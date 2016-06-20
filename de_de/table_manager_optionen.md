@@ -1,1 +1,1 @@
-# Table-Manager Optionen
+# Table Manager: Optionen

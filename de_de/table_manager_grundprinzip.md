@@ -1,1 +1,1 @@
-# Tablemanager - Grundprinzip
+# Table Manager: Grundprinzip
