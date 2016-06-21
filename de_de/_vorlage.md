@@ -154,5 +154,5 @@ Für Hinweise könnten wir die Blockquote-Formatierung verwenden.
 
 ## Markdown-Referenz
 
-[https://daringfireball.net/projects/markdown/syntax](https://daringfireball.net/projects/markdown/syntax)
+[https://daringfireball.net/projects/markdown/syntax](https://daringfireball.net/projects/markdown/syntax)  
 [http://markdown.de/](http://markdown.de/)
