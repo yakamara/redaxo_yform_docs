@@ -22,7 +22,7 @@
 	- [YForm erweitern](yform_modul_erweitern.md) <sup><b>offen</b></sup>
 
 - **E-Mail-Templates**
-	- [E-Mail-Templates erstellen](email_templates.md) <sup><b>offen</b></sup>
+	- [E-Mail-Templates erstellen](email_templates.md) <sup><b>in Bearbeitung</b></sup> <sup><i>rotzek</i></sup>
 
 - **Geo-Plugin**
 	- [Geokoordinaten bestimmen](geo_plugin.md) <sup><b>offen</b></sup>
