@@ -1,7 +1,7 @@
 # YForm-Dokumentation
 
 - **YForm**
-	- [Einführung](yform_intro.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
+	- [Einführung](main_intro.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Yform-Formbuilder](yform_formbuilder.md) <sup><b>offen</b></sup>
 	- [Plugins](yform_plugins.md) <sup><b>offen</b></sup>
 
