@@ -6,6 +6,7 @@
 - [Listen](#listen)
 - [Tabellen](#tabellen)
 - [Code](#code)
+- [Bild](#bild)
 - [Hinweise](#hinweise)
 - [Anker 3](#anker-3)
     - [Anker 3a](#anker-3a)
@@ -121,6 +122,21 @@ Code innerhalb eines Text wird `ganz normal` mit Backticks ausgezeichnet.
 
 ---
 
+<a name="bild"></a>
+## Bild
+
+Die Syntax ähnelt dem eines normalen Links.
+
+**Beispiel Bild**
+
+	![Alt-Text](bildname.png)
+
+**Ausgabe Bild**
+
+![Ein Screenshot](screenshot.png)
+
+---
+
 <a name="hinweise"></a>
 ## Hinweise
 
@@ -138,5 +154,5 @@ Für Hinweise könnten wir die Blockquote-Formatierung verwenden.
 
 ## Markdown-Referenz
 
-[https://daringfireball.net/projects/markdown/syntax](https://daringfireball.net/projects/markdown/syntax)  
+[https://daringfireball.net/projects/markdown/syntax](https://daringfireball.net/projects/markdown/syntax)
 [http://markdown.de/](http://markdown.de/)
