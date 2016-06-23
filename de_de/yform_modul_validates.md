@@ -2,7 +2,7 @@
 # YForm-Modul: Validierung
 
 - [Zweck der Validierungen](#zweck-der-validierungen)
-- [Validierungs-Klassen](#validierungs-klassen)
+- [Validierungs-Klassen](#allgemeine-objparams)
 
 	
 
@@ -51,11 +51,12 @@ vergleicht Feld mit angegebenen Wert mit Hilfe Operatoren
 
 -
 ###customfunction
-Lorem ispum
+es können eigenen Überprüfungen via Funktion oder Klasse/Methode durchgeführt werden
+
 #####Definition
-	_
+	validate|customfunction|label|[!]function/class::method|weitere_parameter|warning_message
 #####Beispiel
-	_
+
 	
 -
 ###email
@@ -68,6 +69,7 @@ Lorem ispum
 	
 	text|email|E-Mail|
 	validate|email|email|Das Feld enthält keine korrekte E-Mail-Adresse!
+
 
 -
 ###empty
@@ -84,23 +86,24 @@ Lorem ispum
 
 
 -
-###existintable
-Lorem ispum
-#####Definition
-	validate|existintable|label,label2|tablename|feldname,feldname2|warning_message
-
-#####Beispiel
-	_
+> ###existintable
+> 
+> #####Definition
+> 	validate|existintable|label,label2|tablename|feldname,feldname2|warning_message
+> 
+> #####Beispiel
+> 	
+> 
 -
-
 ####intformto
-überprüft ob Wert der Eingabe größer oder kleiner als die definierten Werte sind
+überprüft ob **Wert** der Eingabe größer oder kleiner als die definierten Werte sind
 #####Definition
 	validate|intfromto|label|from|to|warning_message
 	
 #####Beispiel
 	text|wert|Wert
 	validate|intfromto|wert|2|4|Der Wert ist kleiner als 2 und größer als 4! 
+	
 	
 -
 ###labelexist
@@ -123,12 +126,13 @@ Lorem ispum
 
 -
 ###preg_match
-Lorem ispum
+überprüft die Eingabe auf die hinterlegten Regeln
 #####Definition
 	validate|preg_match|label|/[a-z]/i|warning_message
 	
 #####Beispiel
-	_
+	text|eingabe|Eingabe
+	validate|preg_match|eingabe|/[a-z]+/|Es dürfen nur ein oder mehrere kleingeschriebene 	Buchstaben eingegeben werden!
 
 
 -
@@ -146,7 +150,7 @@ Lorem ispum
 
 -
 ###size_range
-überprüft die Eingabe eines Feldes auf die angegebene Zeichenlänge, die zwischen dem Minimal- und Maximalwert liegt
+überprüft die Eingabe eines Feldes auf die angegebene **Zeichenlänge**, die zwischen dem Minimal- und Maximalwert liegt
 #####Definition
 	validate|size_range|label|[minsize]|[maxsize]|Fehlermeldung
 	
@@ -164,9 +168,10 @@ Lorem ispum
 	text|wert|Wert
 	validate|type|wert|numeric|Die Eingabe ist keine Nummer!
 
+
 -
 ###unique
-überprüft, ob ein Datensatz mit einem Wert in einer Tabelle bereits vorhanden ist
+überprüft, ob ein Datensatz mit einem Feld-Wert, in einer Tabelle bereits vorhanden ist
 #####Definition
 	validate|unique|dbfeldname[,dbfeldname2]|Dieser Name existiert schon|[table]
 	
