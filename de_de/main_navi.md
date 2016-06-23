@@ -9,7 +9,7 @@
 	- [Grundprinzip](table_manager_grundprinzip.md) <sup><b>offen</b></sup>
 	- [Optionen einer Tabelle](table_manager_optionen.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
 	- [Feldtypen](table_manager_feldtypen.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
-	- [Validierungen](table_manager_validierungen.md) <sup><b>offen</b></sup>
+	- [Validierungen](table_manager_validierungen.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
 	- [Formularcode exportieren / importieren](table_manager_export_import.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
 
 - **YForm-Modul (Ausgabe)**
