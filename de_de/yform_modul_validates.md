@@ -86,14 +86,16 @@ es können eigenen Überprüfungen via Funktion oder Klasse/Methode durchgeführ
 
 
 -
-> ###existintable
-> 
-> #####Definition
-> 	validate|existintable|label,label2|tablename|feldname,feldname2|warning_message
-> 
-> #####Beispiel
-> 	
-> 
+###!existintable
+ 
+#####Definition
+	validate|existintable|label,label2|tablename|feldname,feldname2|warning_message
+ 
+#####Beispiel
+ 	
+ 
+ 
+ 
 -
 ####intformto
 überprüft ob **Wert** der Eingabe größer oder kleiner als die definierten Werte sind
