@@ -1,8 +1,7 @@
 # Table Manager: Optionen
 
- ###todo### Tabelle / Tipps und Hinweise formatieren 
  ###todo### Muster-Tablesets anlegen und bereitstellen für: News, Team, Adressen, Leistungen
- ###todo### id-Feld konvertieren: Funktionseweise?
+ ###todo### id-Feld konvertieren: Funktionsweise?
  
 Um Tabellen im Table Manager zu bearbeiten, gibt es 3 verschiedene Möglichkeiten:
 
@@ -37,14 +36,15 @@ Export der Daten erlauben | Zeigt die Schaltfläche "Datensätze exportieren" in
 Import von Daten erlauben | [Zeigt die Schaltfläche "Datensätze importieren" in der Tabellen-Übersicht an.
 
 > **Hinweis:**
->Solange die Tabelle über keine Felder verfügt, kann hier nur "id" ausgewählt werden. Sie können zunächst die Standard-Sortierung nach id-Feld belassen, dann neue Felder hinzufügen und anschließend die Sortierung der Tabelle neu festlegen. Zum Beispiel nach Name, Datum oder den von Ihnen festgelegten Feldern.
-
-> **Tipp:** 
->Wenn Die Datenbank über Import/Export oder über einen Backup-Crobjob gesichert werden soll, sollte die Tabelle den Präfix `rex_` behalten. Zur besseren Übersicht empfiehlt es sich, der Tabelle einen eigenen Projekt-Präfix zu geben, z.B. `rex_kunde_projekte` oder `rex_kunde_mitarbeiter`.
+>Solange die Tabelle über keine Felder verfügt, kann hier nur `id` ausgewählt werden. Sie können zunächst die Standard-Sortierung nach id-Feld belassen, dann neue Felder hinzufügen und anschließend die Sortierung der Tabelle neu festlegen. Zum Beispiel nach Name, Datum oder den von Ihnen festgelegten Feldern.
 
 > **Hinweis:** 
 >Wenn die Struktur der Tabelle bereits Alternativ kann auch ein vorhandenes Tableset importiert werden.
 Klicken Sie abschließend auf hinzufügen, um die Datenbank-Tabelle zu erstellen.
+
+> **Tipp:** 
+>Wenn Die Datenbank über Import/Export oder über einen Backup-Crobjob gesichert werden soll, sollte die Tabelle den Präfix `rex_` behalten. Zur besseren Übersicht empfiehlt es sich, der Tabelle einen eigenen Projekt-Präfix zu geben, z.B. `rex_kunde_projekte` oder `rex_kunde_mitarbeiter`.
+
 
 <a name="tabelle-migrieren"></a>
 ## Tabelle migrieren
@@ -68,7 +68,7 @@ Seit Redaxo 5 gibt es eine neue Möglichkeit, eine Tabelle im Table Manager zu e
 
 * Im Menü auf YForm klicken,
 * Table Manager öffnen,
-* die Schaltfläche "Tableset importieren" anklicken
+* die Schaltfläche "Tableset importieren" anklicken,
 * JSON-Datei auswählen und 
 * mit Abschicken bestätigen.
 
