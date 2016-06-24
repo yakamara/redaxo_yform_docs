@@ -5,26 +5,27 @@
 * Beispiele bei den einzelnen Parametern (Klassen, Vorauswahl, etc.)
 * Keine zu ausführlichen Beispiele zu be_relation, dafür eine Extra-Seite
 
-
-be_link
+<a name="be_link"></a>
+## be_link
 
 Feld zur Auswahl eines Redaxo-Artikels.
 
-Optionen:
-* Priorität: Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-* Name: Name des Felds in der Datenbank, bspw. "article_id", "page_id", "link_id"
-* Bezeichnung: Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. "Redaxo-Artikel", "Seite", "Link"
-* In der Liste verstecken: Versteckt das Feld in der Tabellen-Übersicht.
-* Als Suchfeld aufnehmen: Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+Option | Erläuterung
+------ | ------
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Name | Name des Felds in der Datenbank, bspw. `article_id`, `page_id`, `link_id`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Redaxo-Artikel`, `Seite`, `Link`
+In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
+Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-Wert in der Datenbank: id des Redaxo-Artikels, bspw. "1", "5", "20"
+Wert in der Datenbank: id des Redaxo-Artikels, bspw. `1`, `5`, `20`
 
 <a name="be_manager_relation"></a>
 ## be_manager_relation
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
 Name | 
 Bezeichnung | 
 Ziel-Tabelle | 
@@ -43,7 +44,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Defaultwert | 
@@ -55,7 +56,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Preview (0/1) (opt) | 
@@ -69,7 +70,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Ignoriere Offline-Kategorien  | 
@@ -88,7 +89,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Anzahl Spalten  | 
@@ -101,7 +102,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Werte (0,1) (nicht angeklickt,angeklickt)  | 
@@ -115,7 +116,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
 Name | 
 Bezeichnung | 
 Query mit "select id, name from .."  | 
@@ -127,7 +128,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 [Startjahr] |
@@ -143,7 +144,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 [Startjahr] |
@@ -159,7 +160,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 [Startjahr] |
@@ -176,7 +177,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Defaultwert | 
@@ -190,7 +191,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -201,7 +202,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -212,7 +213,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Nachkommastellen | 
@@ -226,7 +227,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Input-Feld | 
@@ -241,7 +242,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
 Name | 
 HTML | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -252,7 +253,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Felder | 
 Nicht in Datenbank speichern | 
@@ -265,7 +266,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Defaultwert | 
@@ -278,7 +279,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Label | 
 Bezeichnung | 
 Maximale Größe in Kb oder Range 100,500 | 
@@ -296,7 +297,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 PHP Code | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -307,7 +308,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Tabellenfelder zur Anzeige | 
@@ -321,7 +322,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Selectdefinition, kommasepariert | 
@@ -335,7 +336,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Selectdefinition, kommasepariert | 
@@ -351,7 +352,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Query mit "select id, name from .." | 
@@ -369,14 +370,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
-Bezeichnung | 
-##### | 
-##### | 
-##### | 
-##### |
-##### | 
+Bezeichnungen (kommasepariert) | 
+Werte (optional, kommasepariert) | 
+Nicht in Datenbank speichern | 
+Defaultwert | 
+CSS Klassen (kommasepariert) |
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -403,7 +403,7 @@ Wert in der Datenbank: String, bspw. "Musterfirma", "Paul", "Musterprojekt"
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Defaultwert | 
@@ -417,7 +417,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 [Stundenraster] | 
@@ -432,7 +432,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Label | 
 Bezeichnung | 
 Maximale Größe in Kb oder Range 100,500 | 
@@ -452,7 +452,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | 
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
