@@ -8,7 +8,7 @@
 <a name="be_link"></a>
 ## be_link
 
-Feld zur Auswahl eines Redaxo-Artikels.
+Ein Redaxo-Feld, um einen <b>Redaxo-Artikel</b> auszuwählen.
 
 Option | Erläuterung
 ------ | ------
@@ -23,7 +23,7 @@ Wert in der Datenbank: id des Redaxo-Artikels, bspw. `1`, `5`, `20`
 <a name="be_manager_relation"></a>
 ## be_manager_relation
 
-Feld zur Zuordnung anderer Datensätze über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
+Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer fremden Tabelle zu <b>verknüpfen</b>, bspw. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
 Option | Erläuterung
 ------ | ------
@@ -53,6 +53,8 @@ Wert in der Datenbank:
 <a name="be_media"></a>
 ## be_media
 
+Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -62,8 +64,13 @@ Defaultwert | Datei aus dem Medienpool, mit der das Eingabfeld vorausgefüllt wi
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
+Wert in der Datenbank: 
+* Dateiname der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
+
 <a name="be_medialist"></a>
 ## be_medialist
+
+Ein Redaxo-Feld, um ein oder mehrere <b>Medienpool-Dateien</b> auszuwählen.
 
 Option | Erläuterung
 ------ | ------
@@ -75,6 +82,9 @@ Medienpool Kategorie (opt) | ID der Medienpool-Kategorie, die bei der Auswahl de
 Types (opt) | Filtert die Dateiauswahl im Medienpool anhand der Dateiendung, bspw. `.jpg,.jpeg,.png,.gif` oder `.pdf,.docx,.doc`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+Wert in der Datenbank: 
+* Dateinamen der Medienpool-Dateien als SET, bspw. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
 <a name="be_select_category"></a>
 ## be_select_category
