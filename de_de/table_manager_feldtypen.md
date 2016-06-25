@@ -23,21 +23,32 @@ Wert in der Datenbank: id des Redaxo-Artikels, bspw. `1`, `5`, `20`
 <a name="be_manager_relation"></a>
 ## be_manager_relation
 
+Feld zur Zuordnung anderer Datensätze über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
-Name | 
-Bezeichnung | 
-Ziel-Tabelle | 
-Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | 
-Mehrfachauswahl | 
-Mit "Leer-Option" | 
-Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | 
-Höhe der Auswahlbox | 
-Filter | 
-Relationstabelle | 
+Name | Name des Felds in der Datenbank, bspw. `article_id`, `person_id`, `link_id`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. die Bezeichnung der Ziel-Tabelle
+Ziel-Tabelle | Name der Tabelle, deren Datensätze referenziert werden.
+Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, bspw. `name`, `title AS name` oder `CONCAT('id', ' ', 'name') AS name`
+Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewählt werden können, entweder in einem select-Feld oder als Popup-Fenster 
+Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
+Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
+Höhe der Auswahlbox | Höhe der Auswahlbox, wenn Mehrfachauswahl als select-Feld gewählt wurde. 
+Filter | ###todo###
+Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, bspw. `rex_project_news_tags`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+Wert in der Datenbank: 
+* id des verknüpften Datensatzes, bspw. `1`, `5`, `20` oder
+* ids der verknüpften Datensätze als `SET`, bspw. `1,5,20`, `4,8,12`, `7,10,42` oder
+* leer, wenn eine Relationstabelle angegeben wurde.
+
+> Tipp für Anfänger: Um die verknüpften Datensätze im Frontend auszugeben, wird eine SELECT-Abfrage mit einem `JOIN` benötigt.
+
+> Tipp: Da die Einstellungsmöglichkeiten sehr umfangreich sind, haben wir ein zusätzliches Tutorial mit Anwendungsbeispielen bereitgestellt. ###todo###
 
 <a name="be_media"></a>
 ## be_media
@@ -45,9 +56,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Defaultwert | 
+Name | Name des Felds in der Datenbank, bspw. `image`, `attachment`, `file`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Bild`, `Anhang`, `Datei`
+Defaultwert | Datei aus dem Medienpool, mit der das Eingabfeld vorausgefüllt wird, bspw. `mueller.jpg`, `preisliste.pdf` 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -57,11 +68,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Preview (0/1) (opt) | 
-Medienpool Kategorie (opt) | 
-Types (opt) | 
+Name | Name des Felds in der Datenbank, bspw. `images`, `attachments`, `files`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Bilder`, `Anhänge`, `Dateien`
+Preview (0/1) (opt) | Zeigt eine Bildvorschau an, wenn die Datei in der be_medialist markiert wird.
+Medienpool Kategorie (opt) | ID der Medienpool-Kategorie, die bei der Auswahl der Dateien voreingestellt ist.
+Types (opt) | Filtert die Dateiauswahl im Medienpool anhand der Dateiendung, bspw. `.jpg,.jpeg,.png,.gif` oder `.pdf,.docx,.doc`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
