@@ -1,7 +1,7 @@
 # Table Manager: Feldtypen
 
 * Alle Feldtypen auflisten
-* Informationen zu den einzelnen Parametern^
+* Informationen zu den einzelnen Parametern
 * Beispiele bei den einzelnen Parametern (Klassen, Vorauswahl, etc.)
 * Keine zu ausführlichen Beispiele zu be_relation, dafür eine Extra-Seite
 
@@ -416,6 +416,8 @@ Höhe der Auswahlbox |
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
+> Tipp: Ein select_sql-Feld kann ähnlich wie be_relation dazu benutzt werden, um Datensätze fremder Tabellen in einer 1:1- oder 1:n-Beziehung zu verknüpfen.
+
 <a name="submits"></a>
 ## submits
 
@@ -455,26 +457,28 @@ Wert in der Datenbank: String, bspw. "Musterfirma", "Paul", "Musterprojekt"
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Defaultwert | 
-Nicht in Datenbank speichern | 
-classes | 
+Name | Name des Felds in der Datenbank, bspw. "text", "description", "message"
+Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. "Text", "Beschreibung", "Nachricht"
+Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. `Geben Sie hier Ihre Nachricht ein`
+Nicht in Datenbank speichern | ###todo###
+classes | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, bspw., um das Feld im Frontend oder Backend gesondert zu formatieren.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 <a name="time"></a>
 ## time
 
+Eine Reihe von Auswahlfeldern, in der die <b>Uhrzeit</b> (Stunden, Minuten, Sekunden) ausgewählt wird.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-[Stundenraster] | 
-[Minutenraster] | 
-[Anzeigeformat ###H###h ###I###m] | 
-Nicht in Datenbank speichern |
+Name | Name des Felds in der Datenbank, bspw. `time`, `time_begin`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Uhrzeit`, `Beginn der Veranstaltung`
+[Stundenraster] | optional: Kommagetrennte Liste an Stunden, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23`
+[Minutenraster] | optional: Kommagetrennte Liste an Minuten, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,15,30,45`, `0,10,20,30,40,50`
+[Anzeigeformat ###H###h ###I###m] |  Reihenfolge der Auswahlfelder für Stunde und Minute beim bearbeiteten eines Datensatzes, bspw. `um ###H###:###I### Uhr`
+Nicht in Datenbank speichern | ###todo###
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
