@@ -20,6 +20,8 @@ Fehlermeldung | Hinweis, der erscheint, wenn der Vergleich beider Felder `false`
 <a name="compare_value"></a>
 ## compare_value
 
+Vergleicht einen Eingabe-Wert mit einem <b>fest definierten Wert</b>.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
@@ -46,6 +48,8 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabew
  
 <a name="email"></a>
 ## email
+
+Überprüft, ob der Eingabe-Typ eine <b>E-Mail-Adresse</b> ist.
 
 Option | Erläuterung
 ------ | ------
