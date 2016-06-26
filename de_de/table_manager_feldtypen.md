@@ -1,7 +1,7 @@
 # Table Manager: Feldtypen
 
 * Alle Feldtypen auflisten
-* Informationen zu den einzelnen Parametern
+* Informationen zu den einzelnen Parametern^
 * Beispiele bei den einzelnen Parametern (Klassen, Vorauswahl, etc.)
 * Keine zu ausführlichen Beispiele zu be_relation, dafür eine Extra-Seite
 
@@ -35,7 +35,7 @@ Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen W
 Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewählt werden können, entweder in einem select-Feld oder als Popup-Fenster 
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
-Höhe der Auswahlbox | Höhe der Auswahlbox, wenn Mehrfachauswahl als select-Feld gewählt wurde. 
+Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrfachauswahl` als select-Feld aktiviert wurde. 
 Filter | ###todo###
 Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, bspw. `rex_project_news_tags`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -92,16 +92,16 @@ Wert in der Datenbank:
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Ignoriere Offline-Kategorien  | 
-Prüfe Rechte  | 
-Füge "Homepage"-Eintrag (Root) hinzu  | 
-Root-ID | 
-Sprache | 
-Mehrere Felder möglich  | 
-Höhe der Auswahlbox | 
-Nicht in Datenbank speichern |
+Name | Name des Felds in der Datenbank, bspw. `category_id`, oder `category_ids`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Kategorie`, `Kategorien`, `Navigationspunkt`
+Ignoriere Offline-Kategorien  | Gibt an, ob Offline-Kategorien aus dem Auswahl-Dialogfeld ausgeschlossen werden. 
+Prüfe Rechte  | ###todo###
+Füge "Homepage"-Eintrag (Root) hinzu  | Gibt an, ob im Auswahl-Dialogfeld die oberste Ebene auswählbar ist.
+Root-ID | Startpunkt der Auswahl-Dialogfelds, bspw. die ID einer Unterkategorie.
+Sprache | ###todo###
+Mehrere Felder möglich | Gibt an, ob ein oder mehrere Kategorien ausgewählt werden können.
+Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrere Felder möglich` aktiviert wurde. 
+Nicht in Datenbank speichern | ###todo###
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -111,99 +111,129 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Anzahl Spalten  | 
-Bezeichnung der Spalten (Menge,Preis,Irgendwas)  | 
+Name | Name des Felds in der Datenbank, bspw. `table`, `features`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Info-Tabelle`, `Eigenschaften`
+Anzahl Spalten |  Anzahl der Spalten, die bei der Eingabe zur Verfügung stehen.
+Bezeichnung der Spalten (Menge,Preis,Irgendwas)  | Kopfzeile der Tabelle, bspw., `Leistung,Aufpreis`, `Vorname,Name`, `Artikelnummer,Größe,Preis` 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+Wert in der Datenbank: 
+* ###todo### was ist das? JSON? Eigenes Format? 
+
+> ###todo### Hinweis: Wie kommt man an die einzelnen Werte wieder ran?
 
 <a name="checkbox"></a>
 ## checkbox
 
+Eine <b>Checkbox</b> mit vordefinierten Werten.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Werte (0,1) (nicht angeklickt,angeklickt)  | 
-Defaultstatus |
-Nicht in Datenbank speichern | 
+Name | Name des Felds in der Datenbank, bspw. `active`, `online`, `visible`, `hidden`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `aktiviert`, `online`, `sichtbar?`, `ausgeblendet?`
+Werte (0,1) (nicht angeklickt,angeklickt)  | Wert, der in die Datenbank geschrieben wird, bspw. `0,1`, `nein,ja`
+Defaultstatus | Gibt an, ob die Checkbox vorausgewählt ist oder nicht.
+Nicht in Datenbank speichern |  ###todo###
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+Wert in der Datenbank: 
+* Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
 <a name="checkbox_sql"></a>
 ## checkbox_sql
 
+Eine <b>Checkbox</b> mit Werten, die aus einer <b>SQL-Abfrage</b> stammen.
+###todo### handelt es sich nicht dabei um eine Liste an Checkboxes?
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
-Name | 
-Bezeichnung | 
-Query mit "select id, name from .."  | 
+Name | Name des Felds in der Datenbank, bspw. `active_languages`, `tags`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Sichtbar in Sprachen`, `Schlagwörter`
+Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, bspw. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+Wert in der Datenbank: 
+* ###todo###
+
+> Tipp: Mit checkbox_sql kann man bspw. in einer News-Tabelle einer News die Sprachen zuordnen, in der sie angezeigt werden sollen. 
 
 <a name="date"></a>
 ## date
 
+Eine Reihe von Auswahlfeldern, in der ein <b>Datum</b> (Tag, Monat, Jahr) ausgewählt wird.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-[Startjahr] |
-[Endjahr] oder [+5] |
-[Anzeigeformat###Y###-###M###-###D###]] |
-Aktuelles Datum voreingestellt |
-Nicht in Datenbank speichern |
+Name | Name des Felds in der Datenbank, bspw. `date`, `date_begin`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Datum`, `Beginn der Veranstaltung`
+[Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, bspw. `1980`, `2014`
+[Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, bspw. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
+[Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
+Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
+Nicht in Datenbank speichern | ###todo###
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+Wert in der Datenbank: 
+* Das Datum im ###todo###-Format, z.B.  ``, ``
 
 <a name="datestamp"></a>
 ## datestamp
 
+Ein unsichtbares Feld, in das ein <b>Zeitstempel</b> gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
+
+###todo### Optionen überprüfen, hier müsste doch was anderes stehen?
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-[Startjahr] |
-[Endjahr] oder [+5] |
-[Anzeigeformat###Y###-###M###-###D###]] |
-Aktuelles Datum voreingestellt |
-Nicht in Datenbank speichern |
+Name | Name des Felds in der Datenbank, bspw. `datestamp`, `date_created`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Zeitstempel`, `Beginn der Veranstaltung`
+[Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
+Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist. 
+Nicht in Datenbank speichern | ###todo###
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 <a name="datetime"></a>
 ## datetime
 
+Eine Reihe von Auswahlfeldern, in der <b>Datum und Uhrzeit</b> (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-[Startjahr] |
-[Endjahr] oder [+5] |
-[Minutenformate] | 
-[Anzeigeformat###Y###-###M###-###D###]] |
-Aktuelles Datum voreingestellt |
-Nicht in Datenbank speichern |
+Name | Name des Felds in der Datenbank, bspw. `date`, `date_begin`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Datum`, `Beginn der Veranstaltung`
+[Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, bspw. `1980`, `2014`
+[Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, bspw. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
+[Anzeigeformat###Y###-###M###-###D###]] | ###todo### Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
+Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
+Nicht in Datenbank speichern | ###todo###
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 <a name="email"></a>
 ## email
 
+###todo### wo ist hier der Unterschied zu Text?
+
+Ein einfaches Eingabefeld für <b>E-Mail-Adressen.</b>
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Defaultwert | 
-Nicht in Datenbank speichern  | 
-cssclassname | 
+Name | Name des Felds in der Datenbank, bspw. `email`, `contact`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `E-Mail`, `Kontakt-Mail-Adresse`
+Defaultwert | E-Mail-Adresse, mit der das Eingabfeld vorausgefüllt wird, bspw. `max@mustermann.de`, `jane@smith.com` 
+Nicht in Datenbank speichern  | ###todo###
+cssclassname | CSS-Klasse(n), die dem Input-Element zugewiesen werden.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
