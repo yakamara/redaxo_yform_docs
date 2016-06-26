@@ -7,7 +7,7 @@
 <a name="compare"></a>
 ## compare
 
-Zum Vergleichen zweier Felder, bspw. "E-Mail-Adresse" und "E-Mail-Adresse bestätigen". ###todo### nützliche Beispiele?
+Vergleicht zwei Eingabe-Werte <b>miteinander</b>. ###todo### nützliche Beispiele?
 
 Option | Erläuterung
 ------ | ------
@@ -63,6 +63,8 @@ Fehlermeldung | Hinweis, der erscheint, wenn keine gültige E-Mail-Adresse angeg
 
 <a name="empty"></a>
 ## empty
+
+Überprüft, ob ein Eingabe-Wert <b>vorhanden</b> ist.
 
 Option | Erläuterung
 ------ | ------
