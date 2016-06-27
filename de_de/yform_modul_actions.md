@@ -20,7 +20,7 @@ Die Klassen sind hier zu finden
 
 
 ###!callback
-..
+ruf eine Funktion oder Klasse auf
 
 #####Definition
 	action|callback|mycallback / myclass::mycallback
@@ -97,7 +97,7 @@ sendet E-Mail mit Betreff und Body an angegebene E-Mail-Adresse. Eingaben aus de
 --
 
 
-###encrypt_value
+###!encrypt_value (wird nicht mehr fortgeführt)
 verschlüsselt Eingabe in Feld mit Label
 
 #####Definition
@@ -112,7 +112,7 @@ verschlüsselt Eingabe in Feld mit Label
 --
 
 
-###!fulltext_value
+###!fulltext_value (wird nicht mehr fortgeführt)
 ..
 
 #####Definition
@@ -198,7 +198,7 @@ versendet eine E-Mail über ein yform-E-Mail-Template. Der Parameter **emailtemp
 --
 
 
-###wrapper_value
+###!wrapper_value (wird nicht mehr fortgeführt)
 ..
 
 #####Definition
