@@ -4,7 +4,7 @@
 
 # YForm-Templates
 
-- [Zweck der Templates](#zweck-der-aktionen)
+- [Zweck der Templates](#zweck-der-templates)
 - [Handhabung](#handhabung)
 
 	
