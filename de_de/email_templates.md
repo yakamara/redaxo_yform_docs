@@ -1,7 +1,16 @@
 ## E-Mail-Templates erstellen
 <sup><b>in Bearbeitung</b></sup> <sup><i>rotzek</i></sup>
 
-use case
+
+# YForm-Templates
+
+- [Zweck der Templates](#zweck-der-aktionen)
+- [Handhabung](#handhabung)
+
+	
+
+## Zweck der Templates
+
 •	Kontaktformular
 •	Anfrage Preisliste
 •	Mehrsprachiges Kontaktformular
