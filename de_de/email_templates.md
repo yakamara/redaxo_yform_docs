@@ -20,6 +20,7 @@
 ## Handhabung
 
 -	Vor Versand umformatieren
-•	Zeitstempel, 
-•	dynamisches Textfeld, das via REQUEST befüllt wurde, 
-•	Text des Feldes, das via SELECT_SQL befüllt wurde.
+-	Zeitstempel, 
+-	dynamisches Textfeld, das via REQUEST befüllt wurde, 
+-	Text des Feldes, das via SELECT_SQL befüllt wurde.
+-	Fileuploads mitversenden ($mail->AddAttachment($bild, $sql->getValue("perso")); )
