@@ -1,8 +1,16 @@
 # Table Manager: Validierungen
 
-* Analog zur Seite Felder
-*  ###frage### Validierungsbeispiele für Custom Function bereitstellen... welche Parameter erhält die Funktion, wie erfolgt die Rückgabe?
-*  ###frage### i18n der Fehlermeldungen?
+- [compare](#compare)
+- [compare_value](#compare_value)
+- [customfunction](#customfunction)
+- [email](#email)
+- [empty](#empty)
+- [intfromto](#intfromto)
+- [size](#size)
+- [size_range](#size_range)
+- [type](#type)
+- [unique](#unique)
+
 
 <a name="compare"></a>
 ## compare
@@ -43,9 +51,6 @@ Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `project_is_
 Weitere Parameter | ###todo###
 Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabewert liefert.
 
- ###todo### Wo werden solche Funktionen üblicherweise abgelegt?
- ##todo### Codebeispiele
- 
 <a name="email"></a>
 ## email
 
@@ -56,8 +61,6 @@ Option | Erläuterung
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `email`, `contact`
 Fehlermeldung | Hinweis, der erscheint, wenn keine gültige E-Mail-Adresse angegeben wurde.
-
- ###todo### wie findet die Prüfung statt? RFC-Standardkonform oder einfach nur nach @-Zeichen?
 
 > Hinweis: Falls das E-Mail-Feld ein Pflichtfeld ist, muss auch die Validierung `empty` hinzugefügt werden, da ein leeres Feld eine keine ungültige E-Mail-Adresse darstellt.
 
