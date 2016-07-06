@@ -17,14 +17,13 @@
 	- [Allgemein](yform_modul_allgemein.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Verzeichnis-Struktur](yform_modul_struktur.md) <sup><b>offen</b></sup>
 	- [Objparams](yform_modul_objparams.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
-	- [Values](yform_modul_values.md) <sup><b>offen</b></sup>
-	- [Validates](yform_modul_validates.md) <sup><b>überprüfen</b></sup> <sup><i>goldfischpeter</i></sup>
+	- [Values](yform_modul_values.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
+	- [Validates](yform_modul_validates.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
 	- [Actions](yform_modul_actions.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
 	- [YForm erweitern](yform_modul_erweitern.md) <sup><b>offen</b></sup>
 
 - **E-Mail-Templates**
-	- [E-Mail-Templates erstellen](email_templates.md) <sup><b>in Bearbeitung</b></sup> <sup><i>rotzek</i></sup>
-
+	- [E-Mail-Templates erstellen](email_templates.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
 - **Geo-Plugin**
 	- [Geokoordinaten bestimmen](geo_plugin.md) <sup><b>offen</b></sup>
 
