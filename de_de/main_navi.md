@@ -2,7 +2,7 @@
 
 - **YForm**
 	- [Einführung](main_intro.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
-	- [Yform-Formbuilder](yform_formbuilder.md) <sup><b>offen</b></sup>
+	- [Yform-Formbuilder](yform_formbuilder.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Plugins](yform_plugins.md) <sup><b>offen</b></sup>
 
 - **Table Manager**
@@ -14,7 +14,7 @@
 	- [Anhang: be_relation](table_manager_feldtypen_be-relation.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup> <sup><i>alexplusde</i></sup>
 
 - **YForm-Modul (Ausgabe)**
-	- [Allgemein](yform_modul_allgemein.md) <sup><b>offen</b></sup>
+	- [Allgemein](yform_modul_allgemein.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Verzeichnis-Struktur](yform_modul_struktur.md) <sup><b>offen</b></sup>
 	- [Objparams](yform_modul_objparams.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Values](yform_modul_values.md) <sup><b>offen</b></sup>
