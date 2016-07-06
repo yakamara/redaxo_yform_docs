@@ -64,7 +64,7 @@ Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewäh
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrfachauswahl` als select-Feld aktiviert wurde. 
-Filter | ###todo###
+Filter | Zusätzliche Angaben in einer speziellen Syntax, die 
 Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, bspw. `rex_project_news_tags`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -76,12 +76,13 @@ Wert in der Datenbank:
 
 > Tipp für Anfänger: Um die verknüpften Datensätze im Frontend auszugeben, wird eine SELECT-Abfrage mit einem `JOIN` benötigt.
 
-> Tipp: Da die Einstellungsmöglichkeiten sehr umfangreich sind, haben wir ein zusätzliches Tutorial mit Anwendungsbeispielen bereitgestellt. ###todo###
+> Tipp: Details zu den umfangreichen Einstellungsmöglichkeiten gibt's im [be_relation-Tutorial](table_manager_feldtypen_be-relation).
 
 <a name="be_media"></a>
 ## be_media
 
-Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
+*Funktion:* Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
+*Wert in der Datenbank:* Dateiname der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
 
 Option | Erläuterung
 ------ | ------
@@ -92,8 +93,6 @@ Defaultwert | Datei aus dem Medienpool, mit der das Eingabfeld vorausgefüllt wi
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-Wert in der Datenbank: 
-* Dateiname der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
 
 <a name="be_medialist"></a>
 ## be_medialist
@@ -250,9 +249,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="email"></a>
 ## email
 
-###todo### wo ist hier der Unterschied zu Text?
-
 Ein einfaches Eingabefeld für <b>E-Mail-Adressen.</b>
+*Wert in der Datenbank:* String.
 
 Option | Erläuterung
 ------ | ------
@@ -268,10 +266,12 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="emptyname"></a>
 ## emptyname
 
+Ein Feld *ohne* Eingabemöglichkeit.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
+Name | Name des Felds in der Datenbank
 Bezeichnung | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -279,13 +279,18 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="fieldset"></a>
 ## fieldset
 
+Ein Fieldset gruppiert Formularfelder.
+*Wert in der Datenbank:* **leer**.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
+Name | Name des Felds in der Datenbank, bspw. `fieldset_product`, `fieldset_details`,
+Bezeichnung | Titel des Fieldsets, das im `<legend />`-Tag notiert wird. bspw. `Produktinfos`, `Details`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+> Hinweis: Das Feld wird nur aus technischen Gründen angelegt. Das Feld wird nicht mit einem Wert gefüllt.
 
 <a name="float"></a>
 ## float
@@ -293,13 +298,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Nachkommastellen | 
-Defaultwert | 
+Name | Name des Felds in der Datenbank, bspw. `price`, `fee`.
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Preis in EUR`, `Gebühr`
+Nachkommastellen | Anzahl der erlaubten Stellen nach dem Komma, bspw. `1`, `5`, `42`
+Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, bspw. `0,1234`, `5` 
 Nicht in Datenbank speichern | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+> Tipp: Dieses Feld eignet sich besser für Zahlen als das Feld `text`, weil Dezimalzahlen mit `,` als Trennzeichen automatisch in `float`-Zahlen mit `.` als Trennzeichen umgewandelt werden.
 
 <a name="hashvalue"></a>
 ## hashvalue
@@ -322,8 +329,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
-Name | 
-HTML | 
+Name | Name des Felds in der Datenbank, bspw. `info`, `code`.
+HTML | HTML-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -346,9 +353,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Defaultwert | 
+Name | Name des Felds in der Datenbank, bspw. `price`, `quantity`.
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Preis in EUR`, `Anzahl`
+Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, bspw. `1`, `5`, `42` 
 Nicht in Datenbank speichern  | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -377,8 +384,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-PHP Code | 
+Name | Name des Felds in der Datenbank, bspw. `php`, `code`.
+HTML | PHP-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -388,13 +395,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Tabellenfelder zur Anzeige | 
-Tabellenfelder zur Beschränkung | 
-Defaultwert | 
+Name | Name des Felds in der Datenbank, bspw. `prio`, `ranking`, `order`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Priorität`, `Rang`, `Reihenfolge`
+Anzeige | Feld(er), die in der Auswahl-Box angezeigt werden, bspw. `name`, `title`, `isbn`
+Beschränkung | Feld(er), die die Auswahlmöglichkeiten in der Auswahl-Box beschränken, bspw. `category_id` 
+Am Anfang | Vorauswahl, ob ein neuer Datensatz am Anfang oder am Ende angelegt wird. 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+> Hinweis: Wenn eine Beschränkung ausgewählt wurde, kann es vorkommen, dass ein Datensatz zunächst gespeichert werden muss, damit die Beschränkung greifen kann. Dadurch lässt sich bspw. eine Reihenfolge pro Kategorie festlegen.
 
 <a name="radio"></a>
 ## radio
@@ -469,15 +478,15 @@ Input-Feld zur Eingabe eines Textes.
 Option | Erläuterung
 ------ | ------ 
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | Name des Felds in der Datenbank, bspw. "name", "prename", "title"
-Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. "Name", "Vorname", "Titel"
-Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. "Musterfirma", "Paul", "Musterprojekt"
-Nicht in der Datenbank speichern | ###todo### Wan benötigt man das?
+Name | Name des Felds in der Datenbank, bspw. `name`, `prename`, `title`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Name`, `Vorname`, `Titel`
+Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
+Nicht in der Datenbank speichern |
 cssclassname | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, bspw., um das Feld im Frontend oder Backend gesondert zu formatieren.
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-Wert in der Datenbank: String, bspw. "Musterfirma", "Paul", "Musterprojekt"
+Wert in der Datenbank: String, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
 
 <a name="textarea"></a>
 ## textarea
