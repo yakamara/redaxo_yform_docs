@@ -25,10 +25,10 @@ Danach folgen die Eingaben für den E-Mail-Body, in Plain und HTML.
 
 	text|vorname|Vorname|
 	text|name|Name|
-	text|emailadresse|email|
+	text|email|E-Mail-Adresse|
 
-	validate|email|emailadresse|Das Feld enthält keine korrekte E-Mail-Adresse!
-	validate|empty|emailadresse|Das Feld enthält keine korrekte E-Mail-Adresse!
+	validate|email|email|Das Feld enthält keine korrekte E-Mail-Adresse!
+	validate|empty|email|Das Feld enthält keine korrekte E-Mail-Adresse!
 	
 	action|tpl2email|testtemplate|email
 
