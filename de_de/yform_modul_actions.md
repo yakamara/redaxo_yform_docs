@@ -1,7 +1,7 @@
 # YForm-Modul: Actions
 
 - [Zweck der Aktionen](#zweck-der-aktionen)
-- [Aktionen-Klassen](#aktionen-klassen)
+- [Aktionen-Klassen](#aktions-klassen)
 
 	
 
