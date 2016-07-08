@@ -1,9 +1,36 @@
 # Table Manager: Grundprinzip
 
-* Kurze Erinnerung: Es handelt sich um Datenbanktabellen
-* Fall-Beispiele, in denen Formulare benötigt werden (Kontakt, Bestellung, Anfrage, E-Mail, ...)
-* Verwaltung aus Redaxo heraus -> Der Kunde kann selbst strukturierte Daten anlegen
-* Weiterverarbeitung und Zusammenspiel mit Addons (url, ...) Modulen
-* Unterschiedliche Oberflächen: Tabele Manager zur Verwaltung, Menü "Tabellen" zur Datensatz-Pflege
-* Import/Export (automatische Sicherung, Import aus anderen Systemen (bspw. ERP/CRM), etc.)
-* Abgrenzung, wann besser Artikel und wann ein Datenbank-Eintrag (oder Kombination aus beidem)
+Der Table Manager in YForm dient zum Erstellen und Bearbeiten von Datenbanktabellen sowie zum Verwalten von tabellarischen Daten innerhalb von Redaxo.
+
+> Hinweis: Der Table Manager ist nicht auf den Zugriff aller Redaxo-Datenbanktabellen, bspw. `rex_articles` gedacht. Um direkt auf die Tabellen einer Redaxo-Installation zuzugreifen, gibt es das Adminer-Addon von Friends Of Redaxo. Adminer ist wie PHPMyAdmin eine Webanwendung zur Administration von Datenbanken.
+
+## Wann benötige ich den Table Manager?
+
+Der Table Manager wird üblicherweise dann eingesetzt, wenn in Redaxo tabellarische Daten erzeugt, verwaltet oder aufgezeichnet werden müssen, zum Beispiel:
+
+* Archivierung aller Anfragen eines Kontaktformulars
+* Archivierung aller Bestellungen eines Bestellformulars
+* Verwaltung von Kursen, Terminen und Verstaltungen
+* Verwaltung von News einschließlich zugehöriger Eigenschaften (Kategorien, Tags, ...)
+* Verwaltung von Produkten einschließlich zugehöriger Eigenschaften (Größen, Preis, ...) 
+
+Außerdem kann der Table Manager anhand einer Table Manager-Tabelle den Formular-Code 
+- für das YForm Formbuilder-Modul erzeugen, 
+- für die PHP-Variante von YForm vorbereiten und
+- die Feld-Platzhalter für ein E-Mail-Template auflisten.
+
+Die Daten können dann in Modulen und Addons im Frontend und Backend verwendet werden.
+
+## Wie gebe ich Daten aus dem Table Manager im Frontend aus?
+
+Daten im Table Manager werden in der SQL-Datenbank abgelegt, die bei der Redaxo-Installation angegeben wurde. Die einfachste Möglichkeit ist daher, über das [rex_sql-Objekt](https://github.com/redaxo/redaxo/wiki/Aenderungen-in-REDAXO-5#rex_sql) die Daten auszulesen.
+
+> Tipp: Um bspw. jeder News oder jedem Produkt statt via GET-Parameter über eine eigene URL aufzurufen, obwohl kein eigener Artikel existiert, kann das [URL-Addon von Thomas Blum](https://github.com/tbaddade/redaxo_url) verwendet werden.
+
+## Wie ist der Table Manager aufgebaut?
+
+Der Table Manager wird im Menü über `Addons > YForm > Table Manager` aufgerufen. Dort lassen sich Tabellen und deren Eingabe-Felder hinzufügen. Alle Tabellen, die auf `aktiv` gestellt sind, werden im Menü über `Tabellen > Name_Der_Tabelle` erreicht. Dort lassen sich die Datensätze der jeweiligen Tabelle bearbeiten.
+
+## Wie kann ich ein Backup von Table Manager-Tabellen erstellen?
+
+Datensätze können manuell exportiert werden, sofern die Tabelle im Table Manager konfiguriert ist. Außerdem lässt sich über das Cronjob-Addon ein regelmäßiger Datenbank-Export einrichten.
