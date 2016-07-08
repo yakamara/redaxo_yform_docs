@@ -42,3 +42,5 @@ Daten im Table Manager werden in der SQL-Datenbank abgelegt, die bei der Redaxo-
 ## Wie kann ich ein Backup meiner Table Manager-Tabellen erstellen?
 
 Datensätze können manuell exportiert werden, sofern die Tabelle im Table Manager konfiguriert ist. Außerdem lässt sich über das Cronjob-Addon ein regelmäßiger Datenbank-Export einrichten.
+
+Außerdem gibt es ein neues History-Plugin, mit dem Änderungen an Datensätzen nachverfolgt werden können.
