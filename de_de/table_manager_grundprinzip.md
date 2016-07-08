@@ -4,6 +4,18 @@ Der Table Manager in YForm dient zum Erstellen und Bearbeiten von Datenbanktabel
 
 > Hinweis: Der Table Manager ist nicht auf den Zugriff aller Redaxo-Datenbanktabellen, bspw. `rex_articles` gedacht. Um direkt auf die Tabellen einer Redaxo-Installation zuzugreifen, gibt es das [Adminer-Addon von Friends Of Redaxo](https://github.com/FriendsOfREDAXO/adminer). Adminer ist wie PHPMyAdmin eine Webanwendung zur Administration von Datenbanken.
 
+## First Steps
+
+Im Wesentlichen sind folgende Schritte notwendig, um mit dem Table Manager zu starten:
+
+1. [Tabelle im Table Manager erstellen](table_manager_optionen.md).
+2. [Felder der neuen Tabelle hinzufügen](table_manager_feldtypen.md). 
+3. Datensätze in die Felder der neuen Tabelle eintragen.
+
+## Wie ist der Table Manager aufgebaut?
+
+Der Table Manager wird im Menü über `Addons > YForm > Table Manager` aufgerufen. Dort lassen sich Tabellen und deren Eingabe-Felder hinzufügen. Alle Tabellen, die auf `aktiv` gestellt sind, werden im Menü über `Tabellen > Name_Der_Tabelle` erreicht. Dort lassen sich die Datensätze der jeweiligen Tabelle bearbeiten.
+
 ## Wann benötige ich den Table Manager?
 
 Der Table Manager wird üblicherweise dann eingesetzt, wenn in Redaxo tabellarische Daten erzeugt, verwaltet oder aufgezeichnet werden müssen, zum Beispiel:
@@ -27,10 +39,6 @@ Daten im Table Manager werden in der SQL-Datenbank abgelegt, die bei der Redaxo-
 
 > Tipp: Um bspw. jeder News oder jedem Produkt statt via GET-Parameter über eine eigene URL aufzurufen, obwohl kein eigener Artikel existiert, kann das [URL-Addon von Thomas Blum](https://github.com/tbaddade/redaxo_url) verwendet werden.
 
-## Wie ist der Table Manager aufgebaut?
-
-Der Table Manager wird im Menü über `Addons > YForm > Table Manager` aufgerufen. Dort lassen sich Tabellen und deren Eingabe-Felder hinzufügen. Alle Tabellen, die auf `aktiv` gestellt sind, werden im Menü über `Tabellen > Name_Der_Tabelle` erreicht. Dort lassen sich die Datensätze der jeweiligen Tabelle bearbeiten.
-
-## Wie kann ich ein Backup von Table Manager-Tabellen erstellen?
+## Wie kann ich ein Backup meiner Table Manager-Tabellen erstellen?
 
 Datensätze können manuell exportiert werden, sofern die Tabelle im Table Manager konfiguriert ist. Außerdem lässt sich über das Cronjob-Addon ein regelmäßiger Datenbank-Export einrichten.
