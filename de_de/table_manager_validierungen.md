@@ -15,7 +15,7 @@
 <a name="compare"></a>
 ## compare
 
-Vergleicht zwei Eingabe-Werte <b>miteinander</b>. ###todo### nützliche Beispiele?
+Vergleicht zwei Eingabe-Werte <b>miteinander</b>.
 
 Option | Erläuterung
 ------ | ------
@@ -47,7 +47,7 @@ Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `name`, `email`, `phone`, `zip`
-Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `project_is_customer` ruft `project_is_customer($value)` auf. ###todo### überprüfen
+Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `project_is_customer` ruft `project_is_customer($value)` auf. ###todo### (stimmt das so?)
 Weitere Parameter | ###todo###
 Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabewert liefert.
 
@@ -136,4 +136,4 @@ Option | Erläuterung
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, bspw. `id`, `customer_id`, `email`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe bereits in einem anderen Datensatz existiert.
-Tabelle [opt] |  ###todo###
+Tabelle [opt] | 
