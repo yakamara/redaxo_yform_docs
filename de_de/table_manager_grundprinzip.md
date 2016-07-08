@@ -2,7 +2,7 @@
 
 Der Table Manager in YForm dient zum Erstellen und Bearbeiten von Datenbanktabellen sowie zum Verwalten von tabellarischen Daten innerhalb von Redaxo.
 
-> Hinweis: Der Table Manager ist nicht auf den Zugriff aller Redaxo-Datenbanktabellen, bspw. `rex_articles` gedacht. Um direkt auf die Tabellen einer Redaxo-Installation zuzugreifen, gibt es das Adminer-Addon von Friends Of Redaxo. Adminer ist wie PHPMyAdmin eine Webanwendung zur Administration von Datenbanken.
+> Hinweis: Der Table Manager ist nicht auf den Zugriff aller Redaxo-Datenbanktabellen, bspw. `rex_articles` gedacht. Um direkt auf die Tabellen einer Redaxo-Installation zuzugreifen, gibt es das [Adminer-Addon von Friends Of Redaxo](https://github.com/FriendsOfREDAXO/adminer). Adminer ist wie PHPMyAdmin eine Webanwendung zur Administration von Datenbanken.
 
 ## Wann benötige ich den Table Manager?
 
