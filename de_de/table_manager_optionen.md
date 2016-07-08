@@ -1,12 +1,9 @@
 # Table Manager: Optionen
-
- ###todo### Muster-Tablesets anlegen und bereitstellen für: News, Team, Adressen, Leistungen
- ###todo### id-Feld konvertieren: Funktionsweise?
  
 Um Tabellen im Table Manager zu bearbeiten, gibt es 3 verschiedene Möglichkeiten:
 
 * Sie können eine neue [Datenbank-Tabelle erstellen](#tabelle-erstellen).
-* Sie können eine vorhandene Datenbank-Tabelle in den [Table Manager migrieren](#)
+* Sie können eine vorhandene Datenbank-Tabelle in den [Table Manager migrieren](#tabelle-migrieren)
 * Sie können eine neue Datenbank-Tabelle einschließlich aller benötigten Felder anhand eines [Tablesets imporiteren](#tableset-importieren).
 
 <a name="tabelle-erstellen"></a>
@@ -59,7 +56,7 @@ So migrieren Sie eine vorhandene Tabelle in den Table Manager:
 * vorhandene Datenbank-Tabelle auswählen und
 * mit Abschicken bestätigen.
 
-> **Hinweis:** Falls die Datenbank-Tabelle über kein id-Feld verfügt, können Sie die Option "id-Feld konvertieren falls nicht vorhanden" benutzen. ###todo###
+> **Hinweis:** Falls die Datenbank-Tabelle über kein id-Feld verfügt, können Sie die Option "id-Feld konvertieren falls nicht vorhanden" benutzen.
 
 <a name="tableset-importieren"></a>
 ## Tableset importieren / exportieren
