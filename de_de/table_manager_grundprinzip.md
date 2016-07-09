@@ -12,6 +12,8 @@ Im Wesentlichen sind folgende Schritte notwendig, um mit dem Table Manager zu st
 2. [Felder der neuen Tabelle hinzufügen](table_manager_feldtypen.md). 
 3. Datensätze in die Felder der neuen Tabelle eintragen.
 
+> Tipp für Neulinge: Alternativ zu Schritt 1 und 2 kann auch ein vorkonfiguriertes Tableset importiert werden, das bereits Tabelle und Felder enthält. Eine Anleitung mit Muster-Tablesets für Kontaktformular, Team und Projekte gibt es im Abschnitt [Tableset importieren](table_manager_optionen.md#tableset-importieren)
+
 ## Wie ist der Table Manager aufgebaut?
 
 Der Table Manager wird im Menü über `Addons > YForm > Table Manager` aufgerufen. Dort lassen sich Tabellen und deren Eingabe-Felder hinzufügen. Alle Tabellen, die auf `aktiv` gestellt sind, werden im Menü über `Tabellen > Name_Der_Tabelle` erreicht. Dort lassen sich die Datensätze der jeweiligen Tabelle bearbeiten.
@@ -44,3 +46,7 @@ Daten im Table Manager werden in der SQL-Datenbank abgelegt, die bei der Redaxo-
 Datensätze können manuell exportiert werden, sofern die Tabelle im Table Manager konfiguriert ist. Außerdem lässt sich über das Cronjob-Addon ein regelmäßiger Datenbank-Export einrichten.
 
 Außerdem gibt es ein neues History-Plugin, mit dem Änderungen an Datensätzen nachverfolgt werden können.
+
+## Entwickler: Wie kann ich den Table Manager erweitern?
+
+Es ist möglich, eigene Feldtypen zu definieren und dem Table Manager hinzuzufügen. Das Geo-Plugin für YForm bspw. ist eine Möglichkeit, sich mit der Erweiterung von YForm und dem Table Manager vertraut zu machen.
