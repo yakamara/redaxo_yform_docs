@@ -63,10 +63,15 @@ So migrieren Sie eine vorhandene Tabelle in den Table Manager:
 
 Seit Redaxo 5 gibt es eine neue Möglichkeit, eine Tabelle im Table Manager zu erstellen: Den Import via Tableset.
 
-* Im Menü auf YForm klicken,
-* Table Manager öffnen,
-* die Schaltfläche "Tableset importieren" anklicken,
-* JSON-Datei auswählen und 
-* mit Abschicken bestätigen.
+1. Im Menü auf YForm klicken,
+2. Table Manager öffnen,
+3. die Schaltfläche "Tableset importieren" anklicken,
+4. JSON-Datei auswählen und 
+5. mit Abschicken bestätigen.
 
-Anschließend wird die Tabelle einschließlich aller in der JSON-Datei hinterlegten Felder, Parameter und Standard-Werten importiert.
+Anschließend wird die Tabelle einschließlich aller in der JSON-Datei hinterlegten Felder, Parameter und Standardwerten importiert.
+
+Mit diesem Demo-Tablesets kannst du direkt starten:
+- [Kontaktformular](demo_tableset-rex_yf_messages.json)
+- [Mitarbeiter / Team](demo_tableset-rex_yf_staff.json)
+- [Projekte / Referenzen](demo_tableset-rex_yf_projects.json)
