@@ -25,6 +25,8 @@ Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten de
 Vergleichsart | Operator, wie `Feld 1` und `Feld 2` vergleichen werden sollen, bspw. `!=`, `!=`, `>`, `<` 
 Fehlermeldung | Hinweis, der erscheint, wenn der Vergleich beider Felder `false` ergibt.
 
+> Tipp: Diese Validierung kann z. B. bei Online-Tarifrechnern oder Ähnlichem eingesetzt werden, um serverseitig unzulässige Konfigurationen durch den Nutzer auszuschließen.
+
 <a name="compare_value"></a>
 ## compare_value
 
@@ -63,6 +65,8 @@ Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z
 Fehlermeldung | Hinweis, der erscheint, wenn keine gültige E-Mail-Adresse angegeben wurde.
 
 > Hinweis: Falls das E-Mail-Feld ein Pflichtfeld ist, muss auch die Validierung `empty` hinzugefügt werden, da ein leeres Feld eine keine ungültige E-Mail-Adresse darstellt.
+
+> Hinweis: Die Validierung ist (noch) nicht RFC-konform, sondern wird nach dem Regex-Schema `"#^[\w.+-]{2,}\@\w[\w.-]*.\w+$#u";` überprüft. 
 
 <a name="empty"></a>
 ## empty
@@ -134,6 +138,6 @@ Feld muss nicht ausgefüllt werden | Gibt an, ob die Validierung erfolgreich ist
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
-Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, bspw. `id`, `customer_id`, `email`
+Names |  Namen der Tabellenfelder, die für die Überprüfung herangezogen werden, bspw. `id`, `customer_id`, `email,email_verified`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe bereits in einem anderen Datensatz existiert.
-Tabelle [opt] | 
+Tabelle [opt] | Name der Tabelle, in der die Felder durchsucht werden.
