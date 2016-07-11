@@ -59,7 +59,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, bspw. `article_id`, `person_id`, `link_id`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. die Bezeichnung der Ziel-Tabelle
 Ziel-Tabelle | Name der Tabelle, deren Datensätze referenziert werden.
-Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, bspw. `name`, `title AS name` oder `CONCAT('id', ' ', 'name') AS name`
+Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, bspw. `name`, `prename, ' ', name` oder `name, '(', id, ')'` [Erläuterungen auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/12)
 Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewählt werden können, entweder in einem select-Feld oder als Popup-Fenster 
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
@@ -135,6 +135,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_table"></a>
 ## be_table
 
+Wert in der Datenbank: String / CSV. Felder werden mit Komma abgetrennt, Zeilen mit Semikolon.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -145,10 +147,7 @@ Bezeichnung der Spalten (Menge,Preis,Irgendwas)  | Kopfzeile der Tabelle, bspw.,
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-Wert in der Datenbank: 
-* ###todo### was ist das? JSON? Eigenes Format? 
-
-> ###todo### Hinweis: Wie kommt man an die einzelnen Werte wieder ran?
+> Hinweis: Um die Werte wieder aufzutrennen, kann bspw. `explode(";" $rows)` und `$explode("," $row)` verwendet werden.
 
 <a name="checkbox"></a>
 ## checkbox
@@ -469,6 +468,8 @@ Defaultwert |
 CSS Klassen (kommasepariert) |
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+> Tipp: Mit mehreren Submits kann man auf unterschiedliche Absichten mit dem gleichen Formular reagieren, z. B. zwei Buttons namens `Bestellen` und `Angebot anfragen`.
 
 <a name="text"></a>
 ## text
