@@ -56,7 +56,7 @@ So migrieren Sie eine vorhandene Tabelle in den Table Manager:
 * vorhandene Datenbank-Tabelle auswählen und
 * mit Abschicken bestätigen.
 
-> **Hinweis:** Falls die Datenbank-Tabelle über kein id-Feld verfügt, können Sie die Option "id-Feld konvertieren falls nicht vorhanden" benutzen.
+> **Hinweis:** Falls die Datenbank-Tabelle über kein id-Feld verfügt, können Sie die Option `id-Feld konvertieren falls nicht vorhanden` benutzen. Dabei wird jenes Feld in `id` umbenannt, das als `PRIMARY` und `AUTO_INCREMENT` eingetragen ist.
 
 <a name="tableset-importieren"></a>
 ## Tableset importieren / exportieren
