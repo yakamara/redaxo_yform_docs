@@ -1,5 +1,3 @@
-# YForm-Modul: Objparams
-
 - [Zweck der Objparams](#zweck-der-objparams)
 - [Allgemeine Objparams des Formular](#allgemeine-objparams)
 	- [Formular anzeigen](#formular-anzeigen)
