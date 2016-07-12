@@ -2,9 +2,18 @@
 
 Dieser Abschnitt der Doku ist noch nicht fertig.
 
-- Beispiele für die unterschiedlichen Beziehungen (1:1, 1:n, m:n)
-- Beispiele zu den Auswahl-Typen (Select, Popup)
-- Beispiele zu den Filtern
-- Screenshots
+## Beispiel-Konfigurationen ##
 
-Siehe offene Issues.
+### 1:n ###
+
+### m:n ###
+
+## Auswahl-Typen ##
+
+### select ###
+
+### popup ###
+
+## Filter ##
+
+[GitHub-Diskussion zum Thema Filter](https://github.com/yakamara/redaxo_yform_docs/issues/3)
