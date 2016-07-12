@@ -136,17 +136,21 @@ speichert oder aktualisiert Formulardaten in Tabelle. Dabei werden die Labels un
 
 -
 ###db_query
-führt einen Query aus
+führt einen Query aus, zb um hier Werte aus Eingabefelder in den Query einzusetzen
 
 #####Definition
 	action|db_query|query|Fehlermeldung
 
 	_
 #####Beispiel Formbuilder
-	action|db_query|query|Fehlermeldung
+	text|name|Name
+	text|email|E-Mail-Adresse
+	action|db_query|insert into rex_ycom_user set name = ?, email = ?|name,email
 	
 #####Beispiel PHP
-	$yform->setActionField('db_query', array("query", "Fehlermeldung"));
+	$yform->setValueField('text', array("name","Name"));
+	$yform->setValueField('text', array("email","|E-Mail-Adresse"));
+	$yform->setActionField('db_query', array("insert into rex_ycom_user set name = ?, email = ?", "name,email"));
 
 
 

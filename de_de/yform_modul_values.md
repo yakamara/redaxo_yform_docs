@@ -14,7 +14,7 @@ Die Klassen sind hier zu finden
 	src/addons/yform/lib/yform/values/
 
 
-Beispiele (Schreibweisen) gibt es für **yForm Formbuilder** und **PHP**
+Beispiele (Schreibweisen): **yForm Formbuilder** und **PHP**
 
 Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 
@@ -31,30 +31,16 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 
 
 
+
 ## Value-Klassen
 
-
-###article
-
-#####Definition
-	_
-	
-#####Beispiel Formbuilder
-	_
-	
-#####Beispiel PHP
-	_
---
-	
-	
-	
 	
 	
 ###article
 
 #####Definition
-	_
-	
+	article|article_id
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -86,8 +72,8 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###be_manager_relation
 
 #####Definition
-	_
-	
+	be_link|name|label|defaultwert|no_db
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -103,7 +89,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###be_media
 
 #####Definition
-	_
+	be_media|name|label|defaultwert|no_db
 	
 #####Beispiel Formbuilder
 	_
@@ -120,8 +106,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###be_medialist
 
 #####Definition
-	_
-	
+	be_medialist|name|label|preview|category|types|no_db|	
 #####Beispiel Formbuilder
 	_
 	
@@ -154,7 +139,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###be_table
 
 #####Definition
-	_
+	be_table|name|label|Anzahl Spalten|Menge,Preis/Stück
 	
 #####Beispiel Formbuilder
 	_
@@ -171,7 +156,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###captcha
 
 #####Definition
-	_
+	captcha|Beschreibungstext|Fehlertext
 	
 #####Beispiel Formbuilder
 	_
@@ -184,12 +169,27 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 	
+	
+###captcha_calc
+
+#####Definition
+	captcha_calc|Beschreibungstext|Fehlertext
+	
+#####Beispiel Formbuilder
+	_
+	
+#####Beispiel PHP
+	_
+	
+--
+	
+	
+	
 		
 ###checkbox
 
 #####Definition
-	_
-	
+	checkbox|name|label|Values(0,1)|default clicked (0/1)|[no_db]	
 #####Beispiel Formbuilder
 	_
 	
@@ -205,8 +205,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###checkbox_sql
 
 #####Definition
-	_
-	
+	checkbox_sql|label|Bezeichnung:|select id,name from table order by name|	
 #####Beispiel Formbuilder
 	_
 	
@@ -222,7 +221,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###date
 
 #####Definition
-	_
+	date|name|label| jahrstart | [jahrsende/+5 ]| [Anzeigeformat###Y###-###M###-###D###] | [1/Aktuelles Datum voreingestellt] | [no_db]
 	
 #####Beispiel Formbuilder
 	_
@@ -239,8 +238,8 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###datestamp
 
 #####Definition
-	_
-	
+	datestamp|name| [YmdHis/U/dmy/mysql] | [no_db] | [0-wird immer neu gesetzt,1-nur wenn leer]
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -256,7 +255,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###datetime
 
 #####Definition
-	_
+	datetime|name|label| jahrstart | jahrsende | minutenformate 00,15,30,45 | [Anzeigeformat ###Y###-###M###-###D### ###H###h ###I###m] |[1/Aktuelles Datum voreingestellt]|[no_db]
 	
 #####Beispiel Formbuilder
 	_
@@ -273,7 +272,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###email
 
 #####Definition
-	_
+	email|name|label|defaultwert|[no_db]|cssclassname
 	
 #####Beispiel Formbuilder
 	_
@@ -290,8 +289,8 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###emptyname
 
 #####Definition
-	_
-	
+	emptyname|name|
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -307,8 +306,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###fieldset
 
 #####Definition
-	_
-	
+	fieldset|name|label|[class]|[onlyclose/onlycloseall/onlyopen/closeandopen]	
 #####Beispiel Formbuilder
 	_
 	
@@ -324,7 +322,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###float
 
 #####Definition
-	_
+	float|name|label|scale|defaultwert|[no_db]
 	
 #####Beispiel Formbuilder
 	_
@@ -341,8 +339,8 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###generate_key
 
 #####Definition
-	_
-	
+	generate_key|name|[no_db]
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -358,8 +356,8 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###generate_password
 
 #####Definition
-	_
-	
+	generate_password|name|[no_db]
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -375,7 +373,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###hashvalue
 
 #####Definition
-	_
+	hashvalue|name|[title]|field|(md5/sha1/sha512/...)|[salt]|[no_db]
 	
 #####Beispiel Formbuilder
 	_
@@ -390,15 +388,16 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###hidden
+definiert ein versteckes Feld
 
 #####Definition
-	_
-	
+	hidden|name|(default)value||[no_db]
+	 	
 #####Beispiel Formbuilder
-	_
+	hidden|name|(default)value||[no_db]
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('hidden', array("name", "<h1>Headline</h1>"));
 	
 --
 	
@@ -407,10 +406,27 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###html
+gibt html aus
 
 #####Definition
-	_
+	html|name|[html]
 	
+#####Beispiel Formbuilder
+	html|headline|<h1>Headline</h1>
+		
+#####Beispiel PHP
+	$yform->setValueField('html', array("headline", "<h1>Headline</h1>"));
+	
+--
+	
+	
+	
+	
+		
+###!!index
+
+#####Definition
+	index|name|label1,label2,label3|[no_db]|[func/md5/sha]	
 #####Beispiel Formbuilder
 	_
 	
@@ -423,28 +439,10 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 		
-###index
+###!!integer
 
 #####Definition
-	_
-	
-#####Beispiel Formbuilder
-	_
-	
-#####Beispiel PHP
-	-
-	
---
-	
-	
-	
-	
-		
-###integer
-
-#####Definition
-	_
-	
+	integer|name|label|defaultwert|[no_db]	
 #####Beispiel Formbuilder
 	_
 	
@@ -458,9 +456,29 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###ip
+übergibt die IP des Users.
 
 #####Definition
-	_
+	ip|name|[no_db]
+	
+#####Beispiel Formbuilder
+	ip|ip	
+	
+#####Beispiel PHP
+	$yform->setValueField('ip', array("ip"));
+	
+	-
+	
+--
+	
+	
+	
+	
+		
+###!!mediafile
+
+#####Definition
+	mediafile|name|label|groesseinkb|endungenmitpunktmitkommasepariert|pflicht=1|min_err,max_err,type_err,empty_err|[no_db]|mediacatid|user
 	
 #####Beispiel Formbuilder
 	_
@@ -474,28 +492,10 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 		
-###mediafile
+###!!objparams
 
 #####Definition
-	_
-	
-#####Beispiel Formbuilder
-	_
-	
-#####Beispiel PHP
-	-
-	
---
-	
-	
-	
-	
-		
-###objparams
-
-#####Definition
-	_
-	
+	objparams|key|newvalue|[init/runtime]	
 #####Beispiel Formbuilder
 	_
 	
@@ -508,16 +508,17 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 	
-###password
+###!!password
+
 
 #####Definition
-	_
+	password|name|label|default_value|[no_db]
 	
 #####Beispiel Formbuilder
-	_
+	password|name|label|default_value
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('password', array("name","label", "default_value"));
 	
 --
 	
@@ -527,30 +528,29 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 		
 ###php
 
+
 #####Definition
-	_
-	
+	php|name|<?php  ?>
+		
 #####Beispiel Formbuilder
-	_
-	
+	php|name|<?php  ?>
+		
 #####Beispiel PHP
-	-
+	$yform->setValueField('php', array("name","<?php  ?>"));
 --
 	
 	
 	
 	
 		
-###prio
+###!!prio
 
 #####Definition
-	_
-	
+	prio|name|label|fields|scope|defaultwert	
 #####Beispiel Formbuilder
-	_
-	
+	prio|name|label|fields|scope|defaultwert	
 #####Beispiel PHP
-	-
+	$yform->setValueField('prio', array("name","label", "fields", "scope", "defaultwert"));
 --
 	
 	
@@ -558,15 +558,16 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###radio
+definiert eine Gruppe von Radio-Buttons.
 
 #####Definition
-	_
+	radio|name|label|Frau=w,Herr=m|[no_db]|[defaultwert]
 	
 #####Beispiel Formbuilder
-	_
+	radio|anrede|Anrede|Frau=w,Herr=m
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('radio', array("anrede","Anrede", "Frau=w,Herr=m"));
 --
 	
 	
@@ -574,15 +575,15 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###radio_sql
+definiert eine Gruppe von Radio-Buttons, via einen mySQL-Query
 
 #####Definition
-	_
+	radio_sql|name|label|select id,name from table order by name|[defaultvalue]|[no_db]|
 	
 #####Beispiel Formbuilder
-	_
-	
+	radio_sql|partner|Partner|select id,name from rex_partner order by name	
 #####Beispiel PHP
-	-
+	$yform->setValueField('radio_sql', array("partner","Partner","select id,name from rex_partner order by name"));
 --
 	
 	
@@ -590,25 +591,41 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###readtable
+liest einen Datensatz und übergibt die ausgelesenen Werte in den E-mail value_pool, die einem E-Mail-Template über Platzhalter werden können.
 
 #####Definition
-	_
+	readtable|tablename|feldname|label
 	
 #####Beispiel Formbuilder
-	_
-	
+	text|name|Name
+	readtable|rex_user|name|name
+	action|tpl2email|testtemplate||info@mustermann.de
+
+
 #####Beispiel PHP
-	-
+	$yform->setValueField('text', array("name","Name"));
+	$yform->setValueField('readtable', array("rex_user","name","name"));
+	$yform->setActionField('tpl2email', array("testtemplate","","info@mustermann.de"));
+
+
+	
+liest aus der Tabelle **rex_user** einen Datensatz 
+
+	SELECT * FROM rex_user WHERE name='[eingabe feld name]'
+
+und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adresse:
+
+	
 --
 	
 	
 	
 	
 		
-###remembervalues
+###!!remembervalues
 
 #####Definition
-	_
+	remembervalues|name|label|label1,label2,label3,label4|opt:default:1/0|opt:dauerinsekunden
 	
 #####Beispiel Formbuilder
 	_
@@ -622,15 +639,16 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###resetbutton
+definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 
 #####Definition
-	_
+	resetbutton|name|label|value|cssclassname
 	
 #####Beispiel Formbuilder
-	_
+	resetbutton|reset|reset|Reset
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('resetbutton', array("reset","reset","Reset"));
 	
 --
 	
@@ -639,16 +657,17 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###select
+definiert ein Auswahlliste, dessen Optionen über kommagetrennte Angaben erstellt werden.
 
 #####Definition
-	_
+	select|name|label|Option,Option|[no_db]|defaultwert|multiple=1|selectsize
 	
 #####Beispiel Formbuilder
-	_
-	
+	select|anrede|Anrede|Frau=w,Mann=m
+
 #####Beispiel PHP
-	-
-	
+	$yform->setValueField('select', array("anrede","Anrede","Frau=w,Mann=m"));
+
 --
 	
 	
@@ -656,26 +675,26 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 		
 ###select_sql
+definiert ein Auswahlliste, dessen Optionen über einen mySQL-Query gefüllt werden kann. In diesem Beispiel wird ein Leeroption hinzugefügt. Durch die letzten beiden Parameter wird eine Mehrfachauswahl und die Anzeigegröße der Liste auf 3 gesetzt.
 
 #####Definition
-	_
-	
+	select_sql|label|Bezeichnung:| select id,name from table order by name | [defaultvalue] | [no_db] |1/0 Leeroption|Leeroptionstext|1/0 Multiple Feld|selectsize	
 #####Beispiel Formbuilder
-	_
+	select_sql|kategorie|Kategorie|select id,name from rex_produkte_kategorie order by name |||1|keine Kategorie|1|3
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('select_sql', array("kategorie","Kategorie","select id,name from rex_produkte_kategorie order by name", "", "", "1", "keine Kategorie", "1", "3"));
 --
 	
 	
 	
 	
 		
-###showvalue
+###!!showvalue
 
 #####Definition
-	_
-	
+	showvalue|name|label|defaultwert
+		
 #####Beispiel Formbuilder
 	_
 	
@@ -688,15 +707,17 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 ###submit
+definiert einen Submit-Button
 
 #####Definition
-	_
+	submit|label|value_on_button|[no_db]|cssclassname|[value_to_save_if_clicked]
 	
 #####Beispiel Formbuilder
-	_
+	submit|send|Absenden|no_db|submit_bttn
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('submit', array("send","Absenden","no_db","submit_bttn"));
+
 --
 	
 	
@@ -704,15 +725,16 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 ###submits
+definiert mehrere Submit-Buttons
 
 #####Definition
-	_
+	submit|label|labelvalue1_on_button1,labelvalue2_on_button2 | [value_1_to_save_if_clicked,value_2_to_save_if_clicked]|[no_db]|[Default-Wert]| [cssclassname1,cssclassname2]
 	
 #####Beispiel Formbuilder
-	_
+	submits|send|abonnieren,cancel|1,0
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('submits', array("send","abonnieren,cancel","1,0"));
 --
 
 	
@@ -721,15 +743,16 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 ###text
+Ausgabe eines einzeiligen Eingabefeldes. Über ***default*** kann ein Wert angezeigt oder auch eine CSS-Klasse dem Feld übergeben werden.
 
 #####Definition
-	_
-	
+	text|name|label|defaultwert|[no_db]|cssclassname	
 #####Beispiel Formbuilder
-	_
+	text|name|Name|Dein Name||f_name
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('text', array("name","Name","Dein Name","", "f_name"));
+	
 --
 
 	
@@ -738,15 +761,17 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 ###textarea
+Ausgabe eines mehrzeiligen Eingabefeldes. Über ***default*** kann ein Wert angezeigt werden.
 
 #####Definition
-	_
+	textarea|name|label|default|[no_db]
 	
 #####Beispiel Formbuilder
-	_
+	textarea|kommentar|Kommentar|Ihr Kommentar
 	
 #####Beispiel PHP
-	-
+	$yform->setValueField('textarea', array("kommentar","Kommentar"));
+
 --
 
 	
@@ -755,9 +780,27 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 ###time
+ermöglicht die Ausgabe zweier Auswahllisten, für die Stunden und Minuten, in den definierten Auswahl-Bereichen (Raster).
 
 #####Definition
-	_
+	time|name|label|[stundenraster 0,1,2,3,4,5]|[minutenraster 00,15,30,45]|[Anzeigeformat ###H###h ###I###m]|[no_db]
+	
+#####Beispiel Formbuilder
+	time|uhrzeit|Uhrzeit|08,09,10,11,12|00,15,30,45|###H### ###m###
+
+#####Beispiel PHP
+	$yform->setValueField('time', array("uhrzeit", "Uhrzeit", "08,09,10,11,12", "00,15,30,45", "###H### ###m###"));
+--
+
+	
+	
+	
+	
+	
+###!!uniqueform
+
+#####Definition
+	uniqueform|name|table|Fehlermeldung
 	
 #####Beispiel Formbuilder
 	_
@@ -771,27 +814,10 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 	
-###uniqueform
+###!!upload
 
 #####Definition
-	_
-	
-#####Beispiel Formbuilder
-	_
-	
-#####Beispiel PHP
-	-
---
-
-	
-	
-	
-	
-	
-###upload
-
-#####Definition
-	_
+	upload|name | label | Maximale Größe in Kb oder Range 100,500 | endungenmitpunktmitkommasepariert | pflicht=1 | min_err,max_err,type_err,empty_err,delete_file_msg | Speichermodus(upload/database/no_save) | `database`: Dateiname wird gespeichert in Feldnamen | Eigener Uploadordner [optional] | Dateiprefix [optional] |
 	
 #####Beispiel Formbuilder
 	_
