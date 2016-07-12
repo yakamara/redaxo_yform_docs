@@ -1,17 +1,17 @@
 # Seitenüberschrift
 
-- [Kopfbereich](#kopfbereich)
-- [Überschriften](#ueberschriften)
-- [Links](#links)
-- [Listen](#listen)
-- [Tabellen](#tabellen)
-- [Code](#code)
-- [Hinweise](#hinweise)
-- [Anker 3](#anker-3)
+-   [Kopfbereich](#kopfbereich)
+-   [Überschriften](#ueberschriften)
+-   [Links](#links)
+-   [Listen](#listen)
+-   [Tabellen](#tabellen)
+-   [Code](#code)
+-   [Hinweise](#hinweise)
+-   [Anker 3](#anker-3)
     - [Anker 3a](#anker-3a)
     - [Anker 3b](#anker-3b)
     - [Anker 3c](#anker-3c)
-- [Anker 4](#anker-4)
+-   [Anker 4](#anker-4)
 
 ---
 
@@ -94,9 +94,9 @@ Alt | Neu
 
 **Ausgabe Tabelle**
 
-Alt | Neu
------- | ------
-`$REX['SERVERNAME']` | `rex::getServername()`
+| Alt                  | Neu                    |
+| -------------------- | ---------------------- |
+| `$REX['SERVERNAME']` | `rex::getServername()` |
 
 ---
 
@@ -105,10 +105,12 @@ Alt | Neu
 
 **Beispiel Code Block**
 
-        <?php
-        // Code wird einfach nur mit Tabs eingerückt.
-        // Nicht (wie hier auf Github möglich ) die ``` verwenden.
-        $article = rex_article::get();
+```php
+    <?php
+    // Code wird einfach nur mit Tabs eingerückt.
+    // Nicht (wie hier auf Github möglich ) die ``` verwenden.
+    $article = rex_article::get();
+```
 
 
 **Beispiel Code Inline**
