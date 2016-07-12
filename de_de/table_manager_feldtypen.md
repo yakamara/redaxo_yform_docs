@@ -128,7 +128,7 @@ Root-ID | Startpunkt der Auswahl-Dialogfelds, bspw. die ID einer Unterkategorie.
 Sprache | ###todo###
 Mehrere Felder möglich | Gibt an, ob ein oder mehrere Kategorien ausgewählt werden können.
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrere Felder möglich` aktiviert wurde. 
-Nicht in Datenbank speichern | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -161,7 +161,7 @@ Name | Name des Felds in der Datenbank, bspw. `active`, `online`, `visible`, `hi
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `aktiviert`, `online`, `sichtbar?`, `ausgeblendet?`
 Werte (0,1) (nicht angeklickt,angeklickt)  | Wert, der in die Datenbank geschrieben wird, bspw. `0,1`, `nein,ja`
 Defaultstatus | Gibt an, ob die Checkbox vorausgewählt ist oder nicht.
-Nicht in Datenbank speichern |  ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -202,7 +202,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bs
 [Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, bspw. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
-Nicht in Datenbank speichern | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -223,7 +223,7 @@ Name | Name des Felds in der Datenbank, bspw. `datestamp`, `date_created`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Zeitstempel`, `Beginn der Veranstaltung`
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist. 
-Nicht in Datenbank speichern | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -241,7 +241,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bs
 [Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, bspw. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
 [Anzeigeformat###Y###-###M###-###D###]] | ###todo### Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
-Nicht in Datenbank speichern | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -257,7 +257,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, bspw. `email`, `contact`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `E-Mail`, `Kontakt-Mail-Adresse`
 Defaultwert | E-Mail-Adresse, mit der das Eingabfeld vorausgefüllt wird, bspw. `max@mustermann.de`, `jane@smith.com` 
-Nicht in Datenbank speichern  | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 cssclassname | CSS-Klasse(n), die dem Input-Element zugewiesen werden.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -301,7 +301,7 @@ Name | Name des Felds in der Datenbank, bspw. `price`, `fee`.
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Preis in EUR`, `Gebühr`
 Nachkommastellen | Anzahl der erlaubten Stellen nach dem Komma, bspw. `1`, `5`, `42`
 Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, bspw. `0,1234`, `5` 
-Nicht in Datenbank speichern | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -318,7 +318,7 @@ Bezeichnung |
 Input-Feld | 
 Algorithmus | 
 Salt | 
-Nicht in Datenbank speichern  |
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -341,7 +341,7 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Felder | 
-Nicht in Datenbank speichern | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Opt. Codierfunktion | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -355,7 +355,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, bspw. `price`, `quantity`.
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Preis in EUR`, `Anzahl`
 Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, bspw. `1`, `5`, `42` 
-Nicht in Datenbank speichern  | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -371,7 +371,7 @@ Maximale Größe in Kb oder Range 100,500 |
 Welche Dateien sollen erlaubt sein, kommaseparierte Liste. ".gif,.png" | 
 Pflichtfeld  | 
 min_err,max_err,type_err,empty_err |
-Nicht in Datenbank speichern | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Mediakategorie ID | 
 Mediapool User (createuser/updateuser) | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -413,7 +413,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Selectdefinition, kommasepariert | 
-Nicht in Datenbank speichern | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Defaultwert | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -427,7 +427,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
 Selectdefinition, kommasepariert | 
-Nicht in Datenbank speichern | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Defaultwert | 
 Mehrere Felder möglich |
 Höhe der Auswahlbox | 
@@ -444,7 +444,7 @@ Name |
 Bezeichnung | 
 Query mit "select id, name from .." | 
 Defaultwert (opt.) | 
-Nicht in Datenbank speichern  | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Leeroption  |
 Text bei Leeroption (Bitte auswählen) |
 Mehrere Felder möglich | 
@@ -463,7 +463,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnungen (kommasepariert) | 
 Werte (optional, kommasepariert) | 
-Nicht in Datenbank speichern | 
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Defaultwert | 
 CSS Klassen (kommasepariert) |
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -482,7 +482,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, bspw. `name`, `prename`, `title`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Name`, `Vorname`, `Titel`
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
-Nicht in der Datenbank speichern |
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 cssclassname | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, bspw., um das Feld im Frontend oder Backend gesondert zu formatieren.
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -498,7 +498,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, bspw. "text", "description", "message"
 Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. "Text", "Beschreibung", "Nachricht"
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. `Geben Sie hier Ihre Nachricht ein`
-Nicht in Datenbank speichern | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 classes | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, bspw., um das Feld im Frontend oder Backend gesondert zu formatieren.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -516,7 +516,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bs
 [Stundenraster] | optional: Kommagetrennte Liste an Stunden, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23`
 [Minutenraster] | optional: Kommagetrennte Liste an Minuten, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,15,30,45`, `0,10,20,30,40,50`
 [Anzeigeformat ###H###h ###I###m] |  Reihenfolge der Auswahlfelder für Stunde und Minute beim bearbeiteten eines Datensatzes, bspw. `um ###H###:###I### Uhr`
-Nicht in Datenbank speichern | ###todo###
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
