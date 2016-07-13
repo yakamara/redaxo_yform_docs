@@ -36,15 +36,15 @@
 <a name="be_link"></a>
 ## be_link
 
-###Definition
+### Definition
 
 Ein Redaxo-Feld, um einen **Redaxo-Artikel** auszuwählen.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 *id des Redaxo-Artikels*, bspw. `1`, `5`, `20`
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -58,17 +58,17 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 <a name="be_manager_relation"></a>
 ## be_manager_relation
 
-###Definition
+### Definition
 
 Ein Auswahlfeld / Popup, um ein oder mehrere **Datensätze** mit denen einer fremden Tabelle zu **verknüpfen**, bspw. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 - *id* des verknüpften Datensatzes, bspw. `1`, `5`, `20` oder
 - *ids* der verknüpften Datensätze als `SET`, bspw. `1,5,20`, `4,8,12`, `7,10,42` oder
 - *leer*, wenn eine Relationstabelle angegeben wurde.
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -93,15 +93,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_media"></a>
 ## be_media
 
-###Definition
+### Definition
 
 Ein Redaxo-Feld, um eine einzelne **Medienpool-Datei** auszuwählen.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 *Dateiname* der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -116,15 +116,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_medialist"></a>
 ## be_medialist
 
-###Definition
+### Definition
 
 Ein Redaxo-Feld, um ein oder mehrere **Medienpool-Dateien** auszuwählen.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 *Dateinamen* der Medienpool-Dateien als SET, bspw. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -140,11 +140,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_select_category"></a>
 ## be_select_category
 
-###Definition
+### Definition
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -152,10 +152,10 @@ Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `category_id`, oder `category_ids`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Kategorie`, `Kategorien`, `Navigationspunkt`
 Ignoriere Offline-Kategorien  | Gibt an, ob Offline-Kategorien aus dem Auswahl-Dialogfeld ausgeschlossen werden. 
-Prüfe Rechte  | ###todo###
+Prüfe Rechte  | ### todo### 
 Füge "Homepage"-Eintrag (Root) hinzu  | Gibt an, ob im Auswahl-Dialogfeld die oberste Ebene auswählbar ist.
 Root-ID | Startpunkt der Auswahl-Dialogfelds, bspw. die ID einer Unterkategorie.
-Sprache | ###todo###
+Sprache | ### todo### 
 Mehrere Felder möglich | Gibt an, ob ein oder mehrere Kategorien ausgewählt werden können.
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrere Felder möglich` aktiviert wurde. 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
@@ -165,13 +165,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_table"></a>
 ## be_table
 
-###Definition
+### Definition
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 JSON.
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -188,15 +188,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="checkbox"></a>
 ## checkbox
 
-###Definition
+### Definition
 
 Eine **Checkbox** mit vordefinierten Werten.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 *Value* der Checkbox als *Zahl* oder *String* (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -214,13 +214,13 @@ Wert in der Datenbank:
 <a name="checkbox_sql"></a>
 ## checkbox_sql
 
-###Definition
+### Definition
 
 Ein oder mehrere **Checkbox**-Felder, die aus einer **SQL-Abfrage** stammen.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -236,13 +236,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="date"></a>
 ## date
 
-###Definition
+### Definition
 
 Eine Reihe von Auswahlfeldern, in der ein **Datum** (Tag, Monat, Jahr) ausgewählt wird.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+**MySQL DATETIME**-Format, bspw. `2001-03-10`
+
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -251,7 +253,7 @@ Name | Name des Felds in der Datenbank, bspw. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Datum`, `Beginn der Veranstaltung`
 [Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, bspw. `1980`, `2014`
 [Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, bspw. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
-[Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
+[Anzeigeformat### Y### -### M### -### D### ]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ### D### .### M### .### Y### `
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -260,20 +262,20 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="datestamp"></a>
 ## datestamp
 
-###Definition
+### Definition
 
 Ein unsichtbares Feld, in das ein **Zeitstempel** gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `datestamp`, `date_created`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Zeitstempel`, `Beginn der Veranstaltung`
-[Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
+[Anzeigeformat### Y### -### M### -### D### ]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ### D### .### M### .### Y### `
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist. 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -282,13 +284,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="datetime"></a>
 ## datetime
 
-###Definition
+### Definition
 
 Eine Reihe von Auswahlfeldern, in der **Datum und Uhrzeit** (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+**MySQL DATETIME**-Format, bspw. `2001-03-10 17:16:18`
+
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -297,7 +301,7 @@ Name | Name des Felds in der Datenbank, bspw. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Datum`, `Beginn der Veranstaltung`
 [Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, bspw. `1980`, `2014`
 [Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, bspw. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
-[Anzeigeformat###Y###-###M###-###D###]] | ###todo### Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
+[Anzeigeformat### Y### -### M### -### D### ]] | ### todo### Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ### D### .### M### .### Y### `
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -306,15 +310,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="email"></a>
 ## email
 
-###Definition
+### Definition
 
 Ein einfaches Eingabefeld für **E-Mail-Adressen.**
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 String.
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -330,13 +334,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="emptyname"></a>
 ## emptyname
 
-###Definition
+### Definition
 
 Ein Feld **ohne** Eingabemöglichkeit.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -349,15 +353,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="fieldset"></a>
 ## fieldset
 
-###Definition
+### Definition
 
 Ein Fieldset gruppiert Formularfelder.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 `NULL`
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -372,13 +376,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="float"></a>
 ## float
 
-###Definition
+### Definition
 
 Ein einfaches Eingabefeld für **Gleitkomma-Zahlen.**
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -396,13 +400,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="hashvalue"></a>
 ## hashvalue
 
-###Definition
+### Definition
 
 Ein Feld, das aus dem Wert eines anderen Feldes einen **Hashwert** erzeugt.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -419,13 +423,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="html"></a>
 ## html
 
-###Definition
+### Definition
 
 Gibt **HTML-Code** an der gewünschten Stelle des Eingabe-Formulars aus.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -438,13 +442,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="index"></a>
 ## index
 
-###Definition
+### Definition
 
 Ein Feld, das einen **Index** / Schlüssel über mehrere Felder erzeugt.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -459,13 +463,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="integer"></a>
 ## integer
 
-###Definition
+### Definition
 
 Ein einfaches Eingabefeld für **ganze Zahlen.**
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -480,13 +484,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="mediafile"></a>
 ## mediafile
 
-###Definition
+### Definition
 
 Ein **Upload-Feld**, mit dem eine Datei in den Medienpool hochgeladen wird.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -506,13 +510,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="php"></a>
 ## php
 
-###Definition
+### Definition
 
 Führt **PHP-Code** an der gewünschten Stelle des Eingabe-Formulars aus.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -525,11 +529,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="prio"></a>
 ## prio
 
-###Definition
+### Definition
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -547,13 +551,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="radio"></a>
 ## radio
 
-###Definition
+### Definition
 
 Ein oder mehrere Auswahlfelder als **Radio-Buttons**.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -569,13 +573,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="select"></a>
 ## select
 
-###Definition
+### Definition
 
 Ein **Auswahlfeld** mit vordefinierten Werten.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -593,13 +597,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="select_sql"></a>
 ## select_sql
 
-###Definition
+### Definition
 
 Ein **Auswahlfeld** mit Werten, die aus einer **SQL-Abfrage** stammen.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -621,13 +625,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="submits"></a>
 ## submits
 
-###Definition
+### Definition
 
 Ein oder mehrere **Submit-Buttons** zum Absenden des Formulars.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -646,15 +650,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="text"></a>
 ## text
 
-###Definition
+### Definition
 
 Ein **einfaches Eingabefeld** für Text.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
 String, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------ 
@@ -670,13 +674,13 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 <a name="textarea"></a>
 ## textarea
 
-###Definition
+### Definition
 
 Ein **mehrzeiliges Eingabefeld** für Text.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -692,13 +696,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="time"></a>
 ## time
 
-###Definition
+### Definition
 
 Eine Reihe von Auswahlfeldern, in der die **Uhrzeit** (Stunden, Minuten, Sekunden) ausgewählt wird.
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+**MySQL DATETIME**-Format, bspw. `17:16:18`
+
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -707,7 +713,7 @@ Name | Name des Felds in der Datenbank, bspw. `time`, `time_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Uhrzeit`, `Beginn der Veranstaltung`
 [Stundenraster] | optional: Kommagetrennte Liste an Stunden, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23`
 [Minutenraster] | optional: Kommagetrennte Liste an Minuten, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,15,30,45`, `0,10,20,30,40,50`
-[Anzeigeformat ###H###h ###I###m] |  Reihenfolge der Auswahlfelder für Stunde und Minute beim bearbeiteten eines Datensatzes, bspw. `um ###H###:###I### Uhr`
+[Anzeigeformat ### H### h ### I### m] |  Reihenfolge der Auswahlfelder für Stunde und Minute beim bearbeiteten eines Datensatzes, bspw. `um ### H### :### I### Uhr`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -715,13 +721,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="upload"></a>
 ## upload
 
-###Definition
+### Definition
 
 Ein **Upload-Feld**, mit dem eine Datei in **die Datenbank oder ein Verzeichnis** hochgeladen wird. 
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
@@ -743,11 +749,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="ycom_auth_password"></a>
 ## ycom_auth_password
 
-###Definition
+### Definition
 
-###Wert in der Datenbank
+### Wert in der Datenbank
 
-###Optionen
+### Optionen
 
 Option | Erläuterung
 ------ | ------
