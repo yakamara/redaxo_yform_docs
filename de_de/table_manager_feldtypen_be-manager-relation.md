@@ -1,6 +1,6 @@
-# be_relation Tutorial
+# be_manager_relation
 
-Dieser Abschnitt der Doku ist noch nicht fertig.
+Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/edit/master/de_de/table_manager_feldtypen_be-manager-relation.md) an der Fertigstellung beteiligen.
 
 ## Beispiel-Konfigurationen ##
 
