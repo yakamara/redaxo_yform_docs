@@ -36,7 +36,7 @@
 <a name="be_link"></a>
 ## be_link
 
-Ein Redaxo-Feld, um einen *Redaxo-Artikel* auszuwählen.
+Ein Redaxo-Feld, um einen **Redaxo-Artikel** auszuwählen.
 
 Option | Erläuterung
 ------ | ------
@@ -51,7 +51,7 @@ Wert in der Datenbank: id des Redaxo-Artikels, bspw. `1`, `5`, `20`
 <a name="be_manager_relation"></a>
 ## be_manager_relation
 
-Ein Auswahlfeld / Popup, um ein oder mehrere *Datensätze* mit denen einer fremden Tabelle zu *verknüpfen*, bspw. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
+Ein Auswahlfeld / Popup, um ein oder mehrere **Datensätze** mit denen einer fremden Tabelle zu **verknüpfen**, bspw. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
 Option | Erläuterung
 ------ | ------
@@ -70,9 +70,9 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 Wert in der Datenbank: 
-* id des verknüpften Datensatzes, bspw. `1`, `5`, `20` oder
-* ids der verknüpften Datensätze als `SET`, bspw. `1,5,20`, `4,8,12`, `7,10,42` oder
-* leer, wenn eine Relationstabelle angegeben wurde.
+** id des verknüpften Datensatzes, bspw. `1`, `5`, `20` oder
+** ids der verknüpften Datensätze als `SET`, bspw. `1,5,20`, `4,8,12`, `7,10,42` oder
+** leer, wenn eine Relationstabelle angegeben wurde.
 
 > Tipp für Anfänger: Um die verknüpften Datensätze im Frontend auszugeben, wird eine SELECT-Abfrage mit einem `JOIN` benötigt.
 
@@ -81,8 +81,8 @@ Wert in der Datenbank:
 <a name="be_media"></a>
 ## be_media
 
-*Funktion:* Ein Redaxo-Feld, um eine einzelne *Medienpool-Datei* auszuwählen.
-*Wert in der Datenbank:* Dateiname der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
+**Funktion:** Ein Redaxo-Feld, um eine einzelne **Medienpool-Datei** auszuwählen.
+**Wert in der Datenbank:** Dateiname der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
 
 Option | Erläuterung
 ------ | ------
@@ -97,7 +97,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_medialist"></a>
 ## be_medialist
 
-Ein Redaxo-Feld, um ein oder mehrere *Medienpool-Dateien* auszuwählen.
+Ein Redaxo-Feld, um ein oder mehrere **Medienpool-Dateien** auszuwählen.
 
 Option | Erläuterung
 ------ | ------
@@ -111,7 +111,7 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 Wert in der Datenbank: 
-* Dateinamen der Medienpool-Dateien als SET, bspw. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
+** Dateinamen der Medienpool-Dateien als SET, bspw. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
 <a name="be_select_category"></a>
 ## be_select_category
@@ -152,7 +152,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="checkbox"></a>
 ## checkbox
 
-Eine *Checkbox* mit vordefinierten Werten.
+Eine **Checkbox** mit vordefinierten Werten.
 
 Option | Erläuterung
 ------ | ------
@@ -166,12 +166,12 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 Wert in der Datenbank: 
-* Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
+** Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
 <a name="checkbox_sql"></a>
 ## checkbox_sql
 
-Ein oder mehrere *Checkbox*-Felder, die aus einer *SQL-Abfrage* stammen.
+Ein oder mehrere **Checkbox**-Felder, die aus einer **SQL-Abfrage** stammen.
 
 Option | Erläuterung
 ------ | ------
@@ -183,14 +183,14 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 Wert in der Datenbank: 
-* ###todo###
+** ###todo###
 
 > Tipp: Mit checkbox_sql kann man bspw. in einer News-Tabelle einer News die Sprachen zuordnen, in der sie angezeigt werden sollen. 
 
 <a name="date"></a>
 ## date
 
-Eine Reihe von Auswahlfeldern, in der ein *Datum* (Tag, Monat, Jahr) ausgewählt wird.
+Eine Reihe von Auswahlfeldern, in der ein **Datum** (Tag, Monat, Jahr) ausgewählt wird.
 
 Option | Erläuterung
 ------ | ------
@@ -208,7 +208,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="datestamp"></a>
 ## datestamp
 
-Ein unsichtbares Feld, in das ein *Zeitstempel* gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
+Ein unsichtbares Feld, in das ein **Zeitstempel** gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
 
 Option | Erläuterung
 ------ | ------
@@ -224,7 +224,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="datetime"></a>
 ## datetime
 
-Eine Reihe von Auswahlfeldern, in der *Datum und Uhrzeit* (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
+Eine Reihe von Auswahlfeldern, in der **Datum und Uhrzeit** (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
 
 Option | Erläuterung
 ------ | ------
@@ -242,8 +242,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="email"></a>
 ## email
 
-Ein einfaches Eingabefeld für *E-Mail-Adressen.*
-*Wert in der Datenbank:* String.
+Ein einfaches Eingabefeld für **E-Mail-Adressen.**
+**Wert in der Datenbank:** String.
 
 Option | Erläuterung
 ------ | ------
@@ -259,7 +259,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="emptyname"></a>
 ## emptyname
 
-Ein Feld *ohne* Eingabemöglichkeit.
+Ein Feld **ohne** Eingabemöglichkeit.
 
 Option | Erläuterung
 ------ | ------
@@ -273,7 +273,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 ## fieldset
 
 Ein Fieldset gruppiert Formularfelder.
-*Wert in der Datenbank:* **leer**.
+**Wert in der Datenbank:** ****leer****.
 
 Option | Erläuterung
 ------ | ------
@@ -288,7 +288,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="float"></a>
 ## float
 
-Ein einfaches Eingabefeld für *Gleitkomma-Zahlen.*
+Ein einfaches Eingabefeld für **Gleitkomma-Zahlen.**
 
 Option | Erläuterung
 ------ | ------
@@ -306,7 +306,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="hashvalue"></a>
 ## hashvalue
 
-Ein Feld, das aus dem Wert eines anderen Feldes einen *Hashwert* erzeugt.
+Ein Feld, das aus dem Wert eines anderen Feldes einen **Hashwert** erzeugt.
 
 Option | Erläuterung
 ------ | ------
@@ -323,7 +323,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="html"></a>
 ## html
 
-Gibt *HTML-Code* an der gewünschten Stelle des Eingabe-Formulars aus.
+Gibt **HTML-Code** an der gewünschten Stelle des Eingabe-Formulars aus.
 
 Option | Erläuterung
 ------ | ------
@@ -336,7 +336,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="index"></a>
 ## index
 
-Ein Feld, das einen *Index* / Schlüssel über mehrere Felder erzeugt.
+Ein Feld, das einen **Index** / Schlüssel über mehrere Felder erzeugt.
 
 Option | Erläuterung
 ------ | ------
@@ -351,7 +351,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="integer"></a>
 ## integer
 
-Ein einfaches Eingabefeld für *ganze Zahlen.*
+Ein einfaches Eingabefeld für **ganze Zahlen.**
 
 Option | Erläuterung
 ------ | ------
@@ -366,7 +366,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="mediafile"></a>
 ## mediafile
 
-Ein *Upload-Feld*, mit dem eine Datei in den Medienpool hochgeladen wird.
+Ein **Upload-Feld**, mit dem eine Datei in den Medienpool hochgeladen wird.
 
 Option | Erläuterung
 ------ | ------
@@ -386,7 +386,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="php"></a>
 ## php
 
-Führt *PHP-Code* an der gewünschten Stelle des Eingabe-Formulars aus.
+Führt **PHP-Code** an der gewünschten Stelle des Eingabe-Formulars aus.
 
 Option | Erläuterung
 ------ | ------
@@ -415,7 +415,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="radio"></a>
 ## radio
 
-Ein oder mehrere Auswahlfelder als *Radio-Buttons*.
+Ein oder mehrere Auswahlfelder als **Radio-Buttons**.
 
 Option | Erläuterung
 ------ | ------
@@ -431,7 +431,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="select"></a>
 ## select
 
-Ein *Auswahlfeld* mit vordefinierten Werten.
+Ein **Auswahlfeld** mit vordefinierten Werten.
 
 Option | Erläuterung
 ------ | ------
@@ -449,7 +449,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="select_sql"></a>
 ## select_sql
 
-Ein *Auswahlfeld* mit Werten, die aus einer *SQL-Abfrage* stammen.
+Ein **Auswahlfeld** mit Werten, die aus einer **SQL-Abfrage** stammen.
 
 Option | Erläuterung
 ------ | ------
@@ -471,7 +471,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="submits"></a>
 ## submits
 
-Ein oder mehrere *Submit-Buttons* zum Absenden des Formulars.
+Ein oder mehrere **Submit-Buttons** zum Absenden des Formulars.
 
 Option | Erläuterung
 ------ | ------
@@ -490,7 +490,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="text"></a>
 ## text
 
-Ein *einfaches Eingabefeld* für Text.
+Ein **einfaches Eingabefeld** für Text.
 
 Option | Erläuterung
 ------ | ------ 
@@ -508,7 +508,7 @@ Wert in der Datenbank: String, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
 <a name="textarea"></a>
 ## textarea
 
-Ein *mehrzeiliges Eingabefeld* für Text.
+Ein **mehrzeiliges Eingabefeld** für Text.
 
 Option | Erläuterung
 ------ | ------
@@ -524,7 +524,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="time"></a>
 ## time
 
-Eine Reihe von Auswahlfeldern, in der die *Uhrzeit* (Stunden, Minuten, Sekunden) ausgewählt wird.
+Eine Reihe von Auswahlfeldern, in der die **Uhrzeit** (Stunden, Minuten, Sekunden) ausgewählt wird.
 
 Option | Erläuterung
 ------ | ------
@@ -541,7 +541,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="upload"></a>
 ## upload
 
-Ein *Upload-Feld*, mit dem eine Datei in *die Datenbank oder ein Verzeichnis* hochgeladen wird. 
+Ein **Upload-Feld**, mit dem eine Datei in **die Datenbank oder ein Verzeichnis** hochgeladen wird. 
 
 Option | Erläuterung
 ------ | ------
