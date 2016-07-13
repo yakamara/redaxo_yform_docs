@@ -42,7 +42,7 @@ Ein Redaxo-Feld, um einen **Redaxo-Artikel** auszuwählen.
 
 ###Wert in der Datenbank
 
-id des Redaxo-Artikels, bspw. `1`, `5`, `20`
+*id des Redaxo-Artikels*, bspw. `1`, `5`, `20`
 
 ###Optionen
 
@@ -64,6 +64,10 @@ Ein Auswahlfeld / Popup, um ein oder mehrere **Datensätze** mit denen einer fre
 
 ###Wert in der Datenbank
 
+- *id* des verknüpften Datensatzes, bspw. `1`, `5`, `20` oder
+- *ids* der verknüpften Datensätze als `SET`, bspw. `1,5,20`, `4,8,12`, `7,10,42` oder
+- *leer*, wenn eine Relationstabelle angegeben wurde.
+
 ###Optionen
 
 Option | Erläuterung
@@ -82,11 +86,6 @@ Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgel
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-Wert in der Datenbank: 
-** id des verknüpften Datensatzes, bspw. `1`, `5`, `20` oder
-** ids der verknüpften Datensätze als `SET`, bspw. `1,5,20`, `4,8,12`, `7,10,42` oder
-** leer, wenn eine Relationstabelle angegeben wurde.
-
 > Tipp für Anfänger: Um die verknüpften Datensätze im Frontend auszugeben, wird eine SELECT-Abfrage mit einem `JOIN` benötigt.
 
 > Tipp: Details zu den umfangreichen Einstellungsmöglichkeiten gibt's in der nächsten Version der Doku unter [be_relation-Tutorial](table_manager_feldtypen_be_manager_relation.md).
@@ -100,7 +99,7 @@ Ein Redaxo-Feld, um eine einzelne **Medienpool-Datei** auszuwählen.
 
 ###Wert in der Datenbank
 
-Dateiname der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
+*Dateiname* der Medienpool-Datei, bspw. `mueller.jpg`, `preisliste.pdf`
 
 ###Optionen
 
@@ -123,6 +122,8 @@ Ein Redaxo-Feld, um ein oder mehrere **Medienpool-Dateien** auszuwählen.
 
 ###Wert in der Datenbank
 
+*Dateinamen* der Medienpool-Dateien als SET, bspw. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
+
 ###Optionen
 
 Option | Erläuterung
@@ -135,9 +136,6 @@ Medienpool Kategorie (opt) | ID der Medienpool-Kategorie, die bei der Auswahl de
 Types (opt) | Filtert die Dateiauswahl im Medienpool anhand der Dateiendung, bspw. `.jpg,.jpeg,.png,.gif` oder `.pdf,.docx,.doc`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
-
-Wert in der Datenbank: 
-** Dateinamen der Medienpool-Dateien als SET, bspw. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
 <a name="be_select_category"></a>
 ## be_select_category
@@ -196,6 +194,8 @@ Eine **Checkbox** mit vordefinierten Werten.
 
 ###Wert in der Datenbank
 
+*Value* der Checkbox als *Zahl* oder *String* (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
+
 ###Optionen
 
 Option | Erläuterung
@@ -210,7 +210,6 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 Wert in der Datenbank: 
-** Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
 <a name="checkbox_sql"></a>
 ## checkbox_sql
@@ -357,7 +356,6 @@ Ein Fieldset gruppiert Formularfelder.
 ###Wert in der Datenbank
 
 `NULL`
-
 
 ###Optionen
 
@@ -654,6 +652,8 @@ Ein **einfaches Eingabefeld** für Text.
 
 ###Wert in der Datenbank
 
+String, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
+
 ###Optionen
 
 Option | Erläuterung
@@ -666,8 +666,6 @@ Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll od
 cssclassname | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, bspw., um das Feld im Frontend oder Backend gesondert zu formatieren.
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
-
-Wert in der Datenbank: String, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
 
 <a name="textarea"></a>
 ## textarea
