@@ -1,15 +1,16 @@
 # Table Manager: Validierungen
 
-- [compare](#compare)
-- [compare_value](#compare_value)
-- [customfunction](#customfunction)
-- [email](#email)
-- [empty](#empty)
-- [intfromto](#intfromto)
-- [size](#size)
-- [size_range](#size_range)
-- [type](#type)
-- [unique](#unique)
+> ## Inhalt
+> - [compare](#compare)
+> - [compare_value](#compare_value)
+> - [customfunction](#customfunction)
+> - [email](#email)
+> - [empty](#empty)
+> - [intfromto](#intfromto)
+> - [size](#size)
+> - [size_range](#size_range)
+> - [type](#type)
+> - [unique](#unique)
 
 
 <a name="compare"></a>
@@ -22,7 +23,7 @@ Option | Erläuterung
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 1. Feldname | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `password`, `email`
 2. Feldname | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `password2`, `email_verified`
-Vergleichsart | Operator, wie `Feld 1` und `Feld 2` vergleichen werden sollen, bspw. `!=`, `!=`, `>`, `<` 
+Vergleichsart | Operator, wie `Feld 1` und `Feld 2` verglichen werden sollen, z.B. `!=`, `!=`, `>`, `<` 
 Fehlermeldung | Hinweis, der erscheint, wenn der Vergleich beider Felder `false` ergibt.
 
 > Tipp: Diese Validierung kann z. B. bei Online-Tarifrechnern oder Ähnlichem eingesetzt werden, um serverseitig unzulässige Konfigurationen durch den Nutzer auszuschließen.
@@ -88,8 +89,8 @@ Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `email`, `name`
-Von | Wert, der mindestens eingegeben werden muss, bspw. `0`, `5`, `1000`
-Bis | Wert, der höchstens eingegeben werden darf, bspw. `5`,`10`,`2030`
+Von | Wert, der mindestens eingegeben werden muss, z.B. `0`, `5`, `1000`
+Bis | Wert, der höchstens eingegeben werden darf, z.B. `5`,`10`,`2030`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe nicht im erlaubten Bereich liegt.
 
 <a name="size"></a>
@@ -100,8 +101,8 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe nicht im erlaubten Bere
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
-Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, bspw. `customer_id`, `pin`
-Anzahl der Zeichen | Anzahl der Zeichen, die eingegeben werden sollen, bspw. `5`,`10`,`42`
+Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `customer_id`, `pin`
+Anzahl der Zeichen | Anzahl der Zeichen, die eingegeben werden sollen, z.B. `5`,`10`,`42`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe die festgelegte Anzahl von Zeichen unter- oder überschreitet.
 
 <a name="size_range"></a>
@@ -112,9 +113,9 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe die festgelegte Anzahl 
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
-Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, bspw. `customer_id`, `password`
-Minimale Anzahl der Zeichen (opt) | Anzahl der Zeichen, die mindestens werden sollen, bspw. `0`, `5`, `7`
-Maximale Anzahl der Zeichen (opt) | Anzahl der Zeichen, die höchstens werden sollen, bspw. `5`,`10`,`15`
+Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `customer_id`, `password`
+Minimale Anzahl der Zeichen (opt) | Anzahl der Zeichen, die mindestens werden sollen, z.B. `0`, `5`, `7`
+Maximale Anzahl der Zeichen (opt) | Anzahl der Zeichen, die höchstens werden sollen, z.B. `5`,`10`,`15`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe den festgelegten Bereich an Zeichen unter- oder überschreitet.
 
 <a name="type"></a>
@@ -125,8 +126,8 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe den festgelegten Bereic
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
-Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, bspw. `zip`, `phone`, `name`, `email`, `website`
-Prüfung nach | Typ, der überprüft werden soll, bspw. `int`, `float`, `numeric`, `string`, `email`, `url`, `date`, `hex`]
+Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `zip`, `phone`, `name`, `email`, `website`
+Prüfung nach | Typ, der überprüft werden soll, z.B. `int`, `float`, `numeric`, `string`, `email`, `url`, `date`, `hex`]
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe nicht dem festgelegten Typ entspricht.
 Feld muss nicht ausgefüllt werden | Gibt an, ob die Validierung erfolgreich ist, wenn keine Eingabe stattfindet. 
 
@@ -138,6 +139,6 @@ Feld muss nicht ausgefüllt werden | Gibt an, ob die Validierung erfolgreich ist
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
-Names |  Namen der Tabellenfelder, die für die Überprüfung herangezogen werden, bspw. `id`, `customer_id`, `email,email_verified`
+Names |  Namen der Tabellenfelder, die für die Überprüfung herangezogen werden, z.B. `id`, `customer_id`, `email,email_verified`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe bereits in einem anderen Datensatz existiert.
 Tabelle [opt] | Name der Tabelle, in der die Felder durchsucht werden.

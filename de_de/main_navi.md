@@ -9,7 +9,6 @@
 	- [Optionen einer Tabelle](table_manager_optionen.md)
 	- [Feldtypen](table_manager_feldtypen.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
 	- [Validierungen](table_manager_validierungen.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
-	- [Formularcode exportieren / importieren](table_manager_export_import.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
 	- [Anhang: be_relation](table_manager_feldtypen_be-relation.md) <sup><b>in Bearbeitung</b></sup>  <sup><i>alexplusde</i></sup>
 - YForm-Modul (Ausgabe)
 	- [Allgemein](yform_modul_allgemein.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
