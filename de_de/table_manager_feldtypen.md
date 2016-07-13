@@ -81,14 +81,14 @@ Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewäh
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrfachauswahl` als select-Feld aktiviert wurde. 
-Filter | Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be_manager_relation.md) erläutert werden. Vorab: [Diskussion auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/12)
+Filter | Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be-manager-relation.md) erläutert werden. Vorab: [Diskussion auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/12)
 Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, bspw. `rex_project_news_tags`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 > Tipp für Anfänger: Um die verknüpften Datensätze im Frontend auszugeben, wird eine SELECT-Abfrage mit einem `JOIN` benötigt.
 
-> Tipp: Details zu den umfangreichen Einstellungsmöglichkeiten gibt's in der nächsten Version der Doku unter [be_relation-Tutorial](table_manager_feldtypen_be_manager_relation.md).
+> Tipp: Details zu den umfangreichen Einstellungsmöglichkeiten gibt's in der nächsten Version der Doku unter [be_relation-Tutorial](table_manager_feldtypen_be-manager-relation.md).
 
 <a name="be_media"></a>
 ## be_media
