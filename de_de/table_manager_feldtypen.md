@@ -40,7 +40,7 @@ Ein Redaxo-Feld, um einen <b>Redaxo-Artikel</b> auszuwählen.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `article_id`, `page_id`, `link_id`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Redaxo-Artikel`, `Seite`, `Link`
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
@@ -55,7 +55,7 @@ Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer 
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein. 
 Name | Name des Felds in der Datenbank, bspw. `article_id`, `person_id`, `link_id`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. die Bezeichnung der Ziel-Tabelle
 Ziel-Tabelle | Name der Tabelle, deren Datensätze referenziert werden.
@@ -86,7 +86,7 @@ Wert in der Datenbank:
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `image`, `attachment`, `file`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Bild`, `Anhang`, `Datei`
 Defaultwert | Datei aus dem Medienpool, mit der das Eingabfeld vorausgefüllt wird, bspw. `mueller.jpg`, `preisliste.pdf` 
@@ -101,7 +101,7 @@ Ein Redaxo-Feld, um ein oder mehrere <b>Medienpool-Dateien</b> auszuwählen.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `images`, `attachments`, `files`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Bilder`, `Anhänge`, `Dateien`
 Preview (0/1) (opt) | Zeigt eine Bildvorschau an, wenn die Datei in der be_medialist markiert wird.
@@ -118,7 +118,7 @@ Wert in der Datenbank:
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `category_id`, oder `category_ids`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Kategorie`, `Kategorien`, `Navigationspunkt`
 Ignoriere Offline-Kategorien  | Gibt an, ob Offline-Kategorien aus dem Auswahl-Dialogfeld ausgeschlossen werden. 
@@ -139,7 +139,7 @@ Wert in der Datenbank: String / CSV. Felder werden mit Komma abgetrennt, Zeilen 
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `table`, `features`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Info-Tabelle`, `Eigenschaften`
 Anzahl Spalten |  Anzahl der Spalten, die bei der Eingabe zur Verfügung stehen.
@@ -156,7 +156,7 @@ Eine <b>Checkbox</b> mit vordefinierten Werten.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `active`, `online`, `visible`, `hidden`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `aktiviert`, `online`, `sichtbar?`, `ausgeblendet?`
 Werte (0,1) (nicht angeklickt,angeklickt)  | Wert, der in die Datenbank geschrieben wird, bspw. `0,1`, `nein,ja`
@@ -176,7 +176,7 @@ Eine <b>Checkbox</b> mit Werten, die aus einer <b>SQL-Abfrage</b> stammen.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein. 
 Name | Name des Felds in der Datenbank, bspw. `active_languages`, `tags`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Sichtbar in Sprachen`, `Schlagwörter`
 Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, bspw. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
@@ -195,7 +195,7 @@ Eine Reihe von Auswahlfeldern, in der ein <b>Datum</b> (Tag, Monat, Jahr) ausgew
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Datum`, `Beginn der Veranstaltung`
 [Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, bspw. `1980`, `2014`
@@ -218,7 +218,7 @@ Ein unsichtbares Feld, in das ein <b>Zeitstempel</b> gespeichert wird, wenn der 
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `datestamp`, `date_created`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Zeitstempel`, `Beginn der Veranstaltung`
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ###D###.###M###.###Y###`
@@ -234,7 +234,7 @@ Eine Reihe von Auswahlfeldern, in der <b>Datum und Uhrzeit</b> (Tag, Monat, Jahr
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Datum`, `Beginn der Veranstaltung`
 [Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, bspw. `1980`, `2014`
@@ -253,7 +253,7 @@ Ein einfaches Eingabefeld für <b>E-Mail-Adressen.</b>
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `email`, `contact`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `E-Mail`, `Kontakt-Mail-Adresse`
 Defaultwert | E-Mail-Adresse, mit der das Eingabfeld vorausgefüllt wird, bspw. `max@mustermann.de`, `jane@smith.com` 
@@ -269,7 +269,7 @@ Ein Feld *ohne* Eingabemöglichkeit.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank
 Bezeichnung | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -283,7 +283,7 @@ Ein Fieldset gruppiert Formularfelder.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `fieldset_product`, `fieldset_details`,
 Bezeichnung | Titel des Fieldsets, das im `<legend />`-Tag notiert wird. bspw. `Produktinfos`, `Details`
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -296,7 +296,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `price`, `fee`.
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Preis in EUR`, `Gebühr`
 Nachkommastellen | Anzahl der erlaubten Stellen nach dem Komma, bspw. `1`, `5`, `42`
@@ -312,7 +312,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Bezeichnung | 
 Input-Feld | 
@@ -327,7 +327,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein. 
 Name | Name des Felds in der Datenbank, bspw. `info`, `code`.
 HTML | HTML-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -338,7 +338,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Felder | 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
@@ -351,7 +351,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `price`, `quantity`.
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Preis in EUR`, `Anzahl`
 Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, bspw. `1`, `5`, `42` 
@@ -364,7 +364,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Label | 
 Bezeichnung | 
 Maximale Größe in Kb oder Range 100,500 | 
@@ -382,7 +382,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `php`, `code`.
 HTML | PHP-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -393,7 +393,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `prio`, `ranking`, `order`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Priorität`, `Rang`, `Reihenfolge`
 Anzeige | Feld(er), die in der Auswahl-Box angezeigt werden, bspw. `name`, `title`, `isbn`
@@ -409,7 +409,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Bezeichnung | 
 Selectdefinition, kommasepariert | 
@@ -423,7 +423,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Bezeichnung | 
 Selectdefinition, kommasepariert | 
@@ -439,7 +439,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Bezeichnung | 
 Query mit "select id, name from .." | 
@@ -459,7 +459,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Bezeichnungen (kommasepariert) | 
 Werte (optional, kommasepariert) | 
@@ -478,7 +478,7 @@ Input-Feld zur Eingabe eines Textes.
 
 Option | Erläuterung
 ------ | ------ 
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `name`, `prename`, `title`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Name`, `Vorname`, `Titel`
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
@@ -494,7 +494,7 @@ Wert in der Datenbank: String, bspw. `Musterfirma`, `Paul`, `Musterprojekt`
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. "text", "description", "message"
 Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. "Text", "Beschreibung", "Nachricht"
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, bspw. `Geben Sie hier Ihre Nachricht ein`
@@ -510,7 +510,7 @@ Eine Reihe von Auswahlfeldern, in der die <b>Uhrzeit</b> (Stunden, Minuten, Seku
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `time`, `time_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Uhrzeit`, `Beginn der Veranstaltung`
 [Stundenraster] | optional: Kommagetrennte Liste an Stunden, die für den Nutzer zur Auswahl stehen sollen, bspw. `0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23`
@@ -525,7 +525,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Label | 
 Bezeichnung | 
 Maximale Größe in Kb oder Range 100,500 | 
@@ -545,7 +545,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | 
 Bezeichnung | 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
