@@ -50,8 +50,8 @@ Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `name`, `email`, `phone`, `zip`
-Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `project_is_customer` ruft `project_is_customer($value)` auf. ###todo### (stimmt das so?)
-Weitere Parameter | ###todo###
+Name der Funktion | Funktion, die den Wert überprüfen soll
+Weitere Parameter |
 Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabewert liefert.
 
 <a name="email"></a>
