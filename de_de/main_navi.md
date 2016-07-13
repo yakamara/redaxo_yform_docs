@@ -2,7 +2,7 @@
 
 - YForm
 	- [Einführung](main_intro.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
-	- [Yform-Formbuilder](yform_formbuilder.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
+	- [Yform-Formbuilder](yform_formbuilder.md)
 	- [Plugins](yform_plugins.md) <sup><b>offen</b></sup>
 - Table Manager
 	- [Grundprinzip](table_manager_grundprinzip.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
@@ -14,7 +14,7 @@
 - YForm-Modul (Ausgabe)
 	- [Allgemein](yform_modul_allgemein.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Verzeichnis-Struktur](yform_modul_struktur.md) <sup><b>offen</b></sup>
-	- [Objparams](yform_modul_objparams.md) <sup><b>Fertig</b></sup> <sup><i>polarpixel</i></sup>
+	- [Objparams](yform_modul_objparams.md)
 	- [Values](yform_modul_values.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
 	- [Validates](yform_modul_validates.md) <sup><b>Fertig</b></sup> <sup><i>goldfischpeter</i></sup>
 	- [Actions](yform_modul_actions.md) <sup><b>Fertig</b></sup> <sup><i>goldfischpeter</i></sup>
@@ -28,6 +28,6 @@
 
 **Credits**
 
-- alexplusde (Alexander Walther)
-- goldfischpeter (Peter Wolfrum)
-- polarpixel (Peter Bickel)
+alexplusde (Alexander Walther)  
+goldfischpeter (Peter Wolfrum)  
+polarpixel (Peter Bickel)
