@@ -5,7 +5,7 @@
 	- [Yform-Formbuilder](yform_formbuilder.md)
 	- [Plugins](yform_plugins.md) <sup><b>offen</b></sup>
 - Table Manager
-	- [Grundprinzip](table_manager_grundprinzip.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
+	- [Grundprinzip](table_manager_grundprinzip.md)
 	- [Optionen einer Tabelle](table_manager_optionen.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
 	- [Feldtypen](table_manager_feldtypen.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
 	- [Validierungen](table_manager_validierungen.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
