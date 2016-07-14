@@ -1,25 +1,34 @@
 # YForm-Modul: Validierung
 
-- [Zweck der Validierungen](#zweck-der-validierungen)
-- [Validierungs-Klassen](#validierungs-klassen)
+> ## Inhalt
+> - [Zweck der Validierungen](#zweck-der-validierungen)
+> - [Validierungs-Klassen](#validierungs-klassen)
+> 	- [compare](#compare)
+> 	- [compare_value](#compare-value)
+> 	- [customfunction](#customfunction)
+> 	- [email](#email)
+> 	- [empty](#empty)
+> 	- [intfromto](#intformto)
+> 	- [labelexist](#labelexist)
+> 	- [preg_match](#preg_match)
+> 	- [size](#size)
+> 	- [size_range](#size_range)
+> 	- [type](#type)
+> 	- [unique](#unique)
 
 	
-
+<a name="zweck-der-validierungen"></a>
 ## Zweck der Validierungen
 
-mit diesen Feldklassen lassen sich Feldklassen-Values überprüfen und eine entsprechende Warnung ausgeben.
-Diese Feldklassen werden wie Values und Aktionen im Formbuilder im Feld "Felddefinitonen" eingetragen.
+Mit diesen Klassen lassen sich Values überprüfen. Bei einer negativen Validierung wird eine entsprechende Warnung ausgegeben.
 
-Dabei wird von einer Feldklasse Values das Label definiert, welche validiert werden soll.
+Die Validate-Feldklassen werden wie Values und Actions im Formbuilder im Feld `Felddefinitonen` eingetragen. Dabei muss immer der Name der Value-Feldklasse angegeben, der validiert werden soll.
 
-Die Klassen sind hier zu finden
+Die Validate-Klassen sind hier zu finden:
 
 	src/addons/yform/lib/yform/validate/
 
-
-Beispiele (Schreibweisen) gibt es für **yForm Formbuilder** und **PHP**
-
-Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
+Die PHP-Beispiele können in diesem Basis-Formular getestet/eingesetzt werden:
 
 	<?php
 	$yform = new rex_yform();
@@ -31,162 +40,121 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	echo $yform->getForm();
 	?>
 
-
-
+<a name="validierungs-klassen"></a>
 ## Validierungs-Klassen
 
-###compare
-vergleicht zwei Felder mit Hilfe Operatoren
+<a name="compare"></a>
+### compare
 
-#####Definition
+Vergleicht zwei Felder mit Hilfe von Operatoren.
+
+	// allgemeine Definition
 	validate|compare|label1|label2|[!=,<,>,==,>=,<=]|warning_message|
 
-	_
-#####Beispiel Formbuilder
+	// im YForm-Formbuilder
 	text|wert1|Wert 1|
 	text|wert2|Wert 2|
 	validate|compare|wert1|wert2|!=|Die beiden Felder haben unterschiedliche Werte|
 
-#####Beispiel PHP
+	// in PHP
 	$yform->setValueField('text', array("wert1","Wert 1"));
 	$yform->setValueField('text', array("wert2","Wert 2"));
 	$yform->setValidateField('compare', array("wert1","wert2","!=", "Die Felder haben unterschiedliche Werte"));
 	
+> **Hinweis:** Mögliche Vergleichs-Operatoren sind `!=`, `<`, `>`, `==`, `>=`und `<=`
 
-* [mögliche Vergleichs-Operatoren] !=, <, >, ==, >= <=
+<a name="compare-value"></a>
+### compare_value
 
-	
-	
-	
-	
-	
-	
-	
--
-###compare_value
-vergleicht Feld mit angegebenen Wert mit Hilfe Operatoren
+Vergleicht ein Feld mit einem angegebenen Wert mit Hilfe von Operatoren.
 
-#####Definition
+	// Definition
 	validate|compare_value|label|value|[!=,<,>,==,>=,<=]|warning_message
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|wert1|Wert 1|
 	validate|compare_value|wert1|2|<|Der Wert ist kleiner als 2!|
 
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("wert1","Wert 1"));
 	$yform->setValidateField('compare_value', array("wert1","wert2","<", "Der Wert ist kleiner als 2!"));
 	
+> **Hinweis:** Mögliche Vergleichs-Operatoren sind `!=`, `<`, `>`, `==`, `>=` und `<=`
 
-* [mögliche Vergleichs-Operatoren] !=, <, >, ==, >= <=
+<a name="customfunction"></a>
+### customfunction
 
-	
-	
-	
-	
-	
-	
-	
--
-###customfunction
-es können eigenen Überprüfungen via Funktion oder Klasse/Methode durchgeführt werden
+Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgeführt werden.
 
-#####Definition
+	// Definition
 	validate|customfunction|label|[!]function/class::method|weitere_parameter|warning_message
-		
-#####Beispiel Formbuilder
-
-#####Beispiel PHP
-
 	
--
-###email
-überprüft ob Feld eine E-Mail-Adresse ist. Ein leere Eingabe würde dabei als korrekt bewertet werden!
+<a name="email"></a>
+### email
 
-#####Definition
+Überprüft, ob die Feldeingabe eine E-Mail-Adresse ist. Ein leere Eingabe würde dabei als korrekt bewertet werden! Es empfiehlt sich also eine zusätzliche Validiierung mit `empty`.
+
+	// Definition
 	validate|email|emaillabel|warning_message
 	
-#####Beispiel Formbuilder
-	
+	// Im YForm-Formbuilder
 	text|email|E-Mail|
 	validate|email|email|Das Feld enthält keine korrekte E-Mail-Adresse!
 
-#####Beispiel PHP
+	II In PHP
 	$yform->setValueField('text', array("email","E-Mail"));
 	$yform->setValidateField('email', array("email", "Das Feld enthält keine korrekte E-Mail-Adresse!"));
 
-	
-	
-	
-	
-	
-	
-	
--
-###empty
-überprüft das Feld mit dem angegebenen Label, ob ein Wert eingetragen wurde und gibt ein Meldung aus
+<a name="empty"></a>
+### empty
 
-#####Definition
+Überprüft, ob im Feld ein Wert eingetragen wurde und gibt ein Meldung aus.
 
+	// Definition
 	validate|empty|label|Meldung
 
-#####Beispiel Formbuilder
-
+	// Im YForm-Formbuilder
 	text|name|Nachname|
 	validate|empty|name|Bitte geben Sie einen Namen an!
 
-#####Beispiel PHP
+	// In PHP
 
 	$yform->setValueField('text', array("name","Nachname"));
 	$yform->setValidateField('empty', array("name","Bitte geben Sie einen Namen an!"));
 
-	
-	
-	
-	
-	
-	
-	
--
-###existintable (wird nicht mehr fortgeführt)
+<a name="existintable"></a>
+### existintable (wird nicht mehr fortgeführt)
+
+Überprüft, ob ein Feld in einer Tabelle existiert.
  
-#####Definition
+	// Definition
 	validate|existintable|label,label2|tablename|feldname,feldname2|warning_message
- 
-#####Beispiel Formbuilder
- 	
- 
-#####Beispiel PHP
- 
--
-####intformto
-überprüft ob **Wert** der Eingabe größer oder kleiner als die definierten Werte sind
-#####Definition
+
+<a name="infromto"></a>  
+### intfromto
+
+Überprüft ob der **Wert** der Eingabe größer oder kleiner als die definierten Werte sind.
+
+	// Definition
 	validate|intfromto|label|from|to|warning_message
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|wert|Wert
 	validate|intfromto|wert|2|4|Der Wert ist kleiner als 2 und größer als 4! 
 
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("wert","Wert"));
 	$yform->setValidateField('intfromto', array("wert","2", "4", "Der Wert ist kleiner als 2 und größer als 4! "));
 
-	
-	
-	
-	
-	
-	
-	
--
-###labelexist
-überprüft, ob ein oder mehrere Felder weniger als den Minimal-Wert oder mehr als den Maximal-Wert enthalten
-#####Definition
+<a name="labelexist"></a>
+### labelexist
 
+Überprüft mit einem Minimal- und Maximalwert, ob eine bestimmte Menge an Feldern ausgefüllt wurden.
+
+	// Definition
 	validate|labelexist|label,label2,label3|[minlabels]|[maximallabels]|Fehlermeldung
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|vorname|Vorname|
 	text|name|Nachname|
 	text|email|E-Mail|
@@ -194,125 +162,101 @@ es können eigenen Überprüfungen via Funktion oder Klasse/Methode durchgeführ
 	
 	validate|labelexist|vorname,name,tel|1|2|Fehlermeldung
 
-
-#####Beispiel PHP
-	$yform->setValueField('text', array("vorname","Vorname"));
+	In PHP	$yform->setValueField('text', array("vorname","Vorname"));
 	$yform->setValueField('text', array("name","Nachname"));
 	$yform->setValueField('text', array("email","E-Mail"));
 	$yform->setValueField('text', array("tel","Telefon"));
 	
-	$yform->setValidateField('labelexist', array("vorname, name, tel","1", "2", "Fehlermeldung"));
+	$yform->setValidateField('labelexist', array("vorname, name, tel", "1", "2", "Fehlermeldung"));
+	
+	// Hier in diesem Beispiel müssen von den drei Feldern mindestens 1 und maximal 2 ausgefüllt werden
 
+> Hinweis:  
+> * `minlabels` ist optional und hat den Defaultwert 1.  
+> * `maximallabels` ist optional und den Defaultwert 1000.
 
-* [minlabels] optinal, default 1
-* [maximallabels] optinal, default 1000
+<a name="preg_match"></a>
+### preg_match
 
-	
-	
-	
-	
-	
-	
--	
-###preg_match
-überprüft die Eingabe auf die hinterlegten Regeln
-#####Definition
+Überprüft die Eingabe auf die hinterlegten Regex-Regeln.
+
+	// Definition
 	validate|preg_match|label|/[a-z]/i|warning_message
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|eingabe|Eingabe
-	validate|preg_match|eingabe|/[a-z]+/|Es dürfen nur ein oder mehrere kleingeschriebene 	Buchstaben eingegeben werden!
+	validate|preg_match|eingabe|/[a-z]+/|Es dürfen nur ein oder mehrere klein geschriebene 	Buchstaben eingegeben werden!
 
-
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("eingabe","Eingabe"));
-	$yform->setValidateField('preg_match', array("eingabe","/[a-z]+/", "Es dürfen nur ein oder mehrere kleingeschriebene 	Buchstaben eingegeben werden!"));
+	$yform->setValidateField('preg_match', array("eingabe","/[a-z]+/", "Es dürfen nur ein oder mehrere klein geschriebene Buchstaben eingegeben werden!"));
 
-	
-	
-	
-	
-	
-	
--	
-###size
-überprüft die Eingabe eines Feldes auf die angegebene Zeichenlänge
-#####Definition
+<a name="size"></a>
+### size
+
+Überprüft die Eingabe eines Feldes auf genau die angegebene Zeichenlänge.
+
+	// Definition
 	validate|size|plz|[size]|warning_message
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|plz|PLZ
 	validate|size|plz|5|Die Eingabe hat nicht die korrekte Zeichenlänge!
 
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("plz","PLZ"));
 	$yform->setValidateField('size', array("plz","5", "Die Eingabe hat nicht die korrekte Zeichenlänge!"));
 
+> **Hinweis:** `size` ist eine Zahl und meint die Zeichenlänge.
 
-* [size] Zahl, Zeichenlänge
+<a name="size_range"></a>
+### size_range
 
-	
-	
-	
-	
-	
-	
--	
-###size_range
-überprüft die Eingabe eines Feldes auf die angegebene **Zeichenlänge**, die zwischen dem Minimal- und Maximalwert liegt
-#####Definition
+Überprüft die Eingabe eines Feldes auf die angegebene **Zeichenlänge**, die zwischen dem Minimal- und Maximalwert liegt
+
+	// Definition
 	validate|size_range|label|[minsize]|[maxsize]|Fehlermeldung
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|summe|Summe
 	validate|size_range|summe|3|10|Die Eingabe hat nicht die korrekte Zeichenlänge (mind. 3, max 10 Zeichen)!
 
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("summe","Summe"));
 	$yform->setValidateField('size_range', array("summe", "3", "10", "Die Eingabe hat nicht die korrekte Zeichenlänge (mind. 3, max 10 Zeichen)!"));
 
+<a name="type"></a>
+### type
+
+Überprüft den Typ der Eingabe.
+
+	// Definition
+	validate|type|label|[int,float,numeric,string,email,url,date,datetime]|Fehlermeldung|[1 = Feld darf auch leer sein]	
 	
-	
-	
-	
-	
-	
--	
-###type
-überprüft den Typ der Eingabe
-#####Definition
-	validate|type|label|[int,float,numeric,string,email,url,date,datetime]|Fehlermeldung|[1= Feld darf auch leer sein]	
-	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|wert|Wert
 	validate|type|wert|numeric|Die Eingabe ist keine Nummer!
 
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("wert","Wert"));
 	$yform->setValidateField('type', array("wert", "numeric", "Die Eingabe ist keine Nummer!"));
 
-	
-	
-	
-	
-	
-	
--	
-###unique
-überprüft, ob ein Datensatz mit einem Feld-Wert, in einer Tabelle bereits vorhanden ist
-#####Definition
+<a name="type"></a>
+### unique
+
+Überprüft, ob ein Datensatz mit einem bestimmten Feld-Wert bereits in einer Datenbank-Tabelle vorhanden ist.
+
+	// Definition
 	validate|unique|dbfeldname[,dbfeldname2]|Dieser Name existiert schon|[table]
 	
-#####Beispiel Formbuilder
+	// Im YForm-Formbuilder
 	text|email|E-Mail|
 	validate|unique|email|Ein User mit dieser E-Mail-Adresse existiert schon!|rex_user
 
-#####Beispiel PHP
+	// In PHP
 	$yform->setValueField('text', array("email","E-Mail"));
 	$yform->setValidateField('unique', array("email", "Ein User mit dieser E-Mail-Adresse existiert schon!|rex_user"));
 
-	
-
-
-* [table] wenn Tabellenname angegeben ist, wird der Tabellenname der im Formbuilder ausgewählt wurde übernommen.
-* dbfeldname: es können mehrere Feldname überprüft werden (kommagetrennt)
+> **Hinweise:**  
+> * `table`: Wenn kein Tabellenname angegeben ist, wird der Tabellenname verwendet, der im Formbuilder ausgewählt wurde.  
+> * `dbfeldname`: Es können mehrere Feldname überprüft werden (kommagetrennt).

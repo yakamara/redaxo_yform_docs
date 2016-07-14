@@ -1,26 +1,27 @@
 # YForm-Modul: Objparams
 
-- [Zweck der Objparams](#zweck-der-objparams)
-- [Allgemeine Objparams des Formular](#allgemeine-objparams)
-	- [Formular anzeigen](#formular-anzeigen)
-	- [Eindeutige Namen für Felder](#eindeutige-namen)
-	- [CSS-ID für Formular](#css-id-formular)
-	- [CSS-Klasse für Formular](#css-klasse-formular)
-	- [CSS-ID für den HTML-Wrapper](#css-id-wrapper)
-	- [CSS-Klasse für den HTML-Wrapper](#css-klasse-wrapper)
-	- [Ausgabe der Label](#ausgabe-label)
-- [Objparams zur Formular-Optik](#objparams-optik)
-	- [Themes](#themes)
-	- [Antworttext](#antworttext)
-	- [Submit-Button benennen](#submit-benennen)
-	- [Submit-Button anzeigen](#submit-anzeigen)
-	- [CSS-Klasse für Fehler](#css-klasse-fehler)
-	- ["Echte" Feldnamen](#echte-feldnamen)
-- [Objparams zum Formularversand](#objparams-formularversand)
-	- [Versandmethode des Formulars](#versandmethode)
-	- [Zieladresse des Formulars](#zieladresse)
-	- [Sprunganker](#sprunganker)
-	- [Formular anzeigen nach Abschicken](#formular-anzeigen-nach-abschicken)
+> ## Inhalt
+> - [Zweck der Objparams](#zweck-der-objparams)
+> - [Allgemeine Objparams des Formular](#allgemeine-objparams)
+>	- [Formular anzeigen](#formular-anzeigen)
+>	- [Eindeutige Namen für Felder](#eindeutige-namen)
+>	- [CSS-ID für Formular](#css-id-formular)
+>	- [CSS-Klasse für Formular](#css-klasse-formular)
+>	- [CSS-ID für den HTML-Wrapper](#css-id-wrapper)
+>	- [CSS-Klasse für den HTML-Wrapper](#css-klasse-wrapper)
+>	- [Ausgabe der Label](#ausgabe-label)
+> - [Objparams zur Formular-Optik](#objparams-optik)
+>	- [Themes](#themes)
+>	- [Antworttext](#antworttext)
+>	- [Submit-Button benennen](#submit-benennen)
+>	- [Submit-Button anzeigen](#submit-anzeigen)
+>	- [CSS-Klasse für Fehler](#css-klasse-fehler)
+>	- ["Echte" Feldnamen](#echte-feldnamen)
+> - [Objparams zum Formularversand](#objparams-formularversand)
+>	- [Versandmethode des Formulars](#versandmethode)
+>	- [Zieladresse des Formulars](#zieladresse)
+>	- [Sprunganker](#sprunganker)
+>	- [Formular anzeigen nach Abschicken](#formular-anzeigen-nach-abschicken)
 
 
 ## Zweck der Objparams
@@ -55,7 +56,7 @@ Die **allgemeine Syntax** für das Setzen eines objparams lautet so:
 	// In PHP
 	$xform->setObjectparams('form_show','1');
 
-Mit dem Wert `0` wird das Formular nach dem Abschicken nicht angezeigt. Dieses Ausblenden benötigt man, wenn man eine Formulaktion auslösen will, aber kein sichtbares Formular haben möchte. **Beispiel:** Ein User wird durch den Aufruf einer bestimmten URL freigeschaltet.
+Mit dem Wert `0` wird das Formular nach dem Abschicken nicht angezeigt. Dieses Ausblenden benötigt man, wenn man eine Formulaktion auslösen will, aber kein sichtbares Formular haben möchte. **Beispiel:** Ein User wird durch den Aufruf einer bestimmten URL freigeschaltet.  
 Der Defaultwert ist `1` (anzeigen).
 
 <a name="eindeutige namen"></a>
@@ -67,71 +68,71 @@ Der Defaultwert ist `1` (anzeigen).
 	// In PHP
 	$xform->setObjectparams('form_name','zweites_formular');
 
-Wenn man mehrere Formulare auf einer Seite verwenden möchte, muss der `form_name` für jedes Formular verschieden sein. Der hier gewählte Name wird bei jedem Feld eines Formulars dem Namen und der ID hinzugefügt, so erhält man eine Eindeutigkeit.
+Wenn man mehrere Formulare auf einer Seite verwenden möchte, muss der `form_name` für jedes Formular verschieden sein. Der hier gewählte Name wird bei jedem Feld eines Formulars dem Namen und der ID hinzugefügt, so erhält man eine Eindeutigkeit.  
 Der Defaultwert ist `formular`.
 
 <a name="css-id-formular"></a>
 ### CSS-ID für Formular
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_id|contact_form
 
 	// In PHP
 	$xform->setObjectparams('form_id','contact_form');
 
-Damit kann dem Formular eine individuelle CSS-ID vergeben werden.
+Damit kann dem Formular eine individuelle CSS-ID vergeben werden.  
 Default-Ausgabe:
 `<form id="form_formular">`
 
 <a name="css-klasse-formular"></a>
 ### CSS-Klasse für Formular
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_class|contact_form
 
 	// In PHP
 	$xform->setObjectparams('form_class','contact_form');
 
-Damit kann dem Formular eine individuelle CSS-Klasse vergeben werden.
+Damit kann dem Formular eine individuelle CSS-Klasse vergeben werden.  
 Default-Ausgabe:
 `<form class="rex-xform">`
 
 <a name="css-id-wrapper"></a>
 ### CSS-ID für den HTML-Wrapper
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_wrap_id|contact_form
 
 	// In PHP
 	$xform->setObjectparams('form_wrap_id','contact_form');
 
-Damit kann dem das Formular umgebenden Container eine individuelle CSS-ID vergeben werden.
+Damit kann dem das Formular umgebenden Container eine individuelle CSS-ID vergeben werden.  
 Default-Ausgabe:
 `<form id="xform">`
 
 <a name="css-klasse-wrapper"></a>
 ### CSS-Klasse für den HTML-Wrapper
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_wrap_class|contact_form
 
 	// In PHP
 	$xform->setObjectparams('form_wrap_class','contact_form');
 
-Damit kann dem das Formular umgebenden Container eine individuelle CSS-Klasse vergeben werden.
+Damit kann dem das Formular umgebenden Container eine individuelle CSS-Klasse vergeben werden.  
 Default-Ausgabe:
 `<form class="xform">`
 
 <a name="ausgabe-label"></a>
 ### Ausgabe der Label
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_label_type|html
 
 	// In PHP
 	$xform->setObjectparams('form_label_type','html');
 
-Wenn man den Wert hier auf `plain` setzt, werden die Feld-Label nicht als HTML interpretiert, sondern mit `htmlspecialchars` und `nl2br` maskiert.
+Wenn man den Wert hier auf `plain` setzt, werden die Feld-Label nicht als HTML interpretiert, sondern mit `htmlspecialchars` und `nl2br` maskiert.  
 Default ist `html`.
 
 ---
@@ -142,7 +143,7 @@ Default ist `html`.
 <a name="themes"></a>
 ### Themes
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_skin|classic
 
 	// In PHP
@@ -154,7 +155,7 @@ Der Defaultwert lautet `bootstrap`, d.h. als Basis-Theme ist das HTML-Schema des
 <a name="antworttext"></a>
 ### Antworttext
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|answertext|<p>Das Formular wurde abgeschickt.</p>
 
 	// In PHP
@@ -165,7 +166,7 @@ Hier kann ein optionaler Antworttext definiert werden, der nach dem Abschicken a
 <a name="submit-benennen"></a>
 ### Submit-Button benennen
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|submit_btn_label|Formular senden
 
 	// In PHP
@@ -176,29 +177,29 @@ Damit kann die Standard-Button-Beschriftung `Abschicken` verändert werden.
 <a name="submit-anzeigen"></a>
 ### Submit-Button anzeigen
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|submit_btn_show|0
 
 	// In PHP
 	$xform->setObjectparams('submit_btn_show',0);
 
-Mit dem Wert `0` wird der Standard-Submit-Button versteckt. Dies ist zum Beispiel sinnvoll, wenn man eigene Buttons definiert hat.
+Mit dem Wert `0` wird der Standard-Submit-Button versteckt. Dies ist zum Beispiel sinnvoll, wenn man eigene Buttons definiert hat.  
 Default ist `1` (Anzeigen).
 
 <a name="css-klasse-fehler"></a>
 ### CSS-Klasse für Fehler
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|error_class|my_form_error
 
 	// In PHP
 	$xform->setObjectparams('error_class','my_form_error');
 
-Diese individuelle CSS-Klasse kommt an zwei Stellen zum Tragen:
-1. im Container mit den Fehlerhinweisen zu Beginn des Formulars:
-`<div class="alert alert-danger my_form_error">`
-2. im Container aller Felder, die bei einer Validierung fehlschlagen:
-`<div class="form-group yform-element my_form_error">`.
+Diese individuelle CSS-Klasse kommt an zwei Stellen zum Tragen:  
+1. im Container mit den Fehlerhinweisen zu Beginn des Formulars:  
+`<div class="alert alert-danger my_form_error">`  
+2. im Container aller Felder, die bei einer Validierung fehlschlagen:  
+`<div class="form-group YForm-element my_form_error">`.  
 So kann man sowohl Label als auch Feld als fehlerhaft formatieren.
 
 Die Default-CSS-Klasse ist `form_warning`.
@@ -206,13 +207,13 @@ Die Default-CSS-Klasse ist `form_warning`.
 <a name="echte-feldnamen"></a>
 ### "Echte" Feldnamen
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|real_field_names|1
 
 	// In PHP
 	$xform->setObjectparams('real_field_names',1);
 
-Mit dem auf `1 gesetzten Wert werden exakt die Feldnamen im Formular genommen, die auch in der Formulardefinition gesetzt wurden. Der Feldname lautet dann z.B. nicht mehr `name="FORM[formular][2]"`, sondern `name=vorname`.
+Mit dem auf `1` gesetzten Wert werden exakt die Feldnamen im Formular genommen, die auch in der Formulardefinition gesetzt wurden. Der Feldname lautet dann z.B. nicht mehr `name="FORM[formular][2]"`, sondern `name=vorname`.  
 Der Default-Wert ist `0`.
 
 ---
@@ -223,47 +224,47 @@ Der Default-Wert ist `0`.
 <a name="versandmethode"></a>
 ### Versandmethode des Formulars
 
-	// Im Yform-Formbuilder`
+	// Im YForm-Formbuilder`
 
 
 	// In PHP
 	$xform->setObjectparams('form_method','get');
 
-Mit dem Wert `get` wir die Versandmethode auf get geändert, d.h. alle Feldwerte sind in der URL enthalten.
-Der Defaultwer ist `post`.
+Mit dem Wert `get` wir die Versandmethode auf get geändert, d.h. alle Feldwerte sind als get-Paramater in der URL enthalten.  
+Der Defaultwert ist `post`.
 
 <a name="zieladresse"></a>
 ### Zieladresse des Formulars
 
-	// Im Yform-Formbuilder`
+	// Im YForm-Formbuilder`
 	objparams|form_action|zielseite.html
 
 	// In PHP mit rex_getUrl() auf die Artikel-ID 5
 	$xform->setObjectparams('form_action',rex_getUrl(5));
 
-Als Ziel nach dem Abschicken kann eine andere Adresse definiert werden, z.B. für eine ausführliche Danke-Seite.
-Der Defaultwert ist `index.php`, bzw. die URL der Formularseite. Wird im Normalfall auf die aktuelle Artikel ID gesetzt
+Als Ziel nach dem Abschicken kann eine andere Adresse definiert werden, z.B. für eine ausführliche Danke-Seite. Es könnte auch die aktuelle Artikel-ID gesetzt weden, ergänzt um weitere Parameter.  
+Der Defaultwert ist `index.php`, bzw. die URL der Formularseite.
 
 <a name="sprunganker"></a>
 ### Sprunganker
 
-	// Im Yform-Formbuilder
+	// Im YForm-Formbuilder
 	objparams|form_anchor|my_form
 
 	// In PHP
 	$xform->setObjectparams('my_form');
 
-Wenn sich ein Formular weiter unten auf der Seite befindet, sieht man nach dem Abschicken zunächst keine Erfolgs- oder Fehlermeldung. Über den `form_anchor`lässt sich ein Sprunganker definieren, der in der  URL nach dem Abschicken angehängt wird, so dass die Seite zum Anker springt. Im Normalfall wird man als Anker die ID des Formulars nutzen.
+Wenn sich ein Formular weiter unten auf der Seite befindet, sieht man nach dem Abschicken zunächst keine Erfolgs- oder Fehlermeldung. Über den `form_anchor`lässt sich ein Sprunganker definieren, der in der  URL nach dem Abschicken angehängt wird, so dass die Seite zum Anker springt. Im Normalfall wird man als Anker die ID des Formulars nutzen.  
 Der Defaultwert ist leer.
 
 <a name="formular-anzeigen-nach-abschicken"></a>
 ### Formular anzeigen nach Abschicken
 
-	// Im Yform-Formbuilder`
+	// Im YForm-Formbuilder`
 	objparams|form_showformafterupdate|1
 
 	// In PHP
 	$xform->setObjectparams('form_showformafterupdate',1);
 
-Mit dem Wert `1` kann das Formular nach dem Versand nochmal anzeigen, zum Beispiel um direkt eine neue Eingabe zu ermöglichen oder die eingegeben Werte erneut zum Verändern anzubieten.
-Default ist `0O (nicht anzeigen).
+Mit dem Wert `1` kann man das Formular nach dem Versand nochmal anzeigen, um zum Beispiel direkt eine neue Eingabe zu ermöglichen oder die eingegebenen Werte erneut zum Verändern anzubieten.  
+Default ist `0` (nicht anzeigen).
