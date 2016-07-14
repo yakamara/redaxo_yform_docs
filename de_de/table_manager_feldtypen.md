@@ -274,9 +274,7 @@ Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, bspw. `datestamp`, `date_created`
-Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, bspw. `Zeitstempel`, `Beginn der Veranstaltung`
-[Anzeigeformat### Y### -### M### -### D### ]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, bspw. `am ### D### .### M### .### Y### `
-Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist. 
+Format [YmdHis/U/dmy/mysql] | Gibt an, in welchem Format der Zeitstempel gespeichert wird
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
