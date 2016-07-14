@@ -1,6 +1,12 @@
 # YForm-Modul: Verzeichnis-Struktur
 
-- Verzeichnisstruktur der Dateien erklären, damit man weiß, wo man was findset, wenn man selbst erweitern oder ändern will
+> **Hinweis:** 
+> Dieses Kapitel ist noch in Arbeit ...
+
+Verzeichnisstruktur der Dateien erklären, damit man weiß, wo man was findset, wenn man selbst erweitern oder ändern will.
+
+Struktur:
+
 ```
 lib
    yform
