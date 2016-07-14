@@ -3,7 +3,7 @@
 - YForm
 	- [Einführung](main_intro.md)
 	- [Plugins](yform_plugins.md) <sup><b>offen</b></sup>
-- Table Manager (Veraltung für das Backend)
+- Table Manager (Verwaltung für das Backend)
 	- [Grundprinzip](table_manager_grundprinzip.md)
 	- [Optionen einer Tabelle](table_manager_optionen.md)
 	- [Feldtypen](table_manager_feldtypen.md) <sup><b>in Bearbeitung</b></sup> <sup><i>alexplusde</i></sup>
