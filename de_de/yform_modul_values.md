@@ -376,7 +376,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	hashvalue|name|[title]|field|(md5/sha1/sha512/...)|[salt]|[no_db]
 	
 #####Beispiel Formbuilder
-	_
+	hashvalue|name|[title]|field|(md5/sha1/sha512/...)|[salt]|[no_db]
 	
 #####Beispiel PHP
 	-
@@ -424,6 +424,7 @@ gibt html aus
 	
 		
 ###!!index
+?
 
 #####Definition
 	index|name|label1,label2,label3|[no_db]|[func/md5/sha]	
@@ -439,15 +440,16 @@ gibt html aus
 	
 	
 		
-###!!integer
+###integer
+übergibt nur einen Integer-Wert als Eingabe 
 
 #####Definition
 	integer|name|label|defaultwert|[no_db]	
 #####Beispiel Formbuilder
-	_
-	
+	integer|name|label
+		
 #####Beispiel PHP
-	-
+	$yform->setValueField('integer', array("name", "label"));
 	
 --
 	
@@ -456,7 +458,7 @@ gibt html aus
 	
 		
 ###ip
-übergibt die IP des Users.
+übergibt die IP des Besuchers
 
 #####Definition
 	ip|name|[no_db]
@@ -493,14 +495,15 @@ gibt html aus
 	
 		
 ###!!objparams
+[Beispiele und Erklärung](yform_modul_objparams.md)
 
 #####Definition
 	objparams|key|newvalue|[init/runtime]	
 #####Beispiel Formbuilder
-	_
-	
+
+
 #####Beispiel PHP
-	-
+	
 --
 	
 	
@@ -508,17 +511,17 @@ gibt html aus
 	
 		
 	
-###!!password
-
+###password
+gibt ein Eingabefeld als Typ Passwort aus
 
 #####Definition
 	password|name|label|default_value|[no_db]
 	
 #####Beispiel Formbuilder
-	password|name|label|default_value
+	password|pass|Dein Passwort|
 	
 #####Beispiel PHP
-	$yform->setValueField('password', array("name","label", "default_value"));
+	$yform->setValueField('password', array("pass","Dein Passwort"));
 	
 --
 	
@@ -527,16 +530,16 @@ gibt html aus
 	
 		
 ###php
-
+gibt PHP aus
 
 #####Definition
 	php|name|<?php  ?>
 		
 #####Beispiel Formbuilder
-	php|name|<?php  ?>
+	php|name|<?php echo "redaxo";  ?>
 		
 #####Beispiel PHP
-	$yform->setValueField('php', array("name","<?php  ?>"));
+	$yform->setValueField('php', array("name","<?php echo "redaxo";  ?>"));
 --
 	
 	
@@ -544,6 +547,7 @@ gibt html aus
 	
 		
 ###!!prio
+?
 
 #####Definition
 	prio|name|label|fields|scope|defaultwert	
@@ -589,40 +593,11 @@ definiert eine Gruppe von Radio-Buttons, via einen mySQL-Query
 	
 	
 	
-		
-###readtable
-liest einen Datensatz und übergibt die ausgelesenen Werte in den E-mail value_pool, die einem E-Mail-Template über Platzhalter werden können.
-
-#####Definition
-	readtable|tablename|feldname|label
-	
-#####Beispiel Formbuilder
-	text|name|Name
-	readtable|rex_user|name|name
-	action|tpl2email|testtemplate||info@mustermann.de
-
-
-#####Beispiel PHP
-	$yform->setValueField('text', array("name","Name"));
-	$yform->setValueField('readtable', array("rex_user","name","name"));
-	$yform->setActionField('tpl2email', array("testtemplate","","info@mustermann.de"));
-
-
-	
-liest aus der Tabelle **rex_user** einen Datensatz 
-
-	SELECT * FROM rex_user WHERE name='[eingabe feld name]'
-
-und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adresse:
-
-	
---
-	
-	
 	
 	
 		
 ###!!remembervalues
+?
 
 #####Definition
 	remembervalues|name|label|label1,label2,label3,label4|opt:default:1/0|opt:dauerinsekunden
@@ -690,16 +665,17 @@ definiert ein Auswahlliste, dessen Optionen über einen mySQL-Query gefüllt wer
 	
 	
 		
-###!!showvalue
+###showvalue
+zeigt einenWert mit einem Label in einem <p>-Element an ??
 
 #####Definition
 	showvalue|name|label|defaultwert
 		
 #####Beispiel Formbuilder
-	_
-	
+	showvalue|name|label|defaultwert
+		
 #####Beispiel PHP
-	-
+	$yform->setValueField('showvalue', array("name","label","defaultwert"));
 --
 	
 	
@@ -797,7 +773,7 @@ ermöglicht die Ausgabe zweier Auswahllisten, für die Stunden und Minuten, in d
 	
 	
 	
-###!!uniqueform
+###uniqueform
 
 #####Definition
 	uniqueform|name|table|Fehlermeldung
@@ -814,7 +790,7 @@ ermöglicht die Ausgabe zweier Auswahllisten, für die Stunden und Minuten, in d
 	
 	
 	
-###!!upload
+###upload
 
 #####Definition
 	upload|name | label | Maximale Größe in Kb oder Range 100,500 | endungenmitpunktmitkommasepariert | pflicht=1 | min_err,max_err,type_err,empty_err,delete_file_msg | Speichermodus(upload/database/no_save) | `database`: Dateiname wird gespeichert in Feldnamen | Eigener Uploadordner [optional] | Dateiprefix [optional] |
