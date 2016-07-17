@@ -8,7 +8,7 @@
 	- [Optionen einer Tabelle](table_manager_optionen.md)
 	- [Feldtypen](table_manager_feldtypen.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
 	- [Validierungen](table_manager_validierungen.md) <sup><b>überprüfen</b></sup> <sup><i>alexplusde</i></sup>
-	- [Anhang: be_relation](table_manager_feldtypen_be-manager-relation.md) <sup><b>in Bearbeitung</b></sup>  <sup><i>alexplusde</i></sup>
+	- [Anhang: be_manager_relation](table_manager_feldtypen_be-manager-relation.md) <sup><b>unvollständig</b></sup>  <sup><i>alexplusde</i></sup>
 - YForm-Formbuilder (Modul für das Frontend)
 	- [Allgemein](yform_modul_allgemein.md) <sup><b>in Bearbeitung</b></sup> <sup><i>polarpixel</i></sup>
 	- [Verzeichnis-Struktur](yform_modul_struktur.md) <sup><b>offen</b></sup>
