@@ -538,6 +538,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="select"></a>
 ## select
 
+Ein <b>Auswahlfeld</b> mit vordefinierten Werten.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -554,6 +556,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="select_sql"></a>
 ## select_sql
+
+Ein <b>Auswahlfeld</b> mit Werten, die aus einer <b>SQL-Abfrage</b> stammen.
 
 Option | Erläuterung
 ------ | ------
@@ -577,15 +581,20 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="submits"></a>
 ## submits
 
+Ein oder mehrere <b>Submit-Buttons</b> zum Absenden des Formulars.
+
+> **Wert in der Datenbank**
+> Wert des abgesendeten Buttons, z.B. `Anfrage`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnungen (kommasepariert) | 
-Werte (optional, kommasepariert) | 
+Name | Name des Felds in der Datenbank, z.B. `submits`
+Bezeichnungen (kommasepariert) | Liste an Beschriftungen für die jeweiligen Buttons, z.B. `Anfragen,Kaufen` oder `Rückruf,E-Mail`
+Werte (optional, kommasepariert) | `Anfragen,Kaufen`,`email,phone`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Defaultwert | 
-CSS Klassen (kommasepariert) |
+Defaultwert |  Wert, mit der das Eingabefeld vorausgefüllt wird, z.B. `Anfragen`, `phone` 
+CSS Klassen (kommasepariert) | CSS-Klassen für die jeweiligen Submit-Buttons, z.B. `submit--email,submit--phone`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -616,17 +625,25 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 <a name="textarea"></a>
 ## textarea
 
+Ein <b>mehrzeiliges Eingabefeld</b> für Text.
+
+> **Wert in der Datenbank**
+> Inhalt des Textarea-Feldes
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | Name des Felds in der Datenbank, z.B. "text", "description", "message"
+Name | Name des Felds in der Datenbank, z.B. `text`, `description`, `message`
 Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. "Text", "Beschreibung", "Nachricht"
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, z.B. `Geben Sie hier Ihre Nachricht ein`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-classes | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, z.B., um das Feld im Frontend oder Backend gesondert zu formatieren.
+individuelle Attribute | Im JSON-Format, z.B. `{"class":"redactorEditor2-full","id":"textarea1"}`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+> Tipp:
+> Mit dem Redactor 2 Addon kann das `textarea`-Feld zu einem WYSIWYG-Editor umgewandelt werden.
 
 <a name="time"></a>
 ## time
