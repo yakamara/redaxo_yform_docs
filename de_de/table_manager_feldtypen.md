@@ -230,7 +230,7 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> Tipp: Zum konvertieren des MySQL-Date-Formats in PHP kann
+> Tipp: Zum konvertieren des MySQL-Date-Formats in PHP `date('Y-m-d H:i:s', strtotime($datetime))` verwenden
 
 <a name="datestamp"></a>
 ## datestamp
@@ -467,8 +467,7 @@ Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `php`, `code`.
-HTML | PHP-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
-Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
+PHP Code | PHP-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
