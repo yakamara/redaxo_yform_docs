@@ -56,6 +56,11 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 
 Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer fremden Tabelle zu <b>verknüpfen</b>, z.B. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
+> **Wert in der Datenbank:**
+> ID des verknüpften Datensatzes, z.B. `1`, `5`, `20` oder
+> IDs der verknüpften Datensätze als `SET`, z.B. `1,5,20`, `4,8,12`, `7,10,42` oder
+> leer, wenn eine Relationstabelle angegeben wurde.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
@@ -67,25 +72,23 @@ Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewäh
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrfachauswahl` als select-Feld aktiviert wurde. 
-Filter | Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be-relation.md) erläutert werden.
+Filter | Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be-manager-relation.md) erläutert werden.
 Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, z.B. `rex_project_news_tags`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben. 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**
-> ID des verknüpften Datensatzes, z.B. `1`, `5`, `20` oder
-> IDs der verknüpften Datensätze als `SET`, z.B. `1,5,20`, `4,8,12`, `7,10,42` oder
-> leer, wenn eine Relationstabelle angegeben wurde.
-
 > **Hinweise:**
 > **Tipp für Anfänger:** Um die verknüpften Datensätze im Frontend auszugeben, wird eine SELECT-Abfrage mit einem `JOIN` benötigt.
-> **Tipp:** Details zu den umfangreichen Einstellungsmöglichkeiten gibt's im [be_relation-Tutorial](table_manager_feldtypen_be-relation.md).
+> **Tipp:** Details zu den umfangreichen Einstellungsmöglichkeiten gibt's im [be_relation-Tutorial](table_manager_feldtypen_be-manager-relation.md).
 
 <a name="be_media"></a>
 ## be_media
 
 Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
+
+> **Wert in der Datenbank:**  
+Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
 
 Option | Erläuterung
 ------ | ------
@@ -96,10 +99,6 @@ Defaultwert | Datei aus dem Medienpool, mit der das Eingabefeld vorausgefüllt w
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
-
-> **Wert in der Datenbank:**  
-Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
-
 
 <a name="be_medialist"></a>
 ## be_medialist
