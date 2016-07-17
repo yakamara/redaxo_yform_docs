@@ -63,16 +63,16 @@ Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer 
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, z.B. `article_id`, `person_id`, `link_id`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. die Bezeichnung der Ziel-Tabelle
 Ziel-Tabelle | Name der Tabelle, deren Datensätze referenziert werden.
-Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, z.B. `name`, `prename, ' ', name` oder `name, '(', id, ')'` [Erläuterungen auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/12)
+Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, bspw. `name`, `prename, ' ', name` oder `name, '(', id, ')'`
 Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewählt werden können, entweder in einem select-Feld oder als Popup-Fenster 
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrfachauswahl` als select-Feld aktiviert wurde. 
-Filter | Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be-manager-relation.md) erläutert werden.
+Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be_manager_relation.md) erläutert werden. Vorab: [Diskussion auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/12)
 Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, z.B. `rex_project_news_tags`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben. 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
@@ -124,6 +124,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_select_category"></a>
 ## be_select_category
 
+Ein Redaxo-Feld, um ein oder mehrere <b>Kategorien</b> aus der Struktur auszuwählen.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -143,6 +145,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="be_table"></a>
 ## be_table
+
+Eine Reihe von Eingabefeldern, um <b>tabellarische Daten</b> einzugeben.
 
 > **Wert in der Datenbank:**  
 > JSON-Format (seit YForm 1.1)
@@ -193,7 +197,7 @@ Ein oder mehrere **Checkbox**-Felder mit Werten, die aus einer **SQL-Abfrage** s
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, z.B. `active_languages`, `tags`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Sichtbar in Sprachen`, `Schlagwörter`
 Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, z.B. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
@@ -384,7 +388,7 @@ Gibt <b>HTML-Code</b> an der gewünschten Stelle des Eingabe-Formulars aus.
 
 Option | Erläuterung
 ------ | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
+Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, z.B. `info`, `code`.
 HTML | HTML-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
@@ -536,13 +540,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Selectdefinition, kommasepariert | 
+Name | Name des Felds in der Datenbank, z.B. `options`, `ranking`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Optionen`, `Rang`
+Selectdefinition, kommasepariert | Beschriftung und Wert für die Datenbank, z.B. `Erster=1,Zweiter=2,Dritter=3,disqualifiziert=d`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Defaultwert | 
-Mehrere Felder möglich |
-Höhe der Auswahlbox | 
+Defaultwert | Wert, der beim Aufruf des Formulars vorausgewählt ist, z.B. `3` für `Dritter`
+Mehrere Felder möglich | Gibt an, ob ein oder mehrere Einträge ausgewählt werden können und das Feld als `<select multiple>` dargestellt wird.
+Höhe der Auswahlbox | Anzahl der Einträge, die `<select multiple>` auf einmal anzeigt. 
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -553,21 +557,21 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Query mit "select id, name from .." | 
-Defaultwert (opt.) | 
+Name | Name des Felds in der Datenbank, z.B. `clang_id`, `type`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Sprache`, `Typ`
+Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, z.B. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
+Defaultwert (opt.) | Wert, der beim Aufruf des Formulars vorausgewählt ist, z.B. `3` für `Dritter`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Leeroption  |
-Text bei Leeroption (Bitte auswählen) |
-Mehrere Felder möglich | 
-Höhe der Auswahlbox |  
+Leeroption  | Gibt an, ob es einen Eintrag "Ohne Auswahl" gibt.
+Text bei Leeroption (Bitte auswählen) | Beschriftung des Leeroption-Eintrags, z.B. `Bitte auswählen` oder `keine Auswahl`
+Mehrere Felder möglich | Gibt an, ob ein oder mehrere Einträge ausgewählt werden können und das Feld als `<select multiple>` dargestellt wird.
+Höhe der Auswahlbox | Anzahl der Einträge, die `<select multiple>` auf einmal anzeigt. 
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 > **Tipp:**  
-> Ein select_sql-Feld kann ähnlich wie be_relation dazu benutzt werden, um Datensätze fremder Tabellen in einer 1:1- oder 1:n-Beziehung zu verknüpfen.
+> Ein select_sql-Feld kann ähnlich wie be_manager_relation dazu benutzt werden, um Datensätze fremder Tabellen in einer 1:1- oder 1:n-Beziehung zu verknüpfen.
 
 <a name="submits"></a>
 ## submits
