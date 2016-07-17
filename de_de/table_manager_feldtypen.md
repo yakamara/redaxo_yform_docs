@@ -38,7 +38,7 @@
 
 Ein Redaxo-Feld, um einen <b>Redaxo-Artikel</b> auszuwählen.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > id des Redaxo-Artikels, z.B. `1`, `5`, `20`
 
 Option | Erläuterung
@@ -55,7 +55,7 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 
 Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer fremden Tabelle zu <b>verknüpfen</b>, z.B. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
-> **Wert in der Datenbank:**
+> **Wert in der Datenbank**
 > - ID des verknüpften Datensatzes, z.B. `1`, `5`, `20` oder
 > - IDs der verknüpften Datensätze als `SET`, z.B. `1,5,20`, `4,8,12`, `7,10,42` oder
 > - leer, wenn eine Relationstabelle angegeben wurde.
@@ -86,7 +86,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
 
 Option | Erläuterung
@@ -104,7 +104,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Redaxo-Feld, um ein oder mehrere <b>Medienpool-Dateien</b> auszuwählen.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > Dateinamen der Medienpool-Dateien kommagetrennt, z.B. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
 Option | Erläuterung
@@ -125,7 +125,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Redaxo-Feld, um ein oder mehrere <b>Kategorien</b> aus der Struktur auszuwählen.
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > IDs der gewählten Kategorien (kommagetrennt), z.B. `1,5,20`
 
 Option | Erläuterung
@@ -150,7 +150,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Eine Reihe von Eingabefeldern, um <b>tabellarische Daten</b> einzugeben.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > JSON-Format (seit YForm 1.1)
 
 Option | Erläuterung
@@ -173,7 +173,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Eine <b>Checkbox</b> mit vordefinierten Werten.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
 Option | Erläuterung
@@ -194,7 +194,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein oder mehrere **Checkbox**-Felder mit Werten, die aus einer **SQL-Abfrage** stammen.  
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > IDs der verknüpften Datenbankeinträge, z.B. `1`, `10,25,58`
 
 Option | Erläuterung
@@ -215,7 +215,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Eine Reihe von Auswahlfeldern, in der ein <b>Datum</b> (Tag, Monat, Jahr) ausgewählt wird.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > MYSQL-Date-Format, z.B. `2016-07-12`
 
 Option | Erläuterung
@@ -258,7 +258,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Eine Reihe von Auswahlfeldern, in der **Datum und Uhrzeit** (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
 
-> **Wert in der Datenbank:**  
+> **Wert in der Datenbank**
 > MYSQL-Date-Format, z.B. `2016-07-12 10:00:00`
 
 Option | Erläuterung
@@ -280,8 +280,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein einfaches Eingabefeld für **E-Mail-Adressen.**
 
-> **Wert in der Datenbank:**  
-> String, z.B. `max@mustermann.de`
+> **Wert in der Datenbank**
+> `String`, z.B. `max@mustermann.de`
 
 Option | Erläuterung
 ------ | ------
@@ -301,7 +301,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Feld **ohne** Eingabemöglichkeit.
 
-> **Wert in der Datenbank:** 
+> **Wert in der Datenbank**
 > (leer)
 
 Option | Erläuterung
@@ -318,7 +318,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Fieldset gruppiert Formularfelder.
 
-> **Wert in der Datenbank:** 
+> **Wert in der Datenbank**
 > (leer)
 
 Option | Erläuterung
@@ -338,7 +338,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein einfaches Eingabefeld für <b>Gleitkomma-Zahlen.</b>
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > Zahl, z.B. `0.1234`
 
 Option | Erläuterung
@@ -361,7 +361,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Feld, das aus dem Wert eines anderen Feldes einen <b>Hashwert</b> erzeugt.
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > String, z.B. `f53c8008cb4b3b3c1f51c9922d9dddd0`
 
 Option | Erläuterung
@@ -377,7 +377,7 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> Tipp
+> **Tipp**
 > Salt sollte immer individuell von Feld zu Feld und Redaxo-Installation zu Redaxo-Installation festegelgt werden, um die Sicherheit zu erhöhen. Als Generator für Salt kann z.B. ein [Passwort-Generator](https://www.passwort-generator.com/) zum Einsazt kommen.
 
 <a name="html"></a>
@@ -402,7 +402,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Feld, das einen <b>Index</b> / Schlüssel über mehrere Felder erzeugt.
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > Alle Werte zusammengefasst als String, z.B. `max@mustermann.de4ja` bei Feldern `email,article_id,checkbox_agb`, sofern kein Algorithmus gewählt wurde.
 
 Option | Erläuterung
@@ -424,7 +424,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein einfaches Eingabefeld für <b>ganze Zahlen.</b>
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > Zahl, z.B. `5`
 
 Option | Erläuterung
@@ -478,7 +478,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein <b>Auswahlfeld</b>, um Datensätze in eine <b>bestimmte Reihenfolge</b> zu sortieren.
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > Zahl, z.B. `5`, `20`
 
 Option | Erläuterung
@@ -501,7 +501,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > Wert des gewählten Radio-Buttons, z.B. `3`, `d`
 
 Option | Erläuterung
@@ -521,7 +521,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
-> Wert in der Datenbank
+> **Wert in der Datenbank**
 > Wert des gewählten Radio-Buttons, z.B. `3`, `d`
 
 Option | Erläuterung
@@ -607,6 +607,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Input-Feld zur Eingabe eines Textes.
 
+> **Wert in der Datenbank**
+> String, z.B. `Musterfirma`, `Paul`, `Musterprojekt`
+
 Option | Erläuterung
 ------ | ------ 
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -614,13 +617,13 @@ Name | Name des Felds in der Datenbank, z.B. `name`, `prename`, `title`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Name`, `Vorname`, `Titel`
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, z.B. `Musterfirma`, `Paul`, `Musterprojekt`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-cssclassname | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, z.B., um das Feld im Frontend oder Backend gesondert zu formatieren.
+individuelle Attribute | Zusätzliche Feld-Attribute im JSON-Format, z.B. `{"placeholder":"+491234567890","type":"phone"}`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**  
-> String, z.B. `Musterfirma`, `Paul`, `Musterprojekt`
+> Tipp:
+> Mit der neuen Möglichkeit, individuelle Attribute zu vergeben, lassen sich alle [Input-Feldtypen aus HTML5](http://www.w3schools.com/html/html_form_input_types.asp) nutzen und clientseitig validieren. 
 
 <a name="textarea"></a>
 ## textarea
@@ -637,7 +640,7 @@ Name | Name des Felds in der Datenbank, z.B. `text`, `description`, `message`
 Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. "Text", "Beschreibung", "Nachricht"
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, z.B. `Geben Sie hier Ihre Nachricht ein`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-individuelle Attribute | Im JSON-Format, z.B. `{"class":"redactorEditor2-full","id":"textarea1"}`
+individuelle Attribute | Zusätzliche Feld-Attribute im JSON-Format, z.B. `{"class":"redactorEditor2-full","id":"textarea1"}`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
