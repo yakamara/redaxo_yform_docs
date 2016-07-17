@@ -105,6 +105,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Redaxo-Feld, um ein oder mehrere <b>Medienpool-Dateien</b> auszuwählen.
 
+> **Wert in der Datenbank:**  
+> Dateinamen der Medienpool-Dateien kommagetrennt, z.B. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -117,8 +120,6 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**  
-> Dateinamen der Medienpool-Dateien als SET, z.B. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
 <a name="be_select_category"></a>
 ## be_select_category
@@ -129,10 +130,10 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `category_id`, oder `category_ids`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Kategorie`, `Kategorien`, `Navigationspunkt`
 Ignoriere Offline-Kategorien  | Gibt an, ob Offline-Kategorien aus dem Auswahl-Dialogfeld ausgeschlossen werden. 
-Prüfe Rechte  | ###todo###
+Prüfe Rechte  | Prüft, ob der Nutzer berechtigt ist, auf die jeweiligen Kategorien zuzugreifen.
 Füge "Homepage"-Eintrag (Root) hinzu  | Gibt an, ob im Auswahl-Dialogfeld die oberste Ebene auswählbar ist.
 Root-ID | Startpunkt der Auswahl-Dialogfelds, z.B. die ID einer Unterkategorie.
-Sprache | ###todo###
+Sprache |Clang-ID der Sprache, aus der die Kategorienamen und der Offline-Status gelesen werden, z.B: `1`
 Mehrere Felder möglich | Gibt an, ob ein oder mehrere Kategorien ausgewählt werden können.
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrere Felder möglich` aktiviert wurde. 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
@@ -142,6 +143,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="be_table"></a>
 ## be_table
+
+> **Wert in der Datenbank:**  
+> JSON-Format (seit YForm 1.1)
 
 Option | Erläuterung
 ------ | ------
@@ -154,37 +158,38 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**  
-> String / CSV. Felder werden mit Komma abgetrennt, Zeilen mit Semikolon.
 
 > **Hinweis:**  
-> Um die Werte wieder aufzutrennen, kann z.B. `explode(";" $rows)` und `$explode("," $row)` verwendet werden.
+> Um die Werte wieder aufzutrennen, kann z.B. `json_decode($json, true);` verwendet werden.
 
 <a name="checkbox"></a>
 ## checkbox
 
 Eine <b>Checkbox</b> mit vordefinierten Werten.
 
+> **Wert in der Datenbank:**  
+> Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `active`, `online`, `visible`, `hidden`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `aktiviert`, `online`, `sichtbar?`, `ausgeblendet?`
-Werte (0,1) (nicht angeklickt,angeklickt)  | Wert, der in die Datenbank geschrieben wird, z.B. `0,1`, `nein,ja`
+Werte | Wert, der in die Datenbank geschrieben wird, z.B. `0,1`, `nein,ja`
 Defaultstatus | Gibt an, ob die Checkbox vorausgewählt ist oder nicht.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**  
-Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
 <a name="checkbox_sql"></a>
 ## checkbox_sql
 
-Eine **Checkbox** mit Werten, die aus einer **SQL-Abfrage** stammen.  
-todo: handelt es sich nicht dabei um eine Liste an Checkboxes?
+Ein oder mehrere **Checkbox**-Felder mit Werten, die aus einer **SQL-Abfrage** stammen.  
+
+> **Wert in der Datenbank:**  
+> IDs der verknüpften Datenbankeinträge, z.B. `1`, `10,25,58`
 
 Option | Erläuterung
 ------ | ------
@@ -196,9 +201,6 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:** 
-> todo
-
 > **Tipp:**  
 > Mit checkbox_sql kann man z.B. in einer News-Tabelle einer News die Sprachen zuordnen, in der sie angezeigt werden sollen. 
 
@@ -206,6 +208,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 ## date
 
 Eine Reihe von Auswahlfeldern, in der ein <b>Datum</b> (Tag, Monat, Jahr) ausgewählt wird.
+
+> **Wert in der Datenbank:**  
+> MYSQL-Date-Format, z.B. `2016-07-12`
 
 Option | Erläuterung
 ------ | ------
@@ -221,25 +226,24 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> Wert in der Datenbank:**  
-Das Datum im todo-Format ...
+> Tipp: Zum konvertieren des MySQL-Date-Formats in PHP kann
 
 <a name="datestamp"></a>
 ## datestamp
 
 Ein unsichtbares Feld, in das ein **Zeitstempel** gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
 
-**todo**: Optionen überprüfen, hier müsste doch was anderes stehen?
+> **Wert in der Datenbank**
+> - MYSQL-Date-Format, z.B. `2016-07-12`, oder
+> - andere in "Format" angegebene Datumsformate.
 
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `datestamp`, `date_created`
-Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Zeitstempel`, `Beginn der Veranstaltung`
-[Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
-Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist. 
+Format | Format, in dem der Zeitstempel abgespeichert wird, z.B. `YmdHis`, `U`, `dmy`, `mysql`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
+Wann soll Wert gesetzt werden | Gibt an, ob der Zeitstempel initial beim Erstellen des Datenbankeintrags angelegt wird (`nur, wenn leer`), oder auch bei Änderungen (`immer`).
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -248,6 +252,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Eine Reihe von Auswahlfeldern, in der **Datum und Uhrzeit** (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
 
+> **Wert in der Datenbank:**  
+> MYSQL-Date-Format, z.B. `2016-07-12 10:00:00`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -255,7 +262,7 @@ Name | Name des Felds in der Datenbank, z.B. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Datum`, `Beginn der Veranstaltung`
 [Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014`
 [Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
-[Anzeigeformat###Y###-###M###-###D###]] | ###todo### Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
+Anzeigeformat | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
@@ -266,6 +273,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 ## email
 
 Ein einfaches Eingabefeld für **E-Mail-Adressen.**
+
+> **Wert in der Datenbank:**  
+> String, z.B. `max@mustermann.de`
 
 Option | Erläuterung
 ------ | ------
@@ -279,13 +289,14 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**  
-> String.
 
 <a name="emptyname"></a>
 ## emptyname
 
 Ein Feld **ohne** Eingabemöglichkeit.
+
+> **Wert in der Datenbank:** 
+> (leer)
 
 Option | Erläuterung
 ------ | ------
@@ -301,6 +312,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein Fieldset gruppiert Formularfelder.
 
+> **Wert in der Datenbank:** 
+> (leer)
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -310,14 +324,16 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:** 
-> leer
-
 > **Hinweis:**  
 > Das Feld wird nur aus technischen Gründen angelegt. Das Feld wird nicht mit einem Wert gefüllt.
 
 <a name="float"></a>
 ## float
+
+Ein einfaches Eingabefeld für <b>Gleitkomma-Zahlen.</b>
+
+> Wert in der Datenbank
+> Zahl, z. B. `0.1234`
 
 Option | Erläuterung
 ------ | ------
@@ -337,21 +353,34 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="hashvalue"></a>
 ## hashvalue
 
+Ein Feld, das aus dem Wert eines anderen Feldes einen <b>Hashwert</b> erzeugt.
+
+> Wert in der Datenbank
+> String, z. B. `f53c8008cb4b3b3c1f51c9922d9dddd0`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Input-Feld | 
-Algorithmus | 
-Salt | 
+Name | Name des Felds in der Datenbank, z.B. `password_hash`, `password`.
+Bezeichnung | Name des Felds, wie er im Backend angezeigt wird, z.B. `Passwort-Hash`, `Passwort`
+Input-Feld | Name des Felds, aus dem der Hash generiert werden soll.
+Algorithmus | Name des Algorithmus, der beim Generieren verwendet wird, z. B. `md5`, `sha1`, `sha512`
+Salt | Salz, das zusätzlich zum Input-Feld gestreut wird.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
+> Tipp:
+> Salt sollte immer individuell von Feld zu Feld und Redaxo-Installation zu Redaxo-Installation festegelgt werden, um die Sicherheit zu erhöhen. Als Generator für Salt kann z. B. ein [Passwort-Generator](https://www.passwort-generator.com/) zum Einsazt kommen.
+
 <a name="html"></a>
 ## html
+
+Gibt <b>HTML-Code</b> an der gewünschten Stelle des Eingabe-Formulars aus.
+
+> Wert in der Datebank
+> String, z.B. `<p>Hallo Welt</p>`
 
 Option | Erläuterung
 ------ | ------
@@ -365,19 +394,32 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="index"></a>
 ## index
 
+Ein Feld, das einen <b>Index</b> / Schlüssel über mehrere Felder erzeugt.
+
+> Wert in der Datenbank
+> Alle Werte zusammengefasst als String, z.B. `max@mustermann.de4ja` bei Feldern `email,article_id,checkbox_agb`, sofern kein Algorithmus gewählt wurde.
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Felder | 
+Name | Name des Felds in der Datenbank, z.B. `password_hash`, `password`.
+Felder | Auswahl an Feldern, die für das Erstellen des Index verwendet werden sollen.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Opt. Codierfunktion | 
+Opt. Codierfunktion |  Name des Algorithmus, der beim Generieren verwendet wird, z. B. `md5`, `sha1`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
+> Tipp:
+> Die Generierung eines Index ist nützlich, um aus mehreren Feldern, die sich nicht für `unique` qualifizieren, einen eindeutigen Key zu erstellen.
+
 <a name="integer"></a>
 ## integer
+
+Ein einfaches Eingabefeld für <b>ganze Zahlen.</b>
+
+> Wert in der Datenbank
+> Zahl, z. B. `5`
 
 Option | Erläuterung
 ------ | ------
@@ -393,11 +435,16 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="mediafile"></a>
 ## mediafile
 
+Ein <b>Upload-Feld</b>, mit dem eine Datei in den Medienpool hochgeladen wird.
+
+> Wert in der Datebank
+> Dateiname, z.B. `default.jpg`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Label | 
-Bezeichnung | 
+Name | Name des Felds in der Datenbank, z.B. `image`, `attachment`.
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Profilbild`, `Anhang`
 Maximale Größe in Kb oder Range 100,500 | 
 Welche Dateien sollen erlaubt sein, kommaseparierte Liste. ".gif,.png" | 
 Pflichtfeld  | 
