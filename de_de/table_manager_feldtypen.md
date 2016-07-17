@@ -50,7 +50,6 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-
 <a name="be_manager_relation"></a>
 ## be_manager_relation
 
@@ -67,7 +66,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern im Formular ein.
 Name | Name des Felds in der Datenbank, z.B. `article_id`, `person_id`, `link_id`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. die Bezeichnung der Ziel-Tabelle
 Ziel-Tabelle | Name der Tabelle, deren Datensätze referenziert werden.
-Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, bspw. `name`, `prename, ' ', name` oder `name, '(', id, ')'`
+Ziel Tabellenfeld(er) zur Anzeige oder Zielfeld | Feldname der Tabelle, dessen Werte als Select-Box oder im Popup angezeigt werden, z.B. `name`, `prename, ' ', name` oder `name, '(', id, ')'`
 Mehrfachauswahl | Gibt an, ob ein (1:n) oder mehrere (m:n) Datensätze ausgewählt werden können, entweder in einem select-Feld oder als Popup-Fenster 
 Mit "Leer-Option" | Gibt an, ob "keine Auswahl" erlaubt ist.
 Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem Nutzer mitteilt, dass eine Auswahl getroffen werden muss. 
@@ -125,6 +124,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 ## be_select_category
 
 Ein Redaxo-Feld, um ein oder mehrere <b>Kategorien</b> aus der Struktur auszuwählen.
+
+> Wert in der Datenbank
+> IDs der gewählten Kategorien (kommagetrennt), z.B. `1,5,20`
 
 Option | Erläuterung
 ------ | ------
@@ -337,7 +339,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein einfaches Eingabefeld für <b>Gleitkomma-Zahlen.</b>
 
 > Wert in der Datenbank
-> Zahl, z. B. `0.1234`
+> Zahl, z.B. `0.1234`
 
 Option | Erläuterung
 ------ | ------
@@ -360,7 +362,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Feld, das aus dem Wert eines anderen Feldes einen <b>Hashwert</b> erzeugt.
 
 > Wert in der Datenbank
-> String, z. B. `f53c8008cb4b3b3c1f51c9922d9dddd0`
+> String, z.B. `f53c8008cb4b3b3c1f51c9922d9dddd0`
 
 Option | Erläuterung
 ------ | ------
@@ -368,15 +370,15 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `password_hash`, `password`.
 Bezeichnung | Name des Felds, wie er im Backend angezeigt wird, z.B. `Passwort-Hash`, `Passwort`
 Input-Feld | Name des Felds, aus dem der Hash generiert werden soll.
-Algorithmus | Name des Algorithmus, der beim Generieren verwendet wird, z. B. `md5`, `sha1`, `sha512`
+Algorithmus | Name des Algorithmus, der beim Generieren verwendet wird, z.B. `md5`, `sha1`, `sha512`
 Salt | Salz, das zusätzlich zum Input-Feld gestreut wird.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> Tipp:
-> Salt sollte immer individuell von Feld zu Feld und Redaxo-Installation zu Redaxo-Installation festegelgt werden, um die Sicherheit zu erhöhen. Als Generator für Salt kann z. B. ein [Passwort-Generator](https://www.passwort-generator.com/) zum Einsazt kommen.
+> Tipp
+> Salt sollte immer individuell von Feld zu Feld und Redaxo-Installation zu Redaxo-Installation festegelgt werden, um die Sicherheit zu erhöhen. Als Generator für Salt kann z.B. ein [Passwort-Generator](https://www.passwort-generator.com/) zum Einsazt kommen.
 
 <a name="html"></a>
 ## html
@@ -409,7 +411,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `password_hash`, `password`.
 Felder | Auswahl an Feldern, die für das Erstellen des Index verwendet werden sollen.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Opt. Codierfunktion |  Name des Algorithmus, der beim Generieren verwendet wird, z. B. `md5`, `sha1`
+Opt. Codierfunktion |  Name des Algorithmus, der beim Generieren verwendet wird, z.B. `md5`, `sha1`
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
@@ -423,7 +425,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein einfaches Eingabefeld für <b>ganze Zahlen.</b>
 
 > Wert in der Datenbank
-> Zahl, z. B. `5`
+> Zahl, z.B. `5`
 
 Option | Erläuterung
 ------ | ------
@@ -477,7 +479,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein <b>Auswahlfeld</b>, um Datensätze in eine <b>bestimmte Reihenfolge</b> zu sortieren.
 
 > Wert in der Datenbank
-> Zahl, z. B. `5`, `20`
+> Zahl, z.B. `5`, `20`
 
 Option | Erläuterung
 ------ | ------
@@ -589,7 +591,7 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 > **Tipp:**  
-> Mit mehreren Submits kann man auf unterschiedliche Absichten mit dem gleichen Formular reagieren, z. B. zwei Buttons namens `Bestellen` und `Angebot anfragen`.
+> Mit mehreren Submits kann man auf unterschiedliche Absichten mit dem gleichen Formular reagieren, z.B. zwei Buttons namens `Bestellen` und `Angebot anfragen`.
 
 <a name="text"></a>
 ## text
