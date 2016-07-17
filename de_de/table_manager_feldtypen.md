@@ -39,6 +39,7 @@
 Ein Redaxo-Feld, um einen <b>Redaxo-Artikel</b> auszuwählen.
 
 > **Wert in der Datenbank**
+
 > id des Redaxo-Artikels, z.B. `1`, `5`, `20`
 
 Option | Erläuterung
@@ -56,6 +57,7 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer fremden Tabelle zu <b>verknüpfen</b>, z.B. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
 > **Wert in der Datenbank**
+
 > - ID des verknüpften Datensatzes, z.B. `1`, `5`, `20` oder
 > - IDs der verknüpften Datensätze als `SET`, z.B. `1,5,20`, `4,8,12`, `7,10,42` oder
 > - leer, wenn eine Relationstabelle angegeben wurde.
@@ -87,6 +89,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
 
 > **Wert in der Datenbank**
+
 > Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
 
 Option | Erläuterung
@@ -105,6 +108,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Redaxo-Feld, um ein oder mehrere <b>Medienpool-Dateien</b> auszuwählen.
 
 > **Wert in der Datenbank**
+
 > Dateinamen der Medienpool-Dateien kommagetrennt, z.B. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
 
 Option | Erläuterung
@@ -126,6 +130,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Redaxo-Feld, um ein oder mehrere <b>Kategorien</b> aus der Struktur auszuwählen.
 
 > **Wert in der Datenbank**
+
 > IDs der gewählten Kategorien (kommagetrennt), z.B. `1,5,20`
 
 Option | Erläuterung
@@ -151,6 +156,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Eine Reihe von Eingabefeldern, um <b>tabellarische Daten</b> einzugeben.
 
 > **Wert in der Datenbank**
+
 > JSON-Format (seit YForm 1.1)
 
 Option | Erläuterung
@@ -174,6 +180,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Eine <b>Checkbox</b> mit vordefinierten Werten.
 
 > **Wert in der Datenbank**
+
 > Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
 
 Option | Erläuterung
@@ -195,6 +202,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein oder mehrere **Checkbox**-Felder mit Werten, die aus einer **SQL-Abfrage** stammen.  
 
 > **Wert in der Datenbank**
+
 > IDs der verknüpften Datenbankeinträge, z.B. `1`, `10,25,58`
 
 Option | Erläuterung
@@ -216,6 +224,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Eine Reihe von Auswahlfeldern, in der ein <b>Datum</b> (Tag, Monat, Jahr) ausgewählt wird.
 
 > **Wert in der Datenbank**
+
 > MYSQL-Date-Format, z.B. `2016-07-12`
 
 Option | Erläuterung
@@ -240,6 +249,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein unsichtbares Feld, in das ein **Zeitstempel** gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
 
 > **Wert in der Datenbank**
+
 > - MYSQL-Date-Format, z.B. `2016-07-12`, oder
 > - andere in "Format" angegebene Datumsformate.
 
@@ -259,6 +269,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Eine Reihe von Auswahlfeldern, in der **Datum und Uhrzeit** (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
 
 > **Wert in der Datenbank**
+
 > MYSQL-Date-Format, z.B. `2016-07-12 10:00:00`
 
 Option | Erläuterung
@@ -281,6 +292,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein einfaches Eingabefeld für **E-Mail-Adressen.**
 
 > **Wert in der Datenbank**
+
 > `String`, z.B. `max@mustermann.de`
 
 Option | Erläuterung
@@ -302,7 +314,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Feld **ohne** Eingabemöglichkeit.
 
 > **Wert in der Datenbank**
-> (leer)
+
+> leer
 
 Option | Erläuterung
 ------ | ------
@@ -319,7 +332,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Fieldset gruppiert Formularfelder.
 
 > **Wert in der Datenbank**
-> (leer)
+
+> leer
 
 Option | Erläuterung
 ------ | ------
@@ -339,6 +353,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein einfaches Eingabefeld für <b>Gleitkomma-Zahlen.</b>
 
 > **Wert in der Datenbank**
+
 > Zahl, z.B. `0.1234`
 
 Option | Erläuterung
@@ -362,6 +377,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Feld, das aus dem Wert eines anderen Feldes einen <b>Hashwert</b> erzeugt.
 
 > **Wert in der Datenbank**
+
 > String, z.B. `f53c8008cb4b3b3c1f51c9922d9dddd0`
 
 Option | Erläuterung
@@ -386,6 +402,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Gibt <b>HTML-Code</b> an der gewünschten Stelle des Eingabe-Formulars aus.
 
 > Wert in der Datebank
+
 > String, z.B. `<p>Hallo Welt</p>`
 
 Option | Erläuterung
@@ -403,6 +420,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Feld, das einen <b>Index</b> / Schlüssel über mehrere Felder erzeugt.
 
 > **Wert in der Datenbank**
+
 > Alle Werte zusammengefasst als String, z.B. `max@mustermann.de4ja` bei Feldern `email,article_id,checkbox_agb`, sofern kein Algorithmus gewählt wurde.
 
 Option | Erläuterung
@@ -425,6 +443,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein einfaches Eingabefeld für <b>ganze Zahlen.</b>
 
 > **Wert in der Datenbank**
+
 > Zahl, z.B. `5`
 
 Option | Erläuterung
@@ -444,6 +463,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein <b>Upload-Feld</b>, mit dem eine Datei in den Medienpool hochgeladen wird.
 
 > Wert in der Datebank
+
 > Dateiname, z.B. `default.jpg`
 
 Option | Erläuterung
@@ -464,6 +484,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="php"></a>
 ## php
+
+Führt <b>PHP-Code</b> an der gewünschten Stelle des Eingabe-Formulars aus.
 
 Option | Erläuterung
 ------ | ------
@@ -501,7 +523,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
-> **Wert in der Datenbank**
+> **Wert in der Datenbank** 
+
 > Wert des gewählten Radio-Buttons, z.B. `3`, `d`
 
 Option | Erläuterung
@@ -540,6 +563,10 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein <b>Auswahlfeld</b> mit vordefinierten Werten.
 
+> Wert in der Datenbank
+
+> Werte der gewählten Einträge, z.B. `1,2,3`, `d`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -547,7 +574,7 @@ Name | Name des Felds in der Datenbank, z.B. `options`, `ranking`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Optionen`, `Rang`
 Selectdefinition, kommasepariert | Beschriftung und Wert für die Datenbank, z.B. `Erster=1,Zweiter=2,Dritter=3,disqualifiziert=d`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Defaultwert | Wert, der beim Aufruf des Formulars vorausgewählt ist, z.B. `3` für `Dritter`
+Defaultwert (opt.) | Wert des Eintrags, der beim Aufruf des Formulars vorausgewählt ist.
 Mehrere Felder möglich | Gibt an, ob ein oder mehrere Einträge ausgewählt werden können und das Feld als `<select multiple>` dargestellt wird.
 Höhe der Auswahlbox | Anzahl der Einträge, die `<select multiple>` auf einmal anzeigt. 
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
@@ -559,13 +586,17 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Ein <b>Auswahlfeld</b> mit Werten, die aus einer <b>SQL-Abfrage</b> stammen.
 
+> Wert in der Datenbank
+
+> Werte der gewählten Einträge, z.B. `1,2,3`, `d`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `clang_id`, `type`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Sprache`, `Typ`
 Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, z.B. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
-Defaultwert (opt.) | Wert, der beim Aufruf des Formulars vorausgewählt ist, z.B. `3` für `Dritter`
+Defaultwert (opt.) | Wert des Eintrags, der beim Aufruf des Formulars vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Leeroption  | Gibt an, ob es einen Eintrag "Ohne Auswahl" gibt.
 Text bei Leeroption (Bitte auswählen) | Beschriftung des Leeroption-Eintrags, z.B. `Bitte auswählen` oder `keine Auswahl`
@@ -584,6 +615,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein oder mehrere <b>Submit-Buttons</b> zum Absenden des Formulars.
 
 > **Wert in der Datenbank**
+
 > Wert des abgesendeten Buttons, z.B. `Anfrage`
 
 Option | Erläuterung
@@ -608,6 +640,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Input-Feld zur Eingabe eines Textes.
 
 > **Wert in der Datenbank**
+
 > String, z.B. `Musterfirma`, `Paul`, `Musterprojekt`
 
 Option | Erläuterung
@@ -631,6 +664,7 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 Ein <b>mehrzeiliges Eingabefeld</b> für Text.
 
 > **Wert in der Datenbank**
+
 > Inhalt des Textarea-Feldes
 
 Option | Erläuterung
@@ -653,6 +687,10 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Eine Reihe von Auswahlfeldern, in der die <b>Uhrzeit</b> (Stunden, Minuten, Sekunden) ausgewählt wird.
 
+> **Wert in der Datenbank**
+
+> - MYSQL-Date-Format, z.B. `10:00:00`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -668,6 +706,9 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="upload"></a>
 ## upload
+
+Ein <b>Upload-Feld</b>, mit dem eine Datei in <b>die Datenbank oder ein Verzeichnis</b> hochgeladen wird.
+
 
 Option | Erläuterung
 ------ | ------
