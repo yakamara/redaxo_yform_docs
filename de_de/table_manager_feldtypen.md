@@ -57,9 +57,9 @@ Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Optio
 Ein Auswahlfeld / Popup, um ein oder mehrere <b>Datensätze</b> mit denen einer fremden Tabelle zu <b>verknüpfen</b>, z.B. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 
 > **Wert in der Datenbank:**
-> ID des verknüpften Datensatzes, z.B. `1`, `5`, `20` oder
-> IDs der verknüpften Datensätze als `SET`, z.B. `1,5,20`, `4,8,12`, `7,10,42` oder
-> leer, wenn eine Relationstabelle angegeben wurde.
+> - ID des verknüpften Datensatzes, z.B. `1`, `5`, `20` oder
+> - IDs der verknüpften Datensätze als `SET`, z.B. `1,5,20`, `4,8,12`, `7,10,42` oder
+> - leer, wenn eine Relationstabelle angegeben wurde.
 
 Option | Erläuterung
 ------ | ------
@@ -88,7 +88,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
 
 > **Wert in der Datenbank:**  
-Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
+> Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
 
 Option | Erläuterung
 ------ | ------
@@ -471,6 +471,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="prio"></a>
 ## prio
 
+Ein <b>Auswahlfeld</b>, um Datensätze in eine <b>bestimmte Reihenfolge</b> zu sortieren.
+
+> Wert in der Datenbank
+> Zahl, z. B. `5`, `20`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
@@ -489,14 +494,38 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="radio"></a>
 ## radio
 
+Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
+
+> Wert in der Datenbank
+> Wert des gewählten Radio-Buttons, z.B. `3`, `d`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | 
-Bezeichnung | 
-Selectdefinition, kommasepariert | 
+Name | Name des Felds in der Datenbank, z.B. `options`, `ranking`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Optionen`, `Rang`
+Selectdefinition, kommasepariert | Beschriftung und Wert für die Datenbank, z.B. `Erster=1,Zweiter=2,Dritter=3,disqualifiziert=d`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
-Defaultwert | 
+Defaultwert | Wert, der beim Aufruf des Formulars vorausgewählt ist, z.B. `3` für `Dritter`
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
+In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
+Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
+
+<a name="radio_sql"></a>
+## radio_sql
+
+Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
+
+> Wert in der Datenbank
+> Wert des gewählten Radio-Buttons, z.B. `3`, `d`
+
+Option | Erläuterung
+------ | ------
+Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
+Name | Name des Felds in der Datenbank, z.B. `clang_id`, `type`
+Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Sprache`, `Typ`
+Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, z.B. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
+Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
