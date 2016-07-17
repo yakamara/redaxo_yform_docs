@@ -38,16 +38,18 @@
 
 Ein Redaxo-Feld, um einen <b>Redaxo-Artikel</b> auszuwählen.
 
+> **Wert in der Datenbank:**  
+> id des Redaxo-Artikels, z.B. `1`, `5`, `20`
+
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `article_id`, `page_id`, `link_id`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Redaxo-Artikel`, `Seite`, `Link`
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben. 
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-> **Wert in der Datenbank:**  
-> id des Redaxo-Artikels, z.B. `1`, `5`, `20`
 
 <a name="be_manager_relation"></a>
 ## be_manager_relation
@@ -67,6 +69,7 @@ Fehlermeldung, wenn "Leer-Option" nicht aktiviert ist | Fehlermeldung, die dem N
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrfachauswahl` als select-Feld aktiviert wurde. 
 Filter | Zusätzliche Angaben in einer speziellen Syntax, die in [be_relation-Tutorial](table_manager_feldtypen_be-relation.md) erläutert werden.
 Relationstabelle | [optional] Name der Tabelle, in der die m:n-Beziehungen abgelegt sind, z.B. `rex_project_news_tags`
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben. 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -90,6 +93,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `image`, `attachment`, `file`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Bild`, `Anhang`, `Datei`
 Defaultwert | Datei aus dem Medienpool, mit der das Eingabefeld vorausgefüllt wird, z.B. `mueller.jpg`, `preisliste.pdf` 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -110,6 +114,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 Preview (0/1) (opt) | Zeigt eine Bildvorschau an, wenn die Datei in der `be_medialist` markiert wird.
 Medienpool Kategorie (opt) | ID der Medienpool-Kategorie, die bei der Auswahl der Dateien voreingestellt ist.
 Types (opt) | Filtert die Dateiauswahl im Medienpool anhand der Dateiendung, z.B. `.jpg,.jpeg,.png,.gif` oder `.pdf,.docx,.doc`
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben. 
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -132,6 +137,7 @@ Sprache | ###todo###
 Mehrere Felder möglich | Gibt an, ob ein oder mehrere Kategorien ausgewählt werden können.
 Höhe der Auswahlbox | Höhe der Auswahlbox, wenn `Mehrere Felder möglich` aktiviert wurde. 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -145,6 +151,7 @@ Name | Name des Felds in der Datenbank, z.B. `table`, `features`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Info-Tabelle`, `Eigenschaften`
 Anzahl Spalten |  Anzahl der Spalten, die bei der Eingabe zur Verfügung stehen.
 Bezeichnung der Spalten (Menge,Preis,Irgendwas)  | Kopfzeile der Tabelle, z.B., `Leistung,Aufpreis`, `Vorname,Name`, `Artikelnummer,Größe,Preis` 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -167,6 +174,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 Werte (0,1) (nicht angeklickt,angeklickt)  | Wert, der in die Datenbank geschrieben wird, z.B. `0,1`, `nein,ja`
 Defaultstatus | Gibt an, ob die Checkbox vorausgewählt ist oder nicht.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -185,6 +193,7 @@ Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `active_languages`, `tags`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Sichtbar in Sprachen`, `Schlagwörter`
 Query mit "select id, name from .."  | SQL-Abfrage, um die Checkbox-Werte abzurufen, z.B. `SELECT id, name FROM rex_clang ORDER BY name`, `SELECT id, tag AS name FROM rex_project_tags ORDER BY id`
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -209,6 +218,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -230,6 +240,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist. 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -248,6 +259,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 [Anzeigeformat###Y###-###M###-###D###]] | ###todo### Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -264,6 +276,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 Defaultwert | E-Mail-Adresse, mit der das Eingabfeld vorausgefüllt wird, z.B. `max@mustermann.de`, `jane@smith.com` 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 cssclassname | CSS-Klasse(n), die dem Input-Element zugewiesen werden.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -280,6 +293,7 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank
 Bezeichnung | 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -293,6 +307,7 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `fieldset_product`, `fieldset_details`,
 Bezeichnung | Titel des Fieldsets, das im `<legend />`-Tag notiert wird. z.B. `Produktinfos`, `Details`
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -313,6 +328,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 Nachkommastellen | Anzahl der erlaubten Stellen nach dem Komma, z.B. `1`, `5`, `42`
 Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, z.B. `0,1234`, `5` 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -331,6 +347,7 @@ Input-Feld |
 Algorithmus | 
 Salt | 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -342,6 +359,7 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein. 
 Name | Name des Felds in der Datenbank, z.B. `info`, `code`.
 HTML | HTML-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -355,6 +373,7 @@ Name |
 Felder | 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Opt. Codierfunktion | 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -368,6 +387,7 @@ Name | Name des Felds in der Datenbank, z.B. `price`, `quantity`.
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Preis in EUR`, `Anzahl`
 Defaultwert | Zahl, mit der das Eingabfeld vorausgefüllt wird, z.B. `1`, `5`, `42` 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -386,6 +406,7 @@ min_err,max_err,type_err,empty_err |
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Mediakategorie ID | 
 Mediapool User (createuser/updateuser) | 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -397,6 +418,7 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `php`, `code`.
 HTML | PHP-Code, der vor, zwischen oder nach anderen Feldern im Frontend oder Backend eingefügt wird.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -411,6 +433,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 Anzeige | Feld(er), die in der Auswahl-Box angezeigt werden, z.B. `name`, `title`, `isbn`
 Beschränkung | Feld(er), die die Auswahlmöglichkeiten in der Auswahl-Box beschränken, z.B. `category_id` 
 Am Anfang | Vorauswahl, ob ein neuer Datensatz am Anfang oder am Ende angelegt wird. 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -428,6 +451,7 @@ Bezeichnung |
 Selectdefinition, kommasepariert | 
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Defaultwert | 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -444,6 +468,7 @@ Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll od
 Defaultwert | 
 Mehrere Felder möglich |
 Höhe der Auswahlbox | 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -462,6 +487,7 @@ Leeroption  |
 Text bei Leeroption (Bitte auswählen) |
 Mehrere Felder möglich | 
 Höhe der Auswahlbox |  
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -480,6 +506,7 @@ Werte (optional, kommasepariert) |
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Defaultwert | 
 CSS Klassen (kommasepariert) |
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -499,6 +526,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, z.B. `Musterfirma`, `Paul`, `Musterprojekt`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 cssclassname | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, z.B., um das Feld im Frontend oder Backend gesondert zu formatieren.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken | Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen | Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -516,6 +544,7 @@ Bezeichnung |  Name des Felds, wie er im Frontend oder Backend angezeigt wird, z
 Defaultwert | Wert, der beim Aufruf des Formulars eingetragen ist, z.B. `Geben Sie hier Ihre Nachricht ein`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 classes | Zusätzliche CSS-Klasse(n), die dem Feld zugeordnet werden, z.B., um das Feld im Frontend oder Backend gesondert zu formatieren.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -533,6 +562,7 @@ Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.
 [Minutenraster] | optional: Kommagetrennte Liste an Minuten, die für den Nutzer zur Auswahl stehen sollen, z.B. `0,15,30,45`, `0,10,20,30,40,50`
 [Anzeigeformat ###H###h ###I###m] |  Reihenfolge der Auswahlfelder für Stunde und Minute beim bearbeiteten eines Datensatzes, z.B. `um ###H###:###I### Uhr`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -553,6 +583,7 @@ Speichermodus |
 Eigener Uploadordner [optional] |
 Dateiprefix [optional] |
 Defaultfile |
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
@@ -564,5 +595,6 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | 
 Bezeichnung | 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
