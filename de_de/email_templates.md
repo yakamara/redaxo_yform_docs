@@ -4,7 +4,7 @@
 > - [Zweck der E-Mail-Templates](#zweck-der-email-templates)
 > - [Handhabung](#handhabung)
 > 	- [Beispiel im Formbuilder](#beispiel-formbuilder)  
-> 	- [Eingabenim E-Mail-Template](#email-template)
+> 	- [Eingaben im E-Mail-Template](#email-template)
 > 	- [PHP](#php)
 	
 <a name="zweck-der-email-templates"></a>

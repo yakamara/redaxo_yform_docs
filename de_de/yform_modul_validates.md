@@ -24,9 +24,8 @@ Mit diesen Klassen lassen sich Values überprüfen. Bei einer negativen Validier
 
 Die Validate-Feldklassen werden wie Values und Actions im Formbuilder im Feld `Felddefinitonen` eingetragen. Dabei muss immer der Name der Value-Feldklasse angegeben, der validiert werden soll.
 
-Die Validate-Klassen sind hier zu finden:
-
-	src/addons/yform/lib/yform/validate/
+> Die Validate-Klassen sind hier zu finden:  
+> `src/addons/yform/lib/yform/validate/`
 
 Die PHP-Beispiele können in diesem Basis-Formular getestet/eingesetzt werden:
 

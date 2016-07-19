@@ -1,7 +1,7 @@
 # YForm-Modul: YForm erweitern
 
 > **Hinweis:**  
-> Dieses Kapitel ist noch in Arbeit ...
+> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
 
 - Wie würde man vorgehen, wenn eigene Values, Validates und Actions anlegen will?
 - Wie würde man ein eigenes Template anlegen?

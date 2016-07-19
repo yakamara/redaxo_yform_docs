@@ -1,7 +1,7 @@
 # YForm: Plugins
 
-> **Hinweis:** 
-> Dieses Kapitel ist noch in Arbeit ...
+> **Hinweis:**  
+> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
 
 Plugin-System kurz erklären
 

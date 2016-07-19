@@ -1,9 +1,9 @@
 # Table Manager: Optionen
  
 > ## Inhalte
-> [Tabelle erstellen](tabelle-erstellen)
-> [Tabelle migrieren](tabelle.migrieren)
-> [Tableset importieren / exportieren](tabelle-importieren)
+> [Tabelle erstellen](#tabelle-erstellen)
+> [Tabelle migrieren](#tabelle-migrieren)
+> [Tableset importieren / exportieren](#tableset-importieren)
  
 Um Tabellen im Table Manager zu bearbeiten, gibt es drei verschiedene Möglichkeiten:
 
@@ -38,14 +38,14 @@ Export der Daten erlauben | Zeigt die Schaltfläche `Datensätze exportieren` in
 Import von Daten erlauben | [Zeigt die Schaltfläche `Datensätze importieren` in der Tabellen-Übersicht an.
 
 > **Hinweis:**
->Solange die Tabelle über keine Felder verfügt, kann hier nur `id` ausgewählt werden. Man kann zunächst die Standard-Sortierung nach id-Feld belassen, dann neue Felder hinzufügen und anschließend die Sortierung der Tabelle neu festlegen. Zum Beispiel nach Name, Datum oder den selbst festgelegten Feldern.
+> Solange die Tabelle über keine Felder verfügt, kann hier nur `id` ausgewählt werden. Man kann zunächst die Standard-Sortierung nach id-Feld belassen, dann neue Felder hinzufügen und anschließend die Sortierung der Tabelle neu festlegen. Zum Beispiel nach Name, Datum oder den selbst festgelegten Feldern.
 
 > **Hinweis:** 
-Alternativ kann auch ein vorhandenes Tableset importiert werden.
+> Alternativ kann auch ein vorhandenes Tableset importiert werden.
 In diesem Fall wird durch den abschließenden Klick auf `hinzufügen` die Datenbank-Tabelle erstellt.
 
 > **Tipp:** 
->Wenn die Datenbank über Import/Export oder über einen Backup-Crobjob gesichert werden soll, sollte die Tabelle den Präfix `rex_` behalten. Zur besseren Übersicht empfiehlt es sich, der Tabelle einen eigenen Projekt-Präfix zu geben, z.B. `rex_kunde_projekte` oder `rex_kunde_mitarbeiter`.
+> Wenn die Datenbank über Import/Export oder über einen Backup-Crobjob gesichert werden soll, sollte die Tabelle den Präfix `rex_` behalten. Zur besseren Übersicht empfiehlt es sich, der Tabelle einen eigenen Projekt-Präfix zu geben, z.B. `rex_kunde_projekte` oder `rex_kunde_mitarbeiter`.
 
 
 <a name="tabelle-migrieren"></a>

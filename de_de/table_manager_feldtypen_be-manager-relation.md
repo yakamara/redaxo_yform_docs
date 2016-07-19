@@ -1,6 +1,7 @@
 # be_manager_relation
 
-Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
+> **Hinweis:**  
+> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
 
 ## Beispiel-Konfigurationen ##
 

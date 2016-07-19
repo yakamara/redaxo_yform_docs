@@ -1,8 +1,7 @@
 # YForm-Modul: Verzeichnis-Struktur
 
-> **Hinweis:** 
-> Dieses Kapitel ist noch in Arbeit ...
-
+> **Hinweis:**  
+> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
 Verzeichnisstruktur der Dateien erklären, damit man weiß, wo man was findset, wenn man selbst erweitern oder ändern will.
 
 Struktur:

@@ -1,17 +1,18 @@
 # YForm-Modul: Values
 
+> **Hinweis:** 
+> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
+
 - [Zweck der Values](#zweck-der-values)
-- [Value-Klassen](#allgemeine-objparams)
+- [Value-Klassen](#value-klassen)
 
-
+<a name="zweck-der-values"></a>
 ## Zweck der Values
-mit diesen Klassen werden alle sichtbaren und verstecken Felder definiert.
 
+Mit diesen Klassen werden alle sichtbaren und verstecken Felder definiert.
 
-
-Die Klassen sind hier zu finden
-
-	src/addons/yform/lib/yform/values/
+> Die Value-Klassen sind hier zu finden:  
+> `src/addons/yform/lib/yform/values/`
 
 
 Beispiele (Schreibweisen): **yForm Formbuilder** und **PHP**
@@ -29,9 +30,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	?>
 
 
-
-
-
+<a name="value-klassen"></a>
 ## Value-Klassen
 
 	
@@ -46,7 +45,6 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
---
 	
 	
 	
@@ -62,9 +60,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
-	
+		
 	
 	
 	
@@ -80,7 +76,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel PHP
 	_
 	
---
+
 	
 	
 	
@@ -96,8 +92,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -112,8 +107,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -130,7 +124,6 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel PHP
 	_
 
---
 	
 	
 	
@@ -146,8 +139,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -163,8 +155,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -180,8 +171,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -196,7 +186,6 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel PHP
 	_
 
---
 	
 	
 	
@@ -212,7 +201,6 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel PHP
 	_
 
---
 	
 	
 	
@@ -229,7 +217,6 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel PHP
 	_
 
---
 	
 	
 	
@@ -245,8 +232,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -262,8 +248,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -279,8 +264,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -296,8 +280,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -312,8 +295,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -329,8 +311,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	_
-	
---
+
 	
 	
 	
@@ -345,9 +326,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	_
 	
 #####Beispiel PHP
-	_
-	
---
+
 	
 	
 	
@@ -363,8 +342,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 #####Beispiel PHP
 	-
-	
---
+
 	
 	
 	
@@ -376,12 +354,11 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	hashvalue|name|[title]|field|(md5/sha1/sha512/...)|[salt]|[no_db]
 	
 #####Beispiel Formbuilder
-	hashvalue|name|[title]|field|(md5/sha1/sha512/...)|[salt]|[no_db]
+	_
 	
 #####Beispiel PHP
 	-
-	
---
+
 	
 	
 	
@@ -398,8 +375,7 @@ definiert ein versteckes Feld
 	
 #####Beispiel PHP
 	$yform->setValueField('hidden', array("name", "<h1>Headline</h1>"));
-	
---
+
 	
 	
 	
@@ -416,15 +392,13 @@ gibt html aus
 		
 #####Beispiel PHP
 	$yform->setValueField('html', array("headline", "<h1>Headline</h1>"));
-	
---
+
 	
 	
 	
 	
 		
 ###!!index
-?
 
 #####Definition
 	index|name|label1,label2,label3|[no_db]|[func/md5/sha]	
@@ -433,32 +407,29 @@ gibt html aus
 	
 #####Beispiel PHP
 	-
-	
---
+
 	
 	
 	
 	
 		
-###integer
-übergibt nur einen Integer-Wert als Eingabe 
+###!!integer
 
 #####Definition
 	integer|name|label|defaultwert|[no_db]	
 #####Beispiel Formbuilder
-	integer|name|label
-		
-#####Beispiel PHP
-	$yform->setValueField('integer', array("name", "label"));
+	_
 	
---
+#####Beispiel PHP
+	-
+
 	
 	
 	
 	
 		
 ###ip
-übergibt die IP des Besuchers
+übergibt die IP des Users.
 
 #####Definition
 	ip|name|[no_db]
@@ -470,8 +441,7 @@ gibt html aus
 	$yform->setValueField('ip', array("ip"));
 	
 	-
-	
---
+
 	
 	
 	
@@ -487,23 +457,21 @@ gibt html aus
 	
 #####Beispiel PHP
 	-
-	
---
+
 	
 	
 	
 	
 		
 ###!!objparams
-[Beispiele und Erklärung](yform_modul_objparams.md)
 
 #####Definition
 	objparams|key|newvalue|[init/runtime]	
 #####Beispiel Formbuilder
-
-
-#####Beispiel PHP
+	_
 	
+#####Beispiel PHP
+	-
 --
 	
 	
@@ -511,43 +479,41 @@ gibt html aus
 	
 		
 	
-###password
-gibt ein Eingabefeld als Typ Passwort aus
+###!!password
+
 
 #####Definition
 	password|name|label|default_value|[no_db]
 	
 #####Beispiel Formbuilder
-	password|pass|Dein Passwort|
+	password|name|label|default_value
 	
 #####Beispiel PHP
-	$yform->setValueField('password', array("pass","Dein Passwort"));
-	
---
+	$yform->setValueField('password', array("name","label", "default_value"));
+
 	
 	
 	
 	
 		
 ###php
-gibt PHP aus
+
 
 #####Definition
 	php|name|<?php  ?>
 		
 #####Beispiel Formbuilder
-	php|name|<?php echo "redaxo";  ?>
+	php|name|<?php  ?>
 		
 #####Beispiel PHP
-	$yform->setValueField('php', array("name","<?php echo "redaxo";  ?>"));
---
+	$yform->setValueField('php', array("name","<?php  ?>"));
+
 	
 	
 	
 	
 		
 ###!!prio
-?
 
 #####Definition
 	prio|name|label|fields|scope|defaultwert	
@@ -555,7 +521,6 @@ gibt PHP aus
 	prio|name|label|fields|scope|defaultwert	
 #####Beispiel PHP
 	$yform->setValueField('prio', array("name","label", "fields", "scope", "defaultwert"));
---
 	
 	
 	
@@ -572,7 +537,6 @@ definiert eine Gruppe von Radio-Buttons.
 	
 #####Beispiel PHP
 	$yform->setValueField('radio', array("anrede","Anrede", "Frau=w,Herr=m"));
---
 	
 	
 	
@@ -588,16 +552,43 @@ definiert eine Gruppe von Radio-Buttons, via einen mySQL-Query
 	radio_sql|partner|Partner|select id,name from rex_partner order by name	
 #####Beispiel PHP
 	$yform->setValueField('radio_sql', array("partner","Partner","select id,name from rex_partner order by name"));
---
 	
 	
+	
+	
+		
+###readtable
+liest einen Datensatz und übergibt die ausgelesenen Werte in den E-mail value_pool, die einem E-Mail-Template über Platzhalter werden können.
+
+#####Definition
+	readtable|tablename|feldname|label
+	
+#####Beispiel Formbuilder
+	text|name|Name
+	readtable|rex_user|name|name
+	action|tpl2email|testtemplate||info@mustermann.de
+
+
+#####Beispiel PHP
+	$yform->setValueField('text', array("name","Name"));
+	$yform->setValueField('readtable', array("rex_user","name","name"));
+	$yform->setActionField('tpl2email', array("testtemplate","","info@mustermann.de"));
+
+
+	
+liest aus der Tabelle **rex_user** einen Datensatz 
+
+	SELECT * FROM rex_user WHERE name='[eingabe feld name]'
+
+und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adresse:
+
+
 	
 	
 	
 	
 		
 ###!!remembervalues
-?
 
 #####Definition
 	remembervalues|name|label|label1,label2,label3,label4|opt:default:1/0|opt:dauerinsekunden
@@ -607,7 +598,7 @@ definiert eine Gruppe von Radio-Buttons, via einen mySQL-Query
 	
 #####Beispiel PHP
 	-
---
+
 	
 	
 	
@@ -625,7 +616,7 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 #####Beispiel PHP
 	$yform->setValueField('resetbutton', array("reset","reset","Reset"));
 	
---
+
 	
 	
 	
@@ -643,7 +634,7 @@ definiert ein Auswahlliste, dessen Optionen über kommagetrennte Angaben erstell
 #####Beispiel PHP
 	$yform->setValueField('select', array("anrede","Anrede","Frau=w,Mann=m"));
 
---
+
 	
 	
 	
@@ -659,24 +650,23 @@ definiert ein Auswahlliste, dessen Optionen über einen mySQL-Query gefüllt wer
 	
 #####Beispiel PHP
 	$yform->setValueField('select_sql', array("kategorie","Kategorie","select id,name from rex_produkte_kategorie order by name", "", "", "1", "keine Kategorie", "1", "3"));
---
+
 	
 	
 	
 	
 		
-###showvalue
-zeigt einenWert mit einem Label in einem <p>-Element an ??
+###!!showvalue
 
 #####Definition
 	showvalue|name|label|defaultwert
 		
 #####Beispiel Formbuilder
-	showvalue|name|label|defaultwert
-		
+	_
+	
 #####Beispiel PHP
-	$yform->setValueField('showvalue', array("name","label","defaultwert"));
---
+	-
+
 	
 	
 	
@@ -694,7 +684,7 @@ definiert einen Submit-Button
 #####Beispiel PHP
 	$yform->setValueField('submit', array("send","Absenden","no_db","submit_bttn"));
 
---
+
 	
 	
 	
@@ -711,7 +701,7 @@ definiert mehrere Submit-Buttons
 	
 #####Beispiel PHP
 	$yform->setValueField('submits', array("send","abonnieren,cancel","1,0"));
---
+
 
 	
 	
@@ -728,8 +718,7 @@ Ausgabe eines einzeiligen Eingabefeldes. Über ***default*** kann ein Wert angez
 	
 #####Beispiel PHP
 	$yform->setValueField('text', array("name","Name","Dein Name","", "f_name"));
-	
---
+
 
 	
 	
@@ -748,7 +737,6 @@ Ausgabe eines mehrzeiligen Eingabefeldes. Über ***default*** kann ein Wert ange
 #####Beispiel PHP
 	$yform->setValueField('textarea', array("kommentar","Kommentar"));
 
---
 
 	
 	
@@ -766,14 +754,14 @@ ermöglicht die Ausgabe zweier Auswahllisten, für die Stunden und Minuten, in d
 
 #####Beispiel PHP
 	$yform->setValueField('time', array("uhrzeit", "Uhrzeit", "08,09,10,11,12", "00,15,30,45", "###H### ###m###"));
---
+
 
 	
 	
 	
 	
 	
-###uniqueform
+###!!uniqueform
 
 #####Definition
 	uniqueform|name|table|Fehlermeldung
@@ -783,14 +771,13 @@ ermöglicht die Ausgabe zweier Auswahllisten, für die Stunden und Minuten, in d
 	
 #####Beispiel PHP
 	-
---
 
 	
 	
 	
 	
 	
-###upload
+###!!upload
 
 #####Definition
 	upload|name | label | Maximale Größe in Kb oder Range 100,500 | endungenmitpunktmitkommasepariert | pflicht=1 | min_err,max_err,type_err,empty_err,delete_file_msg | Speichermodus(upload/database/no_save) | `database`: Dateiname wird gespeichert in Feldnamen | Eigener Uploadordner [optional] | Dateiprefix [optional] |
@@ -800,7 +787,7 @@ ermöglicht die Ausgabe zweier Auswahllisten, für die Stunden und Minuten, in d
 	
 #####Beispiel PHP
 	-
---
+
 
 	
 	
