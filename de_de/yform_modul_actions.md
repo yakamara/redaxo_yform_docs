@@ -118,6 +118,7 @@ Speichert oder aktualisiert Formulardaten in einer Tabelle. Dabei werden die Lab
   text|plz|PLZ
   text|ort|Ort
 
+  objparams|getdata|true
   objparams|main_table|rex_warenkorb
   objparams|main_where|id=1
 
@@ -132,6 +133,7 @@ Speichert oder aktualisiert Formulardaten in einer Tabelle. Dabei werden die Lab
   $yform->setValueField('text', array("plz","PLZ"));
   $yform->setValueField('text', array("ort","Ort"));
 
+  $yform->setObjectparams('getdata', TRUE);
   $yform->setObjectparams('main_where', 'id=1');
   $yform->setObjectparams('main_table', 'rex_warenkorb');
 
