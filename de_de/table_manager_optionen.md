@@ -1,9 +1,9 @@
 # Table Manager: Optionen
  
 > ## Inhalte
-> [Tabelle erstellen](#tabelle-erstellen)
-> [Tabelle migrieren](#tabelle-migrieren)
-> [Tableset importieren / exportieren](#tableset-importieren)
+> * [Tabelle erstellen](#tabelle-erstellen)
+> * [Tabelle migrieren](#tabelle-migrieren)
+> * [Tableset importieren / exportieren](#tableset-importieren)
  
 Um Tabellen im Table Manager zu bearbeiten, gibt es drei verschiedene Möglichkeiten:
 
