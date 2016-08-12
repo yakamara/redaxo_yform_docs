@@ -33,7 +33,7 @@ Datensätze pro Seite | Legt fest, ab wie vielen Datensätzen die Tabellen-Über
 Standardsortierung Feld | Legt fest, nach welchem Feld die Tabellen-Übersicht zu Beginn sortiert wird.
 Stadndardsortierung Richtung |  Legt fest, ob das gewählte Feld auf- oder absteigend sortiert wird.
 Suche aktiv | Zeigt die Schaltfläche `Datensatz suchen` in der Tabellen-Übersicht an.
-In der Navigation versteckt | Legt fest, ob die Tabelle auch im Menü angezeigt wird. oder nur im Table Manager. (Hilfreich, um beispielsweise relationale Datenbank-Tabellen auszublenden.)
+In der Navigation versteckt | Legt fest, ob die Tabelle auch im Menü angezeigt wird, oder nur im Table Manager. (Hilfreich, um beispielsweise relationale Datenbank-Tabellen auszublenden.)
 Export der Daten erlauben | Zeigt die Schaltfläche `Datensätze exportieren` in der Tabellen-Übersicht an.
 Import von Daten erlauben | [Zeigt die Schaltfläche `Datensätze importieren` in der Tabellen-Übersicht an.
 
