@@ -21,11 +21,12 @@
 	- [E-Mail-Templates erstellen](email_templates.md)
 - Geo-Plugin
 	- [Geokoordinaten bestimmen](geo_plugin.md) <sup><b>unvollständig</b></sup>
-
----
-
-**Credits**
-
-alexplusde (Alexander Walther)  
-goldfischpeter (Peter Wolfrum)  
-polarpixel (Peter Bickel)
+- Demos
+ 	- [Bewertungen - coming soon](demo_bewertungen.md)
+ 	- [Kommentare - coming soon](demo_kommentare.md)
+ 	- [Kontakt - coming soon](demo_kontakt.md)
+ 	- [Kontakt mit Spamschutz - coming soon](demo_kontakt-spamschutz.md)
+ 	- [Kontakt mit HTML-Mails - coming soon](demo_kontakt-htmlmails.md)
+ 	- [News - coming soon](demo_news.md)
+ 	- [Veranstaltungen - coming soon](demo_veranstaltungen.md)
+ 	- [Glossar](demo_glossar.md)
