@@ -67,7 +67,7 @@ Fehlermeldung | Hinweis, der erscheint, wenn keine gültige E-Mail-Adresse angeg
 
 > Hinweis: Falls das E-Mail-Feld ein Pflichtfeld ist, muss auch die Validierung `empty` hinzugefügt werden, da ein leeres Feld eine keine ungültige E-Mail-Adresse darstellt.
 
-> Hinweis: Die Validierung ist (noch) nicht RFC-konform, sondern wird nach dem Regex-Schema `"#^[\w.+-]{2,}\@\w[\w.-]*.\w+$#u";` überprüft. 
+> Hinweis: Die Validierung ist seit YForm 1.1 RFC-konform. 
 
 <a name="empty"></a>
 ## empty
