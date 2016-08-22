@@ -50,8 +50,8 @@ Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `name`, `email`, `phone`, `zip`
-Name der Funktion | Funktion, die den Wert überprüfen soll
-Weitere Parameter |
+Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `getValidIban` ([Demo zu getValidIban](demo_validate-iban.md))
+Weitere Parameter | [Erläuterungen auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/9), [Erläuterungen im Forum](http://www.redaxo.org/de/forum/addons-f30/wie-funktioniert-xform-validation-customfunction-t19213.html)
 Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabewert liefert.
 
 <a name="email"></a>
