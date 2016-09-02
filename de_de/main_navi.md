@@ -9,6 +9,7 @@
 	- [Feldtypen](table_manager_feldtypen.md)
 	- [Validierungen](table_manager_validierungen.md)
 	- [Anhang: be_manager_relation](table_manager_feldtypen_be-manager-relation.md) <sup><b>unvollständig</b></sup>  <sup><i>alexplusde</i></sup>
+    - [Yorm ORM](yorm.md) <sup><b>in Bearbeitung</b></sup> <sup><i>Gregor, Thomas</i></sup>
 - YForm-Formbuilder (Modul für das Frontend)
 	- [Allgemein](yform_modul_allgemein.md)
 	- [Verzeichnis-Struktur](yform_modul_struktur.md) <sup><b>offen</b></sup>
