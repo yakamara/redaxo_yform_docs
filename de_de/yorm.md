@@ -50,11 +50,14 @@ $items = MyTable::query()->find();
     - getTableAlias
 - count
 - exists
-- find
-- findId
-- findIds
-- findOne
-- get
+- Find
+    - find
+    - findId
+    - findIds
+    - findOne
+- Get
+    - get
+    - getAll
 - Group By
     - groupBy
     - groupByRaw
