@@ -41,9 +41,20 @@ Nun kann man alle Daten wie folgt holen
 $items = MyTable::query()->find();
 ```
 
+#### weitere Beispiele
+
+```
+$items = MyTable::query()
+            ->alias('t')
+            ->joinRelation('relation_id', 'r')
+            ->select('r.name', 'relation_name')
+            ->where('t.status', '1')
+            ->orderBy('t.name')
+            ->find();
+```
 
 <a name="methoden"></a>
-## Methoden (unvollständig)
+## query Methoden (unvollständig)
 
 - Alias
     - alias
@@ -95,3 +106,20 @@ $items = MyTable::query()->find();
     - where
     - whereNested
     - whereRaw
+
+## dataset Methoden
+
+- get
+- getData
+- getForm
+- getId
+- getMessages
+- getRaw
+- getRelatedCollection
+- getRelatedDataset
+- getTable
+- getTableName
+- getValue
+- hasValue
+- isValid
+- loadData
