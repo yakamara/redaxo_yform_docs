@@ -3,6 +3,7 @@
 - [Arbeiten ohne eigene Modal class](#ohne-modal-class)
 - [Eigene Modal class verwenden](#eigene-modal-class)
 - [Methoden](#methoden)
+- [Query debuggen](#query-debuggen)
     
 <a name="ohne-modal-class"></a>
 ## Arbeiten ohne eigene Modal class
@@ -123,3 +124,30 @@ $items = MyTable::query()
 - hasValue
 - isValid
 - loadData
+
+
+<a name="query-debuggen"></a>
+## `Query debuggen
+
+Temporär, wird gelöscht wenn besseres Handling vorhanden ist
+
+### Variante A
+
+Wichtig istnur der Part mir `rex_sql`
+
+```
+$query = MyTable::query();
+$query
+    ->alias('t')
+    ->joinRelation('relation_id', 'r')
+    ->select('r.name', 'relation_name')
+    ->where('t.status', '1')
+    ->orderBy('t.name')
+$items = rex_sql::factory()->setDebug()->getArray($query->getQuery(), $query->getParams());
+$items = $query->find();
+``` 
+
+### Variante B
+
+Datei `/redaxo/src/addons/yform/plugins/manager/lib/yform/manager/dataset.php` und die Variable `private static $debug = false;` auf `true` setzen
+
