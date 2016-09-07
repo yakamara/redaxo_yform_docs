@@ -55,7 +55,9 @@ $items = MyTable::query()
 ```
 
 <a name="methoden"></a>
-## query Methoden (unvollständig)
+## Methoden
+
+### query Methoden
 
 - Alias
     - alias
@@ -108,7 +110,7 @@ $items = MyTable::query()
     - whereNested
     - whereRaw
 
-## dataset Methoden
+### dataset Methoden
 
 - get
 - getData
@@ -133,7 +135,7 @@ Temporär, wird gelöscht wenn besseres Handling vorhanden ist
 
 ### Variante A
 
-Wichtig istnur der Part mir `rex_sql`
+Wichtig ist nur der Part mit `rex_sql`
 
 ```
 $query = MyTable::query();
