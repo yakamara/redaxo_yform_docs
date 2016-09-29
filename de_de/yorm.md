@@ -129,7 +129,7 @@ $items = MyTable::query()
 
 
 <a name="query-debuggen"></a>
-## `Query debuggen
+## Query debuggen
 
 Temporär, wird gelöscht wenn besseres Handling vorhanden ist
 
@@ -153,3 +153,25 @@ $items = $query->find();
 
 Datei `/redaxo/src/addons/yform/plugins/manager/lib/yform/manager/dataset.php` und die Variable `private static $debug = false;` auf `true` setzen
 
+## Beispiele
+
+```
+<?php
+
+$table = rex_yform_manager_table::get('rex_data_product');
+
+$products = $table->query()
+    ->joinRelation('category_id', 'c') // Join auf rex_data_product_category gemäß Relationsfeld category_id, mit Alias "c" für weitere Verwendung
+    ->select('c.name', 'category_name') // Aus der gejointen Tabelle den Kategorienamen mit auslesen mit Alias "category_name"
+    ->where('status', 1)
+    ->find();
+
+foreach ($products as $product) {
+    echo $product->name;
+    echo $product->category_name; // Value aus der gejointen Tabelle, siehe oben
+
+    // Alternativ das komplette Objekt für die Kategorie auslesen
+    $category = $product->getRelatedDataset('category_id');
+    echo $category->name;
+}
+```
