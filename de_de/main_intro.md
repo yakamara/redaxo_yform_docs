@@ -8,7 +8,7 @@ YForm enthält nicht nur alle gängigen Formular-Feldtypen, sondern stellt auch 
 
 Dazu installiert YFom ein Modul namens `YForm-Formbuilder`. Nach einer allgemeinen Einführung in den [Formbuilder](yform_modul_allgemein.md) werden die zahlreichen Optionen aller [Values](yform_modul_values.md), [Validates](yform_modul_validates.md) und [Actions](yform_modul_actions.md) erklärt. Auch [allgemeine Formular-Paramater](yform_modul_objparams.md) und die [Verzeichnisstruktur](yform_modul_struktur.md) werden behandelt.
 
-Das Erstellen von [E-Mail-Templates](email_templates.md) wird in einem eigenen Kapitel beschrieben.
+Das Erstellen von [E-Mail-Templates](email_plugin.md) wird in einem eigenen Kapitel beschrieben.
 
 ## Tabellenverwaltung im Backend
 

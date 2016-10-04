@@ -1,11 +1,12 @@
 # YForm: Plugins
 
-> **Hinweis:**  
-> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
+> **Hinweis:**
+> Plugins erweitern die YForm und können optional aktiviert werden, wobei es hier eher eine technische Abgrenzung ist und man ruhig alle Plugin aktivieren kann/sollte.
 
-Plugin-System kurz erklären
+Es gibt folgende Plugins:
 
-Die einzelnen Plugins kurz erläutern mit Verlinkung zu den entsprechenden Doku-Seiten:
-- email
-- manager
-- plugins
+- [Docs-Plugin](docs_plugin.md)
+- [E-Mail-Plugin](email_plugin.md)
+- [Geo-Plugin](geo_plugin.md)
+- [Table Manager-Plugin](table_manager_grundprinzip.md)
+- [Tools-Plugin](tools_plugin.md)

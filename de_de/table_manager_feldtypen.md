@@ -24,6 +24,7 @@
 > - [php](#php)
 > - [prio](#prio)
 > - [radio](#radio)
+> - [radio_sql](#radio_sql)
 > - [select](#select)
 > - [select_sql](#select_sql)
 > - [submits](#submits)
@@ -31,7 +32,6 @@
 > - [textarea](#textarea)
 > - [time](#time)
 > - [upload](#upload)
-> - [ycom_auth_password](#ycom_auth_password)
 
 <a name="be_link"></a>
 ## be_link
@@ -703,14 +703,3 @@ Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen z
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
-<a name="ycom_auth_password"></a>
-## ycom_auth_password
-
-Option | Erläuterung
------- | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | |
-Bezeichnung | |
-Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
-In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
-Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.

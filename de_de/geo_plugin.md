@@ -1,8 +1,9 @@
 # Geo-Plugin
 
-> **Hinweis:**  
-> Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
+Mit dem Geo-Plugin hat man ein neues Feld im Manager zur Verfügung "google_geocode". MIt diesem Feld kann man Positionen verwalten. Mit dem entsprechenden API-Key von Google bekommt man im entsprechenden Datensatz eine Karte angezeigt und kann dort die Markierung positionieren. Weiterhin kann man über "Names Postionsfindung" verschiedene Felder des Datensatzes definieren (kommasepariert) um damit über die Google Api aus einem Adresssatz eine Position zu bekommen.
 
-Für das Geo-Plugin in YForm gibt es noch keine Dokumentation. Außerdem muss das Plugin durch die Änderungen an der Google Maps JS-API überarbeitet werden. Der aktuelle Stand der Entwicklung ist in [YForm auf GitHub](https://github.com/yakamara/redaxo_yform/issues?utf8=%E2%9C%93&q=) nachlesbar.
+Die entsprechende Position wird folgendermaßen gespeichert: lat,lng
 
-Eine Anleitung für das GEO-Plugin gibt es in der [redaxo.org Dokumentation](http://www.redaxo.org/de/doku/tutorials/table-manager-fka-editme/das-geo-plugin/).
+Eingaben bei Names Positionsfindung sind abhängig von den vorhandenen Datenfeldern, aber folgendes Beispiel wir sicher oft auftauchen
+
+    country, city,street

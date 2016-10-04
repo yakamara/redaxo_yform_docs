@@ -18,10 +18,12 @@
 	- [Validates](yform_modul_validates.md)
 	- [Actions](yform_modul_actions.md)
 	- [YForm erweitern](yform_modul_erweitern.md) <sup><b>offen</b></sup>
-- E-Mail-Templates
-	- [E-Mail-Templates erstellen](email_templates.md)
+- E-Mail-Plugin
+	- [E-Mail-Templates erstellen](email_plugin.md)
 - Geo-Plugin
-	- [Geokoordinaten bestimmen](geo_plugin.md) <sup><b>unvollständig</b></sup>
+	- [Geokoordinaten bestimmen](geo_plugin.md)
+- Tools-Plugin
+    - [Einsetzen der Hilfsmittel](tools_plugin.md)
 - Demos
  	- [Bewertungen - coming soon](demo_bewertungen.md)
  	- [Kommentare - coming soon](demo_kommentare.md)

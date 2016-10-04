@@ -71,19 +71,6 @@ Der Defaultwert ist `1` (anzeigen).
 Wenn man mehrere Formulare auf einer Seite verwenden möchte, muss der `form_name` für jedes Formular verschieden sein. Der hier gewählte Name wird bei jedem Feld eines Formulars dem Namen und der ID hinzugefügt, so erhält man eine Eindeutigkeit.  
 Der Defaultwert ist `formular`.
 
-<a name="css-id-formular"></a>
-### CSS-ID für Formular
-
-	// Im YForm-Formbuilder
-	objparams|form_id|contact_form
-
-	// In PHP
-	$xform->setObjectparams('form_id','contact_form');
-
-Damit kann dem Formular eine individuelle CSS-ID vergeben werden.  
-Default-Ausgabe:
-`<form id="form_formular">`
-
 <a name="css-klasse-formular"></a>
 ### CSS-Klasse für Formular
 
