@@ -131,10 +131,10 @@ Default ist `html`.
 ### Themes
 
 	// Im YForm-Formbuilder
-	objparams|form_skin|classic
+	objparams|form_ytemplate|classic
 
 	// In PHP
-	$yform->setObjectparams('form_skin','classic');
+	$yform->setObjectparams('form_ytemplate','classic');
 
 YForm verfügt über `Templates`, in denen das HTML-Markup definiert ist, das die Felder umgibt. Im Ordner `ytemplates` gibt es Unterordner für jedes Theme, in denen dann die Templates für die einzelnen Felder zu finden sind. Auf diese Weise kann man schnell eigene Themes definieren, die auf dem Basis-Theme aufbauen: Wenn es für einen Feldtyp ein eigenes Template gibt, wird dieses verwendet, anonsten das des Basis-Themes.
 Der Defaultwert lautet `bootstrap`, d.h. als Basis-Theme ist das HTML-Schema des CSS-Frameworks "Bootstrap" hinterlegt.
