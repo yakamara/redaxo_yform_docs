@@ -673,38 +673,18 @@ definiert ein Auswahlliste, dessen Optionen über einen mySQL-Query gefüllt wer
 	
 	
 ###submit
-definiert einen Submit-Button
-
-#####Definition
-	submit|label|value_on_button|[no_db]|cssclassname|[value_to_save_if_clicked]
-	
-#####Beispiel Formbuilder
-	submit|send|Absenden|no_db|submit_bttn
-	
-#####Beispiel PHP
-	$yform->setValueField('submit', array("send","Absenden","no_db","submit_bttn"));
-
-
-	
-	
-	
-	
-	
-###submits
-definiert mehrere Submit-Buttons
+definiert einen oder mehrere Submit-Button
 
 #####Definition
 	submit|label|labelvalue1_on_button1,labelvalue2_on_button2 | [value_1_to_save_if_clicked,value_2_to_save_if_clicked]|[no_db]|[Default-Wert]| [cssclassname1,cssclassname2]
 	
 #####Beispiel Formbuilder
-	submits|send|abonnieren,cancel|1,0
+	submit|send|abonnieren,cancel|1,0|no_db|submit_bttn
 	
 #####Beispiel PHP
-	$yform->setValueField('submits', array("send","abonnieren,cancel","1,0"));
+	$yform->setValueField('submit', array("send","abonnieren,cancel","1,0","no_db","submit_bttn"));
 
 
-	
-	
 	
 	
 	

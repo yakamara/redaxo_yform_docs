@@ -27,7 +27,7 @@
 > - [radio_sql](#radio_sql)
 > - [select](#select)
 > - [select_sql](#select_sql)
-> - [submits](#submits)
+> - [submit](#submit)
 > - [text](#text)
 > - [textarea](#textarea)
 > - [time](#time)
@@ -588,8 +588,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 > **Tipp:**  
 > Ein select_sql-Feld kann ähnlich wie be_manager_relation dazu benutzt werden, um Datensätze fremder Tabellen in einer 1:1- oder 1:n-Beziehung zu verknüpfen.
 
-<a name="submits"></a>
-## submits
+<a name="submit"></a>
+## submit
 
 Ein oder mehrere <b>Submit-Buttons</b> zum Absenden des Formulars.
 
@@ -599,7 +599,7 @@ Ein oder mehrere <b>Submit-Buttons</b> zum Absenden des Formulars.
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | Name des Felds in der Datenbank, z.B. `submits`
+Name | Name des Felds in der Datenbank, z.B. `submit`
 Bezeichnungen (kommasepariert) | Liste an Beschriftungen für die jeweiligen Buttons, z.B. `Anfragen,Kaufen` oder `Rückruf,E-Mail`
 Werte (optional, kommasepariert) | `Anfragen,Kaufen`,`email,phone`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
