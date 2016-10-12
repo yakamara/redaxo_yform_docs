@@ -7,7 +7,7 @@ Das Geo-Plugin wird in Redaxo über die Addonverwaltung installiert und aktivier
 Nach der Installation stehen die Funktionen des Geo-Plugins als neues Feld im Table Manager und im Reiter Geo in YForm zur Verfügung. 
 
 ## Neues Geo-Feld anlegen
-- Für im Table Manager in der gewünchten Tabelle ein neues Feld google_geocode hinzu
+- Füge im Table Manager in der gewünchten Tabelle ein neues Feld google_geocode hinzu
 - Lege einen Namen und eine Bezeichnung fest
 - Unter **Names Positionsfindung** trägst du kommagetrennt die Feldernamen(keys) deiner Tabelle ein, die zur Positionsfindung dienen sollen, z.B.: country, city, street. 
 - Jetzt kannst Du noch die **Höhe** und **Breite** deiner Map im Table Manager festlegen. 
