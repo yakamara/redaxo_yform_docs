@@ -30,5 +30,5 @@ Ist der Google-Api-Code korrekt, zeigt das Feld in der Tabelle bereits eine Kart
 - Mit **Lösche Position** wird das Feld zurückgesetzt
 - Die Position kann mit dem Standortmarker in der Google-Map durch drag & drop korrigiert werden. 
 
-# Ausgabe einer Map
+## Ausgabe einer Map
 Eine Ausgabe der der Daten als Map stellt das Geo-Plugin nicht bereit. Nutze die Geo-Daten zur weiteren Verarbeitung  z.B. für: Google Map oder Leaflet
