@@ -16,6 +16,7 @@ Nach der Installation stehen die Funktionen des Geo-Plugins als neues Feld im Ta
 
 ## Datenformat
 Das Feld gibt die Daten kommagetrennt wie folgt aus: lat,lng
+  > Beispiel: 49.578502,2.761796000000004
 
 ## Massen-Geocoding 
 Will man nicht alle Datensätze selbst bearbeiten, kann man sich die Geodaten automatisch generieren lassen. 
