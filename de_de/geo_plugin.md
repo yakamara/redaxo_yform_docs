@@ -10,9 +10,9 @@ Nach der Installation stehen die Funktionen des Geo-Plugins als neues Feld im Ta
 - Für im Table Manager in der gewünchten Tabelle ein neues Feld google_geocode hinzu
 - Lege einen Namen und eine Bezeichnung fest
 - Unter **Names Positionsfindung** trägst du kommagetrennt die Feldernamen(keys) deiner Tabelle ein, die zur Positionsfindung dienen sollen, z.B.: country, city, street. 
-- jetzt kannst Du noch die Höhe und Breite deiner Map im Table Manager festlegen. 
-- Hinterlege noch einen Google-Maps-Api-Key, diesen kann Du hier anfordern: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=de
-- Unter Default kannst du Standard-Koordination zur Map-Anzeige festlegen, wenn noch keine Koordinaten ermittelt wurden. 
+- Jetzt kannst Du noch die **Höhe** und **Breite** deiner Map im Table Manager festlegen. 
+- Hinterlege noch einen **Google-Maps-Api-Key**, diesen kann Du hier anfordern: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=de
+- Unter **Default** kannst du Standard-Koordination zur Map-Anzeige festlegen, wenn noch keine Koordinaten ermittelt wurden. 
 
 ## Datenformat
 Das Feld gibt die Daten kommagetrennt wie folgt aus: lat,lng
