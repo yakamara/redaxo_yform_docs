@@ -19,7 +19,7 @@ Das Feld gibt die Daten kommagetrennt wie folgt aus: lat,lng
 
 ## Massen-Geocoding 
 Will man nicht alle Datensätze selbst bearbeiten, kann man sich die Geodaten automatisch generieren lassen. 
-Findet das Geo-Plugin eine Tabelle mit dem Geodaten-Feld, kann man diese in YFom im Reiter **Geo** auswählen und automatischen geocodieren lassen. 
+Findet das Geo-Plugin eine Tabelle mit dem Geodaten-Feld, kann man diese in YFom im Reiter **Geo** auswählen und automatisch geocodieren lassen. 
 
 ## Verwendung in der Tabelle
 Ist der Google-Api-Code korrekt, zeigt das Feld in der Tabelle bereits eine Karte an. 
