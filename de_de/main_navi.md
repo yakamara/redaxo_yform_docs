@@ -24,12 +24,15 @@
 	- [Geokoordinaten bestimmen](geo_plugin.md)
 - Tools-Plugin
     - [Einsetzen der Hilfsmittel](tools_plugin.md)
-- Demos
- 	- [Bewertungen - coming soon](demo_bewertungen.md)
- 	- [Kommentare - coming soon](demo_kommentare.md)
- 	- [Kontakt - coming soon](demo_kontakt.md)
+- Tablesets
+ 	- [Tableset Bewertungen](demo_tableset-rex_yf_ratings.json)
+ 	- [Tableset Kommentare](demo_tableset-rex_yf_comments.json)
+ 	- [Tableset Kontakt](demo_tableset-rex_yf_messages.json)
+ 	- [Tableset News](demo_tableset-rex_yf_news.json)
+ 	- [Tableset Mitarbeiter](demo_tableset-rex_yf_employees.json)
+ 	- [Tableset Veranstaltungen](demo_tableset-rex_yf_events.json)
+ 	- [Tableset Glossar](demo_tableset-rex_glossar.json)
+- Tutorials
  	- [Kontakt mit Spamschutz](demo_kontakt-spamschutz.md)
  	- [Kontakt mit HTML-Mails - coming soon](demo_kontakt-htmlmails.md)
- 	- [News - coming soon](demo_news.md)
- 	- [Veranstaltungen - coming soon](demo_veranstaltungen.md)
  	- [Glossar](demo_glossar.md)
