@@ -26,9 +26,7 @@
 ```
 <?php
 // REDAXO Glossary or FAQ for yform
-// Creator: Thomas Skerbis, KLXM Crossmedia GmbH
-// Version: 1.0 
-// License: Public domain 
+// Modulausgabe
 
 $db_table = "rex_glossar";
 $sql = rex_sql::factory();
