@@ -8,7 +8,7 @@ Von Haus aus liefert `YForm` für den Formbuilder zwei Feldtypen, um sicherzuste
 
 Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha)
 
-*Nachteile*
+**Nachteile**
 
 * Nicht barrierefrei
 * Zusätzlicher Aufwand für den Nutzer
@@ -17,22 +17,22 @@ Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha)
 
 Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha_calc)
 
-*Nachteile*
+**Nachteile**
 
 * Zusätzlicher Aufwand für den Nutzer
 
 ## via Zeitstempel 
 
-*Vorgehensweise*
+**Vorgehensweise**
 
 1. Feld vom Typ PHP anlegen: `php|validate_timer|Spamschutz|<?php echo '<input name="validate_timer" type="hidden" value="'.microtime(true).'" />' ?>|`
 2. Validierung vom Typ custom_function anlegen: `validate|customfunction|validate_timer|yform_validate_timer|5|Spambots haben keine Chance|`
 3. Nachfolgende Funktion hinterlegen, die via `custom_function` aufgerufen wird.
 
 ```
-  function yform_validate_timer($label,$microtime,$seconds)
+function xform_validate_timer($label,$microtime,$seconds)
     {
-        if (microtime(true) > ($microtime + 10)) {
+        if (($microtime + $seconds) > microtime(true)) {
             return true;
         } else {
             return false;
@@ -42,7 +42,7 @@ Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha_calc)
     
 > Tipp: Die Funktion kann bspw. im projects-Addon innerhalb der boot.php hinterlegt werden.
     
-*Funktionsweise*
+**Funktionsweise**
 
 Spambots sind kleine ungeduldige Biestlinge. Sie füllen das Formular in der Regel im Bruchteil einer Sekunde aus und haben schließlich keine Zeit zu verlieren, um den nächsten Website-Betreiber in den Wahnsinn zu betreiben.
 
@@ -50,24 +50,24 @@ Spambots sind kleine ungeduldige Biestlinge. Sie füllen das Formular in der Reg
 
 Dieser Zeitstempel wird beim Absenden des Formulars in der Funktion `yform_validate_timer` verglichen. Wenn der vorgegebene Zeitwert unterschritten wird (in diesem Beispiel sind es `5` Sekunden), dann ist davon auszugehen, dass das Formular von einem Spambot ausgefüllt wurde, weshalb die Validierung fehlschlägt und das Absenden unterbunden wird.
 
-*Nachteile*
+**Nachteile**
 
 * keinen
 
 ## via hidden E-Mail-Field
 
-*Vorgehensweise*
+**Vorgehensweise**
 
 1. Feld vom Typ `email` anlegen, als Label `email` verwenden
 2. weiteres Feld vom Typ `email` anlegen, als Label bspw. `xmail` verwenden
 3. Validierung vom Typ `compare` anlegen, das Feld darf nicht `>0` sein.
 4. Eingabefeld `email` via CSS verstecken.
 
-*Funktionsweise*
+**Funktionsweise**
 
 Sobald Spambots das input-Feld namens `email` als Eingabe-Feld erkennen, werden sie es ausfüllen. Nur ein echter Nutzer wird das Feld nicht sehen und damit auch nicht ausfüllen. Dadurch kann man feststellen, ob ein Bot oder ein Mensch das Formular ausgefüllt hat. Für den Bot wird damit das Absenden blockiert.
 
-*Nachteil*
+**Nachteil**
 
 * Unter Umständen wird das versteckte Feld von Browsern vorausgefüllt. 
 * Das korrekte E-Mail-Feld wird nicht mehr vom Browser vorausgefüllt.
