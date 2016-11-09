@@ -20,6 +20,7 @@
 	- [YForm erweitern](yform_modul_erweitern.md) <sup><b>offen</b></sup>
 - E-Mail-Plugin
 	- [E-Mail-Templates erstellen](email_plugin.md)
+	- [E-Mail-Templates verwenden](email_plugin_verwenden.md)
 - Geo-Plugin
 	- [Geokoordinaten bestimmen](geo_plugin.md)
 - Tools-Plugin
