@@ -50,9 +50,25 @@ Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `name`, `email`, `phone`, `zip`
-Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `getValidIban` ([Demo zu getValidIban](demo_validate-iban.md))
-Weitere Parameter | [Erläuterungen auf GitHub](https://github.com/yakamara/redaxo_yform_docs/issues/9), [Erläuterungen im Forum](http://www.redaxo.org/de/forum/addons-f30/wie-funktioniert-xform-validation-customfunction-t19213.html)
+Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `yform_validate_custom`
+Weitere Parameter | Eingabe-Wert, gegen den geprüft werden soll, bspw. `20`
 Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabewert liefert.
+
+### Beispiel für `customfunction`
+
+Diese Funktion bspw. im `project`-Addon in der boot.php hinterlegen:
+
+```
+function yform_validate_custom($label, $value, $param)
+{
+	if($value > $param) { // eigene Validierung. Hier: Prüft, ob der Formular-Eingabewert größer ist als der Parameter
+        return false; // Achtung: false = gültig
+    } else {
+    	return true; // Achtung: true = Fehlermeldung ausgeben
+    }
+}
+```
+
 
 <a name="email"></a>
 ## email
