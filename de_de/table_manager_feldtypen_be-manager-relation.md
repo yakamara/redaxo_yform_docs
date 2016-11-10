@@ -33,6 +33,7 @@ Als erstes werden per Table-Manager folgende Tabellen erstellt:
 
 > **Wichtig** 
 > Diese Tabellen dienen ausschliesslich der Veranschaulichung des Vorgangs (eine echte News-Tabelle würde voraussichtlich weitere Felder bzw. Spalten beinhalten).
+
 > Es wird ausschliesslich das Feld mit dem Typ be_relation genauer erklärt. Die Konfiguration anderer Feld-Typen wird hier genauer erläutert: [Table Manager: Feldtypen](table_manager_feldtypen.md)
 
 #### Tabelle News-Tags `news_tag` ####
