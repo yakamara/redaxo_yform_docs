@@ -51,10 +51,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="link"]
 		
-	
-	
-	
-		
+
 ###be_manager_relation
 
 #####Definition
@@ -71,10 +68,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 
 	
-	
-	
-	
-		
+
 ###be_media
 
 #####Definition
@@ -92,10 +86,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 	
-	
-	
-	
-		
+
 ###be_select_category
 
 #####Definition
@@ -129,13 +120,32 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="table"]
 
-	
-	
-	
-	
-	
-	
+
+###captcha
 		
+#####Definition
+	captcha|Beschreibungstext|Fehlertext
+	
+#####Beispiel Formbuilder
+	_
+	
+#####Beispiel PHP
+	_
+
+
+###captcha_calc
+
+#####Definition
+	captcha_calc|Beschreibungstext|Fehlertext
+	
+#####Beispiel Formbuilder
+	_
+	
+#####Beispiel PHP
+	_
+
+	
+
 ###checkbox
 
 #####Definition
@@ -151,10 +161,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="checkbox"]
 
 	
-	
-	
-	
-		
+
 ###checkbox_sql
 
 #####Definition
@@ -170,10 +177,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="checkbox_sql"]
 
 	
-	
-	
-	
-		
+
 ###date
 
 #####Definition
@@ -208,10 +212,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="datestamp"]
 
 	
-	
-	
-	
-		
+
 ###datetime
 
 #####Definition
@@ -227,10 +228,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="datetime"]
 
 	
-	
-	
-	
-		
+
 ###email
 
 #####Definition
@@ -246,10 +244,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="email"]
 
 	
-	
-	
-	
-		
+
 ###emptyname
 
 #####Definition
@@ -264,10 +259,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="emptyname"]
 	
-	
-	
-	
-		
+
 ###fieldset
 
 #####Definition
@@ -283,10 +275,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="fieldsest"]
 
 	
-	
-	
-	
-		
+
 ###float
 
 #####Definition
@@ -301,13 +290,36 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="float"]
 
-	
-	
-			
-	
-	
-	
+
 		
+###generate_key
+
+#####Definition
+	generate_key|name|[no_db]
+	$yform->setValueField('float', array("float","Float","1"));
+		
+#####Beispiel Formbuilder
+	_
+	
+#####Beispiel PHP
+	_
+
+
+###generate_password
+
+#####Beispiel E-Mail
+	REX_YFORM_DATA[field="float"]
+
+#####Definition
+	generate_password|name|[no_db]
+		
+#####Beispiel Formbuilder
+	_
+	
+#####Beispiel PHP
+	_
+
+
 ###hashvalue
 
 #####Definition
@@ -323,10 +335,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	REX_YFORM_DATA[field="hashvalue"]
 
 	
-	
-	
-	
-		
+
 ###hidden
 definiert ein versteckes Feld
 
@@ -341,10 +350,7 @@ definiert ein versteckes Feld
 	$yform->setValueField('hidden', array("name", "<h1>Headline</h1>"));
 
 	
-	
-	
-	
-		
+
 ###html
 
 #####Definition
@@ -360,10 +366,7 @@ definiert ein versteckes Feld
 	REX_YFORM_DATA[field="html"]
 
 	
-	
-	
-	
-		
+
 ###index
 
 #####Definition
@@ -379,10 +382,7 @@ definiert ein versteckes Feld
 	REX_YFORM_DATA[field="index"]
 
 	
-	
-	
-	
-		
+
 ###integer
 
 #####Definition
@@ -398,12 +398,19 @@ definiert ein versteckes Feld
 	REX_YFORM_DATA[field="int"]
 
 	
+###ip
+übergibt die IP des Users.
 
+#####Definition
+	ip|name|[no_db]
 	
-	
-	
-	
-		
+#####Beispiel Formbuilder
+	ip|ip	
+
+#####Beispiel PHP
+	$yform->setValueField('ip', array("ip"));
+
+
 ###mediafile
 
 #####Definition
@@ -419,11 +426,15 @@ definiert ein versteckes Feld
 	REX_YFORM_DATA[field="media"]
 	
 	
+###!!password
+
+#####Beispiel Formbuilder
+	password|name|label|default_value
 	
-	
-	
-	
-		
+#####Beispiel PHP
+	$yform->setValueField('password', array("name","label", "default_value"));
+
+
 ###php
 
 
@@ -431,23 +442,16 @@ definiert ein versteckes Feld
 	Führt PHP-Code an der gewünschten Stelle des Eingabe-Formulars aus.
 	
 #####Beispiel PHP
-	$yform->setValueField('php', array("php","PHP","<?
-echo 'hallo welt';
-?>"));
+	$yform->setValueField('php', array("php","PHP","<? echo 'hallo welt'; ?>"));
 		
 #####Beispiel Pipe
-	php|php|PHP|<?
-echo 'hallo welt';
-?>|
+	php|php|PHP|<? echo 'hallo welt'; ?>|
 
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="php"]
 
 	
-	
-	
-	
-		
+
 ###prio
 
 #####Definition
@@ -465,8 +469,7 @@ echo 'hallo welt';
 
 
 
-	
-		
+
 ###radio
 
 #####Definition
@@ -481,11 +484,32 @@ echo 'hallo welt';
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="radio"]
 
+###readtable
+liest einen Datensatz und übergibt die ausgelesenen Werte in den E-mail value_pool, die einem E-Mail-Template über Platzhalter werden können.
 
+#####Definition
+	readtable|tablename|feldname|label
+	Ein Auswahlfeld, um Datensätze in eine bestimmte Reihenfolge zu sortieren.
 	
-	
-	
-		
+#####Beispiel Formbuilder
+	text|name|Name
+	readtable|rex_user|name|name
+	action|tpl2email|testtemplate||info@mustermann.de
+
+
+#####Beispiel PHP
+	$yform->setValueField('text', array("name","Name"));
+	$yform->setValueField('readtable', array("rex_user","name","name"));
+	$yform->setActionField('tpl2email', array("testtemplate","","info@mustermann.de"));
+
+liest aus der Tabelle **rex_user** einen Datensatz 
+
+	SELECT * FROM rex_user WHERE name='[eingabe feld name]'
+
+und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adresse:
+
+
+
 ###radio_sql
 
 #####Definition
@@ -499,12 +523,32 @@ echo 'hallo welt';
 
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="radio_sql"]
+
+###resetbutton
+definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
+
+
+#####Definition
+	resetbutton|name|label|value|cssclassname
 	
-		
+#####Beispiel Formbuilder
+	resetbutton|reset|reset|Reset
+
+###!!uniqueform
+
+#####Definition
+	uniqueform|name|table|Fehlermeldung
 	
+#####Beispiel Formbuilder
+	_
 	
+#####Beispiel PHP
+	-
+
+#####Beispiel PHP
+	$yform->setValueField('resetbutton', array("reset","reset","Reset"));
 	
-		
+
 ###select
 
 #####Definition
@@ -521,10 +565,7 @@ echo 'hallo welt';
 
 
 	
-	
-	
-	
-		
+
 ###select_sql
 
 #####Definition
@@ -601,8 +642,6 @@ echo 'hallo welt';
 	
 	
 	
-	
-	
 ###time
 
 #####Definition
@@ -621,6 +660,19 @@ echo 'hallo welt';
 
 	
 	
+###!!uniqueform
+
+#####Definition
+	uniqueform|name|table|Fehlermeldung
+	
+#####Beispiel Formbuilder
+	_
+	
+#####Beispiel PHP
+	-
+
+	
+	
 	
 	
 	
@@ -634,6 +686,8 @@ echo 'hallo welt';
 		
 #####Beispiel Pipe
 	upload|upload|Upload||.jpg,.gif,.png,.jpeg|
+
+	upload|name | label | Maximale Größe in Kb oder Range 100,500 | endungenmitpunktmitkommasepariert | pflicht=1 | min_err,max_err,type_err,empty_err,delete_file_msg | Speichermodus(upload/database/no_save) | `database`: Dateiname wird gespeichert in Feldnamen | Eigener Uploadordner [optional] | Dateiprefix [optional] |
 
 #####Beispiel E-Mail
 	REX_YFORM_DATA[field="upload"]
