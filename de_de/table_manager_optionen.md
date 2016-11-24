@@ -4,6 +4,7 @@
 > * [Tabelle erstellen](#tabelle-erstellen)
 > * [Tabelle migrieren](#tabelle-migrieren)
 > * [Tableset importieren / exportieren](#tableset-importieren)
+> * [Daten importieren](#tabelle-importieren)
  
 Um Tabellen im Table Manager zu bearbeiten, gibt es drei verschiedene Möglichkeiten:
 
@@ -76,7 +77,19 @@ Seit Redaxo 5 gibt es eine neue Möglichkeit, eine Tabelle im Table Manager zu e
 
 Anschließend wird die Tabelle einschließlich aller in der JSON-Datei hinterlegten Felder, Parameter und Standardwerten importiert.
 
-Mit diesem Demo-Tablesets (JSON) kann man direkt starten:
+Mit diesen Demo-Tablesets (JSON) kann man direkt starten:
 - [Kontaktformular](demo_tableset-rex_yf_messages.json)
 - [Mitarbeiter / Team](demo_tableset-rex_yf_staff.json)
 - [Projekte / Referenzen](demo_tableset-rex_yf_projects.json)
+
+<a name="tabelle importieren"></a>
+## Tabelle importieren
+
+Um eine fremde Datenbank-Tabelle zu importieren oder Datensätze einer Tabelle zu importieren, muss zunächst
+* eine Tabelle erstellt oder migriert werden.  
+* Anschließend im Redaxo-Hauptmenü die entsprechende Tabelle öffnen. 
+* Dort neben dem Label `Tabelle` die Schaltfläche `importieren` anklicken und den Instruktionen folgen.
+
+> Der Button `importieren` ist nur dann sichtbar, wenn die Tabelle beim Erstellen oder migrieren die Option `Import von Daten erlauben` aktiviert ist.
+
+> **Hinweis**: Seit YForm 2.0 wird beim Import wird jeder Datensatz beim Importieren validiert. Ungültige Datensätze werden nicht in die Datenbank importiert.
