@@ -108,27 +108,38 @@ Erstellt eine Datenbank-Tabelle. Formular-Label werden dabei als Feldnamen in di
 
 Speichert oder aktualisiert Formulardaten in einer Tabelle. Dabei werden die Label und deren Eingaben in die gleichnamigen Tabellenfelder gespeichert.
 
-	// allgemeine Definition
-	action|db|tblname|[where(id=2)/main_where]
+  ```
+  // allgemeine Definition
+  action|db|tblname|[where(id=2)/main_where]
 
-	im YForm-Formbuilder
-	text|vorname|Vorname
-	text|name|Name
-	text|plz|PLZ
-	text|ort|Ort
+  // im YForm-Formbuilder
+  text|vorname|Vorname
+  text|name|Name
+  text|plz|PLZ
+  text|ort|Ort
 
-	action|db|rex_warenkorb
-	action|html|Daten gespeichert	
+  objparams|getdata|true
+  objparams|main_table|rex_warenkorb
+  objparams|main_where|id=1
 
-	// in Beispiel PHP
-	$yform->setValueField('text', array("vorname","Vorname"));
-	$yform->setValueField('text', array("name","Name"));
-	$yform->setValueField('text', array("plz","PLZ"));
-	$yform->setValueField('text', array("ort","Ort"));
+  action|db|rex_warenkorb|main_where
+  action|html|Daten gespeichert
+  ```
 
-	$yform->setActionField('db', array("rex_warenkorb"));
-	$yform->setActionField('html', array("Daten gespeichert"));
+  ```php
+  // in Beispiel PHP
+  $yform->setValueField('text', array("vorname","Vorname"));
+  $yform->setValueField('text', array("name","Name"));
+  $yform->setValueField('text', array("plz","PLZ"));
+  $yform->setValueField('text', array("ort","Ort"));
 
+  $yform->setObjectparams('getdata', TRUE);
+  $yform->setObjectparams('main_where', 'id=1');
+  $yform->setObjectparams('main_table', 'rex_warenkorb');
+
+  $yform->setActionField('db', array("rex_warenkorb", "main_where"));
+  $yform->setActionField('html', array("Daten gespeichert"));
+  ```
 <a name="db_query"></a>
 ### db_query
 
