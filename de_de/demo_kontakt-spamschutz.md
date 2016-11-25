@@ -69,6 +69,6 @@ Sobald Spambots das input-Feld namens `email` als Eingabe-Feld erkennen, werden 
 
 **Nachteil**
 
-* Unter Umständen wird das versteckte Feld von Browsern vorausgefüllt. 
+* Unter Umständen wird das versteckte Feld von Browsern vorausgefüllt. Lösung: Autocomplete abschalten, indem das Eingabe-Feld via JSON das Attribut `{"autocomplete":"off"}` bekommt.
 * Das korrekte E-Mail-Feld wird nicht mehr vom Browser vorausgefüllt.
 * Die Lösung ist nur bedingt barrierefrei.
