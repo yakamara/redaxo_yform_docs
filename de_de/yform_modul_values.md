@@ -72,7 +72,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ###be_media
 
 #####Definition
-	Ein Redaxo-Feld, um eine einzelne Medienpool-Datei auszuwählen.
+	Ein Redaxo-Feld, um eine einzelne oder mehrere Medienpool-Datei/en auszuwählen.
 	
 #####Beispiel PHP
 	$yform->setValueField('be_media', array("image","Bild","1","0","general","jpg,gif,png,jpeg"));

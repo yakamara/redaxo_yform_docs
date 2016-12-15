@@ -4,7 +4,6 @@
 > - [be_link](#be_link)
 > - [be_manager_relation](#be_manager_relation)
 > - [be_media](#be_media)
-> - [be_medialist](#be_medialist)
 > - [be_select_category](#be_select_category)
 > - [be_table](#be_table)
 > - [checkbox](#checkbox)
@@ -85,7 +84,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="be_media"></a>
 ## be_media
 
-Ein Redaxo-Feld, um eine einzelne <b>Medienpool-Datei</b> auszuwählen.
+Ein Redaxo-Feld, um eine einzelne oder mehrere <b>Medienpool-Datei/en</b> auszuwählen.
 
 > **Wert in der Datenbank**
 > Dateiname der Medienpool-Datei, z.B. `mueller.jpg`, `preisliste.pdf`
@@ -95,28 +94,11 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `image`, `attachment`, `file`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Bild`, `Anhang`, `Datei`
-Defaultwert | Datei aus dem Medienpool, mit der das Eingabefeld vorausgefüllt wird, z.B. `mueller.jpg`, `preisliste.pdf` 
-Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
-In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
-Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
-
-<a name="be_medialist"></a>
-## be_medialist
-
-Ein Redaxo-Feld, um ein oder mehrere <b>Medienpool-Dateien</b> auszuwählen.
-
-> **Wert in der Datenbank**
-> Dateinamen der Medienpool-Dateien kommagetrennt, z.B. `mueller.jpg,mayer.jpg`, `preisliste.pdf,agb.pdf`
-
-Option | Erläuterung
------- | ------
-Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
-Name | Name des Felds in der Datenbank, z.B. `images`, `attachments`, `files`
-Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Bilder`, `Anhänge`, `Dateien`
-Preview (0/1) (opt) | Zeigt eine Bildvorschau an, wenn die Datei in der `be_medialist` markiert wird.
+Preview (0/1) (opt) | Zeigt eine Bildvorschau an, wenn die Datei markiert wird.
+Mehrfachauswahl (0/1) | Wenn mehrere Medien ausgwählt werden sollen.
 Medienpool Kategorie (opt) | id der Medienpool-Kategorie, die bei der Auswahl der Dateien voreingestellt ist.
 Types (opt) | Filtert die Dateiauswahl im Medienpool anhand der Dateiendung, z.B. `.jpg,.jpeg,.png,.gif` oder `.pdf,.docx,.doc`
-Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben. 
+Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
