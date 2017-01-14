@@ -46,7 +46,7 @@ Das kann man im Manager über das Attibutefeld innerhalb von z.B. text so setzen
 
     {"data-yform-tools-inputmask":"dd/mm/yyyy"}
 
-## daterangpicker
+## daterangepicker
 
 diese Bibliothek [http://www.daterangepicker.com/](http://www.daterangepicker.com/) dient für die Auswahl von Datumsfeldern oder Datumzeiträumen. Dabei kann auch eine Uhrzeit selektiert werden.
 
