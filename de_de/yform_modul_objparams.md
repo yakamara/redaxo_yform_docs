@@ -239,7 +239,7 @@ Der Defaultwert ist `index.php`, bzw. die URL der Formularseite.
 	objparams|form_anchor|my_form
 
 	// In PHP
-	$yform->setObjectparams('my_form');
+	$yform->setObjectparams('form_anchor','my_form');
 
 Wenn sich ein Formular weiter unten auf der Seite befindet, sieht man nach dem Abschicken zunächst keine Erfolgs- oder Fehlermeldung. Über den `form_anchor`lässt sich ein Sprunganker definieren, der in der  URL nach dem Abschicken angehängt wird, so dass die Seite zum Anker springt. Im Normalfall wird man als Anker die ID des Formulars nutzen.  
 Der Defaultwert ist leer.
