@@ -211,7 +211,7 @@ Der Default-Wert ist `0`.
 <a name="versandmethode"></a>
 ### Versandmethode des Formulars
 
-	// Im YForm-Formbuilder`
+	// Im YForm-Formbuilder
 
 
 	// In PHP
@@ -223,7 +223,7 @@ Der Defaultwert ist `post`.
 <a name="zieladresse"></a>
 ### Zieladresse des Formulars
 
-	// Im YForm-Formbuilder`
+	// Im YForm-Formbuilder
 	objparams|form_action|zielseite.html
 
 	// In PHP mit rex_getUrl() auf die Artikel-ID 5
@@ -247,7 +247,7 @@ Der Defaultwert ist leer.
 <a name="formular-anzeigen-nach-abschicken"></a>
 ### Formular anzeigen nach Abschicken
 
-	// Im YForm-Formbuilder`
+	// Im YForm-Formbuilder
 	objparams|form_showformafterupdate|1
 
 	// In PHP
