@@ -1,12 +1,12 @@
 # Yorm ORM
 
-- [Arbeiten ohne eigene Modal class](#ohne-modal-class)
-- [Eigene Modal class verwenden](#eigene-modal-class)
+- [Arbeiten ohne eigene Model class](#ohne-model-class)
+- [Eigene Model class verwenden](#eigene-model-class)
 - [Methoden](#methoden)
 - [Query debuggen](#query-debuggen)
     
-<a name="ohne-modal-class"></a>
-## Arbeiten ohne eigene Modal class
+<a name="ohne-model-class"></a>
+## Arbeiten ohne eigene Model class
 
 Hole alle Daten der Tabelle `rex_my_table`
 
@@ -16,8 +16,8 @@ $items = rex_yform_manager_table::get('rex_my_table')->query()->find();
 
 
 
-<a name="eigene-modal-class"></a>
-## Eigene Modal class verwenden
+<a name="eigene-model-class"></a>
+## Eigene Model class verwenden
 
 ### Klasse erstellen
 
