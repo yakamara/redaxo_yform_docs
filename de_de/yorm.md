@@ -92,6 +92,27 @@ $items = MyTable::query()
     - orderByRaw
     - resetOrderBy
 - paginate
+
+### Beispiel ###
+```
+$pager = new rex_pager(10);
+$table = rex_yform_manager_table::get('rex_table_name');
+$ergebnisse = $table->query()
+    ->paginate($pager);
+$fragment = new rex_fragment();
+$fragment->setVar('urlprovider', rex_article::getCurrent());
+$fragment->setVar('pager', $pager);
+echo $fragment->parse('core/navigations/pagination.php');
+
+foreach ($ergebnisse as $erg) {
+echo "ID: ".$erg->id;
+}
+echo $pager->getRowCount();
+echo $pager->getCurrentPage();
+echo $pager->getLastPage();
+echo $pager->getPageCount();
+```
+
 - Query
     - query
     - queryOne
