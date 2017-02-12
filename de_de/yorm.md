@@ -65,14 +65,12 @@ $items = MyTable::query()
     - alias
     - getTableAlias
 - count
-- exists
-liefert true oder false zurück. Optimal für große Abfragen.
+- exists (liefert true oder false zurück. Optimal für große Abfragen.)
 - Find
     - find
     - findId
     - findIds
-    - findOne
-liefert einen Datensatz als Objekt zurück.
+    - findOne (liefert einen Datensatz als Objekt zurück.)
 - Get
     - get
     - getAll
@@ -124,8 +122,7 @@ echo $pager->getPageCount();
 - Select
     - resetSelect
     - select
-    - selectRaw
-    lässt individuelle Argumente zu, wie z.B. `CONCAT, SUM`
+    - selectRaw (lässt individuelle Argumente zu, wie z.B. `CONCAT, SUM`)
 - Table
     - getTable
     - getTableName
@@ -139,10 +136,8 @@ echo $pager->getPageCount();
 ### dataset Methoden
 
 - get
-- getData
-liefert Felder als Array zurück
-- getForm
-liefert Formular zurück - EXPERIMENTELL!
+- getData (liefert Felder als Array zurück)
+- getForm (liefert Formular zurück - EXPERIMENTELL!)
 - getId
 - getMessages
 - getRaw
