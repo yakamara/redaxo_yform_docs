@@ -19,6 +19,8 @@ $items = rex_yform_manager_table::get('rex_my_table')->query()->find();
 <a name="eigene-model-class"></a>
 ## Eigene Model class verwenden
 
+Nicht zwingend erforderlich, vereinfacht das Ansprechen der Tabelle mittels der OO-Notation.
+
 ### Klasse erstellen
 
 Zunächst wird eine Klasse erstellt und in das `project` AddOn im Ordner `lib` abgelegt
@@ -30,7 +32,7 @@ class MyTable extends \rex_yform_manager_dataset
 ```
 
 ### Klasse registrieren
-Jetzt muss die erstellte Klasse noch registiert werden. Dazu öffnet man die Datei `boot.php` des `project` AddOns und fügt nachfolgenden Code ein
+Jetzt muss die erstellte Klasse noch registiert werden. Dazu öffnet man die Datei `boot.php` des `project` AddOns und fügt nachfolgenden Code ein. Wird das theme-Addon verwendet, den Code in die Datei `functions.php` einfügen.
 
 ```
 rex_yform_manager_dataset::setModelClass('rex_my_table', MyTable::class);
@@ -64,11 +66,13 @@ $items = MyTable::query()
     - getTableAlias
 - count
 - exists
+liefert true oder false zurück. Optimal für große Abfragen.
 - Find
     - find
     - findId
     - findIds
     - findOne
+liefert einen Datensatz als Objekt zurück.
 - Get
     - get
     - getAll
@@ -121,6 +125,7 @@ echo $pager->getPageCount();
     - resetSelect
     - select
     - selectRaw
+    lässt individuelle Argumente zu, wie z.B. `CONCAT, SUM`
 - Table
     - getTable
     - getTableName
@@ -135,7 +140,9 @@ echo $pager->getPageCount();
 
 - get
 - getData
+liefert Felder als Array zurück
 - getForm
+liefert Formular zurück - EXPERIMENTELL!
 - getId
 - getMessages
 - getRaw
