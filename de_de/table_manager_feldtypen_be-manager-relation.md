@@ -71,10 +71,10 @@ Zum Beispiel so:
 
 ```
 <?php
-$sql = rex_sql::factory()
+$sql = rex_sql::factory();
 $query = 'SELECT * FROM ' . rex::getTable('news_beitrag') . ' JOIN ' . rex::getTable('news_tag') . ' ON ' . rex::getTable('news_beitrag') . '.id_tag = ' . rex::getTable('news_tag') . '.id ';
-$sql->setQuery($query);
-foreach($sql->getArray as $row) {
+$rows = $sql->getArray($query);
+foreach($rows as $row) {
 	echo '<h1>' . $row['titel'] . '</h1>';
 	echo '<p>' . $row['text'] . '</p>';
 	echo '<p>Tag: ' . $row['name'] . '</p>';
