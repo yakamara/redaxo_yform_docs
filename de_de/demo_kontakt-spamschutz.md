@@ -44,11 +44,13 @@ function yxform_validate_timer($label,$microtime,$seconds)
     
 **Funktionsweise**
 
-Spambots sind kleine ungeduldige Biestlinge. Sie füllen das Formular in der Regel im Bruchteil einer Sekunde aus und haben schließlich keine Zeit zu verlieren, um den nächsten Website-Betreiber in den Wahnsinn zu betreiben.
+Spambots sind kleine ungeduldige Biestlinge. Sie füllen das Formular in der Regel im Bruchteil einer Sekunde aus und haben schließlich keine Zeit zu verlieren, um den nächsten Website-Betreiber in den Wahnsinn zu treiben.
 
 Über PHP wird ein zusätzliches, verstecktes Feld namens `validate_timer` erstellt und bei der Ausgabe des Formulars mit dem Zeitstempel ausgefüllt. Ein Nutzer wird i.d.R. einige Sekunden brauchen, um das Formular auszufüllen. 
 
 Dieser Zeitstempel wird beim Absenden des Formulars in der Funktion `yform_validate_timer` verglichen. Wenn der vorgegebene Zeitwert unterschritten wird (in diesem Beispiel sind es `5` Sekunden), dann ist davon auszugehen, dass das Formular von einem Spambot ausgefüllt wurde, weshalb die Validierung fehlschlägt und das Absenden unterbunden wird.
+
+> Tipp: Zum Testen kann der Wert auf einen wesentlich höheren Wert gestellt werden, bspw. 30 Sekunden. Anschließend beide Fälle testen (vor 30 Sekunden -> Fehler, nach 30 Sekunden -> Erfolg) und zuletzt wieder auf einen niedrigeren Wert stellen.
 
 **Nachteile**
 
