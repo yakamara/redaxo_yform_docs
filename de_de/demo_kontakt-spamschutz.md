@@ -30,7 +30,7 @@ Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha_calc)
 3. Nachfolgende Funktion hinterlegen, die via `custom_function` aufgerufen wird.
 
 ```
-function yxform_validate_timer($label,$microtime,$seconds)
+function yform_validate_timer($label,$microtime,$seconds)
     {
         if (($microtime + $seconds) > microtime(true)) {
             return true;
