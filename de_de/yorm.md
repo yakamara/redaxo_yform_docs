@@ -59,6 +59,27 @@ $items = MyTable::query()
 <a name="methoden"></a>
 ## Methoden
 
+### collection Methoden
+
+- delete
+- executeForm
+- getForm
+- getIds
+- getTable
+- getTableName
+- getUniqueValue
+- getValues
+- groupBy
+- isEmpty
+- isValid
+- isValueUnique
+- populateRelation
+- save
+- setData
+- setValue
+- toKeyIndex
+- toKeyValue
+
 ### query Methoden
 
 - Alias
@@ -93,28 +114,7 @@ $items = MyTable::query()
     - orderBy
     - orderByRaw
     - resetOrderBy
-- paginate
-
-### Beispiel ###
-```
-$pager = new rex_pager(10);
-$table = rex_yform_manager_table::get('rex_table_name');
-$ergebnisse = $table->query()
-    ->paginate($pager);
-$fragment = new rex_fragment();
-$fragment->setVar('urlprovider', rex_article::getCurrent());
-$fragment->setVar('pager', $pager);
-echo $fragment->parse('core/navigations/pagination.php');
-
-foreach ($ergebnisse as $erg) {
-echo "ID: ".$erg->id;
-}
-echo $pager->getRowCount();
-echo $pager->getCurrentPage();
-echo $pager->getLastPage();
-echo $pager->getPageCount();
-```
-
+- paginate ([Beispiel](#beispiel-paginate))
 - Query
     - query
     - queryOne
@@ -135,7 +135,9 @@ echo $pager->getPageCount();
 
 ### dataset Methoden
 
+- create
 - get
+- getAll
 - getData (liefert Felder als Array zurück)
 - getForm (liefert Formular zurück - EXPERIMENTELL!)
 - getId
@@ -197,4 +199,26 @@ foreach ($products as $product) {
     $category = $product->getRelatedDataset('category_id');
     echo $category->name;
 }
+```
+
+<a name="beispiel-paginate"></a>
+### Paginierung ###
+
+```
+$pager = new rex_pager(10);
+$table = rex_yform_manager_table::get('rex_table_name');
+$ergebnisse = $table->query()
+    ->paginate($pager);
+$fragment = new rex_fragment();
+$fragment->setVar('urlprovider', rex_article::getCurrent());
+$fragment->setVar('pager', $pager);
+echo $fragment->parse('core/navigations/pagination.php');
+
+foreach ($ergebnisse as $erg) {
+echo "ID: ".$erg->id;
+}
+echo $pager->getRowCount();
+echo $pager->getCurrentPage();
+echo $pager->getLastPage();
+echo $pager->getPageCount();
 ```
