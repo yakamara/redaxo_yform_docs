@@ -56,6 +56,25 @@ $items = MyTable::query()
             ->find();
 ```
 
+```
+$item = MyTable::create()
+              ->setValue('user_id', 5)
+              ->setValue('article_id', 6)
+              ->save();;
+```
+
+```
+MyTable::query()
+                ->where('user_id', 5)
+                ->where('article_id', 6)
+                ->find()
+                ->delete();
+```
+
+
+
+
+
 <a name="methoden"></a>
 ## Methoden
 
