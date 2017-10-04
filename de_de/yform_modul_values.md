@@ -203,13 +203,13 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	Ein unsichtbares Feld, in das ein Zeitstempel gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
 	
 ##### Beispiel PHP
-	$yform->setValueField('datestamp', array("datestamp","Datestamp","","","0"));
+	$yform->setValueField('datestamp', array("createdate","Zeitstempel","mysql","","0"));
 		
 ##### Beispiel Pipe
-	datestamp|datestamp|Datestamp|||0|
+	datestamp|createdate|Zeitstempel|mysql||0|
 
 ##### Beispiel E-Mail
-	REX_YFORM_DATA[field="datestamp"]
+	REX_YFORM_DATA[field="createdate"]
 
 	
 
