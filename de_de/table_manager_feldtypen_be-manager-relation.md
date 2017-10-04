@@ -163,11 +163,11 @@ Im Frontend kann das ganze dann beispielsweise so abgefragt werden:
 ```
 <?php
 $sql = rex_sql::factory()
-$query = 'SELECT ' . rex::getTable('news_beitrag') . '.*, GROUP_CONCAT(news_tag.name SEPARATOR ',') AS tags ';
-$query.= 'FROM ' . rex::getTable('news_beitrag') . ' ';
-$query.= 'JOIN ' . rex::getTable('news_tag_beitrag') . ' ON ' . rex::getTable('news_beitrag') . '.id = ' . rex::getTable('news_tag_beitrag') . '.id_beitrag ';
-$query.= 'JOIN ' . rex::getTable('news_tag') . ' ON ' . rex::getTable('news_tag') . '.id = ' . rex::getTable('news_tag_beitrag') . '.id_tag ';
-$query.= 'GROUP BY news_beitrag.id';
+$query = 'SELECT ' . rex::getTable('blog') . '.*, GROUP_CONCAT(' . rex::getTable('blog_tags') . '.blog_tag SEPARATOR ",") AS tags ';
+$query.= 'FROM ' . rex::getTable('blog') . ' ';
+$query.= 'JOIN ' . rex::getTable('blog_tags_relation') . ' ON ' . rex::getTable('blog') . '.id = ' . rex::getTable('blog_tags_relation') . '.id_beitrag ';
+$query.= 'JOIN ' . rex::getTable('blog_tags') . ' ON ' . rex::getTable('blog_tags') . '.id = ' . rex::getTable('blog_tags_relation') . '.id_tag ';
+$query.= 'GROUP BY ' . rex::getTable('blog') . '.id';
 # $sql->setQuery($query);
 $rows = $sql->getArray($query);
 foreach($rows as $row) {
