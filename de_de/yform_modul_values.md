@@ -1,4 +1,4 @@
-# YForm-Modul: Values
+()
 
 > **Hinweis:** 
 > Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
@@ -37,68 +37,68 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 	
-###be_link
+### be_link
 
-#####Definition
+##### Definition
 	Ein Redaxo-Feld, um einen Redaxo-Artikel auszuwählen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('be_link', array("link","Link zu Artikel"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	be_link|link|Link zu Artikel|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="link"]
 		
 
-###be_manager_relation
+### be_manager_relation
 
-#####Definition
+##### Definition
 	Ein Auswahlfeld / Popup, um ein oder mehrere Datensätze mit denen einer fremden Tabelle zu verknüpfen, z.B. über einen Fremdschlüssel (1:n) oder eine Relationstabelle (m:n).
 		
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('be_manager_relation', array("manager_relation","Beispiel","rex_yf_messages","","0","0","","","","rex_yf_employees"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	be_manager_relation|manager_relation|Beispiel|rex_yf_messages||0|0||||rex_yf_employees|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="manager_relation"]
 	
 
 	
 
-###be_media
+### be_media
 
-#####Definition
+##### Definition
 	Ein Redaxo-Feld, um eine einzelne oder mehrere Medienpool-Datei/en auszuwählen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('be_media', array("image","Bild","1","0","general","jpg,gif,png,jpeg"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	be_media|image|Bild|1|0|general|jpg,gif,png,jpeg|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="image"]
 
 	
 	
 	
 
-###be_select_category
+### be_select_category
 
-#####Definition
+##### Definition
 	Ein Redaxo-Feld, um ein oder mehrere Kategorien aus der Struktur auszuwählen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('be_select_category', array("be_select_category","Select Category","1","1","1","","1","0"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	be_select_category|be_select_category|Select Category|1|1|1||1|0|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="be_select_category"]
 
 	
@@ -106,90 +106,90 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 	
-###be_table
+### be_table
 
-#####Definition
+##### Definition
 	Eine Reihe von Eingabefeldern, um tabellarische Daten einzugeben.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('be_table', array("table","Tabelle","Menge,Preis,Gewicht"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	be_table|table|Tabelle|Menge,Preis,Gewicht|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="table"]
 
 
-###captcha
+### captcha
 		
-#####Definition
+##### Definition
 	captcha|Beschreibungstext|Fehlertext
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	_
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	_
 
 
-###captcha_calc
+### captcha_calc
 
-#####Definition
+##### Definition
 	captcha_calc|Beschreibungstext|Fehlertext
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	_
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	_
 
 	
 
-###checkbox
+### checkbox
 
-#####Definition
+##### Definition
 	Eine Checkbox mit vordefinierten Werten.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('checkbox', array("checkbox","Checkbox","0,1","1"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	checkbox|checkbox|Checkbox|0,1|1|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="checkbox"]
 
 	
 
-###checkbox_sql
+### checkbox_sql
 
-#####Definition
+##### Definition
 	Ein oder mehrere Checkbox-Felder mit Werten, die aus einer SQL-Abfrage stammen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('checkbox_sql', array("checkbox_sql","Checkbox SQL","SELECT id, name FROM rex_yf_table WHERE name = paul ORDER BY prio"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	checkbox_sql|checkbox_sql|Checkbox SQL|SELECT id, name FROM rex_yf_table WHERE name = paul ORDER BY prio|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="checkbox_sql"]
 
 	
 
-###date
+### date
 
-#####Definition
+##### Definition
 	Eine Reihe von Auswahlfeldern, in der ein Datum (Tag, Monat, Jahr) ausgewählt wird.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('date', array("date","Datum","2016","+5","DD/MM/YYYY","1","","select"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	date|date|Datum|2016|+5|DD/MM/YYYY|1||select|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="date"]
 
 	
@@ -197,308 +197,308 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 	
 	
-###datestamp
+### datestamp
 
-#####Definition
+##### Definition
 	Ein unsichtbares Feld, in das ein Zeitstempel gespeichert wird, wenn der Datensatz hinzugefügt oder bearbeitet wird.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('datestamp', array("datestamp","Datestamp","","","0"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	datestamp|datestamp|Datestamp|||0|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="datestamp"]
 
 	
 
-###datetime
+### datetime
 
-#####Definition
+##### Definition
 	Eine Reihe von Auswahlfeldern, in der Datum und Uhrzeit (Tag, Monat, Jahr, Stunden, Minuten, Sekunden) ausgewählt wird.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('datetime', array("datetime","Datetime","2016","+5","00,15,30,45","DD/MM/YYYY HH:ii","0","","select"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	datetime|datetime|Datetime|2016|+5|00,15,30,45|DD/MM/YYYY HH:ii|0||select|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="datetime"]
 
 	
 
-###email
+### email
 
-#####Definition
+##### Definition
 	Ein einfaches Eingabefeld für E-Mail-Adressen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('email', array("email","E-Mail-Adresse"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	email|email|E-Mail-Adresse|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="email"]
 
 	
 
-###emptyname
+### emptyname
 
-#####Definition
+##### Definition
 	Ein Feld ohne Eingabemöglichkeit.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('emptyname', array("emptyname","Emptyname"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	emptyname|emptyname|Emptyname|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="emptyname"]
 	
 
-###fieldset
+### fieldset
 
-#####Definition
+##### Definition
 	Ein Fieldset gruppiert Formularfelder.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('fieldset', array("fieldsest","Fieldset"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	fieldset|fieldsest|Fieldset|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="fieldsest"]
 
 	
 
-###float
+### float
 
-#####Definition
+##### Definition
 	Ein einfaches Eingabefeld für Gleitkomma-Zahlen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('float', array("float","Float","1"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	float|float|Float|1|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="float"]
 
 
 		
-###generate_key
+### generate_key
 
-#####Definition
+##### Definition
 	generate_key|name|[no_db]
 	$yform->setValueField('float', array("float","Float","1"));
 		
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	_
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	_
 
 
-###generate_password
+### generate_password
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="float"]
 
-#####Definition
+##### Definition
 	generate_password|name|[no_db]
 		
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	_
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	_
 
 
-###hashvalue
+### hashvalue
 
-#####Definition
+##### Definition
 	Ein Feld, das aus dem Wert eines anderen Feldes einen Hashwert erzeugt.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('hashvalue', array("hashvalue","Hashvalue"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	hashvalue|hashvalue|Hashvalue|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="hashvalue"]
 
 	
 
-###hidden
+### hidden
 definiert ein versteckes Feld
 
-#####Definition
+##### Definition
 	hidden|name|(default)value||[no_db]
 	 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	hidden|name|(default)value||[no_db]
 	hidden|name|(default)value|REQUEST|[no_db]
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('hidden', array("name", "<h1>Headline</h1>"));
 
 	
 
-###html
+### html
 
-#####Definition
+##### Definition
 	Gibt HTML-Code an der gewünschten Stelle des Eingabe-Formulars aus.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('html', array("html","HTML","<p>Hallo Welt!</p>"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	html|html|HTML|<p>Hallo Welt!</p>|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="html"]
 
 	
 
-###index
+### index
 
-#####Definition
+##### Definition
 	Ein Feld, das einen Index / Schlüssel über mehrere Felder erzeugt.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('index', array("index","Index"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	index|index|Index|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="index"]
 
 	
 
-###integer
+### integer
 
-#####Definition
+##### Definition
 	Ein einfaches Eingabefeld für ganze Zahlen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('integer', array("int","Integer"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	integer|int|Integer|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="int"]
 
 	
-###ip
+### ip
 übergibt die IP des Users.
 
-#####Definition
+##### Definition
 	ip|name|[no_db]
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	ip|ip	
 
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('ip', array("ip"));
 
 
-###mediafile
+### mediafile
 
-#####Definition
+##### Definition
 	Ein Upload-Feld, mit dem eine Datei in den Medienpool hochgeladen wird.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('mediafile', array("media","Bilder","5000",".jpg,.gif,.png,.jpeg","","","","1"));
 	$yform->setValueField('mediafile', array("name","label","[min_size,max_size]/max_size","[allowed extensions]","[required 0,1]","min_err,max_err,type_err,empty_err","[no_db]","media_cat_id","mediapool_user"));	
 	
-#####Beispiel Pipe
+##### Beispiel Pipe
 	mediafile|media|Bilder|5000|.jpg,.gif,.png,.jpeg||||1|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="media"]
 	
 	
-###!!password
+### !!password
 
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	password|name|label|default_value
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('password', array("name","label", "default_value"));
 
 
-###php
+### php
 
 
-#####Definition
+##### Definition
 	Führt PHP-Code an der gewünschten Stelle des Eingabe-Formulars aus.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('php', array("php","PHP","<? echo 'hallo welt'; ?>"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	php|php|PHP|<? echo 'hallo welt'; ?>|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="php"]
 
 	
 
-###prio
+### prio
 
-#####Definition
+##### Definition
 	Ein Auswahlfeld, um Datensätze in eine bestimmte Reihenfolge zu sortieren.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('prio', array("prio","Reihenfolge"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	prio|prio|Reihenfolge|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="prio"]
 	
 
 
 
 
-###radio
+### radio
 
-#####Definition
+##### Definition
 	Ein Auswahlfeld, um Datensätze in eine bestimmte Reihenfolge zu sortieren.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('radio', array("radio","Radio","schlecht=-1,ok=0,gut=1","0"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	radio|radio|Radio|schlecht=-1,ok=0,gut=1|0|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="radio"]
 
-###readtable
+### readtable
 liest einen Datensatz und übergibt die ausgelesenen Werte in den E-mail value_pool, die einem E-Mail-Template über Platzhalter werden können.
 
-#####Definition
+##### Definition
 	readtable|tablename|feldname|label
 	Ein Auswahlfeld, um Datensätze in eine bestimmte Reihenfolge zu sortieren.
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	text|name|Name
 	readtable|rex_user|name|name
 	action|tpl2email|testtemplate||info@mustermann.de
 
 
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('text', array("name","Name"));
 	$yform->setValueField('readtable', array("rex_user","name","name"));
 	$yform->setActionField('tpl2email', array("testtemplate","","info@mustermann.de"));
@@ -511,74 +511,74 @@ und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adr
 
 
 
-###radio_sql
+### radio_sql
 
-#####Definition
+##### Definition
 	Ein oder mehrere Auswahlfelder als Radio-Buttons.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('radio_sql', array("radio_sql","Radio SQL","SELECT id, name FROM rex_yf_table WHERE name = paul ORDER BY prio"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	radio_sql|radio_sql|Radio SQL|SELECT id, name FROM rex_yf_table WHERE name = paul ORDER BY prio|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="radio_sql"]
 
-###resetbutton
+### resetbutton
 definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 
 
-#####Definition
+##### Definition
 	resetbutton|name|label|value|cssclassname
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	resetbutton|reset|reset|Reset
 
-###!!uniqueform
+### !!uniqueform
 
-#####Definition
+##### Definition
 	uniqueform|name|table|Fehlermeldung
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	_
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	-
 
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('resetbutton', array("reset","reset","Reset"));
 	
 
-###select
+### select
 
-#####Definition
+##### Definition
 	Ein Auswahlfeld mit vordefinierten Werten.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('select', array("select","Select","schlecht=-1,ok=0,gut=1","","0","0"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	select|select|Select|schlecht=-1,ok=0,gut=1||0|0|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="select"]
 
 
 	
 
-###select_sql
+### select_sql
 
-#####Definition
+##### Definition
 	Ein Auswahlfeld mit Werten, die aus einer SQL-Abfrage stammen.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('select_sql', array("select_sql","Select SQL","SELECT id, name FROM rex_yf_table WHERE name = paul ORDER BY prio","","","0","","0"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	select_sql|select_sql|Select SQL|SELECT id, name FROM rex_yf_table WHERE name = paul ORDER BY prio|||0||0|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="select_sql"]
 
 	
@@ -587,36 +587,36 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	
 	
 	
-###submit
+### submit
 
-#####Definition
+##### Definition
 	Ein oder mehrere Submit-Buttons zum Absenden des Formulars.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('submit', array("submit","Submit"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	submit|submit|Submit|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="submit"]
 
 
 	
 	
 	
-###text
+### text
 
-#####Definition
+##### Definition
 	Input-Feld zur Eingabe eines Textes.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('text', array("text","Text"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	text|text|Text|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="text"]
 
 
@@ -625,51 +625,51 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	
 	
 	
-###textarea
+### textarea
 
-#####Definition
+##### Definition
 	Ein mehrzeiliges Eingabefeld für Text.
 
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('textarea', array("textarea","Textarea"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	textarea|textarea|Textarea|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="textarea"]
 
 
 	
 	
 	
-###time
+### time
 
-#####Definition
+##### Definition
 	Eine Reihe von Auswahlfeldern, in der die Uhrzeit (Stunden, Minuten, Sekunden) ausgewählt wird.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('time', array("time","Zeit","","00,15,30,45","HH:ii","","select"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	time|time|Zeit||00,15,30,45|HH:ii||select|
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="time"]
 
 
 
 	
 	
-###!!uniqueform
+### !!uniqueform
 
-#####Definition
+##### Definition
 	uniqueform|name|table|Fehlermeldung
 	
-#####Beispiel Formbuilder
+##### Beispiel Formbuilder
 	_
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	-
 
 	
@@ -677,22 +677,18 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	
 	
 	
-###upload
+### upload
 
-#####Definition
+##### Definition
 	Ein Upload-Feld, mit dem eine Datei in die Datenbank oder ein Verzeichnis hochgeladen wird.
 	
-#####Beispiel PHP
+##### Beispiel PHP
 	$yform->setValueField('upload', array("upload","Upload","",".jpg,.gif,.png,.jpeg"));
 		
-#####Beispiel Pipe
+##### Beispiel Pipe
 	upload|upload|Upload||.jpg,.gif,.png,.jpeg|
 
 	upload|name | label | Maximale Größe in Kb oder Range 100,500 | endungenmitpunktmitkommasepariert | pflicht=1 | min_err,max_err,type_err,empty_err,delete_file_msg | Speichermodus(upload/database/no_save) | `database`: Dateiname wird gespeichert in Feldnamen | Eigener Uploadordner [optional] | Dateiprefix [optional] |
 
-#####Beispiel E-Mail
+##### Beispiel E-Mail
 	REX_YFORM_DATA[field="upload"]
-
-
-	
-	
