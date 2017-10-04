@@ -149,7 +149,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 
 > **Hinweis:**  
-> Um die Werte wieder aufzutrennen, kann z.B. `json_decode($json, true);` verwendet werden.
+> Um die Werte wieder aufzutrennen, kann z.B. `$array = json_decode($json, true);` verwendet werden. `json_decode()` liefert ein mehrdimensionales Array, das per `foreach()` durchlaufen werden kann.
 
 <a name="checkbox"></a>
 ## checkbox
