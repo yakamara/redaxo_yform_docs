@@ -1,4 +1,4 @@
-()
+# YForm-Modul: Values
 
 > **Hinweis:** 
 > Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
@@ -337,7 +337,9 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	
 
 ### hidden
-definiert ein versteckes Feld
+definiert ein Feld, das nur serverseitig befüllt wird und nicht ausgegeben wird.
+
+> Hinweis: Für ein unsichtbares Eingabefeld wird nicht dieses hidden-Feld verwendet, sondern bspw. ein reguläres Eingabefeld (`text`), das zusätzlich das Attribut type="hidden" bekommt.
 
 ##### Definition
 	hidden|name|(default)value||[no_db]
