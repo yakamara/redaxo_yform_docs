@@ -95,13 +95,13 @@ Erstellt eine Datenbank-Tabelle. Formular-Label werden dabei als Feldnamen in di
 	text|vorname|Vorname
 	text|name|Name
 	
-	action|createdb|shop_user
+	action|createdb|rex_order
 	
 	// in PHP
 	$yform->setValueField('text', array("vorname","Vorname"));
 	$yform->setValueField('text', array("name","Name"));
 
-	$yform->setActionField('createdb', array("shop_user"));
+	$yform->setActionField('createdb', array("rex_order"));
 
 <a name="db"></a>
 ### db
