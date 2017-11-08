@@ -691,6 +691,9 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	upload|upload|Upload||.jpg,.gif,.png,.jpeg|
 
 	upload|name | label | Maximale Größe in Kb oder Range 100,500 | endungenmitpunktmitkommasepariert | pflicht=1 | min_err,max_err,type_err,empty_err,delete_file_msg | Speichermodus(upload/database/no_save) | `database`: Dateiname wird gespeichert in Feldnamen | Eigener Uploadordner [optional] | Dateiprefix [optional] |
+	
+###### Dateien als Anhänge in der E-Mail mitsenden
+	php|php|<?php if (isset($this->params['value_pool']['files'])) { $this->params['value_pool']['email_attachments'] = $this->params['value_pool']['files']; } ?>
 
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="upload"]
