@@ -453,6 +453,7 @@ definiert ein Feld, das nur serverseitig befüllt wird und nicht ausgegeben wird
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="php"]
 
+> **Hinweis**: Zusammen mit dem Upload-Feld lassen sich komfortabel [E-Mails mit Anhang versenden](demo_email-attachments.md).
 	
 
 ### prio
@@ -694,3 +695,5 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="upload"]
+
+> **Hinweis**: Zusammen mit dem PHP-Feld lassen sich komfortabel [E-Mails mit Anhang versenden](demo_email-attachments.md).

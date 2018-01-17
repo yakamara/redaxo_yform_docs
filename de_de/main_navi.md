@@ -35,5 +35,6 @@
  	- [Tableset Glossar](demo_tableset-rex_glossar.json)
 - Tutorials
  	- [Kontakt mit Spamschutz](demo_kontakt-spamschutz.md)
+ 	- [Kontakt mit Spamschutz](demo_email-attachments.md)
  	- [Kontakt mit HTML-Mails - coming soon](demo_kontakt-htmlmails.md)
  	- [Glossar](demo_glossar.md)
