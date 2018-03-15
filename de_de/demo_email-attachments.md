@@ -43,5 +43,5 @@ Beim erfolgreichen Upload wird die Datei als dem "value pool" des Dateiuploads (
 
 ## Credits
 
-Thomas Blum, @tbaddade 
+Thomas Blum, @tbaddade<br />
 Alexander Walther, @alexplusde
