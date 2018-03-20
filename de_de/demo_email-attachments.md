@@ -14,7 +14,7 @@ YForm bietet dieses Möglichkeit über einen Trick.
 
 ## Umsetzung
 
-Dem bestehenden Formular wird ein `upload`-Valuefeld hinzugefügt, das in diesem Beispiel auf max. 10 MB begrenzt ist und nur bestimmte Dateiendungen zulässt. 
+Dem bestehenden Formular wird ein `upload`-Valuefeld hinzugefügt, das in diesem Beispiel auf max. 10 MB begrenzt ist und nur bestimmte Dateiendungen zulässt.
 
 Die empfohlene Dateigrößen-Begrenzung hängt von der gewählten PHPMailer-Konfiguration, der Konfiguration des Webservers und PHP sowie von weiteren Faktoren ab - bspw. Limits und Speicherplatz des Empfänger-Postfachs.
 
@@ -27,12 +27,37 @@ $yform->setValueField('php', array('php_attach','Datei anhängen','<?php if (iss
 
 ### Pipe-Schreibweise
 ```
-upload|upload|Upload|100,10000|.pdf,.odt,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.zip|
+upload|upload|Dateianhang|100,10000|.pdf,.odt,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.zip|
 
-php|php|<?php if (isset($this->params['value_pool']['files'])) { $this->params['value_pool']['email_attachments'] = $this->params['value_pool']['files']; } ?>
+php|php_attach|Datei anhängen|<?php if (isset($this->params['value_pool']['files'])) { $this->params['value_pool']['email_attachments'] = $this->params['value_pool']['files']; } ?>
 ```
 
 Beim erfolgreichen Upload wird die Datei als dem "value pool" des Dateiuploads (`files`) übertragen in den "value pool" der E-Mail-Anhänge (`email_attachments`).
+
+## Datei(en) aus dem Medienpool als Anhang
+
+Es können auch bestehende Dateien direkt aus dem Medienpool als E-Mail-Anhang versendet werden (z.B. abhängig von den Formulareingaben, Artikel-Bilder usw.).
+
+### PHP-Schreibweise
+```
+$yform->setValueField('php', array('php_attach', 'Datei anhängen', '<?php $this->params[\'value_pool\'][\'email_attachments\'][] = [\'agb.pdf\', rex_path::media(\'agb.pdf\')]; ?>'));
+```
+
+### Pipe-Schreibweise
+```
+php|php_attach|Datei anhängen|<?php $this->params[\'value_pool\'][\'email_attachments\'][] = [\'agb.pdf\', rex_path::media(\'agb.pdf\')]; ?>
+```
+
+### Beispiel Medialiste
+
+z.B. Bilder eines Artikels (Medialist) als E-Mail-Anhang
+
+```
+$dateiliste = explode(',', $sql->getValue('objekt_bilderliste'));
+foreach ($dateiliste as $file) {
+    $yform->setValueField('php', array('php_attach', 'Datei anhängen', '<?php $this->params[\'value_pool\'][\'email_attachments\'][] = [\''.$file.'\', rex_path::media(\''.$file.'\')]; ?>'));
+}
+```
 
 <a name="alternativen"></a>
 ## Alternativen
