@@ -39,6 +39,8 @@ function yform_validate_timer($label,$microtime,$seconds)
         }
     }
 ```
+
+**WICHTIG: damit das funktioniert, muss `real_field_names` auf `true` stehen: [Anleitung](yform_modul_objparams.md#echte-feldnamen)**
     
 > Tipp: Die Funktion kann bspw. im projects-Addon innerhalb der boot.php hinterlegt werden.
     
