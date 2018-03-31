@@ -242,7 +242,7 @@ Damit kann man anhand eines Eingabefeldes Daten aus einer Tabellen selektieren. 
 	$yform->setActionField('readtable', array("shop_user", "fname", "name"));
 
 <a name="redirect"></a>
-###redirect
+### redirect
 
 Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	
@@ -257,7 +257,7 @@ Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	$yform->setActionField('redirect', array("32"));
 
 <a name="showtext"></a>
-###showtext
+### showtext
 
 Gibt einen Antworttext zurück, der als Plaintext, HTML oder über Textile formatiert werden kann.
 
@@ -289,12 +289,26 @@ Versendet eine E-Mail über ein YForm-E-Mail-Template. Der Parameter **emailtemp
 	action|tpl2email|emailtemplate|email
 
 	// In Beispiel PHP
-	$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	$yform->setActionField('tpl2email', array("emailtemplate", "email"));
+	$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
+	$yform->setActionField('tpl2email', array("emailtemplate", "email"));
 
 > **Hinweis:**
 > * Wird keine E-Mail-Adresse angegeben, wird die E-Mail-Adresse verwendet, die bei `System/Einstellungen` hinterlegt ist.
 > * `emaillabel` ist das E-Mail-Label, Formular-Element
 > * Wird eine E-Mail-Adresse angegeben, wird die E-Mail des Labels überschrieben.
+
+Die Action lässt sich auch mehrfach verwenden, sodass bspw. noch eine Bestätigungs-E-Mail an einen vorgegebenen Empfänger versendet werden kann.
+
+	// im YForm-Formbuilder
+	text|email|E-Mail-Empfänger
+	action|tpl2email|emailtemplate|email
+	action|tpl2email|emailtemplate||bestaetigung@redaxo.org
+
+	// In Beispiel PHP
+	$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
+	$yform->setActionField('tpl2email', array("emailtemplate", "email"));
+	$yform->setActionField('tpl2email', array("emailtemplate", "", "bestaetigung@redaxo.org"));
+
 	
 <a name="wrapper_value"></a>
 ### wrapper_value (wird nicht mehr fortgeführt)
