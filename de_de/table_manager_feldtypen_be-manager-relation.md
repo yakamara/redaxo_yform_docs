@@ -11,7 +11,7 @@
 > **Hinweis:**  
 > Dieser Abschnitt der Doku ist noch nicht fertig. Du kannst dich auf [GitHub](https://github.com/yakamara/redaxo_yform_docs/) an der Fertigstellung beteiligen.
 
-In diesem Tutorial wird die Anwendung des be_relation Feld-Typs erklärt.
+In diesem Tutorial wird die Anwendung des be_manager_relation Feld-Typs erklärt.
 
 Als Beispiel für das Tutorial dient dazu eine Tabelle mit News-Einträgen und einer Tag-Tabelle, für beide Tabellen werden per yForm Table-Manager die gewünschten Felder erstellt. 
 
@@ -34,7 +34,7 @@ Als erstes werden per Table-Manager folgende Tabellen erstellt:
 > **Wichtig** 
 > Diese Tabellen dienen ausschliesslich der Veranschaulichung des Vorgangs (eine echte News-Tabelle würde voraussichtlich weitere Felder bzw. Spalten beinhalten).
 
-> Es wird ausschliesslich das Feld mit dem Typ be_relation genauer erklärt. Die Konfiguration anderer Feld-Typen wird hier genauer erläutert: [Table Manager: Feldtypen](table_manager_feldtypen.md)
+> Es wird ausschliesslich das Feld mit dem Typ be_manager_relation genauer erklärt. Die Konfiguration anderer Feld-Typen wird hier genauer erläutert: [Table Manager: Feldtypen](table_manager_feldtypen.md)
 
 #### Tabelle News-Tags `news_tag` ####
 
@@ -48,7 +48,7 @@ Feld-Name | Feld-Typ
 ------ | ------
 `titel` | `text`
 `text` | `textarea`
-`id_tag` | `be_relation`
+`id_tag` | `be_manager_relation`
 
 Das Feld id_tag wird wie folgt konfiguriert (nicht erwähnte Optionen bleiben unverändert):
 
@@ -91,7 +91,7 @@ Als erstes werden per Table-Manager folgende Tabellen erstellt.
 
 > **Wichtig** 
 > Diese Tabellen dienen ausschliesslich der Veranschaulichung des Vorgangs (eine echte News-Tabelle würde voraussichtlich noch weitere Felder bzw. Spalten beinhalten).
-> Es wird ausschliesslich das Feld mit dem Typ be_relation genauer erklärt. Die Konfiguration anderer Feld-Typen wird hier genauer erläutert: [Table Manager: Feldtypen](table_manager_feldtypen.md)
+> Es wird ausschliesslich das Feld mit dem Typ be_manager_relation genauer erklärt. Die Konfiguration anderer Feld-Typen wird hier genauer erläutert: [Table Manager: Feldtypen](table_manager_feldtypen.md)
 
 #### Tabelle News-Tags `news_tag` ####
 
@@ -110,8 +110,8 @@ Feld-Name | Feld-Typ
 
 Feld-Name | Feld-Typ
 ------ | ------
-`id_tag` | `be_relation`
-`id_beitrag` | `be_relation`
+`id_tag` | `be_manager_relation`
+`id_beitrag` | `be_manager_relation`
 
 Das Feld `id_tag` wird wie folgt konfiguriert (nicht erwähnte Optionen bleiben unverändert):
 
@@ -140,7 +140,7 @@ Als Suchfeld aufnehmen | deaktivieren
 <a name="many-to-many-step-2"></a>
 ### Schritt 2 - Hilfstabelle verknüpfen ###
 
-Um die Verknüpfung abzuschliessen, geht's zurück zur Tabelle News-Beiträge `news_beitrag` wo am Ende der Tabelle ein weiteres be_relation Feld angelegt wird und zwar mit folgenden Einstellungen (nicht erwähnte Optionen bleiben unverändert):
+Um die Verknüpfung abzuschliessen, geht's zurück zur Tabelle News-Beiträge `news_beitrag` wo am Ende der Tabelle ein weiteres be_manager_relation Feld angelegt wird und zwar mit folgenden Einstellungen (nicht erwähnte Optionen bleiben unverändert):
 
 Option | Erläuterung
 ------ | ------
