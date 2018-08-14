@@ -36,10 +36,12 @@ Vergleicht einen Eingabe-Wert mit einem <b>fest definierten Wert</b>.
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
-1. Feldname | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `checkbox_agb`, `newsletter_consent`
+\1. Feldname | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `checkbox_agb`, `newsletter_consent`
 Vergleichswert | Fest definierter Wert, der für den Vergleich herangezogen wird, z.B. `1` (bei Checkboxen) 
 Vergleichsart |  Operator, wie `Feld 1` und `Vergleichswert` vergleichen werden sollen, bspw. `!=`, `!=`, `>`, `<` 
-Fehlermeldung | Hinweis, der erscheint, wenn die Überprüfung `false` ergibt.
+Fehlermeldung | Hinweis, der erscheint, wenn die Bedingung des Vergleichs erfüllt ist.
+
+> Merkhilfe: Wenn die Bedingung erfüllt ist, dann wird eine Fehlermeldung ausgegeben.
 
 <a name="customfunction"></a>
 ## customfunction
@@ -52,7 +54,9 @@ Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten de
 Name | Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `name`, `email`, `phone`, `zip`
 Name der Funktion | Funktion, die den Wert überprüfen soll, bspw. `yform_validate_custom`
 Weitere Parameter | Eingabe-Wert, gegen den geprüft werden soll, bspw. `20`
-Fehlermeldung | Hinweis, der erscheint, wenn die Funktion `false` als Rückgabewert liefert.
+Fehlermeldung | Hinweis, der erscheint, wenn die Bedingung des Vergleichs erfüllt ist.
+
+> Merkhilfe: Wenn die Bedingung erfüllt ist (`return true;`), dann wird eine Fehlermeldung ausgegeben.
 
 ### Beispiel für `customfunction`
 
