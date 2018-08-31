@@ -162,7 +162,7 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 
 	
 
-### checkbox_sql
+### checkbox_sql (nicht mehr empfohlen - statt dessen choice verwenden)
 
 ##### Definition
 	Ein oder mehrere Checkbox-Felder mit Werten, die aus einer SQL-Abfrage stammen.
@@ -176,6 +176,60 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="checkbox_sql"]
 
+
+### choice
+
+##### **Definition**
+Erzeugt eine Selectbox, eine Radiobutton Auswahl oder ein Checkbox-Feld. Wahlweise mit Multiple Auswahl oder Gruppiert (optgroup). Das Feld choice ersetzt mit der YFORM Version 3.0 die Felder checkbox_sql, radio, radio_sql, select und select_sql.
+Die Options können entweder als kommaseparierte Liste `label1=val1,label2=val2...`, als JSON `{"Europa": {"Dänemark": "DK", "Deutschland": "DE", "Österreich": "AT", "Schweiz": "CH"}, "Südamerika": {"Bolivien": "BO"}}` oder als SQL Query `SELECT id AS value, name AS label FROM country` bzw. `SELECT a.id AS value, a.name AS label, b.name AS group_label FROM country AS a LEFT JOIN continent AS b ON a.continent_id = b.id` angegeben werden. SQL muss die Felder `value` und `label` sowie `group_label` für gruppierte Felder zurückgeben. Mit der Syntax als kommaseparierte Liste sind keine gruppierten Felder (optgroups) möglich.
+
+*Hinweis*
+Die SQL Syntax unterscheidet sich zur früheren Syntax! Es werden nun die Felder `label` und `value` statt `id` und `name` erwartet.
+
+*Feldtyp*
+Wenn beim Parameter `expanded` 1 oder true angegeben wird, so wird ein Checkboxfeld oder Radiobuttons erzeugt. Bei 0 oder false wird ein Selectfeld erzeugt. Wenn beim Parameter `multiple` 1 oder true angegeben wird, so wird ein Multiselectfeld bzw. ein Checkboxfeld erzeugt.
+
+    Select:       expanded = 0   multiple = 0
+    Multiselect:  expanded = 0   multiple = 1
+    Radiobuttons: expanded = 1   multiple = 0
+    Checkboxfeld: expanded = 1   multiple = 1
+
+
+##### **Beispiele PHP**
+
+*Syntax*
+
+    $yform->setValueField('choice',["fieldname","Label",Options,expanded,multiple,default,group_by,prefferred_choices,group_attributes,choice_attributes,attributes,notice,[no_db]);
+
+*Beispiele*
+
+Select, Options als kommaseparierte Liste
+
+    $yform->setValueField('choice',["selectfield","Verkehrsmittel","Auto,Bus,Fahrrad,Schiff,Rollschuhe,Zug",0,0]);
+
+Gruppiertes Checkboxfeld, Options als JSON
+
+    $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}},1,1]);
+
+		
+##### **Beispiel Pipe**
+*Syntax*
+
+    choice|name|label|choices|[expanded type: boolean; default: false]|[multiple type: boolean; default: false]|[default]|[group_by]|[preferred_choices]|[group_attributes]|[choice_attributes]|[attributes]|[notice]|[no_db]
+
+*Beispiele*
+
+Select, Options als kommaseparierte Liste
+
+	choice|colors|Farben|Blau,Rot,Grün,Gelb,Lila|0|0|
+	
+Checkboxfeld, Options als kommaseparierte Liste mit Vorauswahl
+
+	choice|colors|Farben|Blau,Rot,Grün,Gelb,Lila|1|1|Rot,Grün
+	
+Gruppierte Radiobutton, Options als JSON
+
+	choice|drinks|Trinken|{"Kalte Getränke": {"Apfelschorle":"01","Orangensaft":"02"},"Warme Getränke":{"Kaffee":"11","Tee":"12"}}|1|0|
 	
 
 ### date
@@ -474,7 +528,7 @@ definiert ein Feld, das nur serverseitig befüllt wird und nicht ausgegeben wird
 
 
 
-### radio
+### radio (nicht mehr empfohlen - statt dessen choice verwenden)
 
 ##### Definition
 	Ein Auswahlfeld, um Datensätze in eine bestimmte Reihenfolge zu sortieren.
@@ -514,7 +568,7 @@ und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adr
 
 
 
-### radio_sql
+### radio_sql (nicht mehr empfohlen - statt dessen choice verwenden)
 
 ##### Definition
 	Ein oder mehrere Auswahlfelder als Radio-Buttons.
@@ -553,7 +607,7 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	$yform->setValueField('resetbutton', array("reset","reset","Reset"));
 	
 
-### select
+### select (nicht mehr empfohlen - statt dessen choice verwenden)
 
 ##### Definition
 	Ein Auswahlfeld mit vordefinierten Werten.
@@ -570,7 +624,7 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 
 	
 
-### select_sql
+### select_sql (nicht mehr empfohlen - statt dessen choice verwenden)
 
 ##### Definition
 	Ein Auswahlfeld mit Werten, die aus einer SQL-Abfrage stammen.
