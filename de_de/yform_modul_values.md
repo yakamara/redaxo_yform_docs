@@ -204,17 +204,17 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 *Syntax*
 
-    $yform->setValueField('choice',["fieldname","Label",Options,expanded,multiple,default,group_by,prefferred_choices,placeholder,group_attributes,choice_attributes,attributes,notice,[no_db]);
+    $yform->setValueField('choice',["fieldname","Label",Options,expanded,multiple,default,group_by,preferred_choices,placeholder,group_attributes,choice_attributes,attributes,notice,[no_db]);
 
 *Beispiele*
 
 1. Select, Options als kommaseparierte Liste
 
-    $yform->setValueField('choice',["selectfield","Verkehrsmittel","Auto,Bus,Fahrrad,Schiff,Rollschuhe,Zug",0,0]);
+        $yform->setValueField('choice',["selectfield","Verkehrsmittel","Auto,Bus,Fahrrad,Schiff,Rollschuhe,Zug",0,0]);
 
 2. Gruppiertes Checkboxfeld, Options als JSON
 
-    $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}},1,1]);
+        $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}},1,1]);
 
 		
 ##### **Beispiel Pipe**
@@ -226,21 +226,21 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 3. Select, Options als kommaseparierte Liste
 
-	choice|colors|Farben|Blau,Rot,Grün,Gelb,Lila|0|0|
+        choice|colors|Farben|Blau,Rot,Grün,Gelb,Lila|0|0|
 	
 4. Checkboxfeld, Options als kommaseparierte Liste mit Vorauswahl
 
-	choice|colors|Farben|Blau,Rot,Grün,Gelb,Lila|1|1|Rot,Grün
+        choice|colors|Farben|Blau,Rot,Grün,Gelb,Lila|1|1|Rot,Grün
 	
 5. Gruppierte Radiobutton, Options als JSON
 
-	choice|drinks|Trinken|{"Kalte Getränke": {"Apfelschorle":"01","Orangensaft":"02"},"Warme Getränke":{"Kaffee":"11","Tee":"12"}}|1|0|
+        choice|drinks|Trinken|{"Kalte Getränke": {"Apfelschorle":"01","Orangensaft":"02"},"Warme Getränke":{"Kaffee":"11","Tee":"12"}}|1|0|
 
 6. Select aus SQL, gruppiert mit Leeroption und bevorzugter Auswahl
 
-    choice|artikel|Artikel|SELECT name label, id value, catname FROM rex_article ORDER BY catname|0|0||catname|8,5|--- bitte auswählen ---
+        choice|artikel|Artikel|SELECT name label, id value, catname FROM rex_article ORDER BY catname|0|0||catname|8,5|--- bitte auswählen ---
 
-Die Datensätze mit der Id 8 und 5 stehen am Anfang des Select (preferred choices).
+    Die Datensätze mit der Id 8 und 5 stehen am Anfang des Select (preferred choices).
 	
 
 ### date
