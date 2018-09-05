@@ -186,7 +186,7 @@ Diese individuelle CSS-Klasse kommt an zwei Stellen zum Tragen:
 1. im Container mit den Fehlerhinweisen zu Beginn des Formulars:  
 `<div class="alert alert-danger my_form_error">`  
 2. im Container aller Felder, die bei einer Validierung fehlschlagen:  
-`<div class="form-group YForm-element my_form_error">`.  
+`<div class="form-group my_form_error">`.  
 So kann man sowohl Label als auch Feld als fehlerhaft formatieren.
 
 Die Default-CSS-Klasse ist `form_warning`.
