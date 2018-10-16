@@ -32,7 +32,7 @@ Beschreibung | Informationen zur Tabelle, zum Beispiel eine Kurzanleitung für d
 aktiv | Legt fest, ob die Tabelle bearbeitet werden kann oder nicht.
 Datensätze pro Seite | Legt fest, ab wie vielen Datensätzen die Tabellen-Übersicht in Seiten unterteilt wird.
 Standardsortierung Feld | Legt fest, nach welchem Feld die Tabellen-Übersicht zu Beginn sortiert wird.
-Stadndardsortierung Richtung |  Legt fest, ob das gewählte Feld auf- oder absteigend sortiert wird.
+Standardsortierung Richtung |  Legt fest, ob das gewählte Feld auf- oder absteigend sortiert wird.
 Suche aktiv | Zeigt die Schaltfläche `Datensatz suchen` in der Tabellen-Übersicht an.
 In der Navigation versteckt | Legt fest, ob die Tabelle auch im Menü angezeigt wird, oder nur im Table Manager. (Hilfreich, um beispielsweise relationale Datenbank-Tabellen auszublenden.)
 Export der Daten erlauben | Zeigt die Schaltfläche `Datensätze exportieren` in der Tabellen-Übersicht an.
