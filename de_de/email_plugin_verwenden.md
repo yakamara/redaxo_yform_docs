@@ -35,7 +35,7 @@ if($form) { // Wenn das Formular nicht abgesendet wurde
 	$debug = 0;
 
 	// Array mit Platzhaltern, die im E-Mail-Template ersetzt werden.
-	$values = $this->params['value_pool']['email'];
+	$values = $yform->objparams['value_pool']['email'];
 	$values['custom'] = 'Eigener Platzhalter';
 
 	if ($yform_email_template = rex_yform_email_template::getTemplate($yform_email_template_key)) {
