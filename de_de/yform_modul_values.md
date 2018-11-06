@@ -414,7 +414,14 @@ definiert ein Feld, das nur serverseitig befüllt wird und nicht ausgegeben wird
 	hidden|name|(default)value|REQUEST|[no_db]
 	
 ##### Beispiel PHP
-	$yform->setValueField('hidden', array("name", "<h1>Headline</h1>"));
+	$yform->setValueField('hidden', array("name", "Max Muster"));
+	
+	// oder
+	
+	$ycom_user = rex_ycom_auth::getUser();
+	if($ycom_user) {
+		$yform->setValueField('hidden', array("user", $ycom_user()->getId()));
+	}
 
 	
 
