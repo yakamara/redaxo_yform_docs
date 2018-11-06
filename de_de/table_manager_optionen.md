@@ -92,4 +92,4 @@ Um eine fremde Datenbank-Tabelle zu importieren oder Datensätze einer Tabelle z
 
 > Der Button `importieren` ist nur dann sichtbar, wenn die Tabelle beim Erstellen oder migrieren die Option `Import von Daten erlauben` aktiviert ist.
 
-> **Hinweis**: Seit YForm 2.0 wird beim Import wird jeder Datensatz beim Importieren validiert. Ungültige Datensätze werden nicht in die Datenbank importiert.
+> **Hinweis**: Seit YForm 2.0 wird beim Import jeder Datensatz beim Importieren validiert. Ungültige Datensätze werden nicht in die Datenbank importiert.
