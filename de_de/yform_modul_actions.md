@@ -13,7 +13,7 @@
 >	- [fulltext_value](#fulltext_value)
 >	- [html](#html)
 >	- [readtable](#readtable)
->	- [reditect](#redirect)
+>	- [redirect](#redirect)
 >	- [showtext](#showtext)
 >	- [tpl2email](#tpl2email)
 >	- [wrapper_value](#wrapper_value)
