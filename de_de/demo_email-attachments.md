@@ -12,6 +12,8 @@ YForm bietet dieses Möglichkeit über einen Trick.
 2. Ein E-Mail-Template (in System > YForm > E-Mail-Tempaltes)
 3. Eine funktionierende PHPMailer-Konfiguration (in System > PHPMailer)
 
+> Wichtig: Diese Anleitung funktioniert nicht, wenn man die E-Mail direkt YForm Formbuilder verfasst, sondern nur, wenn man ein E-Mail-Template zusammen mit der Action `tpl2email` nutzt.
+
 ## Umsetzung
 
 Dem bestehenden Formular wird ein `upload`-Valuefeld hinzugefügt, das in diesem Beispiel auf max. 10 MB begrenzt ist und nur bestimmte Dateiendungen zulässt.
