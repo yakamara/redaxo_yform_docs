@@ -5,7 +5,7 @@
 > - [Action-Klassen](#action-klassen)
 >	- [callback](#callback)
 >	- [copy_value](#copy_value)
->	- [createdb](#createdb)
+>	- [create_table](#create_table)
 >	- [db](#db)
 >	- [db_query](#db_query)
 >	- [email](#email)
@@ -83,25 +83,25 @@ Kopiert Eingaben vom Feld mit dem Label `label_from` in das Feld mit dem Label `
 	$yform->setActionField('db', array("rex_warenkorb"));
 	$yform->setActionField('html', array("Daten gespeichert"));
 
-<a name="createdb"></a>
-### createdb
+<a name="create_table"></a>
+### create_table
 
 Erstellt eine Datenbank-Tabelle. Formular-Label werden dabei als Feldnamen in die neue Tabelle gespeichert. Die neue Tabelle erscheint dabei **nicht** in der Redaxo-Tabellen-Struktur.
 
 	// allgemeine Definition
-	action|createdb|tblname
+	action|create_table|tablename
 
 	// Beispiel Formbuilder
 	text|vorname|Vorname
 	text|name|Name
 	
-	action|createdb|rex_order
+	action|create_table|rex_order
 	
 	// in PHP
 	$yform->setValueField('text', array("vorname","Vorname"));
 	$yform->setValueField('text', array("name","Name"));
 
-	$yform->setActionField('createdb', array("rex_order"));
+	$yform->setActionField('create_table', array("rex_order"));
 
 <a name="db"></a>
 ### db
