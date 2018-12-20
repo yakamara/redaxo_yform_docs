@@ -87,7 +87,7 @@ Kopiert Eingaben vom Feld mit dem Label `label_from` in das Feld mit dem Label `
 ### create_table
 
 Erstellt eine Datenbank-Tabelle. Formular-Label werden dabei als Feldnamen in die neue Tabelle gespeichert. Die neue Tabelle erscheint dabei **nicht** in der Redaxo-Tabellen-Struktur.
-mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setzen.
+Mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setzen.
 
 	// allgemeine Definition
 	action|create_table|tablename
@@ -108,6 +108,7 @@ mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setz
 ### db
 
 Speichert oder aktualisiert Formulardaten in einer Tabelle. Dabei werden die Label und deren Eingaben in die gleichnamigen Tabellenfelder gespeichert.
+Mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setzen.
 
   ```
   // allgemeine Definition
