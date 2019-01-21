@@ -254,7 +254,7 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 
 	// In PHP
 	$yform->setValueField('text', array("email","E-Mail"));
-	$yform->setValidateField('unique', array("email", "Ein User mit dieser E-Mail-Adresse existiert schon!|rex_user"));
+	$yform->setValidateField('unique', array("email", "Ein User mit dieser E-Mail-Adresse existiert schon!","rex_user"));
 
 > **Hinweise:**  
 > * `table`: Wenn kein Tabellenname angegeben ist, wird der Tabellenname verwendet, der im Formbuilder ausgewählt wurde.  
