@@ -1,4 +1,4 @@
-# Table Manager: Grundprinzip
+# Table Manager: Einführung
 
 > ## Inhalt
 > - [Erste Schritte](#erste-schritte)

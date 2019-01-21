@@ -1,4 +1,4 @@
-# Yform-Formbuilder: Allgemein
+# Yform-Formbuilder: Einführung
 
 > ## Inhalt
 > - [Installation des Formbuilder-Moduls](#installation)

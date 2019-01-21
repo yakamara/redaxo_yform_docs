@@ -4,14 +4,14 @@
 	- [Einführung](main_intro.md)
 	- [Plugins](yform_plugins.md) <sup><b>offen</b></sup>
 - Table Manager (Verwaltung für das Backend)
-	- [Grundprinzip](table_manager_grundprinzip.md)
+	- [Einführung](table_manager_intro.md)
 	- [Optionen einer Tabelle](table_manager_optionen.md)
 	- [Feldtypen](table_manager_feldtypen.md)
 	- [Validierungen](table_manager_validierungen.md)
 	- [Anhang: be_manager_relation](table_manager_feldtypen_be-manager-relation.md) <sup><b>unvollständig</b></sup>  <sup><i>alexplusde</i></sup>
     - [Yorm](yorm.md) <sup><b>in Bearbeitung</b></sup> <sup><i>Gregor, Thomas</i></sup>
 - YForm-Formbuilder (Modul für das Frontend)
-	- [Allgemein](yform_modul_allgemein.md)
+	- [Einführung](yform_modul_intro.md)
 	- [Verzeichnis-Struktur](yform_modul_struktur.md) <sup><b>offen</b></sup>
 	- [Objparams](yform_modul_objparams.md)
 	- [Values](yform_modul_values.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
@@ -19,10 +19,9 @@
 	- [Actions](yform_modul_actions.md)
 	- [YForm erweitern](yform_modul_erweitern.md) <sup><b>offen</b></sup>
 - E-Mail-Plugin
-	- [E-Mail-Templates erstellen](email_plugin.md)
-	- [E-Mail-Templates verwenden](email_plugin_verwenden.md)
-- Geo-Plugin
-	- [Geokoordinaten bestimmen](geo_plugin.md)
+	- [Einführung](email_plugin.md)
+- RESTful API-Plugin
+	- [Einführung](rest_plugin.md)
 - Tools-Plugin
     - [Einsetzen der Hilfsmittel](tools_plugin.md)
 - Tablesets

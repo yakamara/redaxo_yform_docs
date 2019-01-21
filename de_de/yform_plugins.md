@@ -7,6 +7,6 @@ Es gibt folgende Plugins:
 
 - [Docs-Plugin](docs_plugin.md)
 - [E-Mail-Plugin](email_plugin.md)
-- [Geo-Plugin](geo_plugin.md)
-- [Table Manager-Plugin](table_manager_grundprinzip.md)
+- [REST-Plugin](rest_plugin.md)
+- [Table Manager-Plugin](table_manager_intro.md)
 - [Tools-Plugin](tools_plugin.md)
