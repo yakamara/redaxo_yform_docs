@@ -52,9 +52,13 @@ $model = new \rex_yform_rest_model(
 );
 
 // Einbinden der Konfiguration
-\rex_yform_rest_route::factory()
+$route = \rex_yform_rest_route::factory()
     ->setPath('/v1/user/')
     ->addModel($model);
+
+// Route Einbinden    
+\rex_yform_rest::addRoute($route);
+    
 ```
 
 Dieses Beispiel führt dazu, dass
