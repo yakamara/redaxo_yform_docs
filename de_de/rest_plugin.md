@@ -3,7 +3,6 @@
 > ## Inhalt
 > - [Erste Schritte](#erste-schritte)
 > - [Konfiguration/Endpoints](#config)
->   - [Model](#config-model)
 >   - [Route](#config-route)
 > - [Nutzung eines Endpoints](#use)
 >   - [GET / Datensätze laden](#use-get)
@@ -40,8 +39,9 @@ Hier ein Beispiel, um YCom-User über die REST API zu verwalten:
 
 
 // Konfiguration des REST Endpoints.
-$model = new \rex_yform_rest_model(
+$route = new \rex_yform_rest_route(
     [
+        'path' => '/v1/user/',
         'auth' => \rex_yform_rest_auth_token::checkToken(),
         'table' => \rex_ycom_user::table(),
         'query' => \rex_ycom_user::query(),
@@ -52,21 +52,18 @@ $model = new \rex_yform_rest_model(
 );
 
 // Einbinden der Konfiguration
-$route = \rex_yform_rest_route::factory()
-    ->setPath('/v1/user/')
-    ->addModel($model);
-
-// Route Einbinden    
 \rex_yform_rest::addRoute($route);
-    
 ```
 
 Dieses Beispiel führt dazu, dass
 
 
 
-<a name="config-model"></a>
-### Model-Konfiguration
+<a name="config-route"></a>
+### Route-Konfiguration
+
+`path`
+muss angegeben werden und bestimmt mit dem $prePath den Endpoint. In diesem Fall wird dann daraus: `/rest/v1/user`
 
 `auth`
 ist optional und kann komplett weggelassen werden, wenn man keine Authentifizerung für einen Endpoint haben möchte. Erlaubte werden sind callbacks und Funktionsnamen.
@@ -92,22 +89,6 @@ Beispiel
 `post`
 
 `delete`
-
-<a name="config-route"></a>
-### Route
-
-Die Modelkonfiguration wird nun eingebunden über 
-
-```
-// Einbinden der Konfiguration
-\rex_yform_rest_route::factory()
-    ->setPath('/v1/user/') // Mein Pfad. Im Normalfall wie die Tabellenbezeichnung
-    ->addModel($model); // Die Modelkonfiguration
-```
-
-Da die Defaultpfadeinstellung mit `/rest` ergänzt wird, ergibt sich in diesem Beispiel dieser Endpoint:
-
-`/rest/v1/user`
 
 <a name="use"></a>
 ## Nutzung eines Endpoints
