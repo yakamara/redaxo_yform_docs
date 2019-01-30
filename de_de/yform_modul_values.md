@@ -360,11 +360,10 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 ### generate_key
 
 ##### Definition
-	generate_key|name|[no_db]
-	$yform->setValueField('float', array("float","Float","1"));
+	Generiert ein nicht sichtbares Feld mit zufälligem 32-stelligem Schlüssel, bestehend aus Zahlen und Kleinbuchstaben.
 		
-##### Beispiel Formbuilder
-	_
+##### Beispiel Pipe
+	generate_key|name|[no_db]
 	
 ##### Beispiel PHP
 	_
@@ -372,17 +371,17 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 ### generate_password
 
-##### Beispiel E-Mail
-	REX_YFORM_DATA[field="float"]
-
 ##### Definition
-	generate_password|name|[no_db]
+	Generiert ein zufälliges Passwort
 		
-##### Beispiel Formbuilder
-	_
+##### Beispiel Pipe
+	generate_password|name|[no_db]
 	
 ##### Beispiel PHP
 	_
+	
+##### Beispiel E-Mail
+	REX_YFORM_DATA[field="float"]
 
 
 ### hashvalue
