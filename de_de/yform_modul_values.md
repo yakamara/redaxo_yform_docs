@@ -369,21 +369,6 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 	_
 
 
-### generate_password
-
-##### Definition
-	Generiert ein zufälliges Passwort
-		
-##### Beispiel Pipe
-	generate_password|name|[no_db]
-	
-##### Beispiel PHP
-	_
-	
-##### Beispiel E-Mail
-	REX_YFORM_DATA[field="float"]
-
-
 ### hashvalue
 
 ##### Definition
