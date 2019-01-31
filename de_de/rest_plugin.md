@@ -43,9 +43,22 @@ $route = new \rex_yform_rest_route(
     [
         'path' => '/v1/user/',
         'auth' => \rex_yform_rest_auth_token::checkToken(),
-        'table' => \rex_ycom_user::table(),
+        'type' => \rex_ycom_user::class,
         'query' => \rex_ycom_user::query(),
-        'get' => [],
+        'get' => [
+            'fields' => [
+                'rex_ycom_user' => [
+                    'id',
+                    'login',
+                    'email',
+                    'name'
+                 ],
+                 'rex_ycom_group' => [
+                    'id',
+                    'name'
+                 ]
+            ]
+        ],
         'post' => [],
         'delete' => [],
     ]
