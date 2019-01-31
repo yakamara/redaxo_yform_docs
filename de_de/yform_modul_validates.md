@@ -89,7 +89,7 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	validate|customfunction|label|[!]function/class::method|weitere_parameter|warning_message
 	
 <a name="email"></a>
-### email
+### email - deprecated, bitte künftig [type](#type) verwenden
 
 Überprüft, ob die Feldeingabe eine E-Mail-Adresse ist. Ein leere Eingabe würde dabei als korrekt bewertet werden! Es empfiehlt sich also eine zusätzliche Validiierung mit `empty`.
 
