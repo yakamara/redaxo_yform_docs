@@ -253,6 +253,7 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 		
 ##### Beispiel Pipe
 	date|date|Datum|2016|+5|DD/MM/YYYY|1||select|
+	validate|type|Datum|date|Bitte geben Sie das Datum ein.|[1 = Feld darf auch leer sein]
 
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="date"]
