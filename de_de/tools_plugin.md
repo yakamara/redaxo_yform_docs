@@ -69,3 +69,14 @@ oder beim Datetimepicker
 kann man im Manager über das Attibutefeld innerhalb von z.B. date mit input:text so setzen:
 
     {"data-yform-tools-datetimepicker":"YYYY-MM-DD HH:ii"}
+
+
+## Ein paar Beispiele für Kombinationen aus datepicker/datetimepicker und Inputmask
+
+datepicker und Inputmask:
+
+    {"data-yform-tools-datepicker":"DD.MM.YYYY", "data-yform-tools-inputmask":"dd.mm.yyyy"}
+
+datetimepicker und Inputmask:
+
+    {"data-yform-tools-datetimepicker":"DD.MM.YYYY HH:ii:ss", "data-yform-tools-inputmask":"datetime", "data-inputmask-mask":"1.2.y h:s:s", "data-inputmask-alias":"dd.mm.yyyy", "data-inputmask-placeholder":"dd.mm.yyyy hh:mm:ss", "data-inputmask-separator":"."} 
