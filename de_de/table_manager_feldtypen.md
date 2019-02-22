@@ -231,7 +231,7 @@ Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `datestamp`, `date_created`
-Format | Format, in dem der Zeitstempel abgespeichert wird, z.B. `YmdHis`, `U`, `dmy`, `mysql`
+Format | Format, in dem der Zeitstempel abgespeichert wird, z.B. `YmdHis`, `U`, `dmy`, - leer lassen für `mysql`
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Wann soll Wert gesetzt werden | Gibt an, ob der Zeitstempel initial beim Erstellen des Datenbankeintrags angelegt wird (`nur, wenn leer`), oder auch bei Änderungen (`immer`).
 In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
