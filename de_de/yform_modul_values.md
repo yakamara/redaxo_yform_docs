@@ -223,7 +223,7 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 2. Gruppiertes Checkboxfeld, Options als JSON
 
-        $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}},1,1]);
+        $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",'{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}}',1,1]);
 
 		
 ##### **Beispiel Pipe**
