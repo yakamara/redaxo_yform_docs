@@ -294,6 +294,15 @@ Versendet eine E-Mail über ein YForm-E-Mail-Template. Der Parameter **emailtemp
 	$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
 	$yform->setActionField('tpl2email', array("emailtemplate", "email"));
 
+	// In Beispiel PHP => manuelles Triggern von tpl2email OHNE Ausgabe
+	$yform = new rex_yform();
+	$yform->setObjectparams('csrf_protection',false);
+	$yform->setValueField('hidden', ['email',$email]); // $email als Variable steht dann im Email-Template zur Verfügung (beliebig erweiterbar)
+	$yform->setActionField('tpl2email', ["emailtemplate","email",'zieladresse@email.de'])
+	$yform->getForm();
+	$yform->setObjectparams('send',1);
+	$yform->executeActions();
+
 > **Hinweis:**
 > * Wird keine E-Mail-Adresse angegeben, wird die E-Mail-Adresse verwendet, die bei `System/Einstellungen` hinterlegt ist.
 > * `emaillabel` ist das E-Mail-Label, Formular-Element
