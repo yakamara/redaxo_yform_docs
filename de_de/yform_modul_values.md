@@ -654,6 +654,8 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	
 ##### Beispiel PHP
 	$yform->setValueField('submit', array("submit","Submit"));
+	Als Standard werden die Klassen "btn" & "btn-primary" definiert. Für zusätzliche Klassen gilt:
+	$yform->setValueField('submit', array('submit','Anfrage senden','','','','btn-secondary'));
 		
 ##### Beispiel Pipe
 	submit|submit|Submit|
