@@ -152,10 +152,19 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	Eine Checkbox mit vordefinierten Werten.
 	
 ##### Beispiel PHP
-	$yform->setValueField('checkbox', array("checkbox","Checkbox","0,1","1"));
+
+*Syntax*
+
+	$yform->setValueField('checkbox', array("checkbox","Checkbox","0 or 1"));
+	
+*Beispiel*
+
+Eine Checkbox die bereits gecheckt ist.
+
+	$yform->setValueField('checkbox', array("checkbox","Checkbox","1"));
 		
 ##### Beispiel Pipe
-	checkbox|checkbox|Checkbox|0,1|1|
+	checkbox|checkbox|Checkbox|0|
 
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="checkbox"]
