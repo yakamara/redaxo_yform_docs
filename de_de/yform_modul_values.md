@@ -164,7 +164,7 @@ Eine Checkbox die bereits gecheckt ist.
 	$yform->setValueField('checkbox', array("checkbox","Checkbox","1"));
 		
 ##### Beispiel Pipe
-	checkbox|checkbox|Checkbox|0|
+	checkbox|checkbox|Checkbox|1|
 
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="checkbox"]
