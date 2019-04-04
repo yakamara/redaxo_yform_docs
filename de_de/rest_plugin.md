@@ -18,6 +18,7 @@ Die Klasse muss zunächst registriert werden siehe [YOrm](yorm.md), damit auf di
 
 > Hinweis: Die Tabellem müssen mit YForm verwaltbar sein, da diese Felder automatisch genutzt werden.
 
+Die Schnittstelle orientiert sich an https://jsonapi.org/format/. Aufrufe und JSON Formate sind ähnlich bis exakt so aufgebaut.
 
 <a name="config"></a>
 ## Konfiguration / Endpoints
@@ -59,8 +60,23 @@ $route = new \rex_yform_rest_route(
                  ]
             ]
         ],
-        'post' => [],
-        'delete' => [],
+        'post' => [
+            'fields' => [
+                'rex_ycom_user' => [
+                    'login',
+                    'email',
+                    'ycom_groups'
+                ]
+            ]
+        ],
+        'delete' => [
+            'fields' => [
+                'rex_ycom_user' => [
+                    'id',
+                    'login'
+                ]
+            ]
+        ]
     ]
 );
 
@@ -68,7 +84,8 @@ $route = new \rex_yform_rest_route(
 \rex_yform_rest::addRoute($route);
 ```
 
-Dieses Beispiel führt dazu, dass
+Dieses Beispiel führt dazu, dass man User über das PlugIn auslesen kann, wie auch User einspielen kann, aber nur mit den Feldern: login,email,ycom_groups. 
+Löschen kann man jeden User. Über Filter bei id oder login, lassen sich bestimmte User filtern und als Ganzes löschen.
 
 
 
@@ -79,13 +96,13 @@ Dieses Beispiel führt dazu, dass
 muss angegeben werden und bestimmt mit dem $prePath den Endpoint. In diesem Fall wird dann daraus: `/rest/v1/user`
 
 `auth`
-ist optional und kann komplett weggelassen werden, wenn man keine Authentifizerung für einen Endpoint haben möchte. Erlaubt sind callbacks und Funktionsnamen.
+ist optional und kann komplett weggelassen werden, wenn man keine Authentifizerung für einen Endpoint haben möchte. Erlaubt sind callbacks und Funktionsnamen. 
+Die Funktion darf nicht direkt aufgerufen werden, sondern muss als Callback wie im Beispiel eingetragen werden, damit sie erst im Bedarfsfall verwendet wird.
 
 Beispiele
 
-* **\rex_yform_rest_auth_token::checkToken** für die interne Authentifizierung mit einfachem Token
-* **function() { return (date("d") == 1) ? true : false }**
-* **"MeineFunktion"**
+* **'\rex_yform_rest_auth_token::checkToken'** für die interne Authentifizierung mit einfachem Token
+* **'MeineFunktion'**
 
 Wenn man keine Authentifizierung einträgt kann jeder diese Daten entsprechend der weiteren Konfiguration nutzen. Sollte man nur bei Tabellen wie PLZ oder ähnlich offensichtlich freien Daten machen.
 
@@ -107,9 +124,7 @@ Beispiel
 ## Nutzung eines Endpoints
 
 URL (z.B. https://domain/rest/v1/user)
-In den Beispielen wird davon ausgegangen, dass es keine Authentifizierung gibt
-
-* Fehler und Statusmeldungen
+In den Beispielen wird davon ausgegangen, dass es keine eigene Authentifizierung gibt. Um zu sehen wie die Aufrufe funktionieren bitte hier https://jsonapi.org/format/ nachschlagen. 
 
 <a name="use-get"></a>
 ### GET
@@ -135,6 +150,8 @@ In den Beispielen wird davon ausgegangen, dass es keine Authentifizierung gibt
 
 ### Standardauthentifizierung
 
-Wenn im Model folgende Authentifizerung angegeben wurde: `\rex_yform_rest_auth_token::checkToken()` ist das die Standardauthentifizierung mit Tokens aus der YForm:Rest:Tokenverwaltung.
+Wenn im Model folgende Authentifizerung angegeben wurde: `'\rex_yform_rest_auth_token::checkToken()'` ist das die Standardauthentifizierung mit Tokens aus der YForm:Rest:Tokenverwaltung.
 
-Die hier erstellen Token werden entsprechend überprüft und müssen im Header übergeben werden. `token=###meintoken###` Nur aktive Tokens funktionieren.
+Die hier erstellen Token werden entsprechend überprüft und müssen im Header übergeben werden. `token=###meintoken###` Nur aktive Tokens funktionieren. 
+Über das REST PlugIn kann man im Backend diese Zugriffe einschränken und tracken. D.h. Es können Einschränkungen wir Zugriffe / Stunde oder ähnliches eingestellt werden. 
+Jeder Zugriff auf die REST-API wird erfasst. 
