@@ -203,10 +203,42 @@ Wenn beim Parameter `expanded` 1 oder true angegeben wird, so wird ein Checkboxf
     Radiobuttons: expanded = 1   multiple = 0
     Checkboxfeld: expanded = 1   multiple = 1
 
-*Attribute*
+**Attribute**
 
-Der Parameter `group_attributes`, `choice_attributes` und `attributes` können entweder als ausführbare Befehle (callable) (z.B. `foo::bar($attributes)` oder `foo($attributes)`) oder als JSON (z.B. `{"class": "group-item"}`) angegeben werden.
-Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: `foo($attributes, $value, $label)`.
+Der Parameter `group_attributes`, `choice_attributes` und `attributes` können entweder als ausführbare Befehle (callable) (z.B. `foo::bar` oder `foo`) oder als JSON (z.B. `{"class": "group-item"}`) angegeben werden.
+
+*group_attributes*
+
+Die group_attributes werden dem übergeordneten div des Choice Elementes zugewiesen. Wenn für die group_attributes eine aufrufbare Funktion verwendet wird, so bekommt diese keine Parameter übergeben.
+
+*choice_attributes*
+
+Beim Parameter `choice_attributes` können beim Select (expanded = 0) die Attributes übernommen und erweitert werden: `foo($attributes)`. Bei Radiobuttons und Checkboxes (expanded = 1) ist der Parameter $attributes leer. Zurückgegebene Attribute werden beim übergeordneten div ausgegeben.
+
+*attributes (bei jeder Option)*
+
+Für die Options eines Choice Feldes können ebenfalls individuelle Attribute gesetzt werden. Hierfür notiert man bei `attributes` eine aufrufbare Funktion (callable) als String in der Form `"foo::bar"` oder `"foo_bar"`. Die Funktion bekommt die Parameter `value` und `label` übergeben, auf die man dann entsprechend reagieren kann. Die Attribute gibt man dann als key/value zurück. Wird bei attributes ein Json angegeben, werden die Attribute bei jeder Option mit ausgegeben.
+
+*Beispiel für individuelle Option Attribute*
+
+```
+function foo ($value,$label) {
+	$trees = [
+		"gelb" => "pear",
+		"red" => "apple"
+	]
+	if (isset($trees[$value])) {
+		return ['data-tree'=>$trees[$value]];
+	}
+	return ['data-tree'=>'unknown'];
+}
+```
+
+Felddefinition:
+
+`$yform->setValueField('choice',["apfeloderbirne","Apfel oder Birne",'{"Birne":"gelb","Apfel":"rot"}',1,0,'','','','','','','foo','','[no_db]');`
+
+Erzeugt zwei Radiobuttons mit unterschiedlichen data-tree-Werten.
 
 
 ##### **Beispiele PHP**
