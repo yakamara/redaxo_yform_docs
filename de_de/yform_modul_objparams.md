@@ -12,7 +12,6 @@
 >	- [Ausgabe der Label](#ausgabe-label)
 > - [Objparams zur Formular-Optik](#objparams-optik)
 >	- [Themes](#themes)
->	- [Antworttext](#antworttext)
 >	- [Submit-Button benennen](#submit-benennen)
 >	- [Submit-Button anzeigen](#submit-anzeigen)
 >	- [CSS-Klasse für Fehler](#css-klasse-fehler)
@@ -138,17 +137,6 @@ Default ist `html`.
 
 YForm verfügt über `Templates`, in denen das HTML-Markup definiert ist, das die Felder umgibt. Im Ordner `ytemplates` gibt es Unterordner für jedes Theme, in denen dann die Templates für die einzelnen Felder zu finden sind. Auf diese Weise kann man schnell eigene Themes definieren, die auf dem Basis-Theme aufbauen: Wenn es für einen Feldtyp ein eigenes Template gibt, wird dieses verwendet, anonsten das des Basis-Themes.
 Der Defaultwert lautet `bootstrap`, d.h. als Basis-Theme ist das HTML-Schema des CSS-Frameworks "Bootstrap" hinterlegt.
-
-<a name="antworttext"></a>
-### Antworttext
-
-	// Im YForm-Formbuilder
-	objparams|answertext|<p>Das Formular wurde abgeschickt.</p>
-
-	// In PHP
-	$yform->setObjectparams('answertext','Das Formular wurde abgeschickt.');
-
-Hier kann ein optionaler Antworttext definiert werden, der nach dem Abschicken angezeigt wird. Im Prinzip ist die Funktion identisch mit der vordefinierten Aktion `Meldung bei erfolgreichen Versand`, wo man allerdings noch die Wahl hat zwischen Plaintext, HTML und Textile. Falls beides definiert wurde, überschreibt die vordefinierte Aktion den bei answertext hinterlegten Wert.
 
 <a name="submit-benennen"></a>
 ### Submit-Button benennen

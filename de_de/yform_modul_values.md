@@ -152,10 +152,19 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 	Eine Checkbox mit vordefinierten Werten.
 	
 ##### Beispiel PHP
-	$yform->setValueField('checkbox', array("checkbox","Checkbox","0,1","1"));
+
+*Syntax*
+
+	$yform->setValueField('checkbox', array("checkbox","Checkbox","0 or 1"));
+	
+*Beispiel*
+
+Eine Checkbox die bereits gecheckt ist.
+
+	$yform->setValueField('checkbox', array("checkbox","Checkbox","1"));
 		
 ##### Beispiel Pipe
-	checkbox|checkbox|Checkbox|0,1|1|
+	checkbox|checkbox|Checkbox|1|
 
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="checkbox"]
@@ -214,7 +223,7 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 2. Gruppiertes Checkboxfeld, Options als JSON
 
-        $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}},1,1]);
+        $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",'{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}}',1,1]);
 
 		
 ##### **Beispiel Pipe**
@@ -654,6 +663,8 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	
 ##### Beispiel PHP
 	$yform->setValueField('submit', array("submit","Submit"));
+	Als Standard werden die Klassen "btn" & "btn-primary" definiert. Für zusätzliche Klassen gilt:
+	$yform->setValueField('submit', array('submit','Anfrage senden','','','','btn-secondary'));
 		
 ##### Beispiel Pipe
 	submit|submit|Submit|
