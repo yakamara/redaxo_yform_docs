@@ -23,12 +23,11 @@ Die Schnittstelle orientiert sich an https://jsonapi.org/format/. Aufrufe und JS
 <a name="config"></a>
 ## Konfiguration / Endpoints
 
-Der Zugriff über REST muss für jeden Endpoint einzeln definiert werden. D.h. man muss für jede Tabelle und für unterschiedliche Nutzungszenarien diese fest definieren.
+Die Zugriff über REST muss für jeden Endpoint einzeln definiert werden. D.h. man muss für jede Tabelle und für unterschiedliche Nutzungszenarien diese fest definieren.
 
 Die Standardroute der REST-API ist auf "/rest" gesetzt, d.h. hierunter können eigene Routen definiert werden. 
 
-Die Konfiguration wird über PHP festgelegt und sollte im project-AddOn in der boot.php abgelegt werden. Kann aber auch an anderen Stellen abgelegt werden, solange diese während der initialisierung aufgerufen wird.
-
+Die Konfiguration wird über PHP festgelegt und sollte im project-AddOn in der boot.php abgelegt werden. Kann aber auch an andere Stelle abgelegt werden, solange diese während der Initialisierung aufgerufen wird.
 
 Hier ein Beispiel, um YCom-User über die REST-API zu verwalten:
 
@@ -96,7 +95,7 @@ Löschen kann man jeden User. Über Filter bei id oder login, lassen sich bestim
 muss angegeben werden und bestimmt mit dem $prePath den Endpoint. In diesem Fall wird dann daraus: `/rest/v1/user`
 
 `auth`
-ist optional und kann komplett weggelassen werden, wenn man keine Authentifizerung für einen Endpoint haben möchte. Erlaubt sind callbacks und Funktionsnamen. 
+ist optional und kann komplett weggelassen werden, wenn man keine Authentifizerung für einen Endpoint haben möchte. Erlaubt sind callbacks und Funktionsnamen.
 Die Funktion darf nicht direkt aufgerufen werden, sondern muss als Callback wie im Beispiel eingetragen werden, damit sie erst im Bedarfsfall verwendet wird.
 
 Beispiele
