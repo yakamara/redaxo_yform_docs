@@ -10,6 +10,7 @@
 >	- [CSS-ID für den HTML-Wrapper](#css-id-wrapper)
 >	- [CSS-Klasse für den HTML-Wrapper](#css-klasse-wrapper)
 >	- [Ausgabe der Label](#ausgabe-label)
+>	- [CSRF-Schutz](#csrf-schutz)
 > - [Objparams zur Formular-Optik](#objparams-optik)
 >	- [Themes](#themes)
 >	- [Submit-Button benennen](#submit-benennen)
@@ -120,6 +121,21 @@ Default-Ausgabe:
 
 Wenn man den Wert hier auf `plain` setzt, werden die Feld-Label nicht als HTML interpretiert, sondern mit `htmlspecialchars` und `nl2br` maskiert.  
 Default ist `html`.
+
+<a name="csrf-schutz"></a>
+### CSRF-Schutz
+
+	// Im YForm-Formbuilder
+	objparams|csrf_protection|0
+
+	// In PHP
+	$yform->setObjectparams('csrf_protection', false);
+
+Der Parameter zum CSRF-Schutz (Cross-Site-Request-Forgery, auch XSRF) verhindert, dass speziell präparierte Anfragen von YForm ausgeführt werden. Angriffsszenario auf ein YForm-Formular wäre bspw. ein Nutzer, der einen präparierten Link erhält und durch einen Klick dann Daten seines REDAXO-Besuchs preisgibt oder unbemerkte/ungewollte Aktionen durch das YForm-Formular ausführt.
+
+Vereinfacht gesagt sorgt der CSRF-Schutz dafür, dass Formulare nur dann erfolgreich abgesendet werden, wenn der Nutzer sich zum Zeitpunkt des Formular-Absendens auf der Seite befunden hat.
+
+Der CSRF-Schutz sollte daher immer aktiviert bleiben, außer, wenn der direkte Aufruf und Versand eines Formulars explizit durch einen präparierten Link erfolgen muss - bspw. beim Account-Aktivieren-Link des Addons YCom.
 
 ---
 
