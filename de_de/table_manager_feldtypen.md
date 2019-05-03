@@ -157,14 +157,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Eine <b>Checkbox</b> mit vordefinierten Werten.
 
 > **Wert in der Datenbank**
-> Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
+> Status der Checkbox als Zahl, z.B. `0` oder `1`
 
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `active`, `online`, `visible`, `hidden`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `aktiviert`, `online`, `sichtbar?`, `ausgeblendet?`
-Werte | Wert, der in die Datenbank geschrieben wird, z.B. `0,1`, `nein,ja`
 Defaultstatus | Gibt an, ob die Checkbox vorausgewählt ist oder nicht.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
