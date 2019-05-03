@@ -653,6 +653,15 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	
 	
 	
+### submit
+
+##### Definition
+	Zeigt einen Wert in der Ausgabe.
+	
+##### Beispiel PHP
+		
+##### Beispiel Pipe
+	showvalue|name|label|defaultwert|notice
 	
 	
 	

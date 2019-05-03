@@ -26,6 +26,7 @@
 > - [radio_sql](#radio_sql)
 > - [select](#select)
 > - [select_sql](#select_sql)
+> - [showvalue](#showvalue)
 > - [submit](#submit)
 > - [text](#text)
 > - [textarea](#textarea)
@@ -570,6 +571,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 > **Tipp:**  
 > Ein select_sql-Feld kann ähnlich wie be_manager_relation dazu benutzt werden, um Datensätze fremder Tabellen in einer 1:1- oder 1:n-Beziehung zu verknüpfen.
+
+<a name="showvalue"></a>
+## showvalue
+
+Zeigt einen Wert in der Ausgabe.
 
 <a name="submit"></a>
 ## submit
