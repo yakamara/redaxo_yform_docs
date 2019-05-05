@@ -351,7 +351,7 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 	
 
-### float
+### float (deprecated)
 
 ##### Definition
 	Ein einfaches Eingabefeld für Gleitkomma-Zahlen.
@@ -494,7 +494,24 @@ definiert ein Feld, das nur serverseitig befüllt wird und nicht ausgegeben wird
 ##### Beispiel E-Mail
 	REX_YFORM_DATA[field="media"]
 	
+
+#### Number 
+##### Beispiel Formbuilder
+    number|name|label|precision|scale|defaultwert|[no_db]|[unit]|[notice]
+	number|zahl|Zahl|6|2|5||cm|Hinweis Number
+
+precision ist die Anzahl der signifikanten Stellen. Der Bereich von precision liegt zwischen 1 und 65.
+
+scale ist die Anzahl der Stellen nach dem Dezimalzeichen. Der Bereich von scale ist 0 und 30. MySQL erfordert, dass scale kleiner oder gleich (<=) precision ist.
+
+In diesem Beispiel kann die Spalte 6 Stellen mit 2 Dezimalstellen speichern. Daher reicht der Bereich der Betragsspalte von 9999,99 bis -9999,99.
+
+
+##### Beispiel PHP
+
 	
+
+
 ### !!password
 
 ##### Beispiel Formbuilder

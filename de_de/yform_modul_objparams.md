@@ -22,7 +22,9 @@
 >	- [Zieladresse des Formulars](#zieladresse)
 >	- [Sprunganker](#sprunganker)
 >	- [Formular anzeigen nach Abschicken](#formular-anzeigen-nach-abschicken)
-
+>   - [Formular debuggen](#formular-debug)
+>   - [Fehlermeldungen ausschalten/verstecken](#formular-hide-top-warning-messages)
+>   - [formular-get-data](#formular-get-data)
 
 ## Zweck der Objparams
 
@@ -259,3 +261,43 @@ Der Defaultwert ist leer.
 
 Mit dem Wert `1` kann man das Formular nach dem Versand nochmal anzeigen, um zum Beispiel direkt eine neue Eingabe zu ermöglichen oder die eingegebenen Werte erneut zum Verändern anzubieten.  
 Default ist `0` (nicht anzeigen).
+
+
+<a name="formular-debug"></a>
+### Formular debuggen
+
+	// Im YForm-Formbuilder
+	objparams|debug|1
+
+	// In PHP
+	$yform->setObjectparams('debug',1);
+
+Mit dem Wert `1` kann man zb Aktionen Formular debuggen und Aktion prüfen.
+
+
+<a name="formular-hide-top-warning-messages"></a>
+### Fehlermeldungen ausschalten/verstecken
+
+	// Im YForm-Formbuilder
+	objparams|hide_top_warning_messages|1
+
+	// In PHP
+	$yform->setObjectparams('hide_top_warning_messages',1);
+
+Mit dem Wert `1` können die Fehlermeldung die über eine Validierung ausgegeben werden versteckt werden.
+
+
+<a name="formular-get-data"></a>
+### Fehlermeldungen bei Feldern ausschalten/verstecken
+
+	// Im YForm-Formbuilder
+	objparams|getdata|1
+	objparams|main_where|id=1
+	objparams|main_table|rex_table
+
+	// In PHP
+	$yform->setObjectparams('getdata',1);
+	$yform->setObjectparams('main_where','id=1');
+	$yform->setObjectparams('main_table','rex_table');
+
+Mit dem Wert `1` bei `getdata` in Verbindung mit `main_where` (hier die id auf den Datensatz) und `main_table` (hier der Tabellename) können Felder mit Werten aus eine Datenbanktabelle vorbelegt/geladen werden.
