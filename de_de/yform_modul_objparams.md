@@ -24,7 +24,7 @@
 >	- [Formular anzeigen nach Abschicken](#formular-anzeigen-nach-abschicken)
 >   - [Formular debuggen](#formular-debug)
 >   - [Fehlermeldungen ausschalten/verstecken](#formular-hide-top-warning-messages)
->   - [formular-get-data](#formular-get-data)
+>   - [Feldwerte aus Datenbank laden](#formular-get-data)
 
 ## Zweck der Objparams
 
@@ -288,7 +288,7 @@ Mit dem Wert `1` können die Fehlermeldung die über eine Validierung ausgegeben
 
 
 <a name="formular-get-data"></a>
-### Fehlermeldungen bei Feldern ausschalten/verstecken
+### Feldwerte aus Datenbank laden
 
 	// Im YForm-Formbuilder
 	objparams|getdata|1
