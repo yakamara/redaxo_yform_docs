@@ -206,8 +206,8 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Datum`, `Beginn der Veranstaltung`
-[Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014`
-[Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
+[Startjahr] oder [-X] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014` oder '-1', um immer 1 Jahr unter der aktuellen Jahreszahl zu beginnen 
+[Endjahr] oder [+X] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl zu enden.
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
@@ -250,8 +250,8 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Datum`, `Beginn der Veranstaltung`
-[Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014`
-[Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
+[Startjahr] oder [-X] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014` oder '-1', um immer 1 Jahr unter der aktuellen Jahreszahl zu beginnen 
+[Endjahr] oder [+X] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl zu enden.
 Anzeigeformat | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
