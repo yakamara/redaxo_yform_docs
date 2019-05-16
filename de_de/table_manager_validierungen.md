@@ -116,13 +116,13 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe nicht im erlaubten Bere
 <a name="size"></a>
 ## size
 
-Überprüft, ob der Eingabe-Wert eine <b>bestimmte Anzahl von Zeichen</b> hat.
+Überprüft, ob der Eingabe-Wert eine <b>exakte Anzahl von Zeichen</b> hat.
 
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `customer_id`, `pin`
-Anzahl der Zeichen | Anzahl der Zeichen, die eingegeben werden sollen, z.B. `5`,`10`,`42`
+Anzahl der Zeichen | exakte Anzahl der Zeichen, die eingegeben werden sollen, z.B. `5`,`10`,`42`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe die festgelegte Anzahl von Zeichen unter- oder überschreitet.
 
 <a name="size_range"></a>
