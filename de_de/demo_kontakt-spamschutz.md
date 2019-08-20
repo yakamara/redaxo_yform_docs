@@ -76,3 +76,12 @@ Sobald Spambots das input-Feld namens `email` als Eingabe-Feld erkennen, werden 
 * Unter Umständen wird das versteckte Feld von Browsern vorausgefüllt. Lösung: Autocomplete abschalten, indem das Eingabe-Feld via JSON das Attribut `{"autocomplete":"off"}` bekommt.
 * Das korrekte E-Mail-Feld wird nicht mehr vom Browser vorausgefüllt.
 * Die Lösung ist nur bedingt barrierefrei.
+
+
+## Google reCaptcha
+
+Siehe [YForm Formbuilder Values](yform_modul_values.md#recaptcha)
+
+**Nachteile**
+
+* Übermittlung von personenbezogenen Daten an Google
