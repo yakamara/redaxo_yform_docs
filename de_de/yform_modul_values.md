@@ -144,6 +144,14 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ##### Beispiel PHP
 	_
 
+
+### reCaptcha
+
+##### Definition
+	Nutzt den Google-Service reCAPTCHA V2.
+
+##### Beispiel Pipe
+	recaptcha|Sicherheitsüberprüfung|<PUBLIC_KEY>|<PRIVATE_KEY>|Die Sicherheitsüberprüfung schlug fehl.|1|
 	
 
 ### checkbox
