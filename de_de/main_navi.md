@@ -33,6 +33,7 @@
  	- [Tableset Veranstaltungen](demo_tableset-rex_yf_events.json)
  	- [Tableset Glossar](demo_tableset-rex_glossar.json)
 - Tutorials
+	- [Hidden-Feld verwenden](demo_hidden.md)
  	- [Kontakt mit Spamschutz](demo_kontakt-spamschutz.md)
  	- [Kontakt mit E-Mail-Anhang](demo_email-attachments.md)
  	- [Kontakt mit HTML-Mails - coming soon](demo_kontakt-htmlmails.md)
