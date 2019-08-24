@@ -166,16 +166,16 @@ Führt eine Abfrage aus, z.B. um hier Werte aus Eingabefeldern in die Abfrage ei
 Sendet E-Mail mit Betreff und Body an angegebene E-Mail-Adresse. Eingaben aus dem Formular können als Platzhalter im Mailbody verwendet werden. 
 
 	// allgemeine Definition
-	action|email|from@email.de|to@email.de|Mailsubject|Mailbody###name###
+	action|email|from@email.de|to@email.de|Mailsubject|Mailbody###name###|<p class="alert alert-danger">Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns telefonisch.</p>
 	
 	im YForm-Formbuilder
 	text|name|Name
-	action|email|from@mustermann|to@mustermann.de|Test|Hallo ###name###
+	action|email|from@mustermann|to@mustermann.de|Test|Hallo ###name###|<p class="alert alert-danger">Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns telefonisch.</p>
 	
 
 	// in Beispiel PHP
 	$yform->setValueField('text', array("name","Name"));
-	$yform->setActionField('email', array("from@mustermann", "to@mustermann.de", "Test", "Hallo ###name###"));
+	$yform->setActionField('email', array("from@mustermann", "to@mustermann.de", "Test", "Hallo ###name###", '<p class="alert alert-danger">Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns telefonisch.</p>'));
 
 <a name="encrypt_value"></a>
 ### encrypt_value (wird nicht mehr fortgeführt)
