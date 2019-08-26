@@ -1,4 +1,4 @@
-# Nützliche YForm-Snippets
+# Table Manager Snippets
 
 - [Table Manager: Spalte ausblenden](#spalteausblenden)
 - [Table Manager: Spalteninhalt vor Anzeige in Übersicht ändern](#Spalteninhalt)
