@@ -148,7 +148,10 @@ Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 ### reCaptcha
 
 ##### Definition
-	Nutzt den Google-Service reCAPTCHA V2.
+Nutzt den Google-Service reCAPTCHA v2.  
+Für den API-Key ist eine Registrierung bei Google unter https://www.google.com/recaptcha notwendig.  
+**Achtung:** Es muss die reCAPTCHA Version 2 (v2) verwendet werden.   
+Eine Nutzung der Versionen v1 und v3 ist derzeit nicht möglich.  
 
 ##### Beispiel Pipe
 	recaptcha|Sicherheitsüberprüfung|<PUBLIC_KEY>|<PRIVATE_KEY>|Die Sicherheitsüberprüfung schlug fehl.|1|
