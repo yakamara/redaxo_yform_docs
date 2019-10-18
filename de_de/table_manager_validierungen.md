@@ -6,6 +6,7 @@
 > - [customfunction](#customfunction)
 > - [email](#email)
 > - [empty](#empty)
+> - [in_table](#intable)
 > - [intfromto](#intfromto)
 > - [size](#size)
 > - [size_range](#size_range)
@@ -98,6 +99,19 @@ Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `email`, `name`
+Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe leer ist.
+
+<a name="intable"></a>
+## in_table
+
+Überprüft, ob ein Eingabe-Wert <b>in der DB vorhanden</b> ist.
+
+Option | Erläuterung
+------ | ------
+Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
+Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `email`, `name`
+Tabellenname |  Name der Tabelle, das für die Überprüfung herangezogen wird, z.B. `rex_ycom_user`
+Feldname |  Name des Feldes in der Tabelle, das für die Überprüfung herangezogen wird, z.B. `email`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe leer ist.
 
 <a name="intfromto"></a>
