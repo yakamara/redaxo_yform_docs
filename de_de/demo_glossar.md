@@ -34,7 +34,7 @@ $sql->setDebug(false); //Ausgabe Query true oder false
 $query = "SELECT * FROM $db_table  ORDER BY Begriff ";
 $rows = $sql->getArray($query);
 $counter = $bcounter = 1;
-if (count($rows) > 0) {
+if ($sql->getRows()) > 0) {
 // Wenn Datensätze im $sql vorliegen 
 foreach($rows as $row)
 {
@@ -50,8 +50,9 @@ foreach($rows as $row)
     $buchstabe ='<h2 id="buchstabe'.$char.'">'.$char. '</h2>'; 
     $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.$char.'">'.$char. '</a>';
     // Erstellt Links für das Alphabet am Anfang 
- } 
- else {$buchstabe = "";}
+ }  else {
+    $buchstabe = "";
+}
 // Ausgabe als Bootstrap Panel
 $out .= $buchstabe.' 
 <div class="panel panel-default">
