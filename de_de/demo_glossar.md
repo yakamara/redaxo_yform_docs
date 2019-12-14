@@ -32,11 +32,11 @@ $db_table = "rex_glossar";
 $sql = rex_sql::factory();
 $sql->setDebug(false); //Ausgabe Query true oder false
 $query = "SELECT * FROM $db_table  ORDER BY Begriff ";
-$sql->setQuery($query, array($id));
+$rows = $sql->getArray($query);
 $counter = $bcounter = 1;
-if (count($sql)) {
+if (count($rows) > 0) {
 // Wenn Datensätze im $sql vorliegen 
-foreach($sql as $row)
+foreach($rows as $row)
 {
  $id = $row->getValue("id");
  $begriff = $row->getValue("Begriff");
