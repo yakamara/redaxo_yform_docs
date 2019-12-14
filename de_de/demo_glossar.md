@@ -38,10 +38,10 @@ if ($sql->getRows()) > 0) {
 // Wenn Datensätze im $sql vorliegen 
 foreach($rows as $row)
 {
- $id = $row->getValue("id");
- $begriff = $row->getValue("Begriff");
+ $id = $row["id"];
+ $begriff = $row["Begriff"];
  $char = strtoupper(substr($begriff,0,1)); // Erster Buchstabe
- $beschreibung = $row->getValue("beschreibung");
+ $beschreibung = $row["beschreibung"];
  # $beschreibung = nl2br($beschreibung); // wenn nur eine Textarea ohne WYSIWYG verwendet wird
  $counter++;
  // Ausgabe des Buchstabens, wenn in $dummy nicht bereits vorhanden. 
@@ -74,4 +74,5 @@ echo $out; // Ausgabe der Panels und Überschriften
 ?>
 
 ```
+
 
