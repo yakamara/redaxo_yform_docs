@@ -351,14 +351,29 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 ##### Definition
 	Ein Fieldset gruppiert Formularfelder.
 	
-##### Beispiel PHP
-	$yform->setValueField('fieldset', array("fieldsest","Fieldset"));
+##### **Beispiele PHP**
+
+*Syntax*
+
+	$yform->setValueField('fieldset', array("id","Legend","classes (space separated)","onlyclose (optional)"));
+
+*Beispiele* 
+
+	$yform->setValueField('fieldset', array("fieldset","Fieldset"));
+	
+- Mit Klassen
+
+        $yform->setValueField('fieldset', array("fieldset","Fieldset","col-12 col-md-4"));
+	
+- Das zuletzt geöffnete Fieldset schließen, ohne ein neues zu öffnen:
+
+        $yform->setValueField('fieldset', array("fieldset", "Fieldset", "", "onlyclose"));
 		
 ##### Beispiel Pipe
-	fieldset|fieldsest|Fieldset|
+	fieldset|fieldset|Fieldset|
 
 ##### Beispiel E-Mail
-	REX_YFORM_DATA[field="fieldsest"]
+	REX_YFORM_DATA[field="fieldset"]
 
 	
 
