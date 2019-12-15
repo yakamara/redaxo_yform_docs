@@ -18,7 +18,6 @@
 	- [Values](yform_modul_values.md) <sup><b>in Bearbeitung</b></sup> <sup><i>goldfischpeter</i></sup>
 	- [Validates](yform_modul_validates.md)
 	- [Actions](yform_modul_actions.md)
-	- [YForm erweitern](yform_modul_erweitern.md) <sup><b>offen</b></sup>
 - E-Mail-Plugin
 	- [Einführung](email_plugin.md)
 - RESTful API-Plugin
@@ -34,6 +33,7 @@
  	- [Tableset Veranstaltungen](demo_tableset-rex_yf_events.json)
  	- [Tableset Glossar](demo_tableset-rex_glossar.json)
 - Tutorials
+	- [YForm erweitern](yform_erweitern.md) 
 	- [Hidden-Feld verwenden](demo_hidden.md)
  	- [Kontakt mit Spamschutz](demo_kontakt-spamschutz.md)
  	- [Kontakt mit E-Mail-Anhang](demo_email-attachments.md)
