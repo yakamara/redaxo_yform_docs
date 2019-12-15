@@ -20,6 +20,7 @@
 > - [index](#index)
 > - [integer](#integer)
 > - [mediafile](#mediafile)
+> - [number](#number)
 > - [php](#php)
 > - [prio](#prio)
 > - [radio](#radio)
@@ -460,6 +461,15 @@ In der Liste verstecken |  Versteckt das Feld in der Tabellen-Übersicht.
 Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Option "Suche aktiv" in den Tabellen-Optionen aktiviert wurde.
 
 > **Hinweis**: Zusammen mit dem Upload-Feld lassen sich komfortabel [E-Mails mit Anhang versenden](demo_email-attachments.md).
+
+<a name="number"></a>
+## number 
+
+Option | Erläuterung
+------ | ------
+`precision` | ist die Anzahl der signifikanten Stellen. Der Bereich von precision liegt zwischen 1 und 65.
+
+`scale` | ist die Anzahl der Stellen nach dem Dezimalzeichen. Der Bereich von `scale` ist `0` und `30`. MySQL erfordert, dass `scale` kleiner oder gleich (`<=`) `precision` ist.
 
 <a name="prio"></a>
 ## prio

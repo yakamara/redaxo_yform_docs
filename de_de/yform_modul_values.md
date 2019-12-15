@@ -506,7 +506,7 @@ definiert ein Feld, das nur serverseitig befüllt wird und nicht ausgegeben wird
 	REX_YFORM_DATA[field="media"]
 	
 
-#### Number 
+#### number 
 ##### Beispiel Formbuilder
     number|name|label|precision|scale|defaultwert|[no_db]|[unit]|[notice]
 	number|zahl|Zahl|6|2|5||cm|Hinweis Number
