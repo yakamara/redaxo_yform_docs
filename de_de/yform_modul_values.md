@@ -182,7 +182,9 @@ Eine Checkbox die bereits gecheckt ist.
 
 	
 
-### checkbox_sql (nicht mehr empfohlen - statt dessen choice verwenden)
+### checkbox_sql
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 ##### Definition
 	Ein oder mehrere Checkbox-Felder mit Werten, die aus einer SQL-Abfrage stammen.
@@ -377,7 +379,9 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
 	
 
-### float (deprecated)
+### float
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `number` verwenden.
 
 ##### Definition
 	Ein einfaches Eingabefeld für Gleitkomma-Zahlen.
@@ -583,7 +587,9 @@ In diesem Beispiel kann die Spalte 6 Stellen mit 2 Dezimalstellen speichern. Dah
 
 
 
-### radio (nicht mehr empfohlen - statt dessen choice verwenden)
+### radio
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 ##### Definition
 	Ein Auswahlfeld, um Datensätze in eine bestimmte Reihenfolge zu sortieren.
@@ -623,7 +629,9 @@ und sendet eine E-Mail mit dem E-Mail-Template "testtemplate" and die E-Mail-Adr
 
 
 
-### radio_sql (nicht mehr empfohlen - statt dessen choice verwenden)
+### radio_sql
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 ##### Definition
 	Ein oder mehrere Auswahlfelder als Radio-Buttons.
@@ -662,7 +670,9 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 	$yform->setValueField('resetbutton', array("reset","reset","Reset"));
 	
 
-### select (nicht mehr empfohlen - statt dessen choice verwenden)
+### select
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 ##### Definition
 	Ein Auswahlfeld mit vordefinierten Werten.
@@ -679,7 +689,9 @@ definiert einen Reset-Button, mit dem Eingaben zurückgesetzt werden können.
 
 	
 
-### select_sql (nicht mehr empfohlen - statt dessen choice verwenden)
+### select_sql 
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 ##### Definition
 	Ein Auswahlfeld mit Werten, die aus einer SQL-Abfrage stammen.
