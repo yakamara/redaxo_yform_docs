@@ -33,3 +33,29 @@ objparam|form_ytemplate|dein_template,bootstrap
 ## Extension Points in YForm
 
 In YForm gibt es verschiedene Extension Points, wie z.B. `YFORM_DATA_LIST_SQL`, der die Darstellung der Tabelle und der Datensätze im Table Manager beeinflusst. Hilf mit, diese Liste zu vervollständigen und werde Teil des Doku-Teams!
+
+### Die E-Mail-Adresse in der Table-Manager-Übersicht verlinken
+
+Ein Trick von @steri-rex unter https://github.com/yakamara/redaxo_yform_docs/issues/117
+
+In die boot.php vom `project`-Addon folgenden Code mit aufnehmen, um am Beispiel des `ycom`-Addons die E-Mail-Adresse zu verlinken. Es muss ein Feld `email` in der Tabelle existieren.
+
+```php
+function format_email($ep)
+{
+return '<a href="mailto:###email###">###email###</a>'; // email ist der Platzhalter für den VALUE von Spalte email
+}
+
+rex_extension::register('YFORM_DATA_LIST','my_rex_list_tweaks');
+
+function my_rex_list_tweaks($ep)
+
+{
+ $list = $ep->getSubject();
+//if ($ep->getParam('table')->getTableName() == 'rex_ycom_user') { // optional wenn nur bestimmte Tabelle verändert werden soll
+ $list->setColumnFormat('email','custom','format_email'); // email ist die Spalte welche editiert werden soll
+//}
+
+}
+```
+
