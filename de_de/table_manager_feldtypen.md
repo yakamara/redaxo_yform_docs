@@ -320,6 +320,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="float"></a>
 ## float
 
+> Achtung: Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `number` verwenden.
+
 Ein einfaches Eingabefeld für <b>Gleitkomma-Zahlen.</b>
 
 > **Wert in der Datenbank**
@@ -487,6 +489,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="radio"></a>
 ## radio
 
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
+
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
 > **Wert in der Datenbank** 
@@ -506,6 +510,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="radio_sql"></a>
 ## radio_sql
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
@@ -547,6 +553,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="select_sql"></a>
 ## select_sql
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 Ein <b>Auswahlfeld</b> mit Werten, die aus einer <b>SQL-Abfrage</b> stammen.
 
