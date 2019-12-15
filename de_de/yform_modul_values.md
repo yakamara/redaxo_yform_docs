@@ -345,7 +345,7 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
         $yform->setValueField('fieldset', array("fieldset","Fieldset","col-12 col-md-4"));
 	
-- Wollt ihr ein Fieldset vorzeitig / an einer bestimmten Stelle schließen
+- Das zuletzt geöffnete Fieldset schließen, ohne ein neues zu öffnen:
 
         $yform->setValueField('fieldset', array("fieldset", "Fieldset", "", "onlyclose"));
 		
