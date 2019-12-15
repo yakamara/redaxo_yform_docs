@@ -9,7 +9,7 @@
 > 	- [email](#email)
 > 	- [empty](#empty)
 > 	- [intfromto](#intformto)
-> 	- [labelexist](#labelexist)
+> 	- [name_exists](#name_exists)
 > 	- [preg_match](#preg_match)
 > 	- [size](#size)
 > 	- [size_range](#size_range)
@@ -121,13 +121,13 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	$yform->setValueField('text', array("name","Nachname"));
 	$yform->setValidateField('empty', array("name","Bitte geben Sie einen Namen an!"));
 
-<a name="existintable"></a>
-### existintable (wird nicht mehr fortgeführt)
+<a name="exists_in_table"></a>
+### exists_in_table (wird nicht mehr fortgeführt)
 
 Überprüft, ob ein Feld in einer Tabelle existiert.
  
 	// Definition
-	validate|existintable|label,label2|tablename|feldname,feldname2|warning_message
+	validate|exists_in_table|label,label2|tablename|feldname,feldname2|warning_message
 
 <a name="infromto"></a>  
 ### intfromto
@@ -145,13 +145,13 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	$yform->setValueField('text', array("wert","Wert"));
 	$yform->setValidateField('intfromto', array("wert","2", "4", "Der Wert ist kleiner als 2 und größer als 4! "));
 
-<a name="labelexist"></a>
-### labelexist
+<a name="name_exists"></a>
+### name_exists
 
 Überprüft mit einem Minimal- und Maximalwert, ob eine bestimmte Menge an Feldern ausgefüllt wurden.
 
 	// Definition
-	validate|labelexist|label,label2,label3|[minlabels]|[maximallabels]|Fehlermeldung
+	validate|name_exists|label,label2,label3|[minlabels]|[maximallabels]|Fehlermeldung
 	
 	// Im YForm-Formbuilder
 	text|vorname|Vorname|
@@ -159,14 +159,14 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|email|E-Mail|
 	text|tel|Telefon|
 	
-	validate|labelexist|vorname,name,tel|1|2|Fehlermeldung
+	validate|name_exists|vorname,name,tel|1|2|Fehlermeldung
 
 	In PHP	$yform->setValueField('text', array("vorname","Vorname"));
 	$yform->setValueField('text', array("name","Nachname"));
 	$yform->setValueField('text', array("email","E-Mail"));
 	$yform->setValueField('text', array("tel","Telefon"));
 	
-	$yform->setValidateField('labelexist', array("vorname, name, tel", "1", "2", "Fehlermeldung"));
+	$yform->setValidateField('name_exists', array("vorname, name, tel", "1", "2", "Fehlermeldung"));
 	
 	// Hier in diesem Beispiel müssen von den drei Feldern mindestens 1 und maximal 2 ausgefüllt werden
 
