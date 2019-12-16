@@ -52,7 +52,7 @@ function my_rex_list_tweaks($ep)
 
 {
  $list = $ep->getSubject();
-//if ($ep->getParam('table')->getTableName() == 'rex_ycom_user') { // optional wenn nur bestimmte Tabelle verändert werden soll
+//if ($ep->getParam('table')->getTableName() == rex::getTable('ycom_user')) { // optional, wenn nur eine bestimmte Tabelle verändert werden soll
  $list->setColumnFormat('email','custom','format_email'); // email ist die Spalte welche editiert werden soll
 //}
 
