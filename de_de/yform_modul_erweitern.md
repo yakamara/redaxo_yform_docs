@@ -4,7 +4,7 @@ YForm lässt sich an verschiedenen Stellen erweitern - durch eigene Feldtypen, T
 
 ## eigene Values, Validates und Actions verwenden
 
-Values, Validates und Actions werden von YForm automatishc aufgenommen. Dupliziere dazu bspw. eine Validierung aus `/redaxo/src/addons/yform/lib/yform/validate` kopieren, anpassen und unter `/redaxo/src/addons/project/lib/` ablegen.
+Values, Validates und Actions werden von YForm automatisch aufgenommen. Dupliziere dazu bspw. eine Validierung aus `/redaxo/src/addons/yform/lib/yform/validate`. Den Datei- sowie den Klassennamen anpassen und unter `/redaxo/src/addons/project/lib/` ablegen.
 
 > **Tipp:** Das Theme-Addon für REDAXO bringt bereits eine Struktur mit, in der eigene YForm-Erweiterungen abgelegt werden können.
 
