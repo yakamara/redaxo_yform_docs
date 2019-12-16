@@ -18,7 +18,7 @@ Dazu bspw. in die boot.php des `project`-Addons folgende Zeile aufnehmen:
 rex_yform::addTemplatePath($this->getPath('ytemplates'));
 ```
 
-und anschließend die gewünschten Ausgabe-Templates von `/redaxo/src/addons/yform/ytemplates/bootstrap/` nach `/redaxo/src/addons/project/ytemplates/dein_template/` kopieren und anpassen.
+und anschließend die gewünschten Ausgabe-Templates von `/redaxo/src/addons/yform/ytemplates/bootstrap/` nach `/redaxo/src/addons/project/ytemplates/dein_template/` kopieren und anpassen oder eigene hinzufügen.
 
 Zu guter Letzt über den Parameter `form_ytemplate` das zusätzliche Template für die Ausgabe wählen.
 
