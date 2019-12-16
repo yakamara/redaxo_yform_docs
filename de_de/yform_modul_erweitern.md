@@ -28,7 +28,7 @@ Zu guter Letzt 체ber den Parameter `form_ytemplate` das zus채tzliche Template f�
 objparam|form_ytemplate|dein_template,bootstrap
 ```
 
-> **Tipp:** Es gen체gt, einzelne Template-Dateien abzu채ndern und ggf. zu 체berschreiben - alle Template-Dateien, die nicht in `dein_template` abgelegt sind, werden automatisch von `bootstrap` 체berschrieben.
+> **Tipp:** Es gen체gt, einzelne Template-Dateien abzu채ndern und ggf. zu 체berschreiben - alle Template-Dateien, die nicht in `dein_template` abgelegt sind, werden dann weiterhin vom `bootstrap`-Template verwendet.
 
 ## Extension Points in YForm
 
