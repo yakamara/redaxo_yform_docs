@@ -467,7 +467,7 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 Option | Erläuterung
 ------ | ------
-`precision` | ist die Anzahl der signifikanten Stellen. Der Bereich von precision liegt zwischen 1 und 65.
+`precision` | ist die Anzahl der signifikanten Stellen. Der Bereich von `precision` liegt zwischen 1 und 65.
 
 `scale` | ist die Anzahl der Stellen nach dem Dezimalzeichen. Der Bereich von `scale` ist `0` und `30`. MySQL erfordert, dass `scale` kleiner oder gleich (`<=`) `precision` ist.
 
