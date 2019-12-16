@@ -32,7 +32,7 @@ objparam|form_ytemplate|dein_template,bootstrap
 
 ## Extension Points in YForm
 
-In YForm gibt es verschiedene Extension Points, wie z.B. `YFORM_DATA_LIST_SQL`, der die Darstellung der Tabelle und der Datensätze im Table Manager beeinflusst. Hilf mit, diese Liste zu vervollständigen und werde Teil des Doku-Teams!
+In YForm gibt es verschiedene Extension Points, wie z.B. `YFORM_DATA_LIST_SQL`, der die Darstellung der Tabelle und der Datensätze im Table-Manager beeinflusst. Hilf mit, diese Liste zu vervollständigen und werde Teil des Doku-Teams!
 
 ### Die E-Mail-Adresse in der Table-Manager-Übersicht verlinken
 
