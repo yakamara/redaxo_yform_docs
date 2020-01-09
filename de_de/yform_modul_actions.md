@@ -252,12 +252,15 @@ Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	action|redirect|Artikel-Id oder Externer Link|request/label|field
 
 	// im YForm-Formbuilder
-	//Umleitung auf internen Artikel 32
-	action|redirect|32  	
+	// Umleitung auf internen Artikel 32
+	action|redirect|32
 	
 	// In PHP
 	$yform->setActionField('redirect', array("32"));
-
+	
+	// In PHP mit Übergabe von URL-Parameter(n):
+	$yform->setActionField('redirect', [rex_getUrl(32).'?mein_Parameter=mein_wert]);	
+	
 <a name="showtext"></a>
 ### showtext
 
