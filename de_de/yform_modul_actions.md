@@ -254,11 +254,13 @@ Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	// im YForm-Formbuilder
 	// Umleitung auf internen Artikel 32
 	action|redirect|32
+	// mit Übergabe von URL-Parameter(n):
+	// Hinweis: Interne Links (per ID übergeben) müssen zwingend als externe URL angegeben werden, sonst lassen sich keine URL-Parameter übergeben!
+	action|redirect|https://www.meinedomain.de/meinpfad/?meinparameter=meinwert
 	
 	// In PHP
 	$yform->setActionField('redirect', array("32"));
-	
-	// In PHP mit Übergabe von URL-Parameter(n):
+	// mit Übergabe von URL-Parameter(n):
 	$yform->setActionField('redirect', [rex_getUrl(32).'?mein_Parameter=mein_wert]);	
 	
 <a name="showtext"></a>
