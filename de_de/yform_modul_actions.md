@@ -261,7 +261,9 @@ Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	// In PHP
 	$yform->setActionField('redirect', array("32"));
 	// mit Übergabe von URL-Parameter(n):
-	$yform->setActionField('redirect', [rex_getUrl(32).'?mein_Parameter=mein_wert]);	
+	$yform->setActionField('redirect', [rex_getUrl(32, rex_clang::getCurrentId(), ['mein_parameter' => 'mein_wert'])]);
+	// oder
+	$yform->setActionField('redirect', [rex_getUrl(32).'?mein_Parameter=mein_wert]);
 	
 <a name="showtext"></a>
 ### showtext
