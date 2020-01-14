@@ -238,7 +238,11 @@ Beim Parameter `choice_attributes` sind bei einer Funktion drei Werte möglich: 
 
         $yform->setValueField('choice',["mycheckboxfield","Vor- und Nachspeisen",'{"Vorspeisen": {"Gemischter Salat":"insalata_mista","Tagessuppe":"piatto_del_giorno"},"Dessert":{"Spaghettieis":"spaghetti_di_ghiaccio","Tiramisu":"tiramisu"}}',1,1]);
 
-		
+> Hinweis: Will man eine PHP Variable an ein Select SQL übergeben ist der SQL-String zwingend in doppelten Anführungszeichen zu setzen, wie im nachfolgenden Beispiel zu sehen.
+
+	$yform2->setValueField('choice', array('merchant','Händler',"SELECT company label, id value FROM rex_my_merchants WHERE user_id = $user_id ORDER BY company",'0','0','','name','','--- Bitte wählen ---','','{"required":"required"}','','Es muss ein Händler gewählt werden',''));
+
+
 ##### **Beispiel Pipe**
 *Syntax*
 
