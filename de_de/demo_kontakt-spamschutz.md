@@ -4,6 +4,10 @@ Von Haus aus liefert `YForm` für den Formbuilder zwei Feldtypen, um sicherzuste
 
 > Hinweis: Ein Captcha ersetzt nicht eine sichere Übermittlung via HTTPS, daher ist ein SSL-Zertifikat verpflichtend. Wenn die eingegebenen Daten per E-Mail versendet werden, werden diese unter Umständen trotz SSL-Zertifikat unverschlüsselt übertragen.
 
+## via Addon
+
+Siehe [YForm Spamschutz](https://github.com/alexplusde/yform_spam_protection/);
+
 ## Captcha 
 
 Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha)
