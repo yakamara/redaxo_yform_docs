@@ -2,7 +2,7 @@
 
 Von Haus aus liefert `YForm` für den Formbuilder zwei Feldtypen, um sicherzustellen, dass das Formular von einem echten Website-Besucher ausgegeben wurde und nicht von einem Spam-Bot. Es gibt jedoch noch weitere Tricks, um Bots zu erkennen und Spam zu vermeiden.
 
-> Hinweis: Ein Captcha ist kein Sicherheitsmerkmal. Für eine sichere Übermittlung der Formular-Daten ist ein SSL-Zertifikat absolute Pflicht. Wenn die eingegebenen Daten per E-Mail versendet werden, werden diese Daten unter Umständen trotz SSL-Zertifikat unverschlüsselt übertragen.
+> Hinweis: Ein Captcha ersetzt nicht eine sichere Übermittlung via HTTPS, daher ist ein SSL-Zertifikat verpflichtend. Wenn die eingegebenen Daten per E-Mail versendet werden, werden diese unter Umständen trotz SSL-Zertifikat unverschlüsselt übertragen.
 
 ## Captcha 
 
