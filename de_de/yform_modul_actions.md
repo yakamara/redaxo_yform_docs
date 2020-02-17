@@ -224,8 +224,8 @@ Erklärung folgt.
 	folgt 
 
 ```php
-	// in PHP
-	folgt
+// in PHP
+folgt
 ```
 
 <a name="html"></a>
@@ -258,9 +258,9 @@ Damit kann man anhand eines Eingabefeldes Daten aus einer Tabellen selektieren. 
 	action|readtable|shop_user|fname|name
 
 ```php
-	// In PHP
-	$yform->setValueField('text', array("name","Name"));
-	$yform->setActionField('readtable', array("shop_user", "fname", "name"));
+// In PHP
+$yform->setValueField('text', array("name","Name"));
+$yform->setActionField('readtable', array("shop_user", "fname", "name"));
 ```
 
 <a name="redirect"></a>
@@ -276,8 +276,8 @@ Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	action|redirect|32  	
 
 ```php
-	// In PHP
-	$yform->setActionField('redirect', array("32"));
+// In PHP
+$yform->setActionField('redirect', array("32"));
 ```
 
 <a name="showtext"></a>
@@ -352,7 +352,7 @@ $yform->setActionField('tpl2email', array("emailtemplate", "", "bestaetigung@red
 	action|db|rex_warenkorb
 	action|html|Daten gespeichert	
 
-```
+```php
 // In Beispiel PHP
 $yform->setValueField('text', array("telefon", "Telefon"));
 $yform->setActionField('wrapper_value', array("telefon", "<a href="tel:+49###value###">###value###</a>"));
