@@ -355,7 +355,7 @@ $yform->setActionField('tpl2email', array("emailtemplate", "", "bestaetigung@red
 ```php
 // In Beispiel PHP
 $yform->setValueField('text', array("telefon", "Telefon"));
-$yform->setActionField('wrapper_value', array("telefon", "<a href="tel:+49###value###">###value###</a>"));
+$yform->setActionField('wrapper_value', array("telefon", "<a href=\"tel:+49###value###\">###value###</a>"));
 $yform->setActionField('db', array("rex_warenkorb"));
 $yform->setActionField('html', array("Daten gespeichert"));
 ```
