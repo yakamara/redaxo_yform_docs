@@ -32,16 +32,18 @@ Beispiele (Schreibweisen) gibt es für **yForm Formbuilder** und **PHP**
 
 Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 
-	<?php
-	$yform = new rex_yform();
-	$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
-	
-	$yform->setValueField('text', array("wert1","Wert 1"));
-	$yform->setValidateField('empty', array("wert1","Bitte geben Sie einen Namen an!"));
-	
-	echo $yform->getForm();
-	?>
-	
+```php
+<?php
+$yform = new rex_yform();
+$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
+
+$yform->setValueField('text', array("wert1","Wert 1"));
+$yform->setValidateField('empty', array("wert1","Bitte geben Sie einen Namen an!"));
+
+echo $yform->getForm();
+?>
+```
+
 <a name="action-klassen"></a>
 ## Action-Klassen
 
@@ -110,38 +112,38 @@ Mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setz
 Speichert oder aktualisiert Formulardaten in einer Tabelle. Dabei werden die Label und deren Eingaben in die gleichnamigen Tabellenfelder gespeichert.
 Mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setzen.
 
-  ```
-  // allgemeine Definition
-  action|db|tblname|[where(id=2)/main_where]
+```
+// allgemeine Definition
+action|db|tblname|[where(id=2)/main_where]
 
-  // im YForm-Formbuilder
-  text|vorname|Vorname
-  text|name|Name
-  text|plz|PLZ
-  text|ort|Ort
+// im YForm-Formbuilder
+text|vorname|Vorname
+text|name|Name
+text|plz|PLZ
+text|ort|Ort
 
-  objparams|getdata|true
-  objparams|main_table|rex_warenkorb
-  objparams|main_where|id=1
+objparams|getdata|true
+objparams|main_table|rex_warenkorb
+objparams|main_where|id=1
 
-  action|db|rex_warenkorb|main_where
-  action|html|Daten gespeichert
-  ```
+action|db|rex_warenkorb|main_where
+action|html|Daten gespeichert
+```
 
-  ```php
-  // in Beispiel PHP
-  $yform->setValueField('text', array("vorname","Vorname"));
-  $yform->setValueField('text', array("name","Name"));
-  $yform->setValueField('text', array("plz","PLZ"));
-  $yform->setValueField('text', array("ort","Ort"));
+```php
+// in Beispiel PHP
+$yform->setValueField('text', array("vorname","Vorname"));
+$yform->setValueField('text', array("name","Name"));
+$yform->setValueField('text', array("plz","PLZ"));
+$yform->setValueField('text', array("ort","Ort"));
 
-  $yform->setObjectparams('getdata', TRUE);
-  $yform->setObjectparams('main_where', 'id=1');
-  $yform->setObjectparams('main_table', 'rex_warenkorb');
+$yform->setObjectparams('getdata', TRUE);
+$yform->setObjectparams('main_where', 'id=1');
+$yform->setObjectparams('main_table', 'rex_warenkorb');
 
-  $yform->setActionField('db', array("rex_warenkorb", "main_where"));
-  $yform->setActionField('html', array("Daten gespeichert"));
-  ```
+$yform->setActionField('db', array("rex_warenkorb", "main_where"));
+$yform->setActionField('html', array("Daten gespeichert"));
+```
 <a name="db_query"></a>
 ### db_query
 
@@ -155,10 +157,12 @@ Führt eine Abfrage aus, z.B. um hier Werte aus Eingabefeldern in die Abfrage ei
 	text|email|E-Mail-Adresse
 	action|db_query|insert into rex_ycom_user set name = ?, email = ?|name,email
 
-	// in PHP
-	$yform->setValueField('text', array("name","Name"));
-	$yform->setValueField('text', array("email","|E-Mail-Adresse"));
-	$yform->setActionField('db_query', array("insert into rex_ycom_user set name = ?, email = ?", "name,email"));
+```php
+// in PHP
+$yform->setValueField('text', array("name","Name"));
+$yform->setValueField('text', array("email","|E-Mail-Adresse"));
+$yform->setActionField('db_query', array("insert into rex_ycom_user set name = ?, email = ?", "name,email"));
+```
 
 <a name="email"></a>
 ### email
@@ -173,9 +177,11 @@ Sendet E-Mail mit Betreff und Body an angegebene E-Mail-Adresse. Eingaben aus de
 	action|email|from@mustermann|to@mustermann.de|Test|Hallo ###name###|<p class="alert alert-danger">Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns telefonisch.</p>
 	
 
-	// in Beispiel PHP
-	$yform->setValueField('text', array("name","Name"));
-	$yform->setActionField('email', array("from@mustermann", "to@mustermann.de", "Test", "Hallo ###name###", '<p class="alert alert-danger">Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns telefonisch.</p>'));
+```php
+// in Beispiel PHP
+$yform->setValueField('text', array("name","Name"));
+$yform->setActionField('email', array("from@mustermann", "to@mustermann.de", "Test", "Hallo ###name###", '<p class="alert alert-danger">Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns telefonisch.</p>'));
+```
 
 <a name="encrypt_value"></a>
 ### encrypt_value (wird nicht mehr fortgeführt)
@@ -191,12 +197,14 @@ Verschlüsselt eine Eingabe in Feld mit Label.
 
 	action|db|rex_warenkorb
 	action|html|Daten gespeichert	
-	
-	// In Beispiel PHP
-	$yform->setValueField('text', array("pass", "Password"));
-	$yform->setActionField('encrypt_value', array("pass", "md5"));	
-	$yform->setActionField('db', array("rex_warenkorb"));
-	$yform->setActionField('html', array("Daten gespeichert"));
+
+```php
+// In Beispiel PHP
+$yform->setValueField('text', array("pass", "Password"));
+$yform->setActionField('encrypt_value', array("pass", "md5"));	
+$yform->setActionField('db', array("rex_warenkorb"));
+$yform->setActionField('html', array("Daten gespeichert"));
+```
 
 <a name="fulltext_value"></a>
 ### fulltext_value (wird nicht mehr fortgeführt)
@@ -222,9 +230,11 @@ Gibt HTML-Code aus.
 
 	// im YForm-Formbuilder
 	action|html|<b>fett</b>
-	
+
+```php
 	// In PHP
 	$yform->setActionField('html', array("<b>fett</b>"));
+```
 
 <a name="readtable"></a>
 ### readtable
@@ -238,10 +248,12 @@ Damit kann man anhand eines Eingabefeldes Daten aus einer Tabellen selektieren. 
 	// im YForm-Formbuilder
 	text|name|Name
 	action|readtable|shop_user|fname|name
-	
+
+```php
 	// In PHP
 	$yform->setValueField('text', array("name","Name"));
 	$yform->setActionField('readtable', array("shop_user", "fname", "name"));
+```
 
 <a name="redirect"></a>
 ### redirect
@@ -254,9 +266,11 @@ Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
 	// im YForm-Formbuilder
 	//Umleitung auf internen Artikel 32
 	action|redirect|32  	
-	
+
+```php
 	// In PHP
 	$yform->setActionField('redirect', array("32"));
+```
 
 <a name="showtext"></a>
 ### showtext
@@ -269,10 +283,12 @@ Gibt einen Antworttext zurück, der als Plaintext, HTML oder über Textile forma
 	// im YForm-Formbuilder
 	action|showtext|Hallo das ist Redaxo|<p>|</p>|0
 	action|showtext|Hallo das ist *Redaxo*|||2
-	
-	// In Beispiel PHP
-	$yform->setActionField('showtext', array("Hallo das ist Redaxo", "<p>", "</p>", "0"));
-	$yform->setActionField('showtext', array("Hallo das ist *Redaxo*", "", "", "2"));
+
+```php
+// In Beispiel PHP
+$yform->setActionField('showtext', array("Hallo das ist Redaxo", "<p>", "</p>", "0"));
+$yform->setActionField('showtext', array("Hallo das ist *Redaxo*", "", "", "2"));
+```
 
 	// Ausgabe nach Submit
 	<p>Hallo das ist Redaxo</p>	
@@ -290,9 +306,11 @@ Versendet eine E-Mail über ein YForm-E-Mail-Template. Der Parameter **emailtemp
 	text|email|E-Mail-Empfänger
 	action|tpl2email|emailtemplate|email
 
-	// In Beispiel PHP
-	$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
-	$yform->setActionField('tpl2email', array("emailtemplate", "email"));
+```php
+// In Beispiel PHP
+$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
+$yform->setActionField('tpl2email', array("emailtemplate", "email"));
+```
 
 > **Hinweis:**
 > * Wird keine E-Mail-Adresse angegeben, wird die E-Mail-Adresse verwendet, die bei `System/Einstellungen` hinterlegt ist.
@@ -306,10 +324,12 @@ Die Action lässt sich auch mehrfach verwenden, sodass bspw. noch eine Bestätig
 	action|tpl2email|emailtemplate|email
 	action|tpl2email|emailtemplate||bestaetigung@redaxo.org
 
-	// In Beispiel PHP
-	$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
-	$yform->setActionField('tpl2email', array("emailtemplate", "email"));
-	$yform->setActionField('tpl2email', array("emailtemplate", "", "bestaetigung@redaxo.org"));
+```php
+// In Beispiel PHP
+$yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
+$yform->setActionField('tpl2email', array("emailtemplate", "email"));
+$yform->setActionField('tpl2email', array("emailtemplate", "", "bestaetigung@redaxo.org"));
+```
 
 	
 <a name="wrapper_value"></a>
@@ -324,8 +344,10 @@ Die Action lässt sich auch mehrfach verwenden, sodass bspw. noch eine Bestätig
 	action|db|rex_warenkorb
 	action|html|Daten gespeichert	
 
-	// In Beispiel PHP
-	$yform->setValueField('text', array("telefon", "Telefon"));
-	$yform->setActionField('wrapper_value', array("telefon", "<a href="tel:+49###value###">###value###</a>"));
-	$yform->setActionField('db', array("rex_warenkorb"));
-	$yform->setActionField('html', array("Daten gespeichert"));
+```
+// In Beispiel PHP
+$yform->setValueField('text', array("telefon", "Telefon"));
+$yform->setActionField('wrapper_value', array("telefon", "<a href="tel:+49###value###">###value###</a>"));
+$yform->setActionField('db', array("rex_warenkorb"));
+$yform->setActionField('html', array("Daten gespeichert"));
+```
