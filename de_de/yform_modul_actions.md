@@ -240,8 +240,8 @@ Gibt HTML-Code aus.
 	action|html|<b>fett</b>
 
 ```php
-	// In PHP
-	$yform->setActionField('html', array("<b>fett</b>"));
+// In PHP
+$yform->setActionField('html', array("<b>fett</b>"));
 ```
 
 <a name="readtable"></a>
