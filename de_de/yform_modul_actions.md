@@ -57,9 +57,11 @@ Ruf eine Funktion oder Klasse auf.
 
 	// im YForm-Formbuilder
 	folgt ...
-	
+
+```php
 	// in PHP
 	folgt ...
+```
 
 <a name="copy_value"></a>
 ### copy_value
@@ -76,14 +78,16 @@ Kopiert Eingaben vom Feld mit dem Label `label_from` in das Feld mit dem Label `
 	
 	action|db|rex_warenkorb
 	action|html|Daten gespeichert	
-	
-	// in PHP	
-	$yform->setValueField('hidden', array("user"));
-	$yform->setValueField('text', array("name","Name"));
-	$yform->setActionField('copy_value', array("name","user"));
-	
-	$yform->setActionField('db', array("rex_warenkorb"));
-	$yform->setActionField('html', array("Daten gespeichert"));
+
+```php
+// in PHP	
+$yform->setValueField('hidden', array("user"));
+$yform->setValueField('text', array("name","Name"));
+$yform->setActionField('copy_value', array("name","user"));
+
+$yform->setActionField('db', array("rex_warenkorb"));
+$yform->setActionField('html', array("Daten gespeichert"));
+```
 
 <a name="create_table"></a>
 ### create_table
@@ -99,12 +103,14 @@ Mit %TABLE_PREFIX% im Tabellennamen kann man den Prefix der REDAXO Tabellen setz
 	text|name|Name
 	
 	action|create_table|rex_order
-	
-	// in PHP
-	$yform->setValueField('text', array("vorname","Vorname"));
-	$yform->setValueField('text', array("name","Name"));
 
-	$yform->setActionField('create_table', array("rex_order"));
+```php
+// in PHP
+$yform->setValueField('text', array("vorname","Vorname"));
+$yform->setValueField('text', array("name","Name"));
+
+$yform->setActionField('create_table', array("rex_order"));
+```
 
 <a name="db"></a>
 ### db
@@ -216,9 +222,11 @@ Erklärung folgt.
 
 	// im YForm-Formbuilder
 	folgt 
-	
+
+```php
 	// in PHP
 	folgt
+```
 
 <a name="html"></a>
 ### html
