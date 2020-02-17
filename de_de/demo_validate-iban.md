@@ -9,7 +9,7 @@
 
 ## Funktion
 
-```
+```php
 <?php
 
     function getValidIban($_label,$iban, $_additional_param)
