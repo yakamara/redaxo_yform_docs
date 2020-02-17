@@ -167,7 +167,7 @@ if ($post->save()) {
 ```
 <a name="eigene-modelklassen"></a>
 ### Eigene Modelklassen
-```
+```php
 <?php
 // boot.php  
 rex_yform_manager_dataset::setModelClass(  
