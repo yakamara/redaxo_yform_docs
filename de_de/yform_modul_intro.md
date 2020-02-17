@@ -72,15 +72,17 @@ Um ein Formular mit YForm-Methoden zu generieren, muss nicht das Formbuilder-Mod
 
 **So sieht das obige Beispiel in PHP aus:**
 
-	<?php
-	$yform = new rex_yform();
-	// $yform->setDebug(TRUE);
-	// auskommentieren, um Probleme zu finden
-	$yform->setValueField('text', array("name","Nachname"));
-	$yform->setValidateField('empty', array("name","Bitte einen Nachnamen eingeben"));
-	$yform->setValueField('select', array("anrede","Anrede","Anrede=,Frau=w,Herr=m"));
-	$yform->setActionField('db', array('adressen'));
-	echo $yform->getForm();
+```php
+<?php
+$yform = new rex_yform();
+// $yform->setDebug(TRUE);
+// auskommentieren, um Probleme zu finden
+$yform->setValueField('text', array("name","Nachname"));
+$yform->setValidateField('empty', array("name","Bitte einen Nachnamen eingeben"));
+$yform->setValueField('select', array("anrede","Anrede","Anrede=,Frau=w,Herr=m"));
+$yform->setActionField('db', array('adressen'));
+echo $yform->getForm();
+```
 
 > **Tipp:** Bei einer mit dem Table Manager angelegten Tabelle kann man sich den Formular-Code in den Versionen PHP (hilfreich bei eigenen Anpassungen), PIPE (im YForm-Modul verwendet) und E-MAIL (für den Versand mit Email-Templates) generieren lassen.
 

@@ -29,15 +29,17 @@ Die Validate-Feldklassen werden wie Values und Actions im Formbuilder im Feld `F
 
 Die PHP-Beispiele können in diesem Basis-Formular getestet/eingesetzt werden:
 
-	<?php
-	$yform = new rex_yform();
-	$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
+```php
+<?php
+$yform = new rex_yform();
+$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
 
-	$yform->setValueField('text', array("wert1","Wert 1"));
-	$yform->setValidateField('empty', array("wert1","Bitte geben Sie einen Namen an!"));
-	
-	echo $yform->getForm();
-	?>
+$yform->setValueField('text', array("wert1","Wert 1"));
+$yform->setValidateField('empty', array("wert1","Bitte geben Sie einen Namen an!"));
+
+echo $yform->getForm();
+?>
+```
 
 <a name="validierungs-klassen"></a>
 ## Validierungs-Klassen

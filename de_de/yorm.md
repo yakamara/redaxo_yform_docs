@@ -51,7 +51,7 @@ Es stehen folgende Klassen zur Verfügung:
 
 Zunächst wird eine Klasse erstellt und in das `project` AddOn im Ordner `lib` abgelegt
 
-```
+```php
 <?php
 class MyTable extends \rex_yform_manager_dataset
 {
@@ -101,7 +101,7 @@ MyTable::query()
                 ->delete();
 ```
 
-```
+```php
 <?php
 
 $table = rex_yform_manager_table::get('rex_data_product');
@@ -125,7 +125,7 @@ foreach ($products as $product) {
 <a name="datensatz-abfragen"></a>
 ### Datensatz abfragen
 
-```
+```php
 <?php
     $post = rex_yform_manager_dataset::get($id, 'rex_blog_post');  
 ?>  
@@ -138,7 +138,7 @@ foreach ($products as $product) {
 <a name="datensatz-ändern"></a>
 ### Datensatz ändern
 
-```
+```php
 <?php
 $post = rex_yform_manager_dataset::get($id, 'rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)';
@@ -153,7 +153,7 @@ if ($post->save()) {
 
 <a name="datensatz-erstellen"></a>
 ### Datensatz erstellen
-```
+```php
 <?php
 $post = rex_yform_manager_dataset::create('rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)'; 
@@ -176,7 +176,7 @@ rex_yform_manager_dataset::setModelClass(
 );  
 ```
 
-```
+```php
 <?php
 // lib/post.php 
 class rex_blog_post extends rex_yform_manager_dataset 
@@ -214,7 +214,7 @@ echo $author->getFullName();
 <a name="query-klasse"></a>
 ### Query-Klasse
  
- ```
+ ```php
 <?php  
 
 $query = rex_blog_post::query();  
@@ -233,7 +233,7 @@ $posts = $query->find();
 <a name="collection-Klasse"></a>
 ### Collection-Klasse
  
-```
+```php
 <?php  
 
 $query = rex_blog_post::query();  
@@ -247,7 +247,7 @@ echo $post->title;
 echo $post->text; 
 }
 ```
-```
+```php
 <?php  
 
 $posts->isEmpty();  
@@ -264,7 +264,7 @@ $posts->delete();
 <a name="relationen"></a>
 ### Relationen
  
-```
+```php
 <?php  
 
 foreach ($posts as $post) {  
@@ -303,7 +303,7 @@ echo 'Autor: '.$post->author_name;
 ### Paginierung
  
 **Beispiel 1**
-```
+```php
 <?php  
 
 $pager = new rex_pager(20);  

@@ -57,14 +57,14 @@ In den E-Mail-Template `Body (Html)` kommt:
 ### PHP
 
 Es kann auch PHP-Code intergriert werden, um z.B. Formular-Eingaben zu prüfen und die Ausgabe in der E-Mail individuell zu verändern.
-	
-	
-	Hallo,<br />
+```php
+Hallo,<br />
 	<?php 
 	if ("REX_YFORM_DATA[field="anrede"]" == "w") echo "Frau";
 	else echo "Herr";
 	?> REX_YFORM_DATA[field="vorname"] REX_YFORM_DATA[field="name"]
-		
+```
+
 > **Hinweis:**  
 > Die Action **tpl2email** kann auch mehrfach im Formular eingesetzt werden. So könnten E-Mails mit unterschiedlichen Templates versendet werden oder auch an mehrere Empfänger, z.B. Admin unhd Kunde.
 

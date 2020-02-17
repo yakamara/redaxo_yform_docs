@@ -19,16 +19,17 @@ Beispiele (Schreibweisen): **yForm Formbuilder** und **PHP**
 
 Die PHP-Beispiele können in diesem Formular getestet/eingesetzt werden:
 
-	<?php
-	$yform = new rex_yform();
-	$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
+```php
+<?php
+$yform = new rex_yform();
+$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
 
-	$yform->setValueField('text', array("wert1","Wert 1"));
+$yform->setValueField('text', array("wert1","Wert 1"));
 
-	
-	echo $yform->getForm();
-	?>
 
+echo $yform->getForm();
+?>
+```
 
 <a name="value-klassen"></a>
 ## Value-Klassen
