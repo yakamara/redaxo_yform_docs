@@ -29,7 +29,7 @@ Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha_calc)
 2. Validierung vom Typ custom_function anlegen: `validate|customfunction|validate_timer|yform_validate_timer|5|Spambots haben keine Chance|`
 3. Nachfolgende Funktion hinterlegen, die via `custom_function` aufgerufen wird.
 
-```
+```php
 function yform_validate_timer($label,$microtime,$seconds)
     {
         if (($microtime + $seconds) > microtime(true)) {

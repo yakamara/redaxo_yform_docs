@@ -57,6 +57,7 @@ In den E-Mail-Template `Body (Html)` kommt:
 ### PHP
 
 Es kann auch PHP-Code intergriert werden, um z.B. Formular-Eingaben zu prüfen und die Ausgabe in der E-Mail individuell zu verändern.
+
 ```php
 Hallo,<br />
 <?php 

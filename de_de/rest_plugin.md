@@ -32,7 +32,7 @@ Die Konfiguration wird über PHP festgelegt und sollte im project-AddOn in der b
 Hier ein Beispiel, um YCom-User über die REST-API zu verwalten:
 
 
-```
+```php
 
 // diese Zeile ist normalerweise nötig. Dieses Bespiel nutzt aber eine YCom-Tabelle, die bereits über das AddOn registriert ist.
 #rex_yform_manager_dataset::setModelClass('rex_ycom_user', rex_ycom_user::class);

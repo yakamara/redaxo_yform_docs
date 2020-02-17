@@ -38,8 +38,10 @@ Die **allgemeine Syntax** für das Setzen eines objparams lautet so:
 	// Im YForm-Formbuilder
 	objparams|key|newvalue|[init/runtime]
 
-	// In PHP
-	$yform->setObjectparams('key', 'newvalue', '[init/runtime]');
+```php
+// In PHP
+$yform->setObjectparams('key', 'newvalue', '[init/runtime]');
+```
 
 - key = die Bezeichnung des Wertes
 - newvalue = der Neue Wert, der gesetzt werden soll
@@ -55,8 +57,10 @@ Die **allgemeine Syntax** für das Setzen eines objparams lautet so:
 	// Im YForm-Formbuilder
 	objparams|form_show|0
 
-	// In PHP
-	$yform->setObjectparams('form_show','1');
+```php
+// In PHP
+$yform->setObjectparams('form_show','1');
+```
 
 Mit dem Wert `0` wird das Formular nach dem Abschicken nicht angezeigt. Dieses Ausblenden benötigt man, wenn man eine Formulaktion auslösen will, aber kein sichtbares Formular haben möchte. **Beispiel:** Ein User wird durch den Aufruf einer bestimmten URL freigeschaltet.  
 Der Defaultwert ist `1` (anzeigen).
@@ -67,8 +71,10 @@ Der Defaultwert ist `1` (anzeigen).
 	// Im YForm-Formbuilder
 	objparams|form_name|formular
 
-	// In PHP
-	$yform->setObjectparams('form_name','zweites_formular');
+```php
+// In PHP
+$yform->setObjectparams('form_name','zweites_formular');
+```
 
 Wenn man mehrere Formulare auf einer Seite verwenden möchte, muss der `form_name` für jedes Formular verschieden sein. Der hier gewählte Name wird bei jedem Feld eines Formulars dem Namen und der ID hinzugefügt, so erhält man eine Eindeutigkeit.  
 Der Defaultwert ist `formular`.
@@ -79,8 +85,10 @@ Der Defaultwert ist `formular`.
 	// Im YForm-Formbuilder
 	objparams|form_class|contact_form
 
-	// In PHP
-	$yform->setObjectparams('form_class','contact_form');
+```php
+// In PHP
+$yform->setObjectparams('form_class','contact_form');
+```
 
 Damit kann dem Formular eine individuelle CSS-Klasse vergeben werden.  
 Default-Ausgabe:
@@ -92,9 +100,10 @@ Default-Ausgabe:
 	// Im YForm-Formbuilder
 	objparams|form_wrap_id|contact_form
 
-	// In PHP
-	$yform->setObjectparams('form_wrap_id','contact_form');
-
+```php
+// In PHP
+$yform->setObjectparams('form_wrap_id','contact_form');
+```
 Damit kann dem das Formular umgebenden Container eine individuelle CSS-ID vergeben werden.  
 Default-Ausgabe:
 `<form id="yform">`
@@ -105,8 +114,10 @@ Default-Ausgabe:
 	// Im YForm-Formbuilder
 	objparams|form_wrap_class|contact_form
 
-	// In PHP
-	$yform->setObjectparams('form_wrap_class','contact_form');
+```php
+// In PHP
+$yform->setObjectparams('form_wrap_class','contact_form');
+```
 
 Damit kann dem das Formular umgebenden Container eine individuelle CSS-Klasse vergeben werden.  
 Default-Ausgabe:
@@ -118,8 +129,10 @@ Default-Ausgabe:
 	// Im YForm-Formbuilder
 	objparams|form_label_type|html
 
-	// In PHP
-	$yform->setObjectparams('form_label_type','html');
+```php
+// In PHP
+$yform->setObjectparams('form_label_type','html');
+```
 
 Wenn man den Wert hier auf `plain` setzt, werden die Feld-Label nicht als HTML interpretiert, sondern mit `htmlspecialchars` und `nl2br` maskiert.  
 Default ist `html`.
@@ -130,8 +143,10 @@ Default ist `html`.
 	// Im YForm-Formbuilder
 	objparams|csrf_protection|0
 
-	// In PHP
-	$yform->setObjectparams('csrf_protection', false);
+```php
+// In PHP
+$yform->setObjectparams('csrf_protection', false);
+```
 
 Der Parameter zum CSRF-Schutz (Cross-Site-Request-Forgery, auch XSRF) verhindert, dass speziell präparierte Anfragen von YForm ausgeführt werden. Angriffsszenario auf ein YForm-Formular wäre bspw. ein Nutzer, der einen präparierten Link erhält und durch einen Klick dann Daten seines REDAXO-Besuchs preisgibt oder unbemerkte/ungewollte Aktionen durch das YForm-Formular ausführt.
 
@@ -150,8 +165,10 @@ Der CSRF-Schutz sollte daher immer aktiviert bleiben, außer, wenn der direkte A
 	// Im YForm-Formbuilder
 	objparams|form_ytemplate|classic
 
-	// In PHP
-	$yform->setObjectparams('form_ytemplate','classic');
+```php
+// In PHP
+$yform->setObjectparams('form_ytemplate','classic');
+```
 
 YForm verfügt über `Templates`, in denen das HTML-Markup definiert ist, das die Felder umgibt. Im Ordner `ytemplates` gibt es Unterordner für jedes Theme, in denen dann die Templates für die einzelnen Felder zu finden sind. Auf diese Weise kann man schnell eigene Themes definieren, die auf dem Basis-Theme aufbauen: Wenn es für einen Feldtyp ein eigenes Template gibt, wird dieses verwendet, anonsten das des Basis-Themes.
 Der Defaultwert lautet `bootstrap`, d.h. als Basis-Theme ist das HTML-Schema des CSS-Frameworks "Bootstrap" hinterlegt.
@@ -162,8 +179,10 @@ Der Defaultwert lautet `bootstrap`, d.h. als Basis-Theme ist das HTML-Schema des
 	// Im YForm-Formbuilder
 	objparams|submit_btn_label|Formular senden
 
-	// In PHP
-	$yform->setObjectparams('submit_btn_label','Formular senden');
+```php
+// In PHP
+$yform->setObjectparams('submit_btn_label','Formular senden');
+```
 
 Damit kann die Standard-Button-Beschriftung `Abschicken` verändert werden.
 
@@ -173,8 +192,10 @@ Damit kann die Standard-Button-Beschriftung `Abschicken` verändert werden.
 	// Im YForm-Formbuilder
 	objparams|submit_btn_show|0
 
-	// In PHP
-	$yform->setObjectparams('submit_btn_show',0);
+```php
+// In PHP
+$yform->setObjectparams('submit_btn_show',0);
+```
 
 Mit dem Wert `0` wird der Standard-Submit-Button versteckt. Dies ist zum Beispiel sinnvoll, wenn man eigene Buttons definiert hat.  
 Default ist `1` (Anzeigen).
@@ -185,8 +206,10 @@ Default ist `1` (Anzeigen).
 	// Im YForm-Formbuilder
 	objparams|error_class|my_form_error
 
-	// In PHP
-	$yform->setObjectparams('error_class','my_form_error');
+```php
+// In PHP
+$yform->setObjectparams('error_class','my_form_error');
+```
 
 Diese individuelle CSS-Klasse kommt an zwei Stellen zum Tragen:  
 1. im Container mit den Fehlerhinweisen zu Beginn des Formulars:  
@@ -203,8 +226,10 @@ Die Default-CSS-Klasse ist `form_warning`.
 	// Im YForm-Formbuilder
 	objparams|real_field_names|1
 
-	// In PHP
-	$yform->setObjectparams('real_field_names',1);
+```php
+// In PHP
+$yform->setObjectparams('real_field_names',1);
+```
 
 Mit dem auf `1` gesetzten Wert werden exakt die Feldnamen im Formular genommen, die auch in der Formulardefinition gesetzt wurden. Der Feldname lautet dann z.B. nicht mehr `name="FORM[formular][2]"`, sondern `name=vorname`.  
 Der Default-Wert ist `0`.
@@ -219,9 +244,10 @@ Der Default-Wert ist `0`.
 
 	// Im YForm-Formbuilder
 
-
-	// In PHP
-	$yform->setObjectparams('form_method','get');
+```php
+// In PHP
+$yform->setObjectparams('form_method','get');
+```
 
 Mit dem Wert `get` wir die Versandmethode auf get geändert, d.h. alle Feldwerte sind als get-Paramater in der URL enthalten.  
 Der Defaultwert ist `post`.
@@ -232,8 +258,10 @@ Der Defaultwert ist `post`.
 	// Im YForm-Formbuilder
 	objparams|form_action|zielseite.html
 
-	// In PHP mit rex_getUrl() auf die Artikel-ID 5
-	$yform->setObjectparams('form_action',rex_getUrl(5));
+```php
+// In PHP mit rex_getUrl() auf die Artikel-ID 5
+$yform->setObjectparams('form_action',rex_getUrl(5));
+```
 
 Als Ziel nach dem Abschicken kann eine andere Adresse definiert werden, z.B. für eine ausführliche Danke-Seite. Es könnte auch die aktuelle Artikel-ID gesetzt weden, ergänzt um weitere Parameter.  
 Der Defaultwert ist `index.php`, bzw. die URL der Formularseite.
@@ -244,8 +272,10 @@ Der Defaultwert ist `index.php`, bzw. die URL der Formularseite.
 	// Im YForm-Formbuilder
 	objparams|form_anchor|my_form
 
-	// In PHP
-	$yform->setObjectparams('form_anchor','my_form');
+```php
+// In PHP
+$yform->setObjectparams('form_anchor','my_form');
+```
 
 Wenn sich ein Formular weiter unten auf der Seite befindet, sieht man nach dem Abschicken zunächst keine Erfolgs- oder Fehlermeldung. Über den `form_anchor`lässt sich ein Sprunganker definieren, der in der  URL nach dem Abschicken angehängt wird, so dass die Seite zum Anker springt. Im Normalfall wird man als Anker die ID des Formulars nutzen.  
 Der Defaultwert ist leer.
@@ -256,8 +286,10 @@ Der Defaultwert ist leer.
 	// Im YForm-Formbuilder
 	objparams|form_showformafterupdate|1
 
-	// In PHP
-	$yform->setObjectparams('form_showformafterupdate',1);
+```php
+// In PHP
+$yform->setObjectparams('form_showformafterupdate',1);
+```
 
 Mit dem Wert `1` kann man das Formular nach dem Versand nochmal anzeigen, um zum Beispiel direkt eine neue Eingabe zu ermöglichen oder die eingegebenen Werte erneut zum Verändern anzubieten.  
 Default ist `0` (nicht anzeigen).
@@ -269,8 +301,10 @@ Default ist `0` (nicht anzeigen).
 	// Im YForm-Formbuilder
 	objparams|debug|1
 
-	// In PHP
-	$yform->setObjectparams('debug',1);
+```php
+// In PHP
+$yform->setObjectparams('debug',1);
+```
 
 Mit dem Wert `1` kann man zb Aktionen Formular debuggen und Aktion prüfen.
 
@@ -281,8 +315,10 @@ Mit dem Wert `1` kann man zb Aktionen Formular debuggen und Aktion prüfen.
 	// Im YForm-Formbuilder
 	objparams|hide_top_warning_messages|1
 
-	// In PHP
-	$yform->setObjectparams('hide_top_warning_messages',1);
+```php
+// In PHP
+$yform->setObjectparams('hide_top_warning_messages',1);
+```
 
 Mit dem Wert `1` können die Fehlermeldung die über eine Validierung ausgegeben werden versteckt werden.
 
@@ -295,9 +331,11 @@ Mit dem Wert `1` können die Fehlermeldung die über eine Validierung ausgegeben
 	objparams|main_where|id=1
 	objparams|main_table|rex_table
 
-	// In PHP
-	$yform->setObjectparams('getdata',1);
-	$yform->setObjectparams('main_where','id=1');
-	$yform->setObjectparams('main_table','rex_table');
+```php
+// In PHP
+$yform->setObjectparams('getdata',1);
+$yform->setObjectparams('main_where','id=1');
+$yform->setObjectparams('main_table','rex_table');
+```
 
 Mit dem Wert `1` bei `getdata` in Verbindung mit `main_where` (hier die id auf den Datensatz) und `main_table` (hier der Tabellename) können Felder mit Werten aus eine Datenbanktabelle vorbelegt/geladen werden.
