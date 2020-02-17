@@ -59,8 +59,8 @@ Ruf eine Funktion oder Klasse auf.
 	folgt ...
 
 ```php
-	// in PHP
-	folgt ...
+// in PHP
+folgt ...
 ```
 
 <a name="copy_value"></a>
