@@ -30,7 +30,7 @@ ORM = Object-relational mapping = Objektrelationale Abbildung
 
 Hole alle Daten der Tabelle `rex_my_table` und zeige das Objekt. 
 
-```
+```php
 $items = rex_yform_manager_table::get('rex_my_table')->query()->find();
 dump($items);
 ```
@@ -69,14 +69,14 @@ rex_yform_manager_dataset::setModelClass('rex_my_table', MyTable::class);
 
 Nun kann man alle Daten wie folgt holen:
 
-```
+```php
 $items = MyTable::query()->find();
 ```
 
 <a name="praxis-beispiele"></a>
 ## Praxis-Beispiele
 
-```
+```php
 $items = MyTable::query()
             ->alias('t')
             ->joinRelation('relation_id', 'r')
@@ -86,7 +86,7 @@ $items = MyTable::query()
             ->find();
 ```
 
-```
+```php
 $item = MyTable::create()
               ->setValue('user_id', 5)
               ->setValue('article_id', 6)
@@ -325,7 +325,7 @@ $pager->getPageCount();
 ``` 
 **Beispiel 2**
 
-```
+```php
 $pager = new rex_pager(10);
 $table = rex_yform_manager_table::get('rex_table_name');
 $ergebnisse = $table->query()
@@ -470,7 +470,7 @@ echo $post->executeForm($yform)
 
 Wichtig ist nur der Part mit `rex_sql`
 
-```
+```php
 $query = MyTable::query();
 $query
     ->alias('t')
