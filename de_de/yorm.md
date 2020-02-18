@@ -135,6 +135,25 @@ foreach ($products as $product) {
 </article> 
 ```
 
+**Beispiel:** Datensatz auslesen und YForm-Formular bereitstellen
+
+```php
+// Datensatz aus Tabelle mit ID 2
+$dataset = rex_yform_manager_dataset::get(2,'tabelle');
+// Formular auslesen
+$yform = $dataset->getForm();
+// Parameter festlegen
+$yform->setObjectparams('form_method','get');
+// Ziel des Formulars, sonst erhält man nur Index.php ...
+$yform->setObjectparams('form_action',rex_getUrl(REX_ARTICLE_ID));
+// Sollen die Daten des Datensatzes ausgelesen werden? (true = ja , false = nein) 
+$yform->setObjectparams("getdata",true);
+$yform->setActionField('showtext',array('','Gespeichert'));
+// Ausgabe des Formulars
+echo $dataset->executeForm($yform);
+} ?>
+```
+
 <a name="datensatz-ändern"></a>
 ### Datensatz ändern
 
@@ -165,6 +184,24 @@ if ($post->save()) {
     echo implode('<br>', $post->getMessages());
 }
 ```
+
+***Beispiel*** Neuen Datensatz erstellen und Formular bereitstellen***
+
+```php
+// Neuen leeren Datensatz erstellen
+$dataset = rex_yform_manager_dataset::create('tabelle');
+// Formular auslesen
+$yform = $dataset->getForm();
+// Parameter festlegen
+$yform->setObjectparams('form_action',rex_getUrl(REX_ARTICLE_ID));
+// Ziel des Formulars, sonst erhält man nur Index.php ...
+$yform->setObjectparams('form_action',rex_getUrl());
+$yform->setActionField('showtext',array('','Gespeichert'));
+echo $dataset->executeForm($yform);
+} ?>
+```
+
+
 <a name="eigene-modelklassen"></a>
 ### Eigene Modelklassen
 ```
