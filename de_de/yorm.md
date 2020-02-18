@@ -229,7 +229,9 @@ rex_yform_manager_dataset::setModelClass(
     'rex_blog_author',  
     rex_blog_author::class  
 );  
-  
+```
+
+```php 
 // lib/author.php 
 class rex_blog_author extends rex_yform_manager_dataset 
 { 
@@ -238,7 +240,9 @@ class rex_blog_author extends rex_yform_manager_dataset
         return $this->first_name.' '.$this->last_name; 
     } 
 } 
- 
+```
+
+```php 
 // Template 
 $author = rex_blog_author::get($id); 
 echo $author->getFullName();
