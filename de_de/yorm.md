@@ -23,6 +23,9 @@
 > - [Debugging](#debugging)
 >   - [Variante 1](#debugging-variante-1)
 >   - [Variante 2](#debugging-variante-2)
+> - [Tricks](#tricks)
+>   - [Dataset filtern 2](#dataset-filter)
+
 
 
 <a name="ohne-model-class"></a>
@@ -512,3 +515,41 @@ $items = $query->find();
 ### Variante 2
 
 Datei `/redaxo/src/addons/yform/plugins/manager/lib/yform/manager/dataset.php` und die Variable `private static $debug = false;` auf `true` setzen
+
+<a name="tricks"></a>
+## Tricks
+
+<a name="dataset-filter"></a>
+### Aus dem Dataset ungewollte Felder (z.B. für's Frontend) herausfiltern 
+
+```php 
+class rex_data_mydata extends rex_yform_manager_dataset
+{
+    public function getFields(array $filter = [])
+    {
+        $fields = $this->getTable()->getFields($filter);
+
+        if (rex::isBackend()) {
+            return $fields;
+        }
+                   
+        foreach ($fields as $i => $field) {
+            if ('interne_links' == $field->getName()) {
+                // hebt das Feld auf, es wird später im Formular auch nicht gezeigt. 
+                unset($fields[$i]); 
+            }
+            if ('user' == $field->getName()) {
+                unset($fields[$i]);
+            }
+        }
+   
+        return $fields;
+    }
+}
+```
+
+Model-Class in boot.php z.B. im project Addon registrieren
+
+```php
+rex_yform_manager_dataset::setModelClass('mydata', rex_data_mydate::class);
+```
