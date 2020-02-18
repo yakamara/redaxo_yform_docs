@@ -3,6 +3,8 @@
 ## Mini-ORM für YForm 
 (ORM = Object-relational mapping = Objektrelationale Abbildung)
 
+Yorm erlecihtert den Umgang mit in YForm Table Manager angemeldeten Tabellen und deren Daten. So ist es möglich mittels eigener Modelclasses die Daten zu verarbeiten und aufbereitet auszugeben. Werden im Table Manager neue Felder hinzugefügt oder entfernt, passen sich über Yorm ausgegegebene Formulare sofort darauf an. Die übliche PIPE oder PHP-Programmierung entfällt. Formulare müssen meist nur durch wenige Parameter ergänzt werden um sofort zu funktionieren.  
+
 > - [YOrm ohne eigene Model Class verwenden](#ohne-model-class)
 > - [YOrm mit eigener Model Class verwenden](#eigene-model-class)
 >   - [Klasse erstellen](#klasse-erstellen)
