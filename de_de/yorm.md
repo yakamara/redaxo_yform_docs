@@ -1,7 +1,7 @@
 # Yorm ORM
 
-Mini-ORM für YForm 
-ORM = Object-relational mapping = Objektrelationale Abbildung
+## Mini-ORM für YForm 
+(ORM = Object-relational mapping = Objektrelationale Abbildung)
 
 > - [YOrm ohne eigene Model Class verwenden](#ohne-model-class)
 > - [YOrm mit eigener Model Class verwenden](#eigene-model-class)
@@ -51,8 +51,7 @@ Es stehen folgende Klassen zur Verfügung:
 
 Zunächst wird eine Klasse erstellt und in das `project` AddOn im Ordner `lib` abgelegt
 
-```
-<?php
+```php
 class MyTable extends \rex_yform_manager_dataset
 {
 }
@@ -63,20 +62,20 @@ class MyTable extends \rex_yform_manager_dataset
 
 Jetzt muss die erstellte Klasse noch registiert werden. Dazu öffnet man die Datei `boot.php` des `project` AddOns und fügt nachfolgenden Code ein. Wird das theme-Addon verwendet, den Code in die Datei `functions.php` einfügen.
 
-```
+```php
 rex_yform_manager_dataset::setModelClass('rex_my_table', MyTable::class);
 ```
 
 Nun kann man alle Daten wie folgt holen:
 
-```
+```php
 $items = MyTable::query()->find();
 ```
 
 <a name="praxis-beispiele"></a>
 ## Praxis-Beispiele
 
-```
+```php
 $items = MyTable::query()
             ->alias('t')
             ->joinRelation('relation_id', 'r')
@@ -86,14 +85,14 @@ $items = MyTable::query()
             ->find();
 ```
 
-```
+```php
 $item = MyTable::create()
               ->setValue('user_id', 5)
               ->setValue('article_id', 6)
               ->save();;
 ```
 
-```
+```php
 MyTable::query()
                 ->where('user_id', 5)
                 ->where('article_id', 6)
@@ -101,9 +100,7 @@ MyTable::query()
                 ->delete();
 ```
 
-```
-<?php
-
+```php
 $table = rex_yform_manager_table::get('rex_data_product');
 
 $products = $table->query()
@@ -125,8 +122,7 @@ foreach ($products as $product) {
 <a name="datensatz-abfragen"></a>
 ### Datensatz abfragen
 
-```
-<?php
+```php
     $post = rex_yform_manager_dataset::get($id, 'rex_blog_post');  
 ?>  
 <article>
@@ -157,8 +153,7 @@ echo $dataset->executeForm($yform);
 <a name="datensatz-ändern"></a>
 ### Datensatz ändern
 
-```
-<?php
+```php
 $post = rex_yform_manager_dataset::get($id, 'rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)';
 $post->text = '...';
@@ -172,8 +167,8 @@ if ($post->save()) {
 
 <a name="datensatz-erstellen"></a>
 ### Datensatz erstellen
-```
-<?php
+
+```php
 $post = rex_yform_manager_dataset::create('rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)'; 
 $post->text = '...';
@@ -204,8 +199,8 @@ echo $dataset->executeForm($yform);
 
 <a name="eigene-modelklassen"></a>
 ### Eigene Modelklassen
-```
-<?php
+
+```php
 // boot.php  
 rex_yform_manager_dataset::setModelClass(  
     'rex_blog_author',  
@@ -213,8 +208,7 @@ rex_yform_manager_dataset::setModelClass(
 );  
 ```
 
-```
-<?php
+```php
 // lib/post.php 
 class rex_blog_post extends rex_yform_manager_dataset 
 { 
@@ -224,8 +218,7 @@ class rex_blog_post extends rex_yform_manager_dataset
 
 oder
 
-``` 
-<?php  
+```php 
   
 // boot.php  
 rex_yform_manager_dataset::setModelClass(  
@@ -251,9 +244,7 @@ echo $author->getFullName();
 <a name="query-klasse"></a>
 ### Query-Klasse
  
- ```
-<?php  
-
+```php 
 $query = rex_blog_post::query();  
 
 $query  
@@ -270,8 +261,7 @@ $posts = $query->find();
 <a name="collection-Klasse"></a>
 ### Collection-Klasse
  
-```
-<?php  
+```php 
 
 $query = rex_blog_post::query();  
 
@@ -284,8 +274,8 @@ echo $post->title;
 echo $post->text; 
 }
 ```
-```
-<?php  
+
+```php 
 
 $posts->isEmpty();  
 $posts->getIds();  
@@ -301,8 +291,7 @@ $posts->delete();
 <a name="relationen"></a>
 ### Relationen
  
-```
-<?php  
+```php 
 
 foreach ($posts as $post) {  
 $author = $post->getRelatedDataset('author_id');  
@@ -311,14 +300,13 @@ echo 'Autor: '.$author->getFullName();
 
 echo $post->title;  
 } 
- 
-<?php  
+
+```php
 
 $posts = $author->getRelatedCollection('posts'); 
 ``` 
 
-``` 
-<?php  
+```php 
 
 $query = rex_blog_post::query();  
 
@@ -340,8 +328,8 @@ echo 'Autor: '.$post->author_name;
 ### Paginierung
  
 **Beispiel 1**
-```
-<?php  
+
+```php 
 
 $pager = new rex_pager(20);  
 
@@ -362,7 +350,7 @@ $pager->getPageCount();
 ``` 
 **Beispiel 2**
 
-```
+```php
 $pager = new rex_pager(10);
 $table = rex_yform_manager_table::get('rex_table_name');
 $ergebnisse = $table->query()
@@ -383,8 +371,8 @@ echo $pager->getPageCount();
 
 <a name="formulare"></a>
 ### Formulare
-``` 
-<?php  
+
+```php 
 
 $post = rex_blog_post::get($id);  
 
