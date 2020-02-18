@@ -123,6 +123,7 @@ foreach ($products as $product) {
 ### Datensatz abfragen
 
 ```php
+<?php
     $post = rex_yform_manager_dataset::get($id, 'rex_blog_post');  
 ?>  
 <article>
