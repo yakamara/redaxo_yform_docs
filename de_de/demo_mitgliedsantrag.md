@@ -158,7 +158,7 @@ https://www.domain.de/redaxo/ > Tabellen > Mitglieder
 ```
 ## Schritt 5: Aktivierungs-Modul einrichten
 
-```
+```php
     <div class="modul-wrapper">       
         <?php
 $key = rex_get('key', 'string', 0);

@@ -57,14 +57,18 @@ In den E-Mail-Template `Body (Html)` kommt:
 ### PHP
 
 Es kann auch PHP-Code intergriert werden, um z.B. Formular-Eingaben zu prüfen und die Ausgabe in der E-Mail individuell zu verändern.
-	
-	
-	Hallo,<br />
-	<?php 
-	if ("REX_YFORM_DATA[field="anrede"]" == "w") echo "Frau";
-	else echo "Herr";
-	?> REX_YFORM_DATA[field="vorname"] REX_YFORM_DATA[field="name"]
-		
+
+```php
+Hallo,<br />
+<?php 
+if ("REX_YFORM_DATA[field="anrede"]" == "w") {
+    echo "Frau";
+} else {
+    echo "Herr";
+}
+?> REX_YFORM_DATA[field="vorname"] REX_YFORM_DATA[field="name"]
+```
+
 > **Hinweis:**  
 > Die Action **tpl2email** kann auch mehrfach im Formular eingesetzt werden. So könnten E-Mails mit unterschiedlichen Templates versendet werden oder auch an mehrere Empfänger, z.B. Admin unhd Kunde.
 
@@ -81,7 +85,7 @@ E-Mail-Templates können jedoch auch von einem YForm-Formular losgelöst verwend
 
 Nachfolgend ein angepasster Formular-Code, um die E-Mail separat zu versenden. Dabei wird ein eigener, zusätzlicher Platzhalter definiert, der sich nicht im Formular befindet. Bitte die Kommentare beachten.
 
-```
+```php
 <?
 $yform = new rex_yform();
 $yform->setObjectparams('form_ytemplate', 'bootstrap');
@@ -123,7 +127,7 @@ if($form) { // Wenn das Formular nicht abgesendet wurde
 	    if ($debug) {
 	        echo '<hr /><pre>'; var_dump($yform_email_template); echo '</pre><hr />';
 	    }
-	    if (!rex_yform_email_template::sendMail($yform_email_template, $template_name)) {
+	    if (!rex_yform_email_template::sendMail($yform_email_template, $yform_email_template_key)) {
 	        if ($debug) { echo 'E-Mail konnte nicht gesendet werden.'; }
 	        return false;
 	    } else {
@@ -131,7 +135,7 @@ if($form) { // Wenn das Formular nicht abgesendet wurde
 	        return true;
 	    }
 	} else {
-	    if ($debug) {echo '<p>YForm E-Mail-Template "'.htmlspecialchars($template_name).'" wurde nicht gefunden.'; }
+	    if ($debug) {echo '<p>YForm E-Mail-Template "'.htmlspecialchars($yform_email_template_key).'" wurde nicht gefunden.'; }
 	}
 }
 ?>
@@ -150,7 +154,7 @@ REX_YFORM_DATA[field="custom"]
 
 Dieser Code basiert auf [plugins/email/lib/yform_action_tpl2email.php](https://github.com/yakamara/redaxo_yform/blob/master/plugins/email/lib/yform_action_tpl2email.php).
 
-```
+```php
 <?
 $yform_email_template_key = 'test'; // Key, wie im Backend unter YForm > E-Mail-Templates hinterlegt
 $debug = 0;
@@ -172,7 +176,7 @@ if ($yform_email_template = rex_yform_email_template::getTemplate($yform_email_t
     if ($debug) {
         echo '<hr /><pre>'; var_dump($yform_email_template); echo '</pre><hr />';
     }
-    if (!rex_yform_email_template::sendMail($yform_email_template, $template_name)) {
+    if (!rex_yform_email_template::sendMail($yform_email_template, $yform_email_template_key)) {
         if ($debug) { echo 'E-Mail konnte nicht gesendet werden.'; }
         return false;
     } else {
@@ -180,7 +184,7 @@ if ($yform_email_template = rex_yform_email_template::getTemplate($yform_email_t
         return true;
     }
 } else {
-    if ($debug) {echo '<p>YForm E-Mail-Template "'.htmlspecialchars($template_name).'" wurde nicht gefunden.'; }
+    if ($debug) {echo '<p>YForm E-Mail-Template "'.htmlspecialchars($yform_email_template_key).'" wurde nicht gefunden.'; }
 }
 ?>
 ```

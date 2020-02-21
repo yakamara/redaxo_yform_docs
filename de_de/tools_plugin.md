@@ -50,6 +50,9 @@ Das kann man im Manager über das Attibutefeld innerhalb von z.B. text so setzen
 
 diese Bibliothek [http://www.daterangepicker.com/](http://www.daterangepicker.com/) dient für die Auswahl von Datumsfeldern oder Datumzeiträumen. Dabei kann auch eine Uhrzeit selektiert werden.
 
+> Bitte unbedingt beachten, dass man das selbe Format bei den Date(time)pickern einträgt, wie man es im entsprechenden Feld (z.B. Date) ausgewählt hat.
+
+
 Dabei muss das Textfeld folgendes Attribut bekommen:
 
     data-yform-tools-datepicker = ""
@@ -80,3 +83,5 @@ datepicker und Inputmask:
 datetimepicker und Inputmask:
 
     {"data-yform-tools-datetimepicker":"DD.MM.YYYY HH:ii:ss", "data-yform-tools-inputmask":"datetime", "data-inputmask-mask":"1.2.y h:s:s", "data-inputmask-alias":"dd.mm.yyyy", "data-inputmask-placeholder":"dd.mm.yyyy hh:mm:ss", "data-inputmask-separator":"."} 
+    
+

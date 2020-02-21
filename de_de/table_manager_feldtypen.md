@@ -20,12 +20,14 @@
 > - [index](#index)
 > - [integer](#integer)
 > - [mediafile](#mediafile)
+> - [number](#number)
 > - [php](#php)
 > - [prio](#prio)
 > - [radio](#radio)
 > - [radio_sql](#radio_sql)
 > - [select](#select)
 > - [select_sql](#select_sql)
+> - [showvalue](#showvalue)
 > - [submit](#submit)
 > - [text](#text)
 > - [textarea](#textarea)
@@ -157,14 +159,13 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 Eine <b>Checkbox</b> mit vordefinierten Werten.
 
 > **Wert in der Datenbank**
-> Status der Checkbox als Zahl oder String (je nach angegebenen Wert), z.B. `0` oder `1`, `nein` oder `ja`
+> Status der Checkbox als Zahl, z.B. `0` oder `1`
 
 Option | Erläuterung
 ------ | ------
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `active`, `online`, `visible`, `hidden`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `aktiviert`, `online`, `sichtbar?`, `ausgeblendet?`
-Werte | Wert, der in die Datenbank geschrieben wird, z.B. `0,1`, `nein,ja`
 Defaultstatus | Gibt an, ob die Checkbox vorausgewählt ist oder nicht.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
 Notiz | Hinweis unterhalb des Feldes, um dem Nutzer zusätzliche Instruktionen zur Eingabe mitzugeben.
@@ -206,8 +207,8 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Datum`, `Beginn der Veranstaltung`
-[Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014`
-[Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
+[Startjahr] oder [-X] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014` oder '-1', um immer 1 Jahr unter der aktuellen Jahreszahl zu beginnen 
+[Endjahr] oder [+X] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl zu enden.
 [Anzeigeformat###Y###-###M###-###D###]] | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
@@ -250,8 +251,8 @@ Option | Erläuterung
 Priorität | Ordnet das Feld zwischen anderen Feldern in der Tabelle ein.
 Name | Name des Felds in der Datenbank, z.B. `date`, `date_begin`
 Bezeichnung | Name des Felds, wie er im Frontend oder Backend angezeigt wird, z.B. `Datum`, `Beginn der Veranstaltung`
-[Startjahr] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014`
-[Endjahr] oder [+5] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl anzugeben.
+[Startjahr] oder [-X] | Gibt an, mit welchem Jahr das Auswahlfeld beginnt, z.B. `1980`, `2014` oder '-1', um immer 1 Jahr unter der aktuellen Jahreszahl zu beginnen 
+[Endjahr] oder [+X] | Gibt an, mit welchem Jahr das Auswahlfeld endet, z.B. `2020` oder `+3`, um immer 3 Jahre über der aktuellen Jahreszahl zu enden.
 Anzeigeformat | Reihenfolge der Auswahlfelder für Tag, Monat und Jahr beim bearbeiteten eines Datensatzes, z.B. `am ###D###.###M###.###Y###`
 Aktuelles Datum voreingestellt | Gibt an, ob das aktuelle Datum vorausgewählt ist.
 Nicht in Datenbank speichern | Gibt an, ob das Feld nur angezeigt werden soll oder der Wert auch in der Datenbank gespeichert werden soll.
@@ -319,6 +320,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="float"></a>
 ## float
+
+> Achtung: Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `number` verwenden.
 
 Ein einfaches Eingabefeld für <b>Gleitkomma-Zahlen.</b>
 
@@ -461,6 +464,15 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 > **Hinweis**: Zusammen mit dem Upload-Feld lassen sich komfortabel [E-Mails mit Anhang versenden](demo_email-attachments.md).
 
+<a name="number"></a>
+## number 
+
+Option | Erläuterung
+------ | ------
+`precision` | ist die Anzahl der signifikanten Stellen. Der Bereich von `precision` liegt zwischen 1 und 65.
+
+`scale` | ist die Anzahl der Stellen nach dem Dezimalzeichen. Der Bereich für `scale` ist von `0` bis `30`. MySQL erfordert, dass `scale` kleiner gleich (`<=`) `precision` ist.
+
 <a name="prio"></a>
 ## prio
 
@@ -487,6 +499,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="radio"></a>
 ## radio
 
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
+
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
 > **Wert in der Datenbank** 
@@ -506,6 +520,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 <a name="radio_sql"></a>
 ## radio_sql
+
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
 
 Ein oder mehrere Auswahlfelder als <b>Radio-Buttons</b>.
 
@@ -548,6 +564,8 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 <a name="select_sql"></a>
 ## select_sql
 
+> **Achtung:** Dieser Feldtyp wird demnächst entfernt. Stattdessen Das Feld `choice` verwenden.
+
 Ein <b>Auswahlfeld</b> mit Werten, die aus einer <b>SQL-Abfrage</b> stammen.
 
 > Wert in der Datenbank
@@ -571,6 +589,11 @@ Als Suchfeld aufnehmen |  Zeigt das Feld in den Suchoptionen an, sofern die Opti
 
 > **Tipp:**  
 > Ein select_sql-Feld kann ähnlich wie be_manager_relation dazu benutzt werden, um Datensätze fremder Tabellen in einer 1:1- oder 1:n-Beziehung zu verknüpfen.
+
+<a name="showvalue"></a>
+## showvalue
+
+Zeigt einen Wert in der Ausgabe.
 
 <a name="submit"></a>
 ## submit

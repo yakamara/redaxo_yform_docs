@@ -29,15 +29,17 @@ Die Validate-Feldklassen werden wie Values und Actions im Formbuilder im Feld `F
 
 Die PHP-Beispiele können in diesem Basis-Formular getestet/eingesetzt werden:
 
-	<?php
-	$yform = new rex_yform();
-	$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
+```php
+<?php
+$yform = new rex_yform();
+$yform->setObjectparams('form_action', rex_getUrl(REX_ARTICLE_ID,REX_CLANG_ID));
 
-	$yform->setValueField('text', array("wert1","Wert 1"));
-	$yform->setValidateField('empty', array("wert1","Bitte geben Sie einen Namen an!"));
-	
-	echo $yform->getForm();
-	?>
+$yform->setValueField('text', array("wert1","Wert 1"));
+$yform->setValidateField('empty', array("wert1","Bitte geben Sie einen Namen an!"));
+
+echo $yform->getForm();
+?>
+```
 
 <a name="validierungs-klassen"></a>
 ## Validierungs-Klassen
@@ -55,10 +57,13 @@ Vergleicht zwei Felder mit Hilfe von Operatoren.
 	text|wert2|Wert 2|
 	validate|compare|wert1|wert2|!=|Die beiden Felder haben unterschiedliche Werte|
 
-	// in PHP
-	$yform->setValueField('text', array("wert1","Wert 1"));
-	$yform->setValueField('text', array("wert2","Wert 2"));
-	$yform->setValidateField('compare', array("wert1","wert2","!=", "Die Felder haben unterschiedliche Werte"));
+```php
+// in PHP
+$yform->setValueField('text', array("wert1","Wert 1"));
+$yform->setValueField('text', array("wert2","Wert 2"));
+$yform->setValidateField('compare', array("wert1","wert2","!=", "Die Felder haben unterschiedliche Werte"));
+```
+
 	
 > **Hinweis:** Mögliche Vergleichs-Operatoren sind `!=`, `<`, `>`, `==`, `>=`und `<=`
 
@@ -74,9 +79,12 @@ Vergleicht ein Feld mit einem angegebenen Wert mit Hilfe von Operatoren.
 	text|wert1|Wert 1|
 	validate|compare_value|wert1|2|<|Der Wert ist kleiner als 2!|
 
-	// In PHP
-	$yform->setValueField('text', array("wert1","Wert 1"));
-	$yform->setValidateField('compare_value', array("wert1","wert2","<", "Der Wert ist kleiner als 2!"));
+```php
+// In PHP
+$yform->setValueField('text', array("wert1","Wert 1"));
+$yform->setValidateField('compare_value', array("wert1","wert2","<", "Der Wert ist kleiner als 2!"));
+```
+
 	
 > **Hinweis:** Mögliche Vergleichs-Operatoren sind `!=`, `<`, `>`, `==`, `>=` und `<=`
 
@@ -100,9 +108,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|email|E-Mail|
 	validate|email|email|Das Feld enthält keine korrekte E-Mail-Adresse!
 
-	II In PHP
-	$yform->setValueField('text', array("email","E-Mail"));
-	$yform->setValidateField('email', array("email", "Das Feld enthält keine korrekte E-Mail-Adresse!"));
+```php
+// In PHP
+$yform->setValueField('text', array("email","E-Mail"));
+$yform->setValidateField('email', array("email", "Das Feld enthält keine korrekte E-Mail-Adresse!"));
+```
 
 <a name="empty"></a>
 ### empty
@@ -116,10 +126,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|name|Nachname|
 	validate|empty|name|Bitte geben Sie einen Namen an!
 
-	// In PHP
-
-	$yform->setValueField('text', array("name","Nachname"));
-	$yform->setValidateField('empty', array("name","Bitte geben Sie einen Namen an!"));
+```php
+// In PHP
+$yform->setValueField('text', array("name","Nachname"));
+$yform->setValidateField('empty', array("name","Bitte geben Sie einen Namen an!"));
+```
 
 <a name="existintable"></a>
 ### existintable (wird nicht mehr fortgeführt)
@@ -141,9 +152,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|wert|Wert
 	validate|intfromto|wert|2|4|Der Wert ist kleiner als 2 und größer als 4! 
 
-	// In PHP
-	$yform->setValueField('text', array("wert","Wert"));
-	$yform->setValidateField('intfromto', array("wert","2", "4", "Der Wert ist kleiner als 2 und größer als 4! "));
+```php
+// In PHP
+$yform->setValueField('text', array("wert","Wert"));
+$yform->setValidateField('intfromto', array("wert","2", "4", "Der Wert ist kleiner als 2 und größer als 4! "));
+```
 
 <a name="labelexist"></a>
 ### labelexist
@@ -161,14 +174,17 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	
 	validate|labelexist|vorname,name,tel|1|2|Fehlermeldung
 
-	In PHP	$yform->setValueField('text', array("vorname","Vorname"));
-	$yform->setValueField('text', array("name","Nachname"));
-	$yform->setValueField('text', array("email","E-Mail"));
-	$yform->setValueField('text', array("tel","Telefon"));
-	
-	$yform->setValidateField('labelexist', array("vorname, name, tel", "1", "2", "Fehlermeldung"));
-	
-	// Hier in diesem Beispiel müssen von den drei Feldern mindestens 1 und maximal 2 ausgefüllt werden
+```php
+//In PHP
+$yform->setValueField('text', array("vorname","Vorname"));
+$yform->setValueField('text', array("name","Nachname"));
+$yform->setValueField('text', array("email","E-Mail"));
+$yform->setValueField('text', array("tel","Telefon"));
+
+$yform->setValidateField('labelexist', array("vorname, name, tel", "1", "2", "Fehlermeldung"));
+
+// Hier in diesem Beispiel müssen von den drei Feldern mindestens 1 und maximal 2 ausgefüllt werden
+```
 
 > Hinweis:  
 > * `minlabels` ist optional und hat den Defaultwert 1.  
@@ -186,9 +202,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|eingabe|Eingabe
 	validate|preg_match|eingabe|/[a-z]+/|Es dürfen nur ein oder mehrere klein geschriebene 	Buchstaben eingegeben werden!
 
-	// In PHP
-	$yform->setValueField('text', array("eingabe","Eingabe"));
-	$yform->setValidateField('preg_match', array("eingabe","/[a-z]+/", "Es dürfen nur ein oder mehrere klein geschriebene Buchstaben eingegeben werden!"));
+```php
+// In PHP
+$yform->setValueField('text', array("eingabe","Eingabe"));
+$yform->setValidateField('preg_match', array("eingabe","/[a-z]+/", "Es dürfen nur ein oder mehrere klein geschriebene Buchstaben eingegeben werden!"));
+```
 
 <a name="size"></a>
 ### size
@@ -202,9 +220,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|plz|PLZ
 	validate|size|plz|5|Die Eingabe hat nicht die korrekte Zeichenlänge!
 
-	// In PHP
-	$yform->setValueField('text', array("plz","PLZ"));
-	$yform->setValidateField('size', array("plz","5", "Die Eingabe hat nicht die korrekte Zeichenlänge!"));
+```php
+// In PHP
+$yform->setValueField('text', array("plz","PLZ"));
+$yform->setValidateField('size', array("plz","5", "Die Eingabe hat nicht die korrekte Zeichenlänge!"));
+```
 
 > **Hinweis:** `size` ist eine Zahl und meint die Zeichenlänge.
 
@@ -220,9 +240,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|summe|Summe
 	validate|size_range|summe|3|10|Die Eingabe hat nicht die korrekte Zeichenlänge (mind. 3, max 10 Zeichen)!
 
-	// In PHP
-	$yform->setValueField('text', array("summe","Summe"));
-	$yform->setValidateField('size_range', array("summe", "3", "10", "Die Eingabe hat nicht die korrekte Zeichenlänge (mind. 3, max 10 Zeichen)!"));
+```php
+// In PHP
+$yform->setValueField('text', array("summe","Summe"));
+$yform->setValidateField('size_range', array("summe", "3", "10", "Die Eingabe hat nicht die korrekte Zeichenlänge (mind. 3, max 10 Zeichen)!"));
+```
 
 <a name="type"></a>
 ### type
@@ -236,9 +258,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|wert|Wert
 	validate|type|wert|numeric|Die Eingabe ist keine Nummer!
 
-	// In PHP
-	$yform->setValueField('text', array("wert","Wert"));
-	$yform->setValidateField('type', array("wert", "numeric", "Die Eingabe ist keine Nummer!"));
+```php
+// In PHP
+$yform->setValueField('text', array("wert","Wert"));
+$yform->setValidateField('type', array("wert", "numeric", "Die Eingabe ist keine Nummer!"));
+```
 
 <a name="type"></a>
 ### unique
@@ -252,9 +276,11 @@ Damit können eigene Überprüfungen via Funktion oder Klasse/Methode durchgefü
 	text|email|E-Mail|
 	validate|unique|email|Ein User mit dieser E-Mail-Adresse existiert schon!|rex_user
 
-	// In PHP
-	$yform->setValueField('text', array("email","E-Mail"));
-	$yform->setValidateField('unique', array("email", "Ein User mit dieser E-Mail-Adresse existiert schon!","rex_user"));
+```php
+// In PHP
+$yform->setValueField('text', array("email","E-Mail"));
+$yform->setValidateField('unique', array("email", "Ein User mit dieser E-Mail-Adresse existiert schon!","rex_user"));
+```
 
 > **Hinweise:**  
 > * `table`: Wenn kein Tabellenname angegeben ist, wird der Tabellenname verwendet, der im Formbuilder ausgewählt wurde.  

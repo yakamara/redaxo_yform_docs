@@ -6,6 +6,7 @@
 > - [customfunction](#customfunction)
 > - [email](#email)
 > - [empty](#empty)
+> - [in_table](#intable)
 > - [intfromto](#intfromto)
 > - [size](#size)
 > - [size_range](#size_range)
@@ -62,7 +63,7 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Bedingung des Vergleichs erfül
 
 Diese Funktion bspw. im `project`-Addon in der boot.php hinterlegen:
 
-```
+```php
 function yform_validate_custom($label, $value, $param)
 {
 	if($value > $param) { // eigene Validierung. Hier: Prüft, ob der Formular-Eingabewert größer ist als der Parameter
@@ -100,6 +101,19 @@ Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten de
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `email`, `name`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe leer ist.
 
+<a name="intable"></a>
+## in_table
+
+Überprüft, ob ein Eingabe-Wert <b>in der DB vorhanden</b> ist.
+
+Option | Erläuterung
+------ | ------
+Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
+Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `email`, `name`
+Tabellenname |  Name der Tabelle, das für die Überprüfung herangezogen wird, z.B. `rex_ycom_user`
+Feldname |  Name des Feldes in der Tabelle, das für die Überprüfung herangezogen wird, z.B. `email`
+Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe leer ist.
+
 <a name="intfromto"></a>
 ## intfromto
 
@@ -116,13 +130,13 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe nicht im erlaubten Bere
 <a name="size"></a>
 ## size
 
-Überprüft, ob der Eingabe-Wert eine <b>bestimmte Anzahl von Zeichen</b> hat.
+Überprüft, ob der Eingabe-Wert eine <b>exakte Anzahl von Zeichen</b> hat.
 
 Option | Erläuterung
 ------ | ------
 Priorität | Reihenfolge des Feldes in der Feldübersicht und beim Abarbeiten der Validierungen.
 Name |  Name des Tabellenfeldes, das für die Überprüfung herangezogen wird, z.B. `customer_id`, `pin`
-Anzahl der Zeichen | Anzahl der Zeichen, die eingegeben werden sollen, z.B. `5`,`10`,`42`
+Anzahl der Zeichen | exakte Anzahl der Zeichen, die eingegeben werden sollen, z.B. `5`,`10`,`42`
 Fehlermeldung | Hinweis, der erscheint, wenn die Eingabe die festgelegte Anzahl von Zeichen unter- oder überschreitet.
 
 <a name="size_range"></a>

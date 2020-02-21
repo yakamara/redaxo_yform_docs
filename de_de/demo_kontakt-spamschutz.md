@@ -2,7 +2,7 @@
 
 Von Haus aus liefert `YForm` für den Formbuilder zwei Feldtypen, um sicherzustellen, dass das Formular von einem echten Website-Besucher ausgegeben wurde und nicht von einem Spam-Bot. Es gibt jedoch noch weitere Tricks, um Bots zu erkennen und Spam zu vermeiden.
 
-> Hinweis: Ein Captcha ist kein Sicherheitsmerkmal. Für eine sichere Übermittlung der Formular-Daten ist ein SSL-Zertifikat absolute Pflicht. Wenn die eingegebenen Daten per E-Mail versendet werden, werden diese Daten unter Umständen trotz SSL-Zertifikat unverschlüsselt übertragen.
+> Hinweis: Ein Captcha ersetzt nicht eine sichere Übermittlung via HTTPS, daher ist ein SSL-Zertifikat verpflichtend. Wenn die eingegebenen Daten per E-Mail versendet werden, werden diese unter Umständen trotz SSL-Zertifikat unverschlüsselt übertragen.
 
 ## Captcha 
 
@@ -29,7 +29,7 @@ Siehe [YForm Formbuilder Values](yform_modul_values.md#captcha_calc)
 2. Validierung vom Typ custom_function anlegen: `validate|customfunction|validate_timer|yform_validate_timer|5|Spambots haben keine Chance|`
 3. Nachfolgende Funktion hinterlegen, die via `custom_function` aufgerufen wird.
 
-```
+```php
 function yform_validate_timer($label,$microtime,$seconds)
     {
         if (($microtime + $seconds) > microtime(true)) {
@@ -76,3 +76,12 @@ Sobald Spambots das input-Feld namens `email` als Eingabe-Feld erkennen, werden 
 * Unter Umständen wird das versteckte Feld von Browsern vorausgefüllt. Lösung: Autocomplete abschalten, indem das Eingabe-Feld via JSON das Attribut `{"autocomplete":"off"}` bekommt.
 * Das korrekte E-Mail-Feld wird nicht mehr vom Browser vorausgefüllt.
 * Die Lösung ist nur bedingt barrierefrei.
+
+
+## Google reCaptcha
+
+Siehe [YForm Formbuilder Values](yform_modul_values.md#recaptcha)
+
+**Nachteile**
+
+* Übermittlung von personenbezogenen Daten an Google

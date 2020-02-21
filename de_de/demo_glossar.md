@@ -23,7 +23,7 @@
 
 ## Modul-Ausgabe
 
-```
+```php
 <?php
 // REDAXO Glossary or FAQ for yform
 // Modulausgabe
@@ -32,16 +32,16 @@ $db_table = "rex_glossar";
 $sql = rex_sql::factory();
 $sql->setDebug(false); //Ausgabe Query true oder false
 $query = "SELECT * FROM $db_table  ORDER BY Begriff ";
-$sql->setQuery($query, array($id));
+$rows = $sql->getArray($query);
 $counter = $bcounter = 1;
-if (count($sql)) {
+if ($sql->getRows()) > 0) {
 // Wenn Datensätze im $sql vorliegen 
-foreach($sql as $row)
+foreach($rows as $row)
 {
- $id = $row->getValue("id");
- $begriff = $row->getValue("Begriff");
+ $id = $row["id"];
+ $begriff = $row["Begriff"];
  $char = strtoupper(substr($begriff,0,1)); // Erster Buchstabe
- $beschreibung = $row->getValue("beschreibung");
+ $beschreibung = $row["beschreibung"];
  # $beschreibung = nl2br($beschreibung); // wenn nur eine Textarea ohne WYSIWYG verwendet wird
  $counter++;
  // Ausgabe des Buchstabens, wenn in $dummy nicht bereits vorhanden. 
@@ -50,8 +50,9 @@ foreach($sql as $row)
     $buchstabe ='<h2 id="buchstabe'.$char.'">'.$char. '</h2>'; 
     $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.$char.'">'.$char. '</a>';
     // Erstellt Links für das Alphabet am Anfang 
- } 
- else {$buchstabe = "";}
+ }  else {
+    $buchstabe = "";
+}
 // Ausgabe als Bootstrap Panel
 $out .= $buchstabe.' 
 <div class="panel panel-default">
@@ -73,4 +74,5 @@ echo $out; // Ausgabe der Panels und Überschriften
 ?>
 
 ```
+
 
