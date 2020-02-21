@@ -267,19 +267,27 @@ $yform->setActionField('readtable', array("shop_user", "fname", "name"));
 ### redirect
 
 Führt nach dem Abschicken des Formulars eine Weiterleitung aus.
-	
-	// allgemeine Definition
-	action|redirect|Artikel-Id oder Externer Link|request/label|field
 
-	// im YForm-Formbuilder
-	//Umleitung auf internen Artikel 32
-	action|redirect|32  	
+```plaintext
+// allgemeine Definition
+action|redirect|Artikel-Id oder Externer Link|request/label|field
 
-```php
-// In PHP
-$yform->setActionField('redirect', array("32"));
+// im YForm-Formbuilder
+// Umleitung auf internen Artikel 32
+action|redirect|32
+// mit Übergabe von URL-Parameter(n):
+// Hinweis: Interne Links (per ID übergeben) müssen zwingend als externe URL angegeben werden, sonst lassen sich keine URL-Parameter übergeben!
+action|redirect|https://www.example.org/kontakt/?mein_parameter=mein_wert
 ```
 
+	// In PHP
+```php
+$yform->setActionField('redirect', array("32"));
+// mit Übergabe von URL-Parameter(n):
+$yform->setActionField('redirect', [rex_getUrl(32, rex_clang::getCurrentId(), ['mein_parameter' => 'mein_wert'])]);
+// oder
+$yform->setActionField('redirect', ["https://www.example.org/kontakt/?mein_parameter=mein_wert");
+```
 <a name="showtext"></a>
 ### showtext
 
@@ -319,6 +327,15 @@ Versendet eine E-Mail über ein YForm-E-Mail-Template. Der Parameter **emailtemp
 $yform->setValueField('text', array("email","E-Mail-Empfänger"));  	
 $yform->setActionField('tpl2email', array("emailtemplate", "email"));
 ```
+
+	// In Beispiel PHP => manuelles Triggern von tpl2email OHNE Ausgabe
+	$yform = new rex_yform();
+	$yform->setObjectparams('csrf_protection',false);
+	$yform->setValueField('hidden', ['email',$email]); // $email als Variable steht dann im Email-Template zur Verfügung (beliebig erweiterbar)
+	$yform->setActionField('tpl2email', ["emailtemplate","email",'zieladresse@email.de'])
+	$yform->getForm();
+	$yform->setObjectparams('send',1);
+	$yform->executeActions();
 
 > **Hinweis:**
 > * Wird keine E-Mail-Adresse angegeben, wird die E-Mail-Adresse verwendet, die bei `System/Einstellungen` hinterlegt ist.
