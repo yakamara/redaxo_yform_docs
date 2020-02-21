@@ -1,7 +1,9 @@
 # Yorm ORM
 
-Mini-ORM für YForm 
-ORM = Object-relational mapping = Objektrelationale Abbildung
+## Mini-ORM für YForm 
+(ORM = Object-relational mapping = Objektrelationale Abbildung)
+
+Yorm erlecihtert den Umgang mit in YForm Table Manager angemeldeten Tabellen und deren Daten. So ist es möglich mittels eigener Modelclasses die Daten zu verarbeiten und aufbereitet auszugeben. Werden im Table Manager neue Felder hinzugefügt oder entfernt, passen sich über Yorm ausgegegebene Formulare sofort darauf an. Die übliche PIPE oder PHP-Programmierung entfällt. Formulare müssen meist nur durch wenige Parameter ergänzt werden um sofort zu funktionieren.  
 
 > - [YOrm ohne eigene Model Class verwenden](#ohne-model-class)
 > - [YOrm mit eigener Model Class verwenden](#eigene-model-class)
@@ -23,6 +25,9 @@ ORM = Object-relational mapping = Objektrelationale Abbildung
 > - [Debugging](#debugging)
 >   - [Variante 1](#debugging-variante-1)
 >   - [Variante 2](#debugging-variante-2)
+> - [Tricks](#tricks)
+>   - [Dataset filtern](#dataset-filter)
+
 
 
 <a name="ohne-model-class"></a>
@@ -63,7 +68,7 @@ class MyTable extends \rex_yform_manager_dataset
 
 Jetzt muss die erstellte Klasse noch registiert werden. Dazu öffnet man die Datei `boot.php` des `project` AddOns und fügt nachfolgenden Code ein. Wird das theme-Addon verwendet, den Code in die Datei `functions.php` einfügen.
 
-```
+```php
 rex_yform_manager_dataset::setModelClass('rex_my_table', MyTable::class);
 ```
 
@@ -93,7 +98,7 @@ $item = MyTable::create()
               ->save();;
 ```
 
-```
+```php
 MyTable::query()
                 ->where('user_id', 5)
                 ->where('article_id', 6)
@@ -102,8 +107,6 @@ MyTable::query()
 ```
 
 ```php
-<?php
-
 $table = rex_yform_manager_table::get('rex_data_product');
 
 $products = $table->query()
@@ -135,11 +138,29 @@ foreach ($products as $product) {
 </article> 
 ```
 
+**Beispiel:** Datensatz auslesen und YForm-Formular bereitstellen
+
+```php
+// Datensatz aus Tabelle mit ID 2
+$dataset = rex_yform_manager_dataset::get(2,'tabelle');
+// Formular auslesen
+$yform = $dataset->getForm();
+// Parameter festlegen
+$yform->setObjectparams('form_method','get');
+// Ziel des Formulars, sonst erhält man nur Index.php ...
+$yform->setObjectparams('form_action',rex_getUrl(REX_ARTICLE_ID));
+// Sollen die Daten des Datensatzes ausgelesen werden? (true = ja , false = nein) 
+$yform->setObjectparams("getdata",true);
+$yform->setActionField('showtext',array('','Gespeichert'));
+// Ausgabe des Formulars
+echo $dataset->executeForm($yform);
+} ?>
+```
+
 <a name="datensatz-ändern"></a>
 ### Datensatz ändern
 
 ```php
-<?php
 $post = rex_yform_manager_dataset::get($id, 'rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)';
 $post->text = '...';
@@ -154,7 +175,6 @@ if ($post->save()) {
 <a name="datensatz-erstellen"></a>
 ### Datensatz erstellen
 ```php
-<?php
 $post = rex_yform_manager_dataset::create('rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)'; 
 $post->text = '...';
@@ -165,10 +185,27 @@ if ($post->save()) {
     echo implode('<br>', $post->getMessages());
 }
 ```
+
+***Beispiel*** Neuen Datensatz erstellen und Formular bereitstellen***
+
+```php
+// Neuen leeren Datensatz erstellen
+$dataset = rex_yform_manager_dataset::create('tabelle');
+// Formular auslesen
+$yform = $dataset->getForm();
+// Parameter festlegen
+$yform->setObjectparams('form_action',rex_getUrl(REX_ARTICLE_ID));
+// Ziel des Formulars, sonst erhält man nur Index.php ...
+$yform->setObjectparams('form_action',rex_getUrl());
+$yform->setActionField('showtext',array('','Gespeichert'));
+echo $dataset->executeForm($yform);
+} ?>
+```
+
+
 <a name="eigene-modelklassen"></a>
 ### Eigene Modelklassen
 ```php
-<?php
 // boot.php  
 rex_yform_manager_dataset::setModelClass(  
     'rex_blog_author',  
@@ -177,7 +214,6 @@ rex_yform_manager_dataset::setModelClass(
 ```
 
 ```php
-<?php
 // lib/post.php 
 class rex_blog_post extends rex_yform_manager_dataset 
 { 
@@ -187,15 +223,16 @@ class rex_blog_post extends rex_yform_manager_dataset
 
 oder
 
-``` 
-<?php  
+```php 
   
 // boot.php  
 rex_yform_manager_dataset::setModelClass(  
     'rex_blog_author',  
     rex_blog_author::class  
 );  
-  
+```
+
+```php 
 // lib/author.php 
 class rex_blog_author extends rex_yform_manager_dataset 
 { 
@@ -204,7 +241,9 @@ class rex_blog_author extends rex_yform_manager_dataset
         return $this->first_name.' '.$this->last_name; 
     } 
 } 
- 
+```
+
+```php 
 // Template 
 $author = rex_blog_author::get($id); 
 echo $author->getFullName();
@@ -214,9 +253,7 @@ echo $author->getFullName();
 <a name="query-klasse"></a>
 ### Query-Klasse
  
- ```php
-<?php  
-
+```php 
 $query = rex_blog_post::query();  
 
 $query  
@@ -234,8 +271,6 @@ $posts = $query->find();
 ### Collection-Klasse
  
 ```php
-<?php  
-
 $query = rex_blog_post::query();  
 
 // $query->...  
@@ -247,8 +282,8 @@ echo $post->title;
 echo $post->text; 
 }
 ```
-```php
-<?php  
+
+```php 
 
 $posts->isEmpty();  
 $posts->getIds();  
@@ -265,7 +300,6 @@ $posts->delete();
 ### Relationen
  
 ```php
-<?php  
 
 foreach ($posts as $post) {  
 $author = $post->getRelatedDataset('author_id');  
@@ -274,14 +308,13 @@ echo 'Autor: '.$author->getFullName();
 
 echo $post->title;  
 } 
- 
-<?php  
+
+```php
 
 $posts = $author->getRelatedCollection('posts'); 
 ``` 
 
-``` 
-<?php  
+```php 
 
 $query = rex_blog_post::query();  
 
@@ -303,8 +336,7 @@ echo 'Autor: '.$post->author_name;
 ### Paginierung
  
 **Beispiel 1**
-```php
-<?php  
+```php 
 
 $pager = new rex_pager(20);  
 
@@ -346,8 +378,8 @@ echo $pager->getPageCount();
 
 <a name="formulare"></a>
 ### Formulare
-``` 
-<?php  
+
+```php 
 
 $post = rex_blog_post::get($id);  
 
@@ -486,3 +518,41 @@ $items = $query->find();
 ### Variante 2
 
 Datei `/redaxo/src/addons/yform/plugins/manager/lib/yform/manager/dataset.php` und die Variable `private static $debug = false;` auf `true` setzen
+
+<a name="tricks"></a>
+## Tricks
+
+<a name="dataset-filter"></a>
+### Aus dem Dataset ungewollte Felder (z.B. für's Frontend) herausfiltern 
+
+```php 
+class rex_data_mydata extends rex_yform_manager_dataset
+{
+    public function getFields(array $filter = [])
+    {
+        $fields = $this->getTable()->getFields($filter);
+
+        if (rex::isBackend()) {
+            return $fields;
+        }
+                   
+        foreach ($fields as $i => $field) {
+            if ('interne_links' == $field->getName()) {
+                // hebt das Feld auf, es wird später im Formular auch nicht gezeigt. 
+                unset($fields[$i]); 
+            }
+            if ('user' == $field->getName()) {
+                unset($fields[$i]);
+            }
+        }
+   
+        return $fields;
+    }
+}
+```
+
+Model-Class in boot.php z.B. im project Addon registrieren
+
+```php
+rex_yform_manager_dataset::setModelClass('mydata', rex_data_mydate::class);
+```
