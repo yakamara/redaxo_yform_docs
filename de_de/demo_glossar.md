@@ -23,7 +23,7 @@
 
 ## Modul-Ausgabe
 
-```
+```php
 <?php
 // REDAXO Glossary or FAQ for yform
 // Modulausgabe

@@ -101,15 +101,24 @@ Alt | Neu
 <a name="code"></a>
 ## Code
 
-**Beispiel Code Block**
+**Beispiel Nicht-PHP-Code Block**
+
+    // Beispiel Nicht-PHP-Code
+    // Der Code wird eingerückt
+    action|encrypt|label[,label2,label3]|md5|[save_in_this_label]
+
+
+**Beispiel PHP-Code Block**
 
 ```php
+    //
+    // Code wird mit Backticks + 'php' gekennzeichnet, um
+    // den Github-Syntax-Highlighter zu nutzen
+    ```php
     <?php
-    // Code wird einfach nur mit Tabs eingerückt.
-    // Nicht (wie hier auf Github möglich ) die ``` verwenden.
     $article = rex_article::get();
+    ```
 ```
-
 
 **Beispiel Code Inline**
 

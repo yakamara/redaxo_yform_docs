@@ -57,14 +57,18 @@ In den E-Mail-Template `Body (Html)` kommt:
 ### PHP
 
 Es kann auch PHP-Code intergriert werden, um z.B. Formular-Eingaben zu prüfen und die Ausgabe in der E-Mail individuell zu verändern.
-	
-	
-	Hallo,<br />
-	<?php 
-	if ("REX_YFORM_DATA[field="anrede"]" == "w") echo "Frau";
-	else echo "Herr";
-	?> REX_YFORM_DATA[field="vorname"] REX_YFORM_DATA[field="name"]
-		
+
+```php
+Hallo,<br />
+<?php 
+if ("REX_YFORM_DATA[field="anrede"]" == "w") {
+    echo "Frau";
+} else {
+    echo "Herr";
+}
+?> REX_YFORM_DATA[field="vorname"] REX_YFORM_DATA[field="name"]
+```
+
 > **Hinweis:**  
 > Die Action **tpl2email** kann auch mehrfach im Formular eingesetzt werden. So könnten E-Mails mit unterschiedlichen Templates versendet werden oder auch an mehrere Empfänger, z.B. Admin unhd Kunde.
 
@@ -81,7 +85,7 @@ E-Mail-Templates können jedoch auch von einem YForm-Formular losgelöst verwend
 
 Nachfolgend ein angepasster Formular-Code, um die E-Mail separat zu versenden. Dabei wird ein eigener, zusätzlicher Platzhalter definiert, der sich nicht im Formular befindet. Bitte die Kommentare beachten.
 
-```
+```php
 <?
 $yform = new rex_yform();
 $yform->setObjectparams('form_ytemplate', 'bootstrap');
@@ -150,7 +154,7 @@ REX_YFORM_DATA[field="custom"]
 
 Dieser Code basiert auf [plugins/email/lib/yform_action_tpl2email.php](https://github.com/yakamara/redaxo_yform/blob/master/plugins/email/lib/yform_action_tpl2email.php).
 
-```
+```php
 <?
 $yform_email_template_key = 'test'; // Key, wie im Backend unter YForm > E-Mail-Templates hinterlegt
 $debug = 0;

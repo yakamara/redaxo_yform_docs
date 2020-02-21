@@ -35,7 +35,7 @@ Yorm erlecihtert den Umgang mit in YForm Table Manager angemeldeten Tabellen und
 
 Hole alle Daten der Tabelle `rex_my_table` und zeige das Objekt. 
 
-```
+```php
 $items = rex_yform_manager_table::get('rex_my_table')->query()->find();
 dump($items);
 ```
@@ -57,6 +57,7 @@ Es stehen folgende Klassen zur Verfügung:
 Zunächst wird eine Klasse erstellt und in das `project` AddOn im Ordner `lib` abgelegt
 
 ```php
+<?php
 class MyTable extends \rex_yform_manager_dataset
 {
 }
@@ -173,7 +174,6 @@ if ($post->save()) {
 
 <a name="datensatz-erstellen"></a>
 ### Datensatz erstellen
-
 ```php
 $post = rex_yform_manager_dataset::create('rex_blog_post');
 $post->title = 'REDAXO-Tag in Wackershofen (am Grundbach)'; 
@@ -205,7 +205,6 @@ echo $dataset->executeForm($yform);
 
 <a name="eigene-modelklassen"></a>
 ### Eigene Modelklassen
-
 ```php
 // boot.php  
 rex_yform_manager_dataset::setModelClass(  
@@ -271,8 +270,7 @@ $posts = $query->find();
 <a name="collection-Klasse"></a>
 ### Collection-Klasse
  
-```php 
-
+```php
 $query = rex_blog_post::query();  
 
 // $query->...  
@@ -301,7 +299,7 @@ $posts->delete();
 <a name="relationen"></a>
 ### Relationen
  
-```php 
+```php
 
 foreach ($posts as $post) {  
 $author = $post->getRelatedDataset('author_id');  
@@ -338,7 +336,6 @@ echo 'Autor: '.$post->author_name;
 ### Paginierung
  
 **Beispiel 1**
-
 ```php 
 
 $pager = new rex_pager(20);  
@@ -505,7 +502,7 @@ echo $post->executeForm($yform)
 
 Wichtig ist nur der Part mit `rex_sql`
 
-```
+```php
 $query = MyTable::query();
 $query
     ->alias('t')

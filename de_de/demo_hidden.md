@@ -20,7 +20,9 @@ Wenn die Formulardaten in einer Datenbanktabelle gespeichert werden sollen, kann
 
 **PHP-Schreibweise** 
 
-    $yform->setHiddenField("summe", 150);
+```php
+$yform->setHiddenField("summe", 150);
+```
 
 **Formbuilder Pipe-Schreibweise**
 
@@ -30,7 +32,9 @@ Wenn die Formulardaten in einer Datenbanktabelle gespeichert werden sollen, kann
 
 **PHP-Schreibweise** 
 
-    $yform->setHiddenField("summe", $bestellung_summe);
+```php
+$yform->setHiddenField("summe", $bestellung_summe);
+```
 
 **Formbuilder Pipe-Schreibweise**
 
@@ -38,8 +42,10 @@ Wenn die Formulardaten in einer Datenbanktabelle gespeichert werden sollen, kann
 
 ### Wert aus dem GET-Parameter lesen
 
-    // www.domain.de/meinformular/?q=Foo
-    $yform->setValueField('hidden', array("suche", "q", REQUEST));
+```php
+// www.domain.de/meinformular/?q=Foo
+$yform->setValueField('hidden', array("suche", "q", REQUEST));
+```
 
 **Formbuilder Pipe-Schreibweise**
 
@@ -56,7 +62,9 @@ Schreibt den Wert `Foo` des GET-Parameters `q` in das Feld `suche`.
 
 **PHP-Schreibweise** 
 
-    $yform->setValueField('text', array('anzahl','Anzahl','0','0','{"type":"hidden"}'));
+```php
+$yform->setValueField('text', array('anzahl','Anzahl','0','0','{"type":"hidden"}'));
+```
 
 **Formbuilder Pipe-Schreibweise**
 
@@ -70,14 +78,18 @@ Erzeugt im Formular Eingabefeld, das bspw. per Javascript verändert werden kann
 
 Das YForm-Objekt verfügt über zwei weitere Objekt-Methoden `setHiddenField()` und `setHiddenFields()`, die jedoch ihre Werte nicht in den sog. `value_pool` ablegen, sondern als Objektparameter unter dem key `form_hiddenfields` - d.h. diese Werte sind nicht für Aktionen wie `tpl2email` oder `db` sichtbar und werden demzufolge nicht an ein E-Mail-Template oder die Datenbank übergeben.
 
-    $yform->setHiddenField('versteckt', 1);
-    $yform->setHiddenFields(["a" => "b","c" => "d"]);
+```php
+$yform->setHiddenField('versteckt', 1);
+$yform->setHiddenFields(["a" => "b","c" => "d"]);
+```
 
 Auslesen über die Methode `getObjectparams()`
 
-    $yform->getObjectparams('form_hiddenfields')['versteckt'];
-    $yform->getObjectparams('form_hiddenfields')['a'];
-    $yform->getObjectparams('form_hiddenfields')['c'];
+```php
+$yform->getObjectparams('form_hiddenfields')['versteckt'];
+$yform->getObjectparams('form_hiddenfields')['a'];
+$yform->getObjectparams('form_hiddenfields')['c'];
+```
 
 ## Credits
 

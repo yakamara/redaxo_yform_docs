@@ -63,7 +63,7 @@ Fehlermeldung | Hinweis, der erscheint, wenn die Bedingung des Vergleichs erfül
 
 Diese Funktion bspw. im `project`-Addon in der boot.php hinterlegen:
 
-```
+```php
 function yform_validate_custom($label, $value, $param)
 {
 	if($value > $param) { // eigene Validierung. Hier: Prüft, ob der Formular-Eingabewert größer ist als der Parameter
