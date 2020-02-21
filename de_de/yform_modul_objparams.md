@@ -25,6 +25,7 @@
 >   - [Formular debuggen](#formular-debug)
 >   - [Fehlermeldungen ausschalten/verstecken](#formular-hide-top-warning-messages)
 >   - [Feldwerte aus Datenbank laden](#formular-get-data)
+>   - [Weiterleitung forcieren](#form_exit)
 
 ## Zweck der Objparams
 
@@ -339,3 +340,14 @@ $yform->setObjectparams('main_table','rex_table');
 ```
 
 Mit dem Wert `1` bei `getdata` in Verbindung mit `main_where` (hier die id auf den Datensatz) und `main_table` (hier der Tabellename) können Felder mit Werten aus eine Datenbanktabelle vorbelegt/geladen werden.
+
+<a name="form_exit"></a>
+### Weiterleitung forcieren
+
+Mit `form_exit` wird gesteuert, ob die Abarbeitung des weiteren Codes, bspw. in Modulen und Templates, nach erfolgreichem Versand beendet wird oder nicht. Ein vorzeitiges Beenden des Codes ist bspw. dann nötig, wenn man eine redirect-Action (Weiterleitung) verwenden möchte und diese direkt ausgeführt werden soll, oder, um in bestimmten Fällen eine doppelte Ausführung des Formulars zu verhindern.
+
+	// Im YForm-Formbuilder
+	objparams|form_exit|1
+
+	// In PHP
+	$yform->setObjectparams('form_exit',1);
