@@ -61,7 +61,7 @@ Es kann auch PHP-Code intergriert werden, um z.B. Formular-Eingaben zu prüfen u
 ```php
 Hallo,<br />
 <?php 
-if ("REX_YFORM_DATA[field="anrede"]" == "w") {
+if ('REX_YFORM_DATA[field="anrede"]' == 'w') {
     echo "Frau";
 } else {
     echo "Herr";
